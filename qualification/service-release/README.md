@@ -7,3 +7,5 @@
 运行：`npm ci --ignore-scripts --prefix qualification/service-release`，然后 `node qualification/service-release/qualify.mjs <candidate-directory>`。
 
 检查镜像索引的 linux/amd64 与 linux/arm64、setup／doctor／stop／保留卷／restart／dispose 后服务仍运行。所有检查通过才写 service-qualification.json，并绑定候选元数据与归档摘要。测试结束只清理该次随机 stateRoot 命名空间。实际首次发布的镜像／服务验证仍待 T6，新代码的打包夹具测试不等于通过真实候选资格。
+
+本工具作为独立准备步骤合入，不启用现行发布 workflow。发布接线、资格／晋升门槛和旧安装器退出由后续变更完成；工具代码合入不代表这些工作或 T5 已结束。
