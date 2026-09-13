@@ -79,81 +79,6 @@ async function runGovernance(root) {
   return runNode(path.join(ROOT, "scripts", "check-release-governance.mjs"), [], root);
 }
 
-async function promotionVerificationScript(kind) {
-  const workflow = await readFile(path.join(ROOT, ".github", "workflows", "release-compose-bundle.yml"), "utf8");
-  const jobStart = workflow.indexOf(`  build-and-qualify-${kind}:`);
-  const nextJob = workflow.indexOf("\n  build-and-qualify-", jobStart + 1);
-  const job = workflow.slice(jobStart, nextJob === -1 ? undefined : nextJob);
-  const stepStart = job.indexOf("      - name: Verify rc predecessor was published and matches its manifest asset");
-  const runStart = job.indexOf("        run: |\n", stepStart) + "        run: |\n".length;
-  const followingStep = job.indexOf("\n      - name:", runStart);
-  assert.notEqual(jobStart, -1);
-  assert.notEqual(stepStart, -1);
-  assert.notEqual(runStart, -1);
-  return job
-    .slice(runStart, followingStep === -1 ? undefined : followingStep)
-    .split("\n")
-    .map((line) => line.startsWith("          ") ? line.slice(10) : line)
-    .join("\n");
-}
-
-async function runPromotionVerification(kind, assetMatches, checkPass = true) {
-  const root = await mkdtemp(path.join(os.tmpdir(), `wsr-${kind}-promotion-`));
-  const bin = path.join(root, "bin");
-  await mkdir(bin);
-  const rc = path.join(root, "rc.json");
-  const asset = path.join(root, "asset.release.json");
-  await writeFile(rc, '{"release":"1.2.3-rc.7","version":"1.2.3-rc.7"}\n');
-  await writeFile(asset, assetMatches ? await readFile(rc) : "different\n");
-  const commands = {
-    node: `#!/bin/sh
-if [ "$FAKE_CHECK_FAIL" = "1" ]; then
-  printf '%s\\n' 'subject: fixture coordinate' 'evidence: injected verifier failure' 'verdict: blocked'
-  exit 1
-fi
-printf 'manifest: fixture.json\\npromoted from: %s\\n\\npass\\n' "$FAKE_RC"
-`,
-    jq: "#!/bin/sh\nprintf '%s\\n' '1.2.3-rc.7'\n",
-    gh: `#!/bin/sh
-if [ "$1 $2" = "release view" ]; then
-  printf '%s\\n' true
-  exit 0
-fi
-if [ "$1 $2" = "release download" ]; then
-  while [ "$#" -gt 0 ]; do
-    if [ "$1" = "--dir" ]; then shift; target="$1"; fi
-    shift
-  done
-  cp "$FAKE_ASSET" "$target/fixture.release.json"
-  exit 0
-fi
-exit 2
-`,
-  };
-  for (const [name, source] of Object.entries(commands)) {
-    const file = path.join(bin, name);
-    await writeFile(file, source);
-    await chmod(file, 0o755);
-  }
-  try {
-    const result = await execFileAsync("/bin/bash", ["--noprofile", "--norc", "-e", "-o", "pipefail", "-c", await promotionVerificationScript(kind)], {
-      cwd: root,
-      env: {
-        ...process.env,
-        PATH: `${bin}:/usr/bin:/bin`,
-        FAKE_RC: rc,
-        FAKE_ASSET: asset,
-        FAKE_CHECK_FAIL: checkPass ? "0" : "1",
-        RELEASE_MANIFEST: "fixture.json",
-        RUNNER_TEMP: path.join(root, "runner"),
-      },
-    });
-    return { status: 0, ...result };
-  } catch (error) {
-    return { status: error.code, stdout: error.stdout, stderr: error.stderr };
-  }
-}
-
 test("a comment naming a promotion workflow does not count as a call", async () => {
   const result = await runGovernance(await governanceFixture());
   assert.equal(result.status, 0, result.stdout + result.stderr);
@@ -200,17 +125,16 @@ test("existing governance hazards remain blocked", async (t) => {
   });
 });
 
-test("promotion checks an exact rc tag without a bounded release list", async () => {
-  const workflow = await readFile(path.join(ROOT, ".github", "workflows", "release-compose-bundle.yml"), "utf8");
-  assert.doesNotMatch(workflow, /^\s*gh release list/m);
-  assert.equal((workflow.match(/gh release view "\$TAG"/g) ?? []).length, 2);
-  assert.equal((workflow.match(/gh release download "\$TAG"/g) ?? []).length, 2);
-});
-
-test("compose qualification uses the Node 24 buildx action runtime", async () => {
-  const action = await readFile(path.join(ROOT, ".github", "actions", "build-qualify-bundle", "action.yml"), "utf8");
-  assert.match(action, /uses: docker\/setup-buildx-action@v4\b/);
-  assert.doesNotMatch(action, /uses: docker\/setup-buildx-action@v3\b/);
+test("promotion downloads one exact tag and verifies the qualified set without rebuilding", async () => {
+  const workflow = await readFile(path.join(ROOT, ".github/workflows/release-compose-bundle.yml"), "utf8");
+  const verifier = await readFile(path.join(ROOT, "scripts/prepare-combination-promotion.mjs"), "utf8");
+  assert.doesNotMatch(workflow, /gh release list|build-qualify-bundle|build-combination-candidate/);
+  assert.match(workflow, /gh release download "\$CANDIDATE_TAG"/);
+  assert.match(workflow, /prepare-combination-promotion\.mjs/);
+  assert.match(verifier, /'release','view',candidateTag/);
+  assert.match(verifier, /verifyQualifiedCandidate/);
+  assert.match(verifier, /check-ga-manifest\.mjs/);
+  assert.match(verifier, /stdio:'inherit'/);
 });
 
 test("all first-party workflows and actions use Node 24 action majors", async () => {
@@ -219,7 +143,6 @@ test("all first-party workflows and actions use Node 24 action majors", async ()
     path.join(ROOT, ".github", "workflows", "release-candidate.yml"),
     path.join(ROOT, ".github", "workflows", "release-compose-bundle.yml"),
     path.join(ROOT, ".github", "workflows", "release-governance.yml"),
-    path.join(ROOT, ".github", "actions", "build-qualify-bundle", "action.yml"),
   ];
   const text = (await Promise.all(files.map((file) => readFile(file, "utf8")))).join("\n");
   for (const deprecated of [
@@ -242,27 +165,7 @@ test("release guides describe candidate push as the only entry point", async () 
   }
 });
 
-test("both promotion jobs bind a published rc to its exact manifest asset", async (t) => {
-  for (const kind of ["compose", "product"]) {
-    await t.test(`${kind}: matching asset passes`, async () => {
-      const result = await runPromotionVerification(kind, true);
-      assert.equal(result.status, 0, result.stdout + result.stderr);
-      assert.match(result.stdout, /asset-verified/);
-    });
-    await t.test(`${kind}: mismatched asset is rejected`, async () => {
-      const result = await runPromotionVerification(kind, false);
-      assert.equal(result.status, 1, result.stdout + result.stderr);
-      assert.match(result.stderr, /manifest asset differs/);
-    });
-  }
-});
 
-test("promotion preserves checker diagnostics while failing closed", async () => {
-  const result = await runPromotionVerification("compose", true, false);
-  assert.equal(result.status, 1, result.stdout + result.stderr);
-  assert.match(result.stdout, /evidence: injected verifier failure/);
-  assert.match(result.stderr, /check-ga-manifest failed/);
-});
 
 async function withArtifactServer(body, fn) {
   const server = http.createServer((_request, response) => {

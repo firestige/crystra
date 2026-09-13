@@ -1,137 +1,77 @@
-name: Publish WSR release candidates
-
-# Superproject counterpart to the component convention (push to release/next).
-# The filename places this workflow in CANDIDATE_WORKFLOWS
-# (scripts/check-release-governance.mjs), which is what permits it to carry an
-# automatic trigger and to publish — a promote-class workflow may do neither.
-#
-# Discovery is scoped to what this push actually introduces relative to main,
-# not to every rc manifest that happens to exist in the tree: a stale rc
-# manifest with no release (e.g. release/compose/0.1.0-rc.1.json) must never
-# be picked up just because it is present.
+name: Publish Crystra release candidates
 
 on:
   push:
-    branches:
-      - release/next
+    branches: [release/next]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: release-candidate
   cancel-in-progress: false
 
 jobs:
-  discover:
-    runs-on: ubuntu-latest
-    outputs:
-      include: ${{ steps.discover.outputs.include }}
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Discover rc manifests this push introduces
-        id: discover
-        run: |
-          git fetch origin main --depth=1
-          ADDED="$(git diff --name-only --diff-filter=A origin/main...HEAD -- 'release/compose/*.json' 'release/product/*.json')"
-          ENTRIES="[]"
-          for f in $ADDED; do
-            case "$f" in
-              release/compose/*.json) KIND=compose ;;
-              release/product/*.json) KIND=product ;;
-              *) continue ;;
-            esac
-            VERSION="$(jq -er '.version // .release' "$f")"
-            case "$VERSION" in *-rc.*) ;; *) continue ;; esac
-            ENTRIES="$(echo "$ENTRIES" | jq -c --arg k "$KIND" --arg m "$f" '. + [{"bundle_kind":$k,"release_manifest":$m}]')"
-          done
-          echo "include=$ENTRIES" >> "$GITHUB_OUTPUT"
-
   build-and-publish:
-    needs: discover
-    if: needs.discover.outputs.include != '[]'
-    strategy:
-      fail-fast: false
-      matrix:
-        include: ${{ fromJson(needs.discover.outputs.include) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-          submodules: ${{ matrix.bundle_kind == 'product' && 'recursive' || 'false' }}
-
-      - name: Validate immutable manifest location and resolve version
-        env:
-          RELEASE_MANIFEST: ${{ matrix.release_manifest }}
-          BUNDLE_KIND: ${{ matrix.bundle_kind }}
-        run: |
-          if [ "$BUNDLE_KIND" = compose ]; then
-            case "$RELEASE_MANIFEST" in release/compose/*.json) ;; *) exit 1 ;; esac
-            test -f "$RELEASE_MANIFEST"
-            VERSION="$(jq -er '.version' "$RELEASE_MANIFEST")"
-          else
-            case "$RELEASE_MANIFEST" in release/product/*.json) ;; *) exit 1 ;; esac
-            test -f "$RELEASE_MANIFEST"
-            VERSION="$(jq -er '.release' "$RELEASE_MANIFEST")"
-            test "$(jq -er '.version' product-operations/package.json)" = "$VERSION"
-            cmp "$RELEASE_MANIFEST" "product-operations/manifests/product-$VERSION.json"
-          fi
-          case "$VERSION" in *-rc.*) ;; *) exit 1 ;; esac
-          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
-
-      - uses: ./.github/actions/build-qualify-bundle
+          submodules: recursive
+      - uses: actions/setup-node@v7
         with:
-          bundle_kind: ${{ matrix.bundle_kind }}
-          release_manifest: ${{ matrix.release_manifest }}
-          require_final_version: 'false'
-
-      - name: Render human release preview
-        env:
-          RELEASE_MANIFEST: ${{ matrix.release_manifest }}
-          BUNDLE_KIND: ${{ matrix.bundle_kind }}
+          node-version: '24.12.0'
+      - name: Validate one explicit candidate request
+        id: request
         run: |
-          BASE="${VERSION%%-rc.*}"
-          RELEASE_PREVIEW="$RUNNER_TEMP/$BUNDLE_KIND-$VERSION.preview.md"
-          PREVIEW_ARGS=(--manifest "$RELEASE_MANIFEST" --output "$RELEASE_PREVIEW")
-          shopt -s nullglob
-          for candidate in "release/$BUNDLE_KIND/$BASE"-rc.*.json; do
-            if [ "$candidate" != "$RELEASE_MANIFEST" ]; then
-              PREVIEW_ARGS+=(--compare "$candidate")
-            fi
-          done
-          node scripts/render-release-preview.mjs "${PREVIEW_ARGS[@]}"
+          test "$GITHUB_REF_NAME" = release/next
+          node --input-type=module <<'JS'
+          import {readFileSync,appendFileSync} from 'node:fs';
+          import {validateReleaseRequest} from './scripts/lib/combination-release.mjs';
+          const request=validateReleaseRequest(JSON.parse(readFileSync('release/request.json','utf8')));
+          appendFileSync(process.env.GITHUB_OUTPUT,`kind=${request.kind}\ntag=${request.candidateTag}\n`);
+          JS
+      - name: Build from selected committed sources and immutable inputs
+        run: node scripts/build-combination-candidate.mjs "$RUNNER_TEMP/candidate"
+      - uses: docker/setup-buildx-action@v4
+        if: steps.request.outputs.kind == 'services'
+      - name: Install isolated service qualification dependencies
+        if: steps.request.outputs.kind == 'services'
+        run: npm ci --prefix qualification/service-release --ignore-scripts --no-audit --no-fund
+      - name: Qualify exact service archive against real containers
+        if: steps.request.outputs.kind == 'services'
+        run: node qualification/service-release/qualify.mjs "$RUNNER_TEMP/candidate"
+      - name: Qualify exact installed plugin dependencies and service binding
+        if: steps.request.outputs.kind == 'combination'
+        run: node scripts/qualify-combination-candidate.mjs "$RUNNER_TEMP/candidate"
+      - name: Admit qualification and render human release preview
+        run: |
+          # Uses scripts/render-release-preview.mjs after exact qualification admission.
+          node scripts/finalize-combination-candidate.mjs "$RUNNER_TEMP/candidate"
+          RELEASE_PREVIEW="$RUNNER_TEMP/candidate/release-preview.md"
           cat "$RELEASE_PREVIEW" >> "$GITHUB_STEP_SUMMARY"
           echo "RELEASE_PREVIEW=$RELEASE_PREVIEW" >> "$GITHUB_ENV"
-
-      - name: Publish or skip existing release candidate
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.request.outputs.tag }}
+          path: ${{ runner.temp }}/candidate/*
+          if-no-files-found: error
+          retention-days: 30
+      - id: release-app
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.CRYSTRA_RELEASE_CLIENT_ID }}
+          private-key: ${{ secrets.CRYSTRA_RELEASE_APP_PRIVATE_KEY }}
+          owner: firestige
+          repositories: crystra
+      - name: Publish immutable qualified candidate
         env:
-          GH_TOKEN: ${{ github.token }}
-          BUNDLE_KIND: ${{ matrix.bundle_kind }}
+          GH_TOKEN: ${{ steps.release-app.outputs.token }}
+          CANDIDATE_TAG: ${{ steps.request.outputs.tag }}
         run: |
-          TAG="$BUNDLE_KIND-$VERSION"
-          # Candidate numbering is disposable: a re-push that reproduces an
-          # already-published rc is a normal event, not a collision to fail on.
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "candidate already published, skipping: $TAG"
-            exit 0
-          fi
-          if [ "$BUNDLE_KIND" = compose ]; then
-            gh release create "$TAG" \
-              "$ARCHIVE" "$CHECKSUM" "$RELEASE_ASSET_MANIFEST" "$RELEASE_PREVIEW" \
-              --target "$(git rev-parse HEAD)" \
-              --prerelease \
-              --title "WSR Docker Compose bundle candidate $VERSION" \
-              --notes-file "$RELEASE_PREVIEW"
-          else
-            gh release create "$TAG" \
-              "$ARCHIVE" "$CHECKSUM" "$RELEASE_ASSET_MANIFEST" "$CONFIG_EXAMPLE" "$RELEASE_PREVIEW" \
-              --target "$(git rev-parse HEAD)" \
-              --prerelease \
-              --title "WSR product operations candidate $VERSION" \
-              --notes-file "$RELEASE_PREVIEW"
-          fi
+          # Existing tags fail closed; use a new RC number, never overwrite bytes.
+          gh release create "$CANDIDATE_TAG" "$RUNNER_TEMP/candidate"/* \
+            --repo firestige/crystra --target "$GITHUB_SHA" --prerelease \
+            --title "$CANDIDATE_TAG" --notes-file "$RELEASE_PREVIEW"

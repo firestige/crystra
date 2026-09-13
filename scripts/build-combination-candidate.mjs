@@ -4,7 +4,7 @@ import {resolve,join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {validateReleaseRequest,verifyCombinationArtifacts} from './lib/combination-release.mjs';
+import {validateReleaseRequest,verifyCombinationArtifacts,validateCandidateManifest} from './lib/combination-release.mjs';
 const root=process.cwd();
 function run(command,args,cwd=root){const r=spawnSync(command,args,{cwd,encoding:'utf8',maxBuffer:16*1024*1024});if(r.error||r.status!==0)throw new Error(`CANDIDATE_BUILD_FAILED: ${r.error?.message??r.stderr}`);return r.stdout.trim();}
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -14,10 +14,10 @@ try{
  if(run('git',['status','--porcelain','--untracked-files=normal']))throw new Error('CANDIDATE_SOURCE_DIRTY');
  const manifestBytes=await readFile(resolve(root,request.manifest));
  const manifest=JSON.parse(manifestBytes);
+ validateCandidateManifest(request,manifest);
  const output=resolve(process.argv[2]??'artifacts/candidate');await mkdir(output); // fresh output only
  const metadata={schemaVersion:'crystra.release-metadata@1.0.0',repository:'firestige/crystra',commit,kind:request.kind,version:request.version,candidateTag:request.candidateTag,manifestPath:request.manifest,manifestSha256:digest(manifestBytes),files:[]};
  if(request.kind==='combination'){
-  if(manifest.release!==request.version)throw new Error('COMBINATION_REQUEST_VERSION_MISMATCH');
   const downloads=await verifyCombinationArtifacts(manifest);
   await writeFile(join(output,`crystra-${request.version}.release.json`),manifestBytes,{flag:'wx'});
   await writeFile(join(output,'verified-inputs.json'),JSON.stringify({downloads},null,2)+'\n',{flag:'wx'});

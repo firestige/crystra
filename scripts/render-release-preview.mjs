@@ -8,6 +8,8 @@ import { isThirdPartyPrereleaseField } from "./release-content-policy.mjs";
 const PRERELEASE = /-(?:rc|dev|alpha|beta|canary|snapshot|preview)\b/i;
 
 function identity(manifest) {
+  if (manifest?.schemaVersion === "crystra.compose-release@1.0.0" && typeof manifest.release === "string") return {kind: "services", version: manifest.release};
+  if (manifest?.schema === "crystra.compatibility@1.0.0" && typeof manifest.release === "string") return {kind: "combination", version: manifest.release};
   if (manifest?.schemaVersion === "wsr.compose-release@1.0.0" && typeof manifest.version === "string") {
     return { kind: "compose", version: manifest.version };
   }
@@ -51,13 +53,16 @@ function productCoordinates(component, prefix = component.id, root = true) {
 
 function coordinates(manifest) {
   const { kind } = identity(manifest);
-  if (kind === "compose") {
+  if (kind === "compose" || kind === "services") {
     return Object.entries(manifest.images ?? {}).map(([name, value]) => ({
       component: `image.${name}`,
       version: coordinateVersion(value),
       coordinate: value.coordinate ?? "(none)",
       digest: digestFrom(value),
     }));
+  }
+  if (kind === "combination") {
+    return [...manifest.components.flatMap(component => component.artifacts.map(asset => ({component: component.id, version: component.revision ?? "(not declared)", coordinate: asset.url, digest: asset.sha256}))), {component: "services", version: "(see coordinate)", coordinate: manifest.services.url, digest: manifest.services.sha256}];
   }
   return (manifest.components ?? []).flatMap((component) => productCoordinates(component));
 }
