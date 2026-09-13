@@ -1,0 +1,27 @@
+name: Verify Crystra combination
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.12.0
+      - name: Verify selected release authority surfaces
+        run: |
+          node scripts/check-release-governance.mjs
+          node scripts/check-release-ecosystem.mjs release/governance-topology.json
+      - name: Verify combination release guards
+        run: node --test scripts/release-*.test.mjs

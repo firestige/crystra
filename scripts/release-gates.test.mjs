@@ -215,7 +215,7 @@ test("compose qualification uses the Node 24 buildx action runtime", async () =>
 
 test("all first-party workflows and actions use Node 24 action majors", async () => {
   const files = [
-    path.join(ROOT, ".github", "workflows", "iter3-execution-ci.yml"),
+    path.join(ROOT, ".github", "workflows", "verify-combination.yml"),
     path.join(ROOT, ".github", "workflows", "release-candidate.yml"),
     path.join(ROOT, ".github", "workflows", "release-compose-bundle.yml"),
     path.join(ROOT, ".github", "workflows", "release-governance.yml"),
