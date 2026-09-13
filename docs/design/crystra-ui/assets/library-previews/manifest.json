@@ -1,0 +1,21 @@
+{
+  "source": "../library-preview.html",
+  "sourceSha256": "b48a3c1bd5743bb2a7c380a67af7bf25fab9a9aabaf6a31d3a4e5cbfa757b96f",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "files": {
+    "expressions.png": "76bb20974020cbfb04a96a83d51a88692093883c3f4981914602ec0cb72f9635",
+    "dashboard.png": "66eea2f001fbddad3ba50ae0d083cda8bbdea17084c1f500828206f9c90b79ee",
+    "waterfall.png": "21c9fb2271687e9f05d0996ca400f9e691dad074183f3d6c5b050b0056ffa53a",
+    "tree.png": "c1654453d2b1e59735420cf29ea4bf9416da7123d7ca4bc0b2f0b2454c0348a2",
+    "statistics.png": "4f58a304c36a2a839683ce381f9297bf53bb83201ff44e8e8750a3451c237e72",
+    "passport.png": "25b294bde678e83bbde898e51be0d2588384cbf5c7cd2707a0236a65c9e8f48a",
+    "dashboard-edit.png": "7c7e34b94d12cbf0c19019e24826902a94ea845bb303c317bd2ff43ef24870cb",
+    "dashboard-context-menu.png": "c7c7d07a890ec5950b09af492d76aa8fa249960a9232529977afcf193a9ad666",
+    "dashboard-compact.png": "7e178d9352cef83f7032a76d9480e25e7ce50124c2f4d62663755c2713c4ad33",
+    "dashboard-ghost.png": "e5eb8138440cb882c0f1d6c612caa5147e78121eeae52a5667d55284be3e5b90",
+    "widget-tooltip.png": "0b1dd27177753f0e57e12998d9cdf51bca82ab3604741349231c81cd9618e25d"
+  }
+}

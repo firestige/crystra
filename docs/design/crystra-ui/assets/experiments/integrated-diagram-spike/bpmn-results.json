@@ -1,0 +1,1224 @@
+[
+  {
+    "name": "development",
+    "mode": "raw",
+    "state": "expanded",
+    "engine": "stable",
+    "error": "Cannot set properties of undefined (setting '2')",
+    "ms": 20.859624999999994
+  },
+  {
+    "name": "development",
+    "mode": "raw",
+    "state": "expanded",
+    "engine": "next",
+    "error": "A sequence flow cannot cross a containment scope.",
+    "code": "CROSS_SCOPE_SEQUENCE_FLOW",
+    "ms": 24.32312499999999
+  },
+  {
+    "name": "development",
+    "mode": "scoped",
+    "state": "collapsed",
+    "engine": "stable",
+    "ms": 25.255915999999985,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 32,
+    "edges": 34,
+    "nonOrthogonal": 0,
+    "expanded": [],
+    "boundaries": [
+      {
+        "id": "plan",
+        "entries": [
+          "read"
+        ],
+        "exits": [
+          "design"
+        ]
+      },
+      {
+        "id": "work",
+        "entries": [
+          "choose"
+        ],
+        "exits": [
+          "next"
+        ]
+      },
+      {
+        "id": "delivery",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "pack"
+        ]
+      },
+      {
+        "id": "tdd",
+        "entries": [
+          "red"
+        ],
+        "exits": [
+          "stable"
+        ]
+      }
+    ],
+    "file": "development-scoped-collapsed-stable.bpmn"
+  },
+  {
+    "name": "development",
+    "mode": "scoped",
+    "state": "collapsed",
+    "engine": "next",
+    "ms": 27.640417000000014,
+    "warnings": [],
+    "diagrams": 5,
+    "shapes": 32,
+    "edges": 34,
+    "nonOrthogonal": 0,
+    "expanded": [],
+    "boundaries": [
+      {
+        "id": "plan",
+        "entries": [
+          "read"
+        ],
+        "exits": [
+          "design"
+        ]
+      },
+      {
+        "id": "work",
+        "entries": [
+          "choose"
+        ],
+        "exits": [
+          "next"
+        ]
+      },
+      {
+        "id": "delivery",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "pack"
+        ]
+      },
+      {
+        "id": "tdd",
+        "entries": [
+          "red"
+        ],
+        "exits": [
+          "stable"
+        ]
+      }
+    ],
+    "file": "development-scoped-collapsed-next.bpmn"
+  },
+  {
+    "name": "development",
+    "mode": "scoped",
+    "state": "plan",
+    "engine": "stable",
+    "ms": 15.164832999999987,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 32,
+    "edges": 34,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "plan"
+    ],
+    "boundaries": [
+      {
+        "id": "plan",
+        "entries": [
+          "read"
+        ],
+        "exits": [
+          "design"
+        ]
+      },
+      {
+        "id": "work",
+        "entries": [
+          "choose"
+        ],
+        "exits": [
+          "next"
+        ]
+      },
+      {
+        "id": "delivery",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "pack"
+        ]
+      },
+      {
+        "id": "tdd",
+        "entries": [
+          "red"
+        ],
+        "exits": [
+          "stable"
+        ]
+      }
+    ],
+    "file": "development-scoped-plan-stable.bpmn"
+  },
+  {
+    "name": "development",
+    "mode": "scoped",
+    "state": "plan",
+    "engine": "next",
+    "ms": 16.755499999999984,
+    "warnings": [],
+    "diagrams": 4,
+    "shapes": 32,
+    "edges": 34,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "plan"
+    ],
+    "boundaries": [
+      {
+        "id": "plan",
+        "entries": [
+          "read"
+        ],
+        "exits": [
+          "design"
+        ]
+      },
+      {
+        "id": "work",
+        "entries": [
+          "choose"
+        ],
+        "exits": [
+          "next"
+        ]
+      },
+      {
+        "id": "delivery",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "pack"
+        ]
+      },
+      {
+        "id": "tdd",
+        "entries": [
+          "red"
+        ],
+        "exits": [
+          "stable"
+        ]
+      }
+    ],
+    "file": "development-scoped-plan-next.bpmn"
+  },
+  {
+    "name": "development",
+    "mode": "scoped",
+    "state": "expanded",
+    "engine": "stable",
+    "ms": 13.065166000000005,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 32,
+    "edges": 34,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "plan",
+      "work",
+      "delivery",
+      "tdd"
+    ],
+    "boundaries": [
+      {
+        "id": "plan",
+        "entries": [
+          "read"
+        ],
+        "exits": [
+          "design"
+        ]
+      },
+      {
+        "id": "work",
+        "entries": [
+          "choose"
+        ],
+        "exits": [
+          "next"
+        ]
+      },
+      {
+        "id": "delivery",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "pack"
+        ]
+      },
+      {
+        "id": "tdd",
+        "entries": [
+          "red"
+        ],
+        "exits": [
+          "stable"
+        ]
+      }
+    ],
+    "file": "development-scoped-expanded-stable.bpmn"
+  },
+  {
+    "name": "development",
+    "mode": "scoped",
+    "state": "expanded",
+    "engine": "next",
+    "ms": 32.76133299999998,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 32,
+    "edges": 34,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "plan",
+      "work",
+      "delivery",
+      "tdd"
+    ],
+    "boundaries": [
+      {
+        "id": "plan",
+        "entries": [
+          "read"
+        ],
+        "exits": [
+          "design"
+        ]
+      },
+      {
+        "id": "work",
+        "entries": [
+          "choose"
+        ],
+        "exits": [
+          "next"
+        ]
+      },
+      {
+        "id": "delivery",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "pack"
+        ]
+      },
+      {
+        "id": "tdd",
+        "entries": [
+          "red"
+        ],
+        "exits": [
+          "stable"
+        ]
+      }
+    ],
+    "file": "development-scoped-expanded-next.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "raw",
+    "state": "expanded",
+    "engine": "stable",
+    "ms": 51.812292000000014,
+    "warnings": [
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 177\n\tcolumn: 6\n\tnested error: duplicate ID <options_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 180\n\tcolumn: 6\n\tnested error: duplicate ID <fork_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 183\n\tcolumn: 6\n\tnested error: duplicate ID <quality_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 186\n\tcolumn: 6\n\tnested error: duplicate ID <join_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 189\n\tcolumn: 6\n\tnested error: duplicate ID <decision_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 192\n\tcolumn: 6\n\tnested error: duplicate ID <adjust_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 195\n\tcolumn: 6\n\tnested error: duplicate ID <boundaries_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 198\n\tcolumn: 6\n\tnested error: duplicate ID <write_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 201\n\tcolumn: 6\n\tnested error: duplicate ID <e_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 204\n\tcolumn: 6\n\tnested error: duplicate ID <edge-4_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 208\n\tcolumn: 6\n\tnested error: duplicate ID <edge-5_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 212\n\tcolumn: 6\n\tnested error: duplicate ID <edge-6_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 217\n\tcolumn: 6\n\tnested error: duplicate ID <edge-7_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 221\n\tcolumn: 6\n\tnested error: duplicate ID <edge-9_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 225\n\tcolumn: 6\n\tnested error: duplicate ID <edge-10_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 229\n\tcolumn: 6\n\tnested error: duplicate ID <edge-12_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 234\n\tcolumn: 6\n\tnested error: duplicate ID <edge-11_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 240\n\tcolumn: 6\n\tnested error: duplicate ID <edge-8_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 245\n\tcolumn: 6\n\tnested error: duplicate ID <edge-13_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 249\n\tcolumn: 6\n\tnested error: duplicate ID <brainstorm_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 252\n\tcolumn: 6\n\tnested error: duplicate ID <scope_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 255\n\tcolumn: 6\n\tnested error: duplicate ID <options_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 258\n\tcolumn: 6\n\tnested error: duplicate ID <fork_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 261\n\tcolumn: 6\n\tnested error: duplicate ID <quality_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 264\n\tcolumn: 6\n\tnested error: duplicate ID <join_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 267\n\tcolumn: 6\n\tnested error: duplicate ID <decision_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 270\n\tcolumn: 6\n\tnested error: duplicate ID <adjust_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 273\n\tcolumn: 6\n\tnested error: duplicate ID <boundaries_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 276\n\tcolumn: 6\n\tnested error: duplicate ID <write_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 279\n\tcolumn: 6\n\tnested error: duplicate ID <e_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 282\n\tcolumn: 6\n\tnested error: duplicate ID <edge-2_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 286\n\tcolumn: 6\n\tnested error: duplicate ID <edge-3_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 290\n\tcolumn: 6\n\tnested error: duplicate ID <edge-4_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 294\n\tcolumn: 6\n\tnested error: duplicate ID <edge-5_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 298\n\tcolumn: 6\n\tnested error: duplicate ID <edge-6_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 303\n\tcolumn: 6\n\tnested error: duplicate ID <edge-7_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 307\n\tcolumn: 6\n\tnested error: duplicate ID <edge-9_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 311\n\tcolumn: 6\n\tnested error: duplicate ID <edge-10_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 315\n\tcolumn: 6\n\tnested error: duplicate ID <edge-12_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 320\n\tcolumn: 6\n\tnested error: duplicate ID <edge-11_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 326\n\tcolumn: 6\n\tnested error: duplicate ID <edge-8_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 331\n\tcolumn: 6\n\tnested error: duplicate ID <edge-13_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 335\n\tcolumn: 6\n\tnested error: duplicate ID <fork_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 338\n\tcolumn: 6\n\tnested error: duplicate ID <quality_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 341\n\tcolumn: 6\n\tnested error: duplicate ID <join_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 344\n\tcolumn: 6\n\tnested error: duplicate ID <decision_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 347\n\tcolumn: 6\n\tnested error: duplicate ID <adjust_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 350\n\tcolumn: 6\n\tnested error: duplicate ID <boundaries_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 353\n\tcolumn: 6\n\tnested error: duplicate ID <write_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 356\n\tcolumn: 6\n\tnested error: duplicate ID <e_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 359\n\tcolumn: 6\n\tnested error: duplicate ID <edge-5_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 363\n\tcolumn: 6\n\tnested error: duplicate ID <edge-6_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 368\n\tcolumn: 6\n\tnested error: duplicate ID <edge-7_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 372\n\tcolumn: 6\n\tnested error: duplicate ID <edge-9_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 376\n\tcolumn: 6\n\tnested error: duplicate ID <edge-10_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 380\n\tcolumn: 6\n\tnested error: duplicate ID <edge-12_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 385\n\tcolumn: 6\n\tnested error: duplicate ID <edge-11_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 391\n\tcolumn: 6\n\tnested error: duplicate ID <edge-8_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 396\n\tcolumn: 6\n\tnested error: duplicate ID <edge-13_di>"
+      }
+    ],
+    "diagrams": 1,
+    "shapes": 15,
+    "edges": 13,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "explore",
+      "architecture",
+      "reviewing"
+    ],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-raw-expanded-stable.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "raw",
+    "state": "expanded",
+    "engine": "next",
+    "error": "A sequence flow cannot cross a containment scope.",
+    "code": "CROSS_SCOPE_SEQUENCE_FLOW",
+    "ms": 1.7507079999999746
+  },
+  {
+    "name": "architecture",
+    "mode": "scoped",
+    "state": "collapsed",
+    "engine": "stable",
+    "ms": 15.785290999999972,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 21,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-scoped-collapsed-stable.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "scoped",
+    "state": "collapsed",
+    "engine": "next",
+    "ms": 33.71637500000003,
+    "warnings": [],
+    "diagrams": 4,
+    "shapes": 21,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-scoped-collapsed-next.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "scoped",
+    "state": "plan",
+    "engine": "stable",
+    "ms": 16.381542000000024,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 21,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "explore"
+    ],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-scoped-plan-stable.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "scoped",
+    "state": "plan",
+    "engine": "next",
+    "ms": 30.134124999999983,
+    "warnings": [],
+    "diagrams": 3,
+    "shapes": 21,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "explore"
+    ],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-scoped-plan-next.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "scoped",
+    "state": "expanded",
+    "engine": "stable",
+    "ms": 22.718042000000025,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 21,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "explore",
+      "architecture",
+      "reviewing"
+    ],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-scoped-expanded-stable.bpmn"
+  },
+  {
+    "name": "architecture",
+    "mode": "scoped",
+    "state": "expanded",
+    "engine": "next",
+    "ms": 26.323125000000005,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 21,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "explore",
+      "architecture",
+      "reviewing"
+    ],
+    "boundaries": [
+      {
+        "id": "explore",
+        "entries": [
+          "brainstorm"
+        ],
+        "exits": [
+          "scope"
+        ]
+      },
+      {
+        "id": "architecture",
+        "entries": [
+          "options"
+        ],
+        "exits": [
+          "decision"
+        ]
+      },
+      {
+        "id": "reviewing",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "join"
+        ]
+      }
+    ],
+    "file": "architecture-scoped-expanded-next.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "raw",
+    "state": "expanded",
+    "engine": "stable",
+    "ms": 9.362750000000005,
+    "warnings": [
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 194\n\tcolumn: 6\n\tnested error: duplicate ID <calc_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 197\n\tcolumn: 6\n\tnested error: duplicate ID <check_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 200\n\tcolumn: 6\n\tnested error: duplicate ID <abnormal_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 203\n\tcolumn: 6\n\tnested error: duplicate ID <investigate_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 206\n\tcolumn: 6\n\tnested error: duplicate ID <report_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 209\n\tcolumn: 6\n\tnested error: duplicate ID <e_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 212\n\tcolumn: 6\n\tnested error: duplicate ID <edge-10_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 216\n\tcolumn: 6\n\tnested error: duplicate ID <edge-11_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 220\n\tcolumn: 6\n\tnested error: duplicate ID <edge-12_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 224\n\tcolumn: 6\n\tnested error: duplicate ID <edge-14_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 229\n\tcolumn: 6\n\tnested error: duplicate ID <edge-13_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 235\n\tcolumn: 6\n\tnested error: duplicate ID <edge-15_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 239\n\tcolumn: 6\n\tnested error: duplicate ID <fork_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 242\n\tcolumn: 6\n\tnested error: duplicate ID <records_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 245\n\tcolumn: 6\n\tnested error: duplicate ID <join_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 248\n\tcolumn: 6\n\tnested error: duplicate ID <complete_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 251\n\tcolumn: 6\n\tnested error: duplicate ID <supplement_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 254\n\tcolumn: 6\n\tnested error: duplicate ID <actions_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 257\n\tcolumn: 6\n\tnested error: duplicate ID <calc_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 260\n\tcolumn: 6\n\tnested error: duplicate ID <check_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 263\n\tcolumn: 6\n\tnested error: duplicate ID <abnormal_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 266\n\tcolumn: 6\n\tnested error: duplicate ID <investigate_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 269\n\tcolumn: 6\n\tnested error: duplicate ID <report_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNShape> detected\n\tline: 272\n\tcolumn: 6\n\tnested error: duplicate ID <e_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 275\n\tcolumn: 6\n\tnested error: duplicate ID <edge-2_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 279\n\tcolumn: 6\n\tnested error: duplicate ID <edge-3_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 284\n\tcolumn: 6\n\tnested error: duplicate ID <edge-4_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 288\n\tcolumn: 6\n\tnested error: duplicate ID <edge-6_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 292\n\tcolumn: 6\n\tnested error: duplicate ID <edge-7_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 296\n\tcolumn: 6\n\tnested error: duplicate ID <edge-9_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 301\n\tcolumn: 6\n\tnested error: duplicate ID <edge-8_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 307\n\tcolumn: 6\n\tnested error: duplicate ID <edge-5_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 312\n\tcolumn: 6\n\tnested error: duplicate ID <edge-10_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 316\n\tcolumn: 6\n\tnested error: duplicate ID <edge-11_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 320\n\tcolumn: 6\n\tnested error: duplicate ID <edge-12_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 324\n\tcolumn: 6\n\tnested error: duplicate ID <edge-14_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 329\n\tcolumn: 6\n\tnested error: duplicate ID <edge-13_di>"
+      },
+      {
+        "message": "unparsable content <bpmndi:BPMNEdge> detected\n\tline: 335\n\tcolumn: 6\n\tnested error: duplicate ID <edge-15_di>"
+      }
+    ],
+    "diagrams": 1,
+    "shapes": 15,
+    "edges": 15,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "collect",
+      "compute"
+    ],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-raw-expanded-stable.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "raw",
+    "state": "expanded",
+    "engine": "next",
+    "error": "A sequence flow cannot cross a containment scope.",
+    "code": "CROSS_SCOPE_SEQUENCE_FLOW",
+    "ms": 1.5828750000000582
+  },
+  {
+    "name": "research",
+    "mode": "scoped",
+    "state": "collapsed",
+    "engine": "stable",
+    "ms": 7.188749999999914,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 19,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-scoped-collapsed-stable.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "scoped",
+    "state": "collapsed",
+    "engine": "next",
+    "ms": 6.556749999999965,
+    "warnings": [],
+    "diagrams": 3,
+    "shapes": 19,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-scoped-collapsed-next.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "scoped",
+    "state": "plan",
+    "engine": "stable",
+    "ms": 4.938958999999954,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 19,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "collect"
+    ],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-scoped-plan-stable.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "scoped",
+    "state": "plan",
+    "engine": "next",
+    "ms": 10.486125000000015,
+    "warnings": [],
+    "diagrams": 2,
+    "shapes": 19,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "collect"
+    ],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-scoped-plan-next.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "scoped",
+    "state": "expanded",
+    "engine": "stable",
+    "ms": 4.916208000000097,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 19,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "collect",
+      "compute"
+    ],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-scoped-expanded-stable.bpmn"
+  },
+  {
+    "name": "research",
+    "mode": "scoped",
+    "state": "expanded",
+    "engine": "next",
+    "ms": 6.687416999999982,
+    "warnings": [],
+    "diagrams": 1,
+    "shapes": 19,
+    "edges": 19,
+    "nonOrthogonal": 0,
+    "expanded": [
+      "collect",
+      "compute"
+    ],
+    "boundaries": [
+      {
+        "id": "collect",
+        "entries": [
+          "fork"
+        ],
+        "exits": [
+          "complete"
+        ]
+      },
+      {
+        "id": "compute",
+        "entries": [
+          "calc"
+        ],
+        "exits": [
+          "abnormal"
+        ]
+      }
+    ],
+    "file": "research-scoped-expanded-next.bpmn"
+  }
+]

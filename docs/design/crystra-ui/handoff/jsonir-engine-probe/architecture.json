@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1-draft",
+  "source": {
+    "kind": "example",
+    "id": "architecture"
+  },
+  "title": "系统设计：探索、评审与修订",
+  "nodes": [
+    {
+      "id": "architecture0",
+      "title": "澄清问题",
+      "kind": "activity",
+      "summary": "",
+      "description": "澄清问题",
+      "output": "阶段结果"
+    },
+    {
+      "id": "architecture1",
+      "title": "探索方案",
+      "kind": "activity",
+      "summary": "",
+      "description": "探索方案",
+      "output": "阶段结果"
+    },
+    {
+      "id": "architecture2",
+      "title": "方案评审",
+      "kind": "decision",
+      "summary": "",
+      "description": "方案评审",
+      "output": "阶段结果"
+    },
+    {
+      "id": "architecture3",
+      "title": "设计交付",
+      "kind": "final",
+      "summary": "",
+      "description": "设计交付",
+      "output": "阶段结果"
+    }
+  ],
+  "flows": [
+    {
+      "id": "architecture-root",
+      "kind": "main",
+      "title": "系统设计：探索、评审与修订",
+      "entryNodeId": "architecture0",
+      "exitNodeIds": [
+        "architecture3"
+      ],
+      "nodeIds": [
+        "architecture0",
+        "architecture1",
+        "architecture2",
+        "architecture3"
+      ],
+      "edges": [
+        {
+          "id": "a",
+          "from": "architecture0",
+          "to": "architecture1",
+          "title": "",
+          "outcome": "continue",
+          "kind": "control",
+          "description": ""
+        },
+        {
+          "id": "b",
+          "from": "architecture1",
+          "to": "architecture2",
+          "title": "",
+          "outcome": "continue",
+          "kind": "control",
+          "description": ""
+        },
+        {
+          "id": "c",
+          "from": "architecture2",
+          "to": "architecture3",
+          "title": "符合要求",
+          "outcome": "success",
+          "kind": "control",
+          "description": "符合要求"
+        },
+        {
+          "id": "d",
+          "from": "architecture2",
+          "to": "architecture0",
+          "title": "需要补充",
+          "outcome": "rework",
+          "kind": "control",
+          "description": "需要补充"
+        }
+      ]
+    }
+  ],
+  "relations": []
+}

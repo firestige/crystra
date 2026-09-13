@@ -1,0 +1,42 @@
+[
+  {
+    "file": "preview.html",
+    "sha256": "de951308003ade825359e1a49928f9c6507394ead5d848bc240acf07cb59c99f"
+  },
+  {
+    "file": "layouts.json",
+    "sha256": "dccffdfffc6ba5d32ae47a5e857dfbcdb39306441146b81ce018510746d2776e"
+  },
+  {
+    "file": "candidates.json",
+    "sha256": "2f705255accdeabb7ce15f96b636d5735228a9b39966bf54c24667d46dbf3466"
+  },
+  {
+    "file": "counterexamples.json",
+    "sha256": "257d06b82409909aa68b5cbbff0d0bbdbca2f04e6fc6e7f299b004ecf77efdb5"
+  },
+  {
+    "file": "route-choice.cjs",
+    "sha256": "cb2ced4aa50b81f5d1fc6c35a975edbd190fef108afe3e3012b7dc9a4dce7eca"
+  },
+  {
+    "file": "build.cjs",
+    "sha256": "50d35cec56ef559d75ac0b45181ac3ceccc3d6a569cee95723ef642e4e4c831a"
+  },
+  {
+    "file": "counterexample.cjs",
+    "sha256": "1a56f335e8092442295c0724a831fac7b5bae2ac8db3f8291f3e962986962f2f"
+  },
+  {
+    "file": "route-choice.test.cjs",
+    "sha256": "6a81a1e4d000f84e948ab04f823752495a8fa7d425625e3ff8e758de4273094d"
+  },
+  {
+    "file": "README.md",
+    "sha256": "a18bc25417dc4a284d2f43079d0f848f79c542eaf796f2c061f808127ba8fddb"
+  },
+  {
+    "file": "other-scenarios-review.md",
+    "sha256": "81e1d1111ac27d595c5cdf6f31d0109a6166bc3d1dda54520c4c79786928928a"
+  }
+]

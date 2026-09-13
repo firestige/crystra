@@ -1,0 +1,23 @@
+@startuml
+skinparam defaultFontName "PingFang SC"
+start
+partition "澄清目标" {
+:整理需求;
+:明确约束与非功能目标;
+}
+partition "形成方案" {
+repeat
+:比较架构风格与模式;
+:描述候选方案;
+repeat while (符合目标？) is (否) not (是)
+}
+partition "多角度评审" {
+fork
+:检查职责与边界;
+fork again
+:检查非功能需求;
+end fork
+:汇总评审;
+}
+stop
+@enduml

@@ -1,0 +1,45 @@
+/* DSH Input geometry: installed ui-conversation source. Host-owned subtree is isolated from Crystra trials. */
+:root [data-host-owned="dsh-input"] {font-family:Inter,system-ui,sans-serif;color:#f9fafb;background:#151517!important;box-shadow:none!important;border:0!important;border-radius:0!important;}
+:root [data-host-owned] [data-section-id="conversation-feed"] {padding:16px 32px!important;display:flex;flex-direction:column;gap:16px;}
+:root [data-host-owned] [data-section-id="conversation-feed"]>* {margin:0!important;flex-shrink:0;}
+:root [data-host-owned] .host-user {align-self:flex-end;max-width:min(525px,82%);border-radius:22px!important;padding:10px 16px!important;background:#2c2c2e!important;}
+:root [data-host-owned] .host-user p {font-size:16px!important;line-height:24px!important;color:#f9fafb!important;}
+:root [data-host-owned] .host-answer {padding:0!important;}
+:root [data-host-owned] .host-answer p {font-size:16px!important;line-height:28px!important;color:#f9fafb!important;}
+:root [data-host-owned] .host-tool {border-radius:6px!important;padding:8px 0!important;background:transparent!important;border:0!important;font-size:14px;}
+:root [data-host-owned] .host-notice {border-radius:8px!important;padding:4px 8px!important;font-size:12px;line-height:18px;}
+:root [data-host-owned] [data-section-id="input-approval-card"] {border-radius:20px!important;padding:12px 16px 14px!important;background:#2c2c2e!important;}
+:root [data-host-owned] [data-section-id="composer"] {margin:0 16px 8px!important;border-radius:22px!important;padding:10px 0 0!important;display:flex;flex-direction:column;gap:12px;background:#2c2c2e!important;border:1px solid #ffffff0f!important;box-shadow:0 4px 12px 0 #00000005,0 2px 8px 0 #0000000a!important;}
+:root [data-host-owned] [data-section-id="composer-reply-subject"] {margin:0 12px!important;padding:4px 8px!important;border-radius:8px!important;gap:8px;}
+:root [data-host-owned] .host-textarea {font:16px/24px Inter,system-ui,sans-serif!important;color:#f9fafb!important;background:transparent!important;border:0;resize:none;outline:none;padding:4px 12px 0 16px;width:100%;min-height:52px;}
+:root [data-host-owned] .host-textarea::placeholder {color:#81858c;}
+:root [data-host-owned] .host-toolbar {display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:2px 8px 6px;container-type:inline-size;}
+:root [data-host-owned] .host-tools {display:flex;align-items:center;gap:16px;min-width:0;}
+:root [data-host-owned] .host-trailing {display:flex;align-items:center;gap:12px;margin-left:auto;}
+:root [data-host-owned] [data-section-id="composer-add"] {width:28px!important;height:28px!important;min-width:28px!important;border-radius:999px!important;background:#43454a!important;}
+:root [data-host-owned] [data-section-id="composer-send"] {width:34px!important;height:34px!important;min-width:34px!important;border-radius:999px!important;background:#679efe!important;transform:translateY(-2px);color:white!important;}
+:root [data-host-owned] [data-section-id="composer-add"] svg,:root [data-host-owned] [data-section-id="composer-send"] svg {width:18px!important;height:18px!important;}
+:root [data-host-owned] [data-section-id="composer-write-mode"],:root [data-host-owned] .host-model {display:inline-flex;align-items:center;gap:4px;height:28px;border-radius:24px;padding:0 4px 0 8px;font-size:13px!important;line-height:20px!important;white-space:nowrap;color:#cfd3d6!important;}
+:root [data-host-owned] [data-section-id="composer-write-mode"] svg {width:14px!important;height:14px!important;}
+:root [data-host-owned] .host-model svg {width:12px!important;height:12px!important;}
+@container (width <= 460px) { [data-host-owned] .host-mode-label {display:none;} }
+:root [data-host-owned] [data-section-id="composer-reply-subject-clear"] {width:28px!important;height:28px!important;min-width:28px!important;}
+:root [data-host-owned] [data-section-id="composer-reply-subject-clear"] svg {width:14px!important;height:14px!important;}
+[data-iconify] {vertical-align:-.125em;flex-shrink:0;}
+[data-iconify]:not([data-brand-expand]):not([data-brand-crystra]) {display:inline-block;}
+[data-iconify].hidden {display:none;}
+
+:root [data-host-owned] [data-section-id="input-approval-card"] {padding:0!important;border:1px solid #f59e0b66!important;overflow:hidden;}
+:root [data-host-owned] .host-approval-strip {padding:10px 16px;background:#f59e0b1f;color:#f59e0b;font-size:13px;line-height:18px;}
+:root [data-host-owned] .host-approval-body {display:flex;flex-direction:column;gap:6px;padding:12px 16px 0;}
+:root [data-host-owned] .host-approval-body p {font-size:15px;font-weight:500;line-height:24px;}
+:root [data-host-owned] .host-approval-body code {font:13px/20px ui-monospace,monospace;color:#adb2b8;}
+:root [data-host-owned] .host-approval-actions {display:flex;justify-content:flex-end;gap:8px;padding:14px 16px;}
+:root [data-host-owned] .host-approval-actions button {border:1px solid #ffffff1f;border-radius:8px;padding:4px 12px;font-size:13px;}
+:root [data-host-owned="dsh-input"][data-host-hero] {border-radius:22px!important;background:#2c2c2e!important;border:1px solid #ffffff0f!important;padding:10px 0 0!important;display:flex;flex-direction:column;gap:12px;}
+:root [data-host-owned] [data-section-id="hero-composer-add"] {width:28px;height:28px;border-radius:999px;background:#43454a;}
+:root [data-host-owned] [data-section-id="hero-composer-send"] {width:34px;height:34px;border-radius:999px;background:#679efe;color:white;}
+:root [data-host-owned] [data-section-id="hero-composer-add"] svg,:root [data-host-owned] [data-section-id="hero-composer-send"] svg {width:18px;height:18px;}
+:root [data-host-owned] [data-section-id="hero-composer-write-mode"] {display:inline-flex;gap:4px;align-items:center;font-size:13px;color:#cfd3d6;}
+:root [data-host-owned] [data-host-icon="add"] {width:14px!important;height:14px!important;}
+:root [data-host-owned] [data-host-icon="primary"] {width:16px!important;height:16px!important;}

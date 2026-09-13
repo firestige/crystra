@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+skinparam defaultFontName "PingFang SC"
+start
+repeat
+partition "理解与设计" {
+:理解需求与系统设计;
+while (材料足够？) is (否)
+:澄清缺口;
+:重新理解材料;
+endwhile (是)
+:完成详细设计与测试目标;
+}
+partition "逐单元实现" {
+repeat
+:选择实现单元;
+partition "测试与实现循环" {
+:编写并校准测试;
+repeat
+:完成最小实现;
+:运行测试;
+repeat while (测试通过？) is (否) not (是)
+:重构;
+:验证回归;
+}
+repeat while (还有实现单元？) is (是) not (否)
+}
+partition "测试与复核" {
+fork
+:检查设计符合性;
+fork again
+:执行整体验证;
+end fork
+}
+repeat while (整体通过？) is (否) not (是)
+stop
+@enduml

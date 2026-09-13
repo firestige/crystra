@@ -1,0 +1,3091 @@
+{
+  "description": "Unmodified A1 static DOM inventory; parent relation uses nearest data-section-id ancestor. Not a production component schema.",
+  "source": "../sources/ui/assets/crystra-task-work-v7.html",
+  "nodes": [
+    {
+      "section_id": "app-shell",
+      "tag": "main",
+      "line": 176,
+      "parent_section_id": null,
+      "class": "grid h-screen min-h-[760px]",
+      "attributes": {
+        "data-layout-mode": "standard",
+        "data-better-sidebar-available": "false",
+        "data-utility-open": "false",
+        "data-utility-placement": "bottom"
+      }
+    },
+    {
+      "section_id": "sidebar",
+      "tag": "aside",
+      "line": 177,
+      "parent_section_id": "app-shell",
+      "class": "flex min-h-0 flex-col border-r border-line bg-sidebar px-3.5 py-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "sidebar-logo-row",
+      "tag": "div",
+      "line": 178,
+      "parent_section_id": "sidebar",
+      "class": "flex h-9 items-center gap-2 px-0.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "surface-banner",
+      "tag": "button",
+      "line": 179,
+      "parent_section_id": "sidebar-logo-row",
+      "class": "group flex min-w-0 flex-1 items-center gap-2.5 text-left text-slate-100 transition-colors hover:text-white",
+      "attributes": {
+        "type": "button",
+        "aria-label": "切换到 DeepSeek Harness",
+        "title": "切换到 DeepSeek Harness"
+      }
+    },
+    {
+      "section_id": "sidebar-brand-mark",
+      "tag": "span",
+      "line": 180,
+      "parent_section_id": "surface-banner",
+      "class": "grid h-6 w-6 shrink-0 place-items-center text-sky-300 transition-colors group-hover:text-sky-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "sidebar-brand-name",
+      "tag": "span",
+      "line": 187,
+      "parent_section_id": "surface-banner",
+      "class": "truncate text-[19px] font-semibold tracking-[-.025em]",
+      "attributes": {}
+    },
+    {
+      "section_id": "sidebar-toggle",
+      "tag": "button",
+      "line": 189,
+      "parent_section_id": "sidebar-logo-row",
+      "class": "grid size-8 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "收起侧边栏",
+        "title": "收起侧边栏"
+      }
+    },
+    {
+      "section_id": "new-task-action",
+      "tag": "button",
+      "line": 197,
+      "parent_section_id": "sidebar",
+      "class": "mt-6 flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/[.12] bg-white/[.18] text-sm font-medium text-slate-100 transition-colors hover:bg-white/[.24] active:bg-white/[.28]",
+      "attributes": {
+        "type": "button",
+        "aria-label": "新建任务"
+      }
+    },
+    {
+      "section_id": "new-task-icon",
+      "tag": "span",
+      "line": 198,
+      "parent_section_id": "new-task-action",
+      "class": "grid size-4 shrink-0 place-items-center",
+      "attributes": {
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "section_id": "new-task-label",
+      "tag": "span",
+      "line": 203,
+      "parent_section_id": "new-task-action",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-working-set",
+      "tag": "section",
+      "line": 206,
+      "parent_section_id": "sidebar",
+      "class": "mt-5 flex min-h-0 flex-1 flex-col",
+      "attributes": {
+        "data-expanded": "true"
+      }
+    },
+    {
+      "section_id": "task-section-header",
+      "tag": "header",
+      "line": 207,
+      "parent_section_id": "task-working-set",
+      "class": "relative mx-1 flex h-9 shrink-0 items-center rounded-md bg-white/[.025] transition-colors",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-section-toggle",
+      "tag": "button",
+      "line": 208,
+      "parent_section_id": "task-section-header",
+      "class": "flex h-full min-w-0 flex-1 items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition-colors hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "折叠任务列表",
+        "aria-expanded": "true"
+      }
+    },
+    {
+      "section_id": "task-section-chevron",
+      "tag": "svg",
+      "line": 209,
+      "parent_section_id": "task-section-toggle",
+      "class": "shrink-0 transition-transform",
+      "attributes": {
+        "width": "12",
+        "height": "12",
+        "viewbox": "0 0 12 12",
+        "fill": "none",
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "section_id": "task-section-label",
+      "tag": "span",
+      "line": 210,
+      "parent_section_id": "task-section-toggle",
+      "class": "truncate",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-section-attention-badge",
+      "tag": "span",
+      "line": 211,
+      "parent_section_id": "task-section-toggle",
+      "class": "ml-1 grid size-[18px] place-items-center rounded-full bg-amber-500/20 text-[10px] font-medium tracking-normal text-amber-300",
+      "attributes": {
+        "title": "3 项需要关注",
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "task-search-control",
+      "tag": "div",
+      "line": 213,
+      "parent_section_id": "task-section-header",
+      "class": "ml-auto flex min-w-0 items-center",
+      "attributes": {
+        "data-open": "false"
+      }
+    },
+    {
+      "section_id": "task-search-action",
+      "tag": "button",
+      "line": 214,
+      "parent_section_id": "task-search-control",
+      "class": "grid size-7 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "搜索任务",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "section_id": "task-search-input",
+      "tag": "input",
+      "line": 217,
+      "parent_section_id": "task-search-control",
+      "class": "h-full min-w-0 flex-1 border-0 bg-transparent px-1.5 text-[13px] text-slate-200 outline-none placeholder:text-slate-500",
+      "attributes": {
+        "type": "text",
+        "placeholder": "搜索任务…",
+        "maxlength": "500",
+        "tabindex": "-1",
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "task-search-clear",
+      "tag": "button",
+      "line": 218,
+      "parent_section_id": "task-search-control",
+      "class": "grid size-7 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "关闭搜索",
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "task-section-actions",
+      "tag": "div",
+      "line": 222,
+      "parent_section_id": "task-section-header",
+      "class": "flex items-center gap-0.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-view-options-action",
+      "tag": "button",
+      "line": 223,
+      "parent_section_id": "task-section-actions",
+      "class": "grid size-7 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "视图选项",
+        "aria-haspopup": "menu",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "section_id": "task-view-options-menu",
+      "tag": "div",
+      "line": 228,
+      "parent_section_id": "task-section-header",
+      "class": "absolute right-0 top-10 z-50 w-52 rounded-xl border border-line bg-[#1a1e24] p-2 text-xs shadow-2xl shadow-black/50",
+      "attributes": {
+        "role": "menu",
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "task-sort-created",
+      "tag": "input",
+      "line": 230,
+      "parent_section_id": "task-view-options-menu",
+      "class": "accent-blue-500",
+      "attributes": {
+        "type": "radio",
+        "name": "task-sort",
+        "value": "created",
+        "checked": null
+      }
+    },
+    {
+      "section_id": "task-sort-activity",
+      "tag": "input",
+      "line": 231,
+      "parent_section_id": "task-view-options-menu",
+      "class": "accent-blue-500",
+      "attributes": {
+        "type": "radio",
+        "name": "task-sort",
+        "value": "activity"
+      }
+    },
+    {
+      "section_id": "task-filter-all",
+      "tag": "input",
+      "line": 234,
+      "parent_section_id": "task-view-options-menu",
+      "class": "accent-blue-500",
+      "attributes": {
+        "type": "radio",
+        "name": "task-filter",
+        "value": "all",
+        "checked": null
+      }
+    },
+    {
+      "section_id": "task-filter-active",
+      "tag": "input",
+      "line": 235,
+      "parent_section_id": "task-view-options-menu",
+      "class": "accent-blue-500",
+      "attributes": {
+        "type": "radio",
+        "name": "task-filter",
+        "value": "active"
+      }
+    },
+    {
+      "section_id": "task-section-content",
+      "tag": "div",
+      "line": 239,
+      "parent_section_id": "task-working-set",
+      "class": "flex min-h-0 flex-1 flex-col",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-list",
+      "tag": "div",
+      "line": 240,
+      "parent_section_id": "task-section-content",
+      "class": "mt-1 min-h-0 flex-1 space-y-0.5 overflow-y-auto",
+      "attributes": {
+        "data-scrollbar": "hidden"
+      }
+    },
+    {
+      "section_id": "task-current",
+      "tag": "button",
+      "line": 241,
+      "parent_section_id": "task-list",
+      "class": "flex h-10 w-full min-w-0 items-center gap-2 rounded-lg border border-blue-500/70 bg-blue-500/[.08] px-2.5 text-left",
+      "attributes": {
+        "data-task-row": null,
+        "data-task-id": "task-market-release",
+        "data-task-state": "review",
+        "data-task-active": "true",
+        "data-created-at": "2026-09-07T14:02:00+08:00",
+        "data-last-event-at": "2026-09-07T14:08:00+08:00",
+        "aria-current": "true",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "task-current-status",
+      "tag": "span",
+      "line": 242,
+      "parent_section_id": "task-current",
+      "class": "size-2 shrink-0 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(251,191,36,.55)]",
+      "attributes": {
+        "title": "需要审查"
+      }
+    },
+    {
+      "section_id": "task-current-title",
+      "tag": "span",
+      "line": 243,
+      "parent_section_id": "task-current",
+      "class": "min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-medium text-slate-100",
+      "attributes": {
+        "title": "发布插件市场方案"
+      }
+    },
+    {
+      "section_id": "task-current-attention-badge",
+      "tag": "span",
+      "line": 245,
+      "parent_section_id": "task-current",
+      "class": "grid size-[18px] shrink-0 place-items-center rounded-full bg-amber-500/20 text-[10px] font-medium text-amber-300",
+      "attributes": {
+        "title": "1 项需要关注"
+      }
+    },
+    {
+      "section_id": "task-running",
+      "tag": "button",
+      "line": 247,
+      "parent_section_id": "task-list",
+      "class": "flex h-10 w-full min-w-0 items-center gap-2 rounded-lg px-2.5 text-left text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "data-task-row": null,
+        "data-task-id": "task-ui-workbench",
+        "data-task-state": "running",
+        "data-task-active": "true",
+        "data-created-at": "2026-09-07T13:47:00+08:00",
+        "data-last-event-at": "2026-09-07T14:09:00+08:00",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "task-running-status",
+      "tag": "span",
+      "line": 248,
+      "parent_section_id": "task-running",
+      "class": "size-2 shrink-0 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,.5)]",
+      "attributes": {
+        "title": "运行中"
+      }
+    },
+    {
+      "section_id": "task-failed",
+      "tag": "button",
+      "line": 252,
+      "parent_section_id": "task-list",
+      "class": "flex h-10 w-full min-w-0 items-center gap-2 rounded-lg px-2.5 text-left text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "data-task-row": null,
+        "data-task-id": "task-plugin-preflight",
+        "data-task-state": "failed",
+        "data-task-active": "true",
+        "data-created-at": "2026-09-07T13:20:00+08:00",
+        "data-last-event-at": "2026-09-07T13:38:00+08:00",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "task-failed-status",
+      "tag": "span",
+      "line": 253,
+      "parent_section_id": "task-failed",
+      "class": "size-2 shrink-0 rounded-full bg-red-400 shadow-[0_0_6px_rgba(248,113,113,.45)]",
+      "attributes": {
+        "title": "失败停止"
+      }
+    },
+    {
+      "section_id": "task-failed-attention-badge",
+      "tag": "span",
+      "line": 256,
+      "parent_section_id": "task-failed",
+      "class": "grid size-[18px] shrink-0 place-items-center rounded-full bg-red-500/20 text-[10px] font-medium text-red-300",
+      "attributes": {
+        "title": "2 项需要关注"
+      }
+    },
+    {
+      "section_id": "task-complete",
+      "tag": "button",
+      "line": 258,
+      "parent_section_id": "task-list",
+      "class": "flex h-10 w-full min-w-0 items-center gap-2 rounded-lg px-2.5 text-left text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "data-task-row": null,
+        "data-task-id": "task-plugin-research",
+        "data-task-state": "complete",
+        "data-task-active": "false",
+        "data-created-at": "2026-09-06T10:10:00+08:00",
+        "data-last-event-at": "2026-09-06T18:35:00+08:00",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "task-complete-status",
+      "tag": "span",
+      "line": 259,
+      "parent_section_id": "task-complete",
+      "class": "size-2 shrink-0 rounded-full bg-emerald-400",
+      "attributes": {
+        "title": "全部完成"
+      }
+    },
+    {
+      "section_id": "all-tasks-action",
+      "tag": "a",
+      "line": 263,
+      "parent_section_id": "task-list",
+      "class": "flex h-9 items-center rounded-lg px-2.5 text-xs text-blue-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "href": "crystra-task-browser-v7.html"
+      }
+    },
+    {
+      "section_id": "workflow-navigation",
+      "tag": "nav",
+      "line": 268,
+      "parent_section_id": "sidebar",
+      "class": "mt-3 shrink-0",
+      "attributes": {
+        "data-expanded": "true"
+      }
+    },
+    {
+      "section_id": "workflow-section-header",
+      "tag": "header",
+      "line": 269,
+      "parent_section_id": "workflow-navigation",
+      "class": "mx-1 flex h-9 items-center rounded-md bg-white/[.025]",
+      "attributes": {}
+    },
+    {
+      "section_id": "workflow-section-toggle",
+      "tag": "button",
+      "line": 270,
+      "parent_section_id": "workflow-section-header",
+      "class": "flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04] hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "折叠工作流列表",
+        "aria-expanded": "true"
+      }
+    },
+    {
+      "section_id": "workflow-section-chevron",
+      "tag": "svg",
+      "line": 271,
+      "parent_section_id": "workflow-section-toggle",
+      "class": "transition-transform",
+      "attributes": {
+        "width": "12",
+        "height": "12",
+        "viewbox": "0 0 12 12",
+        "fill": "none",
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "section_id": "workflow-section-label",
+      "tag": "span",
+      "line": 272,
+      "parent_section_id": "workflow-section-toggle",
+      "class": "truncate",
+      "attributes": {}
+    },
+    {
+      "section_id": "workflow-section-content",
+      "tag": "div",
+      "line": 275,
+      "parent_section_id": "workflow-navigation",
+      "class": "space-y-0.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "workflow-current-list",
+      "tag": "div",
+      "line": 276,
+      "parent_section_id": "workflow-section-content",
+      "class": "space-y-0.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "all-workflows-action",
+      "tag": "a",
+      "line": 281,
+      "parent_section_id": "workflow-section-content",
+      "class": "flex h-8 items-center rounded-md px-2.5 text-xs text-blue-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "href": "crystra-workflow-studio-v7.html?view=workflows"
+      }
+    },
+    {
+      "section_id": "analysis-navigation",
+      "tag": "nav",
+      "line": 285,
+      "parent_section_id": "sidebar",
+      "class": "mt-2 shrink-0",
+      "attributes": {
+        "data-expanded": "true"
+      }
+    },
+    {
+      "section_id": "analysis-section-header",
+      "tag": "header",
+      "line": 286,
+      "parent_section_id": "analysis-navigation",
+      "class": "mx-1 flex h-9 items-center rounded-md bg-white/[.025]",
+      "attributes": {}
+    },
+    {
+      "section_id": "analysis-section-toggle",
+      "tag": "button",
+      "line": 287,
+      "parent_section_id": "analysis-section-header",
+      "class": "flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04] hover:text-slate-100",
+      "attributes": {
+        "type": "button",
+        "aria-label": "折叠分析列表",
+        "aria-expanded": "true"
+      }
+    },
+    {
+      "section_id": "analysis-section-chevron",
+      "tag": "svg",
+      "line": 288,
+      "parent_section_id": "analysis-section-toggle",
+      "class": "transition-transform",
+      "attributes": {
+        "width": "12",
+        "height": "12",
+        "viewbox": "0 0 12 12",
+        "fill": "none",
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "section_id": "analysis-section-label",
+      "tag": "span",
+      "line": 289,
+      "parent_section_id": "analysis-section-toggle",
+      "class": "truncate",
+      "attributes": {}
+    },
+    {
+      "section_id": "analysis-section-content",
+      "tag": "div",
+      "line": 292,
+      "parent_section_id": "analysis-navigation",
+      "class": "space-y-0.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "analysis-secondary-navigation",
+      "tag": "div",
+      "line": 293,
+      "parent_section_id": "analysis-section-content",
+      "class": "space-y-0.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "analysis-dashboard-action",
+      "tag": "a",
+      "line": 294,
+      "parent_section_id": "analysis-secondary-navigation",
+      "class": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "href": "crystra-analysis-audit-v7.html?view=dashboard"
+      }
+    },
+    {
+      "section_id": "analysis-traces-action",
+      "tag": "a",
+      "line": 295,
+      "parent_section_id": "analysis-secondary-navigation",
+      "class": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "href": "crystra-analysis-audit-v7.html?view=traces"
+      }
+    },
+    {
+      "section_id": "analysis-audit-action",
+      "tag": "a",
+      "line": 296,
+      "parent_section_id": "analysis-secondary-navigation",
+      "class": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "href": "crystra-analysis-audit-v7.html?view=audit"
+      }
+    },
+    {
+      "section_id": "analysis-compare-action",
+      "tag": "a",
+      "line": 297,
+      "parent_section_id": "analysis-secondary-navigation",
+      "class": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+      "attributes": {
+        "href": "crystra-analysis-audit-v7.html?view=compare"
+      }
+    },
+    {
+      "section_id": "sidebar-footer",
+      "tag": "footer",
+      "line": 302,
+      "parent_section_id": "sidebar",
+      "class": "mt-auto shrink-0 border-t border-line pt-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "host-settings",
+      "tag": "button",
+      "line": 303,
+      "parent_section_id": "sidebar-footer",
+      "class": "flex h-9 w-full items-center gap-3 rounded-md px-2 text-sm text-slate-300 transition hover:bg-white/[.05] hover:text-white",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "task-workspace",
+      "tag": "section",
+      "line": 307,
+      "parent_section_id": "app-shell",
+      "class": "relative flex min-w-0 flex-col overflow-hidden bg-[#101216]",
+      "attributes": {}
+    },
+    {
+      "section_id": "new-task-empty-state",
+      "tag": "section",
+      "line": 308,
+      "parent_section_id": "task-workspace",
+      "class": "absolute inset-0 z-40 grid place-items-center bg-[#101216] px-8",
+      "attributes": {
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "new-task-composer-seat",
+      "tag": "div",
+      "line": 309,
+      "parent_section_id": "new-task-empty-state",
+      "class": "w-full max-w-[720px] -translate-y-10",
+      "attributes": {}
+    },
+    {
+      "section_id": "new-task-hero-composer-placeholder",
+      "tag": "section",
+      "line": 311,
+      "parent_section_id": "new-task-composer-seat",
+      "class": "rounded-2xl border border-line bg-[#24282f] p-4 shadow-panel",
+      "attributes": {
+        "data-provider": "dsh-client-ui-conversation",
+        "data-slot": "conversation.composer.bar",
+        "data-variant": "hero"
+      }
+    },
+    {
+      "section_id": "new-task-workspace-slot-placeholder",
+      "tag": "button",
+      "line": 315,
+      "parent_section_id": "new-task-hero-composer-placeholder",
+      "class": "flex h-8 min-w-0 max-w-[260px] items-center gap-2 rounded-lg px-2 text-slate-300 transition hover:bg-white/[.06] hover:text-slate-100",
+      "attributes": {
+        "data-provider": "dsh-client-ui-workspace",
+        "data-slot": "conversation.hero.workspace",
+        "data-prototype-placeholder": "true",
+        "type": "button",
+        "aria-haspopup": "menu",
+        "title": "原型占位：正式实现由 DSH Workspace Slot 渲染"
+      }
+    },
+    {
+      "section_id": "workspace-header",
+      "tag": "header",
+      "line": 327,
+      "parent_section_id": "task-workspace",
+      "class": "flex min-h-[112px] items-center justify-between gap-8 border-b border-line px-7 py-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-context",
+      "tag": "div",
+      "line": 334,
+      "parent_section_id": "workspace-header",
+      "class": "mt-2 flex flex-wrap items-center gap-2 text-xs text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-execution-summary",
+      "tag": "section",
+      "line": 343,
+      "parent_section_id": "task-workspace",
+      "class": "mx-5 mt-4 flex min-h-[88px] items-stretch rounded-xl border border-line bg-[#15191f] px-5 py-3 shadow-panel",
+      "attributes": {}
+    },
+    {
+      "section_id": "run-health",
+      "tag": "div",
+      "line": 344,
+      "parent_section_id": "task-execution-summary",
+      "class": "flex w-[160px] shrink-0 items-center gap-3 border-r border-line pr-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "current-activity",
+      "tag": "div",
+      "line": 349,
+      "parent_section_id": "task-execution-summary",
+      "class": "flex min-w-0 flex-1 flex-col justify-center border-r border-line px-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-counts",
+      "tag": "div",
+      "line": 354,
+      "parent_section_id": "task-execution-summary",
+      "class": "flex w-[265px] shrink-0 flex-col justify-center border-r border-line px-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "attention-summary",
+      "tag": "div",
+      "line": 359,
+      "parent_section_id": "task-execution-summary",
+      "class": "flex w-[218px] shrink-0 items-center gap-3 border-r border-line px-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "attention-open-gates",
+      "tag": "button",
+      "line": 361,
+      "parent_section_id": "attention-summary",
+      "class": "mt-1 text-xs text-warning",
+      "attributes": {}
+    },
+    {
+      "section_id": "latest-activity",
+      "tag": "div",
+      "line": 365,
+      "parent_section_id": "task-execution-summary",
+      "class": "min-w-0",
+      "attributes": {}
+    },
+    {
+      "section_id": "run-consumption",
+      "tag": "div",
+      "line": 366,
+      "parent_section_id": "task-execution-summary",
+      "class": "ml-4 shrink-0 text-right",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-layout-region",
+      "tag": "div",
+      "line": 370,
+      "parent_section_id": "task-workspace",
+      "class": "mt-4 grid min-h-0 flex-1 grid-cols-[minmax(0,38fr)_minmax(0,62fr)] gap-4 px-5 pb-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "input-stream",
+      "tag": "section",
+      "line": 371,
+      "parent_section_id": "task-layout-region",
+      "class": "flex min-h-0 flex-col overflow-hidden rounded-xl border border-line bg-[#15191f] shadow-panel",
+      "attributes": {}
+    },
+    {
+      "section_id": "conversation-feed",
+      "tag": "div",
+      "line": 372,
+      "parent_section_id": "input-stream",
+      "class": "min-h-0 flex-1 space-y-4 overflow-auto px-5 py-4",
+      "attributes": {
+        "data-scrollbar": "hidden"
+      }
+    },
+    {
+      "section_id": "input-approval-card",
+      "tag": "article",
+      "line": 377,
+      "parent_section_id": "conversation-feed",
+      "class": "rounded-lg border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "input-approval-publish-path",
+      "tag": "label",
+      "line": 377,
+      "parent_section_id": "input-approval-card",
+      "class": "flex gap-2 py-1.5 text-xs text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "input-approval-reuse-abstraction",
+      "tag": "label",
+      "line": 377,
+      "parent_section_id": "input-approval-card",
+      "class": "flex gap-2 py-1.5 text-xs text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "input-approval-submit",
+      "tag": "button",
+      "line": 377,
+      "parent_section_id": "input-approval-card",
+      "class": "mt-3 float-right rounded-md border border-blue-500/50 px-3 py-1.5 text-xs text-blue-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "composer",
+      "tag": "section",
+      "line": 379,
+      "parent_section_id": "input-stream",
+      "class": "m-4 rounded-2xl border border-line bg-[#24282f] p-4 shadow-panel",
+      "attributes": {}
+    },
+    {
+      "section_id": "composer-reply-subject",
+      "tag": "div",
+      "line": 380,
+      "parent_section_id": "composer",
+      "class": "mb-3 hidden items-center gap-2 rounded-lg border border-amber-500/20 bg-amber-500/5 px-3 py-2 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "composer-reply-subject-copy",
+      "tag": "span",
+      "line": 380,
+      "parent_section_id": "composer-reply-subject",
+      "class": "truncate text-amber-100",
+      "attributes": {}
+    },
+    {
+      "section_id": "composer-reply-subject-clear",
+      "tag": "button",
+      "line": 380,
+      "parent_section_id": "composer-reply-subject",
+      "class": "ml-auto grid size-5 shrink-0 place-items-center rounded text-muted hover:bg-white/5 hover:text-slate-200",
+      "attributes": {
+        "type": "button",
+        "aria-label": "清除回复对象"
+      }
+    },
+    {
+      "section_id": "composer-add",
+      "tag": "button",
+      "line": 382,
+      "parent_section_id": "composer",
+      "class": "grid size-8 place-items-center rounded-full bg-white/5 text-xl",
+      "attributes": {}
+    },
+    {
+      "section_id": "composer-write-mode",
+      "tag": "button",
+      "line": 382,
+      "parent_section_id": "composer",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "composer-send",
+      "tag": "button",
+      "line": 382,
+      "parent_section_id": "composer",
+      "class": "grid size-9 place-items-center rounded-full bg-blue-600 text-lg text-white",
+      "attributes": {}
+    },
+    {
+      "section_id": "control-workspace",
+      "tag": "section",
+      "line": 386,
+      "parent_section_id": "task-layout-region",
+      "class": "flex min-h-0 flex-col overflow-hidden",
+      "attributes": {}
+    },
+    {
+      "section_id": "task-workbench-navigation",
+      "tag": "nav",
+      "line": 387,
+      "parent_section_id": "control-workspace",
+      "class": "mb-3 flex shrink-0 items-center gap-1 rounded-xl border border-line bg-panel p-1.5 text-xs text-muted shadow-panel",
+      "attributes": {
+        "aria-label": "任务工作面"
+      }
+    },
+    {
+      "section_id": "workbench-nav-grilling",
+      "tag": "label",
+      "line": 388,
+      "parent_section_id": "task-workbench-navigation",
+      "class": "cursor-pointer rounded-lg px-3 py-2",
+      "attributes": {
+        "data-surface-option": null
+      }
+    },
+    {
+      "section_id": "preview-surface-grilling",
+      "tag": "input",
+      "line": 388,
+      "parent_section_id": "workbench-nav-grilling",
+      "class": "sr-only",
+      "attributes": {
+        "type": "radio",
+        "name": "control-surface",
+        "value": "grilling"
+      }
+    },
+    {
+      "section_id": "workbench-nav-plan",
+      "tag": "label",
+      "line": 389,
+      "parent_section_id": "task-workbench-navigation",
+      "class": "cursor-pointer rounded-lg px-3 py-2",
+      "attributes": {
+        "data-surface-option": null
+      }
+    },
+    {
+      "section_id": "preview-surface-plan",
+      "tag": "input",
+      "line": 389,
+      "parent_section_id": "workbench-nav-plan",
+      "class": "sr-only",
+      "attributes": {
+        "type": "radio",
+        "name": "control-surface",
+        "value": "plan"
+      }
+    },
+    {
+      "section_id": "workbench-nav-execution",
+      "tag": "label",
+      "line": 390,
+      "parent_section_id": "task-workbench-navigation",
+      "class": "cursor-pointer rounded-lg py-2 pl-5 pr-3",
+      "attributes": {
+        "data-surface-option": null,
+        "data-system-active": "true"
+      }
+    },
+    {
+      "section_id": "preview-surface-execution",
+      "tag": "input",
+      "line": 390,
+      "parent_section_id": "workbench-nav-execution",
+      "class": "sr-only",
+      "attributes": {
+        "type": "radio",
+        "name": "control-surface",
+        "value": "execution"
+      }
+    },
+    {
+      "section_id": "workbench-system-focus",
+      "tag": "span",
+      "line": 390,
+      "parent_section_id": "workbench-nav-execution",
+      "class": "ml-1 text-[10px] text-blue-300",
+      "attributes": {
+        "data-system-surface": "execution"
+      }
+    },
+    {
+      "section_id": "workbench-nav-gate",
+      "tag": "label",
+      "line": 391,
+      "parent_section_id": "task-workbench-navigation",
+      "class": "cursor-pointer rounded-lg px-3 py-2",
+      "attributes": {
+        "data-surface-option": null
+      }
+    },
+    {
+      "section_id": "preview-surface-gate",
+      "tag": "input",
+      "line": 391,
+      "parent_section_id": "workbench-nav-gate",
+      "class": "sr-only",
+      "attributes": {
+        "type": "radio",
+        "name": "control-surface",
+        "value": "gate",
+        "checked": null
+      }
+    },
+    {
+      "section_id": "workbench-nav-delivery",
+      "tag": "label",
+      "line": 392,
+      "parent_section_id": "task-workbench-navigation",
+      "class": "cursor-pointer rounded-lg px-3 py-2",
+      "attributes": {
+        "data-surface-option": null
+      }
+    },
+    {
+      "section_id": "preview-surface-delivery",
+      "tag": "input",
+      "line": 392,
+      "parent_section_id": "workbench-nav-delivery",
+      "class": "sr-only",
+      "attributes": {
+        "type": "radio",
+        "name": "control-surface",
+        "value": "delivery"
+      }
+    },
+    {
+      "section_id": "control-workspace-scroll-region",
+      "tag": "div",
+      "line": 395,
+      "parent_section_id": "control-workspace",
+      "class": "min-h-0 flex-1 overflow-auto",
+      "attributes": {
+        "data-scrollbar": "hidden"
+      }
+    },
+    {
+      "section_id": "gate-review-workbench",
+      "tag": "section",
+      "line": 396,
+      "parent_section_id": "control-workspace-scroll-region",
+      "class": "space-y-3",
+      "attributes": {
+        "data-control-surface": "gate"
+      }
+    },
+    {
+      "section_id": "gate-main-view",
+      "tag": "div",
+      "line": 397,
+      "parent_section_id": "gate-review-workbench",
+      "class": "space-y-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-review-overview",
+      "tag": "section",
+      "line": 398,
+      "parent_section_id": "gate-main-view",
+      "class": "relative rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-queue-navigation",
+      "tag": "div",
+      "line": 399,
+      "parent_section_id": "gate-review-overview",
+      "class": "mb-3 flex items-center gap-2 border-b border-amber-500/15 pb-3 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-queue-toggle",
+      "tag": "button",
+      "line": 400,
+      "parent_section_id": "gate-queue-navigation",
+      "class": "flex items-center gap-2 rounded-lg border border-amber-500/25 bg-black/15 px-3 py-1.5 text-amber-100 transition hover:border-amber-400/50",
+      "attributes": {
+        "type": "button",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "section_id": "gate-queue-count",
+      "tag": "span",
+      "line": 400,
+      "parent_section_id": "gate-queue-toggle",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-queue-position",
+      "tag": "span",
+      "line": 401,
+      "parent_section_id": "gate-queue-navigation",
+      "class": "rounded bg-white/5 px-2 py-1 text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-current-impact",
+      "tag": "span",
+      "line": 402,
+      "parent_section_id": "gate-queue-navigation",
+      "class": "text-warning",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-decision-queue",
+      "tag": "section",
+      "line": 404,
+      "parent_section_id": "gate-review-overview",
+      "class": "absolute left-4 top-[50px] z-30 hidden w-[430px] rounded-xl border border-line bg-[#20242b] p-2 shadow-2xl",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-queue-item-g3",
+      "tag": "button",
+      "line": 406,
+      "parent_section_id": "gate-decision-queue",
+      "class": "flex w-full items-start gap-3 rounded-lg border border-blue-500/30 bg-blue-500/5 px-3 py-2.5 text-left",
+      "attributes": {
+        "data-gate-select": "g3",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "gate-queue-item-g5",
+      "tag": "button",
+      "line": 407,
+      "parent_section_id": "gate-decision-queue",
+      "class": "mt-1 flex w-full items-start gap-3 rounded-lg border border-transparent px-3 py-2.5 text-left transition hover:border-line hover:bg-white/[.03]",
+      "attributes": {
+        "data-gate-select": "g5",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "gate-queue-item-g6",
+      "tag": "button",
+      "line": 408,
+      "parent_section_id": "gate-decision-queue",
+      "class": "mt-1 flex w-full items-start gap-3 rounded-lg border border-transparent px-3 py-2.5 text-left transition hover:border-line hover:bg-white/[.03]",
+      "attributes": {
+        "data-gate-select": "g6",
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "gate-decision-question",
+      "tag": "div",
+      "line": 412,
+      "parent_section_id": "gate-review-overview",
+      "class": "min-w-0",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-decision-question-kicker",
+      "tag": "p",
+      "line": 413,
+      "parent_section_id": "gate-decision-question",
+      "class": "text-[10px] font-semibold uppercase tracking-[.12em] text-warning",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-decision-question-title",
+      "tag": "h2",
+      "line": 414,
+      "parent_section_id": "gate-decision-question",
+      "class": "mt-1 text-base font-medium text-slate-100",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-trigger-context",
+      "tag": "span",
+      "line": 416,
+      "parent_section_id": "gate-decision-question",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-location-context",
+      "tag": "span",
+      "line": 417,
+      "parent_section_id": "gate-decision-question",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-decision-status",
+      "tag": "span",
+      "line": 420,
+      "parent_section_id": "gate-review-overview",
+      "class": "ml-auto shrink-0 rounded bg-amber-500/15 px-2.5 py-1 text-xs text-warning",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-decision-board",
+      "tag": "div",
+      "line": 424,
+      "parent_section_id": "gate-main-view",
+      "class": "grid grid-cols-[1.1fr_.9fr] gap-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-decision-state",
+      "tag": "section",
+      "line": 425,
+      "parent_section_id": "gate-decision-board",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-relevant-decisions",
+      "tag": "section",
+      "line": 428,
+      "parent_section_id": "gate-decision-state",
+      "class": "mt-4 rounded-lg bg-raised p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-relevant-decisions-count",
+      "tag": "span",
+      "line": 429,
+      "parent_section_id": "gate-relevant-decisions",
+      "class": "ml-auto rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-success",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-relevant-decisions-list",
+      "tag": "ul",
+      "line": 430,
+      "parent_section_id": "gate-relevant-decisions",
+      "class": "mt-2.5 grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-current-interpretation",
+      "tag": "section",
+      "line": 437,
+      "parent_section_id": "gate-decision-state",
+      "class": "mt-3 rounded-lg border border-blue-500/30 bg-blue-500/5 p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-current-interpretation-status",
+      "tag": "span",
+      "line": 438,
+      "parent_section_id": "gate-current-interpretation",
+      "class": "ml-auto rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-current-interpretation-copy",
+      "tag": "p",
+      "line": 439,
+      "parent_section_id": "gate-current-interpretation",
+      "class": "mt-2 text-sm leading-6 text-slate-100",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-understanding-delta",
+      "tag": "section",
+      "line": 442,
+      "parent_section_id": "gate-decision-state",
+      "class": "mt-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-understanding-delta-list",
+      "tag": "div",
+      "line": 444,
+      "parent_section_id": "gate-understanding-delta",
+      "class": "mt-2 grid grid-cols-2 gap-2 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-execution-preview",
+      "tag": "section",
+      "line": 452,
+      "parent_section_id": "gate-decision-board",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-execution-preview-title",
+      "tag": "h3",
+      "line": 453,
+      "parent_section_id": "gate-execution-preview",
+      "class": "mt-1 text-sm font-medium",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-execution-preview-status",
+      "tag": "span",
+      "line": 453,
+      "parent_section_id": "gate-execution-preview",
+      "class": "ml-auto rounded bg-amber-500/10 px-2 py-1 text-[10px] text-warning",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-execution-steps",
+      "tag": "ol",
+      "line": 454,
+      "parent_section_id": "gate-execution-preview",
+      "class": "mt-5 space-y-0 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-preserved-boundary",
+      "tag": "div",
+      "line": 460,
+      "parent_section_id": "gate-execution-preview",
+      "class": "mt-4 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2.5 text-xs text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-preserved-boundary-copy",
+      "tag": "span",
+      "line": 460,
+      "parent_section_id": "gate-preserved-boundary",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence",
+      "tag": "section",
+      "line": 464,
+      "parent_section_id": "gate-main-view",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-plan-context",
+      "tag": "a",
+      "line": 467,
+      "parent_section_id": "gate-evidence",
+      "class": "rounded-lg border border-line bg-raised p-3 text-left transition hover:border-slate-500",
+      "attributes": {
+        "href": "?surface=plan&plan_view=document&plan_anchor=wave-2&from_gate_id=G-3"
+      }
+    },
+    {
+      "section_id": "gate-evidence-plan-title",
+      "tag": "span",
+      "line": 467,
+      "parent_section_id": "gate-evidence-plan-context",
+      "class": "block text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-plan-copy",
+      "tag": "span",
+      "line": 467,
+      "parent_section_id": "gate-evidence-plan-context",
+      "class": "mt-1.5 block text-[11px] text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-plan-action",
+      "tag": "span",
+      "line": 467,
+      "parent_section_id": "gate-evidence-plan-context",
+      "class": "mt-3 block text-[10px] text-blue-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-trigger-record",
+      "tag": "a",
+      "line": 468,
+      "parent_section_id": "gate-evidence",
+      "class": "rounded-lg border border-red-500/25 bg-red-500/5 p-3 text-left transition hover:border-red-400/50",
+      "attributes": {
+        "href": "crystra-analysis-audit-v7.html?plan_run_id=plan-v4%2Frun-08&wave_id=wave-2&workflow_run_id=workflow-v3%2Frun-08&trace_root_id=trace-7f42a&attempt=3&span_id=build-sign&event_id=signature-validation-failed&from_gate_id=G-3"
+      }
+    },
+    {
+      "section_id": "gate-evidence-trigger-title",
+      "tag": "span",
+      "line": 468,
+      "parent_section_id": "gate-evidence-trigger-record",
+      "class": "block text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-trigger-copy",
+      "tag": "span",
+      "line": 468,
+      "parent_section_id": "gate-evidence-trigger-record",
+      "class": "mt-1.5 block text-[11px] text-red-200/70",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-trigger-action",
+      "tag": "span",
+      "line": 468,
+      "parent_section_id": "gate-evidence-trigger-record",
+      "class": "mt-3 block text-[10px] text-red-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-proposed-change",
+      "tag": "a",
+      "line": 469,
+      "parent_section_id": "gate-evidence",
+      "class": "rounded-lg border border-line bg-raised p-3 text-left transition hover:border-slate-500",
+      "attributes": {
+        "href": "?surface=gate&gate_id=g3&context=proposed-change"
+      }
+    },
+    {
+      "section_id": "gate-evidence-change-title",
+      "tag": "span",
+      "line": 469,
+      "parent_section_id": "gate-evidence-proposed-change",
+      "class": "block text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-change-copy",
+      "tag": "span",
+      "line": 469,
+      "parent_section_id": "gate-evidence-proposed-change",
+      "class": "mt-1.5 block text-[11px] text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-change-action",
+      "tag": "span",
+      "line": 469,
+      "parent_section_id": "gate-evidence-proposed-change",
+      "class": "mt-3 block text-[10px] text-blue-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-validation-result",
+      "tag": "a",
+      "line": 470,
+      "parent_section_id": "gate-evidence",
+      "class": "rounded-lg border border-line bg-raised p-3 text-left transition hover:border-slate-500",
+      "attributes": {
+        "href": "?surface=gate&gate_id=g3&context=validation-result"
+      }
+    },
+    {
+      "section_id": "gate-evidence-validation-title",
+      "tag": "span",
+      "line": 470,
+      "parent_section_id": "gate-evidence-validation-result",
+      "class": "block text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-validation-copy",
+      "tag": "span",
+      "line": 470,
+      "parent_section_id": "gate-evidence-validation-result",
+      "class": "mt-1.5 block text-[11px] text-success",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-validation-action",
+      "tag": "span",
+      "line": 470,
+      "parent_section_id": "gate-evidence-validation-result",
+      "class": "mt-3 block text-[10px] text-blue-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-governing-decision",
+      "tag": "a",
+      "line": 471,
+      "parent_section_id": "gate-evidence",
+      "class": "rounded-lg border border-amber-500/25 bg-amber-500/5 p-3 text-left transition hover:border-amber-400/50",
+      "attributes": {
+        "href": "?surface=gate&gate_id=g3&context=governing-decision"
+      }
+    },
+    {
+      "section_id": "gate-evidence-decision-title",
+      "tag": "span",
+      "line": 471,
+      "parent_section_id": "gate-evidence-governing-decision",
+      "class": "block text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-decision-copy",
+      "tag": "span",
+      "line": 471,
+      "parent_section_id": "gate-evidence-governing-decision",
+      "class": "mt-1.5 block text-[11px] text-amber-200/70",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-evidence-decision-action",
+      "tag": "span",
+      "line": 471,
+      "parent_section_id": "gate-evidence-governing-decision",
+      "class": "mt-3 block text-[10px] text-amber-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-inspector",
+      "tag": "section",
+      "line": 476,
+      "parent_section_id": "gate-review-workbench",
+      "class": "hidden min-h-[570px] flex-col overflow-hidden rounded-xl border border-line bg-panel shadow-panel",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-header",
+      "tag": "header",
+      "line": 477,
+      "parent_section_id": "gate-context-inspector",
+      "class": "flex shrink-0 items-center border-b border-line px-5 py-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-back",
+      "tag": "a",
+      "line": 478,
+      "parent_section_id": "gate-context-header",
+      "class": "mr-4 rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300",
+      "attributes": {
+        "href": "?surface=gate&gate_id=g3"
+      }
+    },
+    {
+      "section_id": "gate-context-kind",
+      "tag": "p",
+      "line": 479,
+      "parent_section_id": "gate-context-header",
+      "class": "text-[10px] font-semibold uppercase tracking-[.12em] text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-title",
+      "tag": "h2",
+      "line": 479,
+      "parent_section_id": "gate-context-header",
+      "class": "mt-1 text-sm font-medium",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-revision",
+      "tag": "span",
+      "line": 480,
+      "parent_section_id": "gate-context-header",
+      "class": "ml-auto rounded bg-white/5 px-2 py-1 font-mono text-[10px] text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-body",
+      "tag": "div",
+      "line": 482,
+      "parent_section_id": "gate-context-inspector",
+      "class": "min-h-0 flex-1 overflow-auto p-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-summary",
+      "tag": "section",
+      "line": 483,
+      "parent_section_id": "gate-context-body",
+      "class": "rounded-xl border border-blue-500/25 bg-blue-500/5 p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-summary-copy",
+      "tag": "p",
+      "line": 483,
+      "parent_section_id": "gate-context-summary",
+      "class": "mt-2 text-sm leading-6 text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-detail-grid",
+      "tag": "div",
+      "line": 484,
+      "parent_section_id": "gate-context-body",
+      "class": "mt-4 grid grid-cols-2 gap-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-primary",
+      "tag": "section",
+      "line": 485,
+      "parent_section_id": "gate-context-detail-grid",
+      "class": "rounded-xl border border-line bg-raised p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-primary-title",
+      "tag": "h3",
+      "line": 485,
+      "parent_section_id": "gate-context-primary",
+      "class": "text-xs font-medium text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-primary-copy",
+      "tag": "div",
+      "line": 485,
+      "parent_section_id": "gate-context-primary",
+      "class": "mt-3 whitespace-pre-line font-mono text-xs leading-6 text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-secondary",
+      "tag": "section",
+      "line": 486,
+      "parent_section_id": "gate-context-detail-grid",
+      "class": "rounded-xl border border-line bg-raised p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-secondary-title",
+      "tag": "h3",
+      "line": 486,
+      "parent_section_id": "gate-context-secondary",
+      "class": "text-xs font-medium text-slate-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-secondary-copy",
+      "tag": "div",
+      "line": 486,
+      "parent_section_id": "gate-context-secondary",
+      "class": "mt-3 whitespace-pre-line text-xs leading-6 text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-provenance",
+      "tag": "section",
+      "line": 488,
+      "parent_section_id": "gate-context-body",
+      "class": "mt-4 rounded-xl border border-line bg-raised p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "gate-context-provenance-fields",
+      "tag": "dl",
+      "line": 488,
+      "parent_section_id": "gate-context-provenance",
+      "class": "mt-3 grid grid-cols-2 gap-x-6 gap-y-3 font-mono text-[11px] text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "grilling-workbench",
+      "tag": "section",
+      "line": 494,
+      "parent_section_id": "control-workspace-scroll-region",
+      "class": "space-y-3",
+      "attributes": {
+        "data-control-surface": "grilling"
+      }
+    },
+    {
+      "section_id": "grilling-overview",
+      "tag": "section",
+      "line": 495,
+      "parent_section_id": "grilling-workbench",
+      "class": "flex items-center gap-4 rounded-xl border border-blue-500/35 bg-blue-500/10 px-4 py-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "grilling-question-map",
+      "tag": "section",
+      "line": 497,
+      "parent_section_id": "grilling-workbench",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "grilling-live-brief",
+      "tag": "section",
+      "line": 498,
+      "parent_section_id": "grilling-workbench",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "grilling-brief-changes",
+      "tag": "section",
+      "line": 498,
+      "parent_section_id": "grilling-live-brief",
+      "class": "rounded-lg border border-blue-500/30 bg-blue-500/5 p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-workbench",
+      "tag": "section",
+      "line": 502,
+      "parent_section_id": "control-workspace-scroll-region",
+      "class": "",
+      "attributes": {
+        "data-control-surface": "plan"
+      }
+    },
+    {
+      "section_id": "plan-document-viewer",
+      "tag": "section",
+      "line": 503,
+      "parent_section_id": "plan-workbench",
+      "class": "hidden min-h-[570px] flex-col overflow-hidden rounded-xl border border-line bg-panel shadow-panel",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-document-header",
+      "tag": "header",
+      "line": 504,
+      "parent_section_id": "plan-document-viewer",
+      "class": "flex shrink-0 items-center border-b border-line px-5 py-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-document-back",
+      "tag": "button",
+      "line": 505,
+      "parent_section_id": "plan-document-header",
+      "class": "mr-4 rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-document-page",
+      "tag": "div",
+      "line": 510,
+      "parent_section_id": "plan-document-viewer",
+      "class": "grid min-h-[500px] grid-cols-[175px_minmax(0,1fr)]",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-document-outline",
+      "tag": "nav",
+      "line": 511,
+      "parent_section_id": "plan-document-page",
+      "class": "border-r border-line p-4 text-xs text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-document-dag-chapter-entry",
+      "tag": "button",
+      "line": 512,
+      "parent_section_id": "plan-document-outline",
+      "class": "text-left text-blue-300",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-document-content",
+      "tag": "article",
+      "line": 514,
+      "parent_section_id": "plan-document-page",
+      "class": "max-h-[500px] overflow-auto p-6 text-xs leading-6 text-slate-300",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-linked-gate-context",
+      "tag": "div",
+      "line": 514,
+      "parent_section_id": "plan-document-content",
+      "class": "mb-5 hidden items-center rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-blue-200",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-linked-gate-copy",
+      "tag": "span",
+      "line": 514,
+      "parent_section_id": "plan-linked-gate-context",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-document-wave-anchor",
+      "tag": "section",
+      "line": 514,
+      "parent_section_id": "plan-document-content",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-full-dag",
+      "tag": "section",
+      "line": 517,
+      "parent_section_id": "plan-document-viewer",
+      "class": "hidden min-h-0 flex-1 flex-col",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-toolbar",
+      "tag": "div",
+      "line": 518,
+      "parent_section_id": "plan-full-dag",
+      "class": "flex shrink-0 items-center gap-2 border-b border-line px-4 py-2.5 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-document-back",
+      "tag": "button",
+      "line": 519,
+      "parent_section_id": "plan-dag-toolbar",
+      "class": "rounded-lg border border-line bg-raised px-3 py-2 text-slate-300",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-dag-search",
+      "tag": "label",
+      "line": 521,
+      "parent_section_id": "plan-dag-toolbar",
+      "class": "ml-auto flex items-center gap-2 rounded-lg border border-line bg-[#11151a] px-3 py-2 text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-collapse-branches",
+      "tag": "button",
+      "line": 522,
+      "parent_section_id": "plan-dag-toolbar",
+      "class": "rounded-lg border border-line bg-raised px-3 py-2",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-dag-zoom-out",
+      "tag": "button",
+      "line": 523,
+      "parent_section_id": "plan-dag-toolbar",
+      "class": "grid size-8 place-items-center rounded-lg border border-line bg-raised text-base",
+      "attributes": {
+        "type": "button",
+        "aria-label": "缩小"
+      }
+    },
+    {
+      "section_id": "plan-dag-zoom-in",
+      "tag": "button",
+      "line": 524,
+      "parent_section_id": "plan-dag-toolbar",
+      "class": "grid size-8 place-items-center rounded-lg border border-line bg-raised text-base",
+      "attributes": {
+        "type": "button",
+        "aria-label": "放大"
+      }
+    },
+    {
+      "section_id": "plan-dag-fit-view",
+      "tag": "button",
+      "line": 525,
+      "parent_section_id": "plan-dag-toolbar",
+      "class": "rounded-lg border border-line bg-raised px-3 py-2",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-dag-viewport",
+      "tag": "section",
+      "line": 529,
+      "parent_section_id": "plan-full-dag",
+      "class": "relative min-h-[470px] cursor-grab overflow-hidden bg-[#0f1720] active:cursor-grabbing",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-canvas",
+      "tag": "svg",
+      "line": 530,
+      "parent_section_id": "plan-dag-viewport",
+      "class": "absolute left-0 top-0 h-[620px] w-[1280px] select-none",
+      "attributes": {
+        "data-scale": "0.44",
+        "data-pan-x": "8",
+        "data-pan-y": "100",
+        "style": "transform: translate(8px, 100px) scale(.44); transform-origin: 0 0",
+        "viewbox": "0 0 1280 620",
+        "role": "img",
+        "aria-label": "可缩放和拖动的完整计划 DAG"
+      }
+    },
+    {
+      "section_id": "plan-dag-grid",
+      "tag": "pattern",
+      "line": 531,
+      "parent_section_id": "plan-dag-canvas",
+      "class": "",
+      "attributes": {
+        "width": "24",
+        "height": "24",
+        "patternunits": "userSpaceOnUse"
+      }
+    },
+    {
+      "section_id": "plan-dag-minimap",
+      "tag": "aside",
+      "line": 542,
+      "parent_section_id": "plan-dag-viewport",
+      "class": "absolute bottom-4 right-4 h-24 w-40 rounded-lg border border-line bg-[#18212b]/95 p-2 shadow-panel",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-node-details",
+      "tag": "aside",
+      "line": 545,
+      "parent_section_id": "plan-full-dag",
+      "class": "border-l border-line bg-[#171b21] p-4 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-node-title",
+      "tag": "h3",
+      "line": 545,
+      "parent_section_id": "plan-dag-node-details",
+      "class": "mt-2 text-base font-medium",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-summary",
+      "tag": "section",
+      "line": 550,
+      "parent_section_id": "plan-workbench",
+      "class": "space-y-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-overview",
+      "tag": "section",
+      "line": 551,
+      "parent_section_id": "plan-summary",
+      "class": "flex items-center gap-4 rounded-xl border border-blue-500/35 bg-blue-500/10 px-4 py-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-document-entry",
+      "tag": "button",
+      "line": 551,
+      "parent_section_id": "plan-overview",
+      "class": "ml-1 rounded-lg border border-blue-400/30 bg-[#18243a] px-3 py-2 text-blue-200",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-outcome-summary",
+      "tag": "section",
+      "line": 554,
+      "parent_section_id": "plan-summary",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-projection",
+      "tag": "section",
+      "line": 555,
+      "parent_section_id": "plan-summary",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-dag-entry",
+      "tag": "button",
+      "line": 555,
+      "parent_section_id": "plan-dag-projection",
+      "class": "ml-auto rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "plan-readiness-summaries",
+      "tag": "section",
+      "line": 558,
+      "parent_section_id": "plan-summary",
+      "class": "grid grid-cols-3 gap-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-control-envelope-summary",
+      "tag": "article",
+      "line": 558,
+      "parent_section_id": "plan-readiness-summaries",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-proof-readiness",
+      "tag": "article",
+      "line": 558,
+      "parent_section_id": "plan-readiness-summaries",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-context-health",
+      "tag": "article",
+      "line": 558,
+      "parent_section_id": "plan-readiness-summaries",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-attention-summary",
+      "tag": "section",
+      "line": 560,
+      "parent_section_id": "plan-summary",
+      "class": "rounded-xl border border-amber-500/30 bg-amber-500/5 p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "plan-change-summary",
+      "tag": "section",
+      "line": 560,
+      "parent_section_id": "plan-summary",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-workbench",
+      "tag": "section",
+      "line": 564,
+      "parent_section_id": "control-workspace-scroll-region",
+      "class": "",
+      "attributes": {
+        "data-control-surface": "execution"
+      }
+    },
+    {
+      "section_id": "execution-plan-run-overview",
+      "tag": "section",
+      "line": 565,
+      "parent_section_id": "execution-workbench",
+      "class": "overflow-hidden rounded-xl border border-line bg-panel shadow-panel",
+      "attributes": {
+        "data-plan-run-id": "plan-v4/run-08"
+      }
+    },
+    {
+      "section_id": "execution-plan-run-header",
+      "tag": "header",
+      "line": 566,
+      "parent_section_id": "execution-plan-run-overview",
+      "class": "flex items-center border-b border-line px-4 py-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-run-summary",
+      "tag": "section",
+      "line": 572,
+      "parent_section_id": "execution-plan-run-overview",
+      "class": "grid grid-cols-5 border-b border-line bg-[#151a20] text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-run-map",
+      "tag": "section",
+      "line": 581,
+      "parent_section_id": "execution-plan-run-overview",
+      "class": "border-r border-line bg-[#101821] p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-run-canvas",
+      "tag": "svg",
+      "line": 583,
+      "parent_section_id": "execution-plan-run-map",
+      "class": "mt-4 h-[420px] w-full rounded-lg border border-line bg-[#0e151d]",
+      "attributes": {
+        "style": "background-image: radial-gradient(#263443 1px, transparent 1px); background-size: 24px 24px",
+        "viewbox": "0 0 900 430",
+        "role": "img",
+        "aria-label": "计划 DAG 的 Wave 级执行状态"
+      }
+    },
+    {
+      "section_id": "execution-plan-edge-arrows",
+      "tag": "g",
+      "line": 585,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-node-goal",
+      "tag": "g",
+      "line": 586,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-wave-0",
+      "tag": "g",
+      "line": 586,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-wave-1a",
+      "tag": "g",
+      "line": 586,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-wave-1b",
+      "tag": "g",
+      "line": 586,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "cursor-pointer",
+      "attributes": {
+        "role": "button",
+        "tabindex": "0",
+        "aria-label": "查看批次 1B 的工作流运行"
+      }
+    },
+    {
+      "section_id": "execution-plan-wave-2",
+      "tag": "g",
+      "line": 586,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-gate",
+      "tag": "g",
+      "line": 586,
+      "parent_section_id": "execution-plan-run-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-frontier",
+      "tag": "aside",
+      "line": 591,
+      "parent_section_id": "execution-plan-run-overview",
+      "class": "flex min-w-0 flex-col bg-[#171b21] p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-plan-wave-outcome",
+      "tag": "section",
+      "line": 594,
+      "parent_section_id": "execution-plan-frontier",
+      "class": "mt-4 rounded-lg border border-line bg-raised p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-run-detail",
+      "tag": "section",
+      "line": 600,
+      "parent_section_id": "execution-workbench",
+      "class": "hidden space-y-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-run-toolbar",
+      "tag": "div",
+      "line": 601,
+      "parent_section_id": "execution-wave-run-detail",
+      "class": "relative",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-level-breadcrumb",
+      "tag": "nav",
+      "line": 602,
+      "parent_section_id": "execution-wave-run-toolbar",
+      "class": "flex items-center rounded-xl border border-line bg-panel px-4 py-3 text-xs",
+      "attributes": {
+        "aria-label": "执行层级"
+      }
+    },
+    {
+      "section_id": "execution-wave-run-back",
+      "tag": "button",
+      "line": 602,
+      "parent_section_id": "execution-level-breadcrumb",
+      "class": "text-blue-300",
+      "attributes": {
+        "type": "button"
+      }
+    },
+    {
+      "section_id": "execution-wave-run-metadata-toggle",
+      "tag": "button",
+      "line": 602,
+      "parent_section_id": "execution-level-breadcrumb",
+      "class": "ml-3 inline-flex h-8 w-[92px] items-center justify-center gap-1.5 rounded-lg border border-line bg-raised text-slate-300",
+      "attributes": {
+        "type": "button",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "section_id": "execution-wave-run-metadata-chevron",
+      "tag": "svg",
+      "line": 602,
+      "parent_section_id": "execution-wave-run-metadata-toggle",
+      "class": "size-[14px] shrink-0 transition-transform duration-150",
+      "attributes": {
+        "viewbox": "0 0 20 20",
+        "fill": "none",
+        "stroke": "currentColor",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stroke-width": "1.8"
+      }
+    },
+    {
+      "section_id": "execution-wave-run-analysis-link",
+      "tag": "a",
+      "line": 602,
+      "parent_section_id": "execution-level-breadcrumb",
+      "class": "ml-2 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-1.5 text-blue-300",
+      "attributes": {
+        "href": "crystra-analysis-audit-v7.html?plan_run_id=plan-v4%2Frun-08&wave_id=wave-1b&workflow_run_id=workflow-v3%2Frun-08&trace_root_id=trace-7f42a"
+      }
+    },
+    {
+      "section_id": "execution-wave-run-metadata",
+      "tag": "section",
+      "line": 603,
+      "parent_section_id": "execution-wave-run-toolbar",
+      "class": "absolute right-0 top-full z-30 mt-2 hidden w-[620px] rounded-xl border border-line bg-[#1a1e24]/[.98] px-4 py-3 shadow-2xl backdrop-blur",
+      "attributes": {
+        "data-plan-run-id": "plan-v4/run-08",
+        "data-wave-id": "wave-1b",
+        "data-workflow-id": "build-sign@v3",
+        "data-workflow-run-id": "workflow-v3/run-08",
+        "data-trace-root-id": "trace-7f42a"
+      }
+    },
+    {
+      "section_id": "execution-wave-metadata-plan-run",
+      "tag": "div",
+      "line": 606,
+      "parent_section_id": "execution-wave-run-metadata",
+      "class": "grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-copy-plan-run",
+      "tag": "button",
+      "line": 606,
+      "parent_section_id": "execution-wave-metadata-plan-run",
+      "class": "grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300",
+      "attributes": {
+        "data-wave-copy-value": "plan-v4/run-08",
+        "type": "button",
+        "title": "复制 Plan Run",
+        "aria-label": "复制 Plan Run"
+      }
+    },
+    {
+      "section_id": "execution-wave-metadata-wave",
+      "tag": "div",
+      "line": 607,
+      "parent_section_id": "execution-wave-run-metadata",
+      "class": "grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-copy-wave",
+      "tag": "button",
+      "line": 607,
+      "parent_section_id": "execution-wave-metadata-wave",
+      "class": "grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300",
+      "attributes": {
+        "data-wave-copy-value": "wave-1b",
+        "type": "button",
+        "title": "复制 Wave",
+        "aria-label": "复制 Wave"
+      }
+    },
+    {
+      "section_id": "execution-wave-metadata-workflow",
+      "tag": "div",
+      "line": 608,
+      "parent_section_id": "execution-wave-run-metadata",
+      "class": "grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-copy-workflow",
+      "tag": "button",
+      "line": 608,
+      "parent_section_id": "execution-wave-metadata-workflow",
+      "class": "grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300",
+      "attributes": {
+        "data-wave-copy-value": "build-sign@v3",
+        "type": "button",
+        "title": "复制 Workflow 定义",
+        "aria-label": "复制 Workflow 定义"
+      }
+    },
+    {
+      "section_id": "execution-wave-metadata-run",
+      "tag": "div",
+      "line": 609,
+      "parent_section_id": "execution-wave-run-metadata",
+      "class": "grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-copy-run",
+      "tag": "button",
+      "line": 609,
+      "parent_section_id": "execution-wave-metadata-run",
+      "class": "grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300",
+      "attributes": {
+        "data-wave-copy-value": "workflow-v3/run-08",
+        "type": "button",
+        "title": "复制 Workflow Run",
+        "aria-label": "复制 Workflow Run"
+      }
+    },
+    {
+      "section_id": "execution-wave-metadata-trace-root",
+      "tag": "div",
+      "line": 610,
+      "parent_section_id": "execution-wave-run-metadata",
+      "class": "grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-wave-copy-trace-root",
+      "tag": "button",
+      "line": 610,
+      "parent_section_id": "execution-wave-metadata-trace-root",
+      "class": "grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300",
+      "attributes": {
+        "data-wave-copy-value": "trace-7f42a",
+        "type": "button",
+        "title": "复制 Trace Root",
+        "aria-label": "复制 Trace Root"
+      }
+    },
+    {
+      "section_id": "execution-dashboard",
+      "tag": "section",
+      "line": 614,
+      "parent_section_id": "execution-wave-run-detail",
+      "class": "overflow-hidden rounded-xl border border-line bg-panel shadow-panel",
+      "attributes": {
+        "data-runtime-pace": "slow"
+      }
+    },
+    {
+      "section_id": "execution-dashboard-header",
+      "tag": "header",
+      "line": 615,
+      "parent_section_id": "execution-dashboard",
+      "class": "flex items-center border-b border-line px-4 py-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-dashboard-health",
+      "tag": "div",
+      "line": 618,
+      "parent_section_id": "execution-dashboard-header",
+      "class": "ml-auto mr-3 flex items-center gap-3 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-effects-toggle",
+      "tag": "button",
+      "line": 619,
+      "parent_section_id": "execution-dashboard-header",
+      "class": "flex items-center gap-2 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-xs text-blue-200",
+      "attributes": {
+        "type": "button",
+        "aria-pressed": "true"
+      }
+    },
+    {
+      "section_id": "execution-effects-indicator",
+      "tag": "span",
+      "line": 619,
+      "parent_section_id": "execution-effects-toggle",
+      "class": "size-2 rounded-full bg-blue-400 shadow-[0_0_10px_#60a5fa]",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-effects-label",
+      "tag": "span",
+      "line": 619,
+      "parent_section_id": "execution-effects-toggle",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-observability-slots",
+      "tag": "section",
+      "line": 622,
+      "parent_section_id": "execution-dashboard",
+      "class": "flex items-center gap-2 border-b border-line bg-[#151a20] px-4 py-2 text-[11px]",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-speed-signal",
+      "tag": "button",
+      "line": 624,
+      "parent_section_id": "execution-observability-slots",
+      "class": "flex items-center gap-2 rounded-md border px-2.5 py-1.5",
+      "attributes": {
+        "type": "button",
+        "data-signal-source": "runtime-duration/median-5-runs",
+        "data-runtime-pace": "slow"
+      }
+    },
+    {
+      "section_id": "execution-speed-signal-dot",
+      "tag": "span",
+      "line": 624,
+      "parent_section_id": "execution-speed-signal",
+      "class": "size-1.5 rounded-full",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-speed-signal-copy",
+      "tag": "span",
+      "line": 624,
+      "parent_section_id": "execution-speed-signal",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-error-signal",
+      "tag": "div",
+      "line": 625,
+      "parent_section_id": "execution-observability-slots",
+      "class": "flex items-center gap-2 rounded-md border border-red-500/25 bg-red-500/10 px-2.5 py-1.5 text-red-200",
+      "attributes": {
+        "data-signal-source": "runtime-error-count"
+      }
+    },
+    {
+      "section_id": "execution-observability-extension-slot",
+      "tag": "div",
+      "line": 626,
+      "parent_section_id": "execution-observability-slots",
+      "class": "ml-auto rounded-md border border-dashed border-slate-600 px-2.5 py-1.5 text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-workflow-run-map",
+      "tag": "section",
+      "line": 630,
+      "parent_section_id": "execution-dashboard",
+      "class": "flex min-w-0 flex-col border-r border-line bg-[#101821]",
+      "attributes": {
+        "data-workflow-run-id": "workflow-v3/run-08",
+        "data-effects": "on",
+        "data-runtime-pace": "slow"
+      }
+    },
+    {
+      "section_id": "execution-run-map-heading",
+      "tag": "div",
+      "line": 631,
+      "parent_section_id": "execution-workflow-run-map",
+      "class": "flex items-center px-4 pt-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-legend-success",
+      "tag": "span",
+      "line": 631,
+      "parent_section_id": "execution-run-map-heading",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-legend-running",
+      "tag": "span",
+      "line": 631,
+      "parent_section_id": "execution-run-map-heading",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-legend-failed",
+      "tag": "span",
+      "line": 631,
+      "parent_section_id": "execution-run-map-heading",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-legend-paused",
+      "tag": "span",
+      "line": 631,
+      "parent_section_id": "execution-run-map-heading",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-legend-gate",
+      "tag": "span",
+      "line": 631,
+      "parent_section_id": "execution-run-map-heading",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-run-map-viewport",
+      "tag": "div",
+      "line": 633,
+      "parent_section_id": "execution-workflow-run-map",
+      "class": "min-h-0 flex-1 p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-run-map-canvas",
+      "tag": "svg",
+      "line": 634,
+      "parent_section_id": "execution-run-map-viewport",
+      "class": "h-full min-h-[390px] w-full rounded-lg border border-line bg-[#0e151d]",
+      "attributes": {
+        "style": "background-image: radial-gradient(#263443 1px, transparent 1px); background-size: 24px 24px",
+        "viewbox": "0 0 920 500",
+        "role": "img",
+        "aria-label": "按状态区分连接线并带有扫光动效的工作流运行路径"
+      }
+    },
+    {
+      "section_id": "execution-observed-path",
+      "tag": "g",
+      "line": 636,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-edge-success",
+      "tag": "g",
+      "line": 637,
+      "parent_section_id": "execution-observed-path",
+      "class": "",
+      "attributes": {
+        "fill": "none",
+        "stroke": "#2f9f70",
+        "stroke-width": "3"
+      }
+    },
+    {
+      "section_id": "execution-edge-running",
+      "tag": "g",
+      "line": 638,
+      "parent_section_id": "execution-observed-path",
+      "class": "",
+      "attributes": {
+        "fill": "none",
+        "stroke": "#3487e8",
+        "stroke-width": "3"
+      }
+    },
+    {
+      "section_id": "execution-edge-degraded",
+      "tag": "path",
+      "line": 639,
+      "parent_section_id": "execution-observed-path",
+      "class": "",
+      "attributes": {
+        "d": "M310 242H380"
+      }
+    },
+    {
+      "section_id": "execution-edge-failed",
+      "tag": "g",
+      "line": 640,
+      "parent_section_id": "execution-observed-path",
+      "class": "",
+      "attributes": {
+        "fill": "none",
+        "stroke": "#e25b5b",
+        "stroke-width": "3",
+        "stroke-dasharray": "8 5"
+      }
+    },
+    {
+      "section_id": "execution-edge-paused",
+      "tag": "g",
+      "line": 641,
+      "parent_section_id": "execution-observed-path",
+      "class": "",
+      "attributes": {
+        "fill": "none",
+        "stroke": "#66717f",
+        "stroke-width": "2",
+        "stroke-dasharray": "4 7"
+      }
+    },
+    {
+      "section_id": "execution-next-action-frontier",
+      "tag": "g",
+      "line": 643,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {
+        "fill": "none",
+        "stroke": "#66717f",
+        "stroke-width": "2",
+        "stroke-dasharray": "4 7",
+        "opacity": ".72"
+      }
+    },
+    {
+      "section_id": "execution-flow-particles",
+      "tag": "g",
+      "line": 645,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-dashoffset": "0"
+      }
+    },
+    {
+      "section_id": "execution-running-sweep",
+      "tag": "g",
+      "line": 646,
+      "parent_section_id": "execution-flow-particles",
+      "class": "",
+      "attributes": {
+        "stroke": "#73c6ff"
+      }
+    },
+    {
+      "section_id": "execution-degraded-sweep",
+      "tag": "g",
+      "line": 647,
+      "parent_section_id": "execution-flow-particles",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-edge-arrowheads",
+      "tag": "g",
+      "line": 650,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-pace-arrowhead",
+      "tag": "path",
+      "line": 650,
+      "parent_section_id": "execution-edge-arrowheads",
+      "class": "",
+      "attributes": {
+        "d": "M380 242l-10-6v12Z"
+      }
+    },
+    {
+      "section_id": "execution-node-goal",
+      "tag": "g",
+      "line": 652,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-node-rules",
+      "tag": "g",
+      "line": 653,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-node-security",
+      "tag": "g",
+      "line": 654,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-node-build",
+      "tag": "g",
+      "line": 655,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-running-halo",
+      "tag": "rect",
+      "line": 655,
+      "parent_section_id": "execution-node-build",
+      "class": "",
+      "attributes": {
+        "x": "372",
+        "y": "170",
+        "width": "141",
+        "height": "80",
+        "rx": "15",
+        "fill": "none",
+        "stroke-width": "6",
+        "opacity": ".5"
+      }
+    },
+    {
+      "section_id": "execution-current-node-body",
+      "tag": "rect",
+      "line": 655,
+      "parent_section_id": "execution-node-build",
+      "class": "",
+      "attributes": {
+        "x": "380",
+        "y": "178",
+        "width": "125",
+        "height": "64",
+        "rx": "10",
+        "fill": "#2c2518",
+        "stroke": "#d49b32",
+        "stroke-width": "2"
+      }
+    },
+    {
+      "section_id": "execution-current-node-map-status",
+      "tag": "text",
+      "line": 655,
+      "parent_section_id": "execution-node-build",
+      "class": "",
+      "attributes": {
+        "x": "396",
+        "y": "200",
+        "fill": "#f1bf55",
+        "font-size": "10"
+      }
+    },
+    {
+      "section_id": "execution-node-docs",
+      "tag": "g",
+      "line": 656,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-error-halo",
+      "tag": "rect",
+      "line": 656,
+      "parent_section_id": "execution-node-docs",
+      "class": "",
+      "attributes": {
+        "x": "372",
+        "y": "290",
+        "width": "141",
+        "height": "80",
+        "rx": "15",
+        "fill": "#e25b5b",
+        "stroke": "#ff7474",
+        "opacity": ".25"
+      }
+    },
+    {
+      "section_id": "execution-node-paused",
+      "tag": "g",
+      "line": 657,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-node-sandbox",
+      "tag": "g",
+      "line": 658,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-loop-control",
+      "tag": "g",
+      "line": 660,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-loop-decision",
+      "tag": "g",
+      "line": 661,
+      "parent_section_id": "execution-loop-control",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-loop-return",
+      "tag": "path",
+      "line": 662,
+      "parent_section_id": "execution-loop-control",
+      "class": "",
+      "attributes": {
+        "d": "M770 264V468H350V210H380",
+        "fill": "none",
+        "stroke": "#d49b32",
+        "stroke-width": "2.5",
+        "stroke-dasharray": "7 6"
+      }
+    },
+    {
+      "section_id": "execution-node-gate",
+      "tag": "g",
+      "line": 664,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {
+        "opacity": ".72"
+      }
+    },
+    {
+      "section_id": "execution-run-frontier",
+      "tag": "g",
+      "line": 666,
+      "parent_section_id": "execution-run-map-canvas",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-run-event-strip",
+      "tag": "footer",
+      "line": 670,
+      "parent_section_id": "execution-workflow-run-map",
+      "class": "flex items-center border-t border-line px-4 py-3 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-run-pace-copy",
+      "tag": "span",
+      "line": 670,
+      "parent_section_id": "execution-run-event-strip",
+      "class": "ml-auto",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node",
+      "tag": "aside",
+      "line": 673,
+      "parent_section_id": "execution-dashboard",
+      "class": "flex min-w-0 flex-col bg-[#171b21] p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-status",
+      "tag": "span",
+      "line": 674,
+      "parent_section_id": "execution-current-node",
+      "class": "ml-auto rounded bg-amber-500/10 px-2 py-1 text-xs text-warning",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-progress",
+      "tag": "section",
+      "line": 676,
+      "parent_section_id": "execution-current-node",
+      "class": "mt-5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-progress-value",
+      "tag": "span",
+      "line": 676,
+      "parent_section_id": "execution-current-node-progress",
+      "class": "ml-auto",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-progress-bar",
+      "tag": "div",
+      "line": 676,
+      "parent_section_id": "execution-current-node-progress",
+      "class": "h-full w-[68%] rounded-full transition-colors",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-duration-copy",
+      "tag": "p",
+      "line": 676,
+      "parent_section_id": "execution-current-node-progress",
+      "class": "mt-2 text-[11px] text-muted",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-output",
+      "tag": "section",
+      "line": 678,
+      "parent_section_id": "execution-current-node",
+      "class": "mt-5 rounded-lg border border-line bg-raised p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-checks",
+      "tag": "section",
+      "line": 680,
+      "parent_section_id": "execution-current-node",
+      "class": "mt-4 space-y-2 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-active-check",
+      "tag": "div",
+      "line": 680,
+      "parent_section_id": "execution-current-node-checks",
+      "class": "flex rounded-lg border px-3 py-2.5",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-current-node-active-dot",
+      "tag": "span",
+      "line": 680,
+      "parent_section_id": "execution-current-node-active-check",
+      "class": "",
+      "attributes": {}
+    },
+    {
+      "section_id": "execution-next-boundary",
+      "tag": "section",
+      "line": 682,
+      "parent_section_id": "execution-current-node",
+      "class": "mt-auto rounded-lg border border-amber-500/25 bg-amber-500/5 p-3",
+      "attributes": {}
+    },
+    {
+      "section_id": "delivery-workbench",
+      "tag": "section",
+      "line": 689,
+      "parent_section_id": "control-workspace-scroll-region",
+      "class": "space-y-3",
+      "attributes": {
+        "data-control-surface": "delivery"
+      }
+    },
+    {
+      "section_id": "delivery-current-readiness",
+      "tag": "section",
+      "line": 690,
+      "parent_section_id": "delivery-workbench",
+      "class": "flex items-center gap-4 rounded-xl border border-emerald-500/35 bg-emerald-500/10 px-4 py-3",
+      "attributes": {
+        "data-deliverability": "ready"
+      }
+    },
+    {
+      "section_id": "delivery-readiness-invalidated-by-input",
+      "tag": "section",
+      "line": 691,
+      "parent_section_id": "delivery-workbench",
+      "class": "flex items-center rounded-xl border border-blue-500/25 bg-blue-500/5 px-4 py-3 text-xs",
+      "attributes": {}
+    },
+    {
+      "section_id": "delivery-artifacts",
+      "tag": "section",
+      "line": 692,
+      "parent_section_id": "delivery-workbench",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "delivery-acceptance",
+      "tag": "section",
+      "line": 692,
+      "parent_section_id": "delivery-workbench",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "delivery-residual-risk",
+      "tag": "section",
+      "line": 693,
+      "parent_section_id": "delivery-workbench",
+      "class": "rounded-xl border border-amber-500/25 bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "delivery-economics",
+      "tag": "section",
+      "line": 693,
+      "parent_section_id": "delivery-workbench",
+      "class": "rounded-xl border border-line bg-panel p-4",
+      "attributes": {}
+    },
+    {
+      "section_id": "better-sidebar-edge-handle",
+      "tag": "div",
+      "line": 700,
+      "parent_section_id": "app-shell",
+      "class": "",
+      "attributes": {
+        "data-edge": "bottom",
+        "data-open": "false",
+        "data-armed": "false",
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "better-sidebar-toggle",
+      "tag": "button",
+      "line": 701,
+      "parent_section_id": "better-sidebar-edge-handle",
+      "class": "",
+      "attributes": {
+        "type": "button",
+        "aria-label": "展开文件工具面",
+        "aria-expanded": "false",
+        "title": "文件工具面"
+      }
+    },
+    {
+      "section_id": "better-sidebar-handle-icon",
+      "tag": "svg",
+      "line": 702,
+      "parent_section_id": "better-sidebar-toggle",
+      "class": "",
+      "attributes": {
+        "width": "16",
+        "height": "16",
+        "viewbox": "0 0 16 16",
+        "fill": "none",
+        "aria-hidden": "true"
+      }
+    },
+    {
+      "section_id": "better-sidebar-surface",
+      "tag": "aside",
+      "line": 706,
+      "parent_section_id": "app-shell",
+      "class": "min-h-0 min-w-0 flex-col overflow-hidden border-l border-line bg-[#12151a] shadow-[-18px_0_40px_rgba(0,0,0,.22)]",
+      "attributes": {
+        "data-provider": "dsh-better-sidebar",
+        "data-density": "compact",
+        "hidden": null
+      }
+    },
+    {
+      "section_id": "better-sidebar-close",
+      "tag": "button",
+      "line": 710,
+      "parent_section_id": "better-sidebar-surface",
+      "class": "ml-auto grid size-7 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-white",
+      "attributes": {
+        "type": "button",
+        "aria-label": "关闭文件工具面"
+      }
+    },
+    {
+      "section_id": "better-sidebar-host-slot",
+      "tag": "div",
+      "line": 712,
+      "parent_section_id": "better-sidebar-surface",
+      "class": "grid min-h-0 flex-1",
+      "attributes": {}
+    }
+  ]
+}

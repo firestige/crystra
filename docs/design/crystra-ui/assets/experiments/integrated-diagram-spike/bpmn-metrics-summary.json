@@ -1,0 +1,16 @@
+{
+  "stable": {
+    "planes": 9,
+    "crossings": 0,
+    "blocked": 12,
+    "nodeOverlaps": 0,
+    "nonOrthogonal": 0
+  },
+  "next": {
+    "planes": 24,
+    "crossings": 0,
+    "blocked": 0,
+    "nodeOverlaps": 0,
+    "nonOrthogonal": 0
+  }
+}

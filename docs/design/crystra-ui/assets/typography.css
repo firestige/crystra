@@ -1,0 +1,85 @@
+/* Accepted balanced typography. Legacy utility sizes are overridden by semantic roles. */
+:root[data-typography="balanced"] {
+  --type-scale-11: 11px;
+  --type-scale-12: 12px;
+  --type-scale-13: 13px;
+  --type-scale-14: 14px;
+  --type-scale-16: 16px;
+  --type-scale-18: 18px;
+  --type-scale-20: 20px;
+  --type-scale-24: 24px;
+  --type-page-title-size: var(--type-scale-24);
+  --type-page-title-line: 32px;
+  --type-page-title-weight: 600;
+  --type-section-title-size: var(--type-scale-18);
+  --type-section-title-line: 26px;
+  --type-section-title-weight: 600;
+  --type-card-title-size: var(--type-scale-16);
+  --type-card-title-line: 24px;
+  --type-card-title-weight: 600;
+  --type-item-title-size: var(--type-scale-14);
+  --type-item-title-line: 20px;
+  --type-item-title-weight: 500;
+  --type-body-size: var(--type-scale-14);
+  --type-body-line: 24px;
+  --type-body-weight: 400;
+  --type-body-compact-size: var(--type-scale-14);
+  --type-body-compact-line: 20px;
+  --type-body-compact-weight: 400;
+  --type-header-description-size: var(--type-scale-14);
+  --type-header-description-line: 22px;
+  --type-header-description-weight: 400;
+  --type-description-size: var(--type-scale-12);
+  --type-description-line: 18px;
+  --type-description-weight: 400;
+  --type-meta-size: var(--type-scale-12);
+  --type-meta-line: 18px;
+  --type-meta-weight: 400;
+  --type-label-size: var(--type-scale-12);
+  --type-label-line: 18px;
+  --type-label-weight: 600;
+  --type-control-size: var(--type-scale-14);
+  --type-control-line: 20px;
+  --type-control-weight: 500;
+  --type-code-size: var(--type-scale-12);
+  --type-code-line: 20px;
+  --type-code-weight: 400;
+  --type-metric-size: var(--type-scale-20);
+  --type-metric-line: 28px;
+  --type-metric-weight: 500;
+  --type-brand-size: var(--type-scale-20);
+  --type-brand-line: 28px;
+  --type-brand-weight: 600;
+  --type-badge-size: var(--type-scale-11);
+  --type-badge-line: 14px;
+  --type-badge-weight: 500;
+  --type-graph-title-size: var(--type-scale-13);
+  --type-graph-title-line: 18px;
+  --type-graph-title-weight: 500;
+  --type-graph-meta-size: var(--type-scale-11);
+  --type-graph-meta-line: 16px;
+  --type-graph-meta-weight: 400;
+}
+:root:not([data-typography="original"]) [data-type="page-title"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-page-title-size) !important; line-height: var(--type-page-title-line) !important; font-weight: var(--type-page-title-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="section-title"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-section-title-size) !important; line-height: var(--type-section-title-line) !important; font-weight: var(--type-section-title-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="card-title"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-card-title-size) !important; line-height: var(--type-card-title-line) !important; font-weight: var(--type-card-title-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="item-title"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-item-title-size) !important; line-height: var(--type-item-title-line) !important; font-weight: var(--type-item-title-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="body"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-body-size) !important; line-height: var(--type-body-line) !important; font-weight: var(--type-body-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="body-compact"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-body-compact-size) !important; line-height: var(--type-body-compact-line) !important; font-weight: var(--type-body-compact-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="header-description"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-header-description-size) !important; line-height: var(--type-header-description-line) !important; font-weight: var(--type-header-description-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="description"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-description-size) !important; line-height: var(--type-description-line) !important; font-weight: var(--type-description-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="meta"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-meta-size) !important; line-height: var(--type-meta-line) !important; font-weight: var(--type-meta-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="label"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-label-size) !important; line-height: var(--type-label-line) !important; font-weight: var(--type-label-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="control"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-control-size) !important; line-height: var(--type-control-line) !important; font-weight: var(--type-control-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="code"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-code-size) !important; line-height: var(--type-code-line) !important; font-weight: var(--type-code-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="metric"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-metric-size) !important; line-height: var(--type-metric-line) !important; font-weight: var(--type-metric-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="brand"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-brand-size) !important; line-height: var(--type-brand-line) !important; font-weight: var(--type-brand-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="badge"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-badge-size) !important; line-height: var(--type-badge-line) !important; font-weight: var(--type-badge-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="graph-title"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-graph-title-size) !important; line-height: var(--type-graph-title-line) !important; font-weight: var(--type-graph-title-weight) !important; letter-spacing: 0 !important; }
+:root:not([data-typography="original"]) [data-type="graph-meta"]:not([data-host-owned], [data-host-owned] *) { font-size: var(--type-graph-meta-size) !important; line-height: var(--type-graph-meta-line) !important; font-weight: var(--type-graph-meta-weight) !important; letter-spacing: 0 !important; }
+/* Existing icon glyphs retain their visual size; they are not textual headings. */
+:root:not([data-typography="original"]) [data-type="glyph"]:not([data-host-owned], [data-host-owned] *) { font-size: 20px !important; line-height: 1 !important; }
+:root:not([data-typography="original"]) [data-type="code"]:not([data-host-owned], [data-host-owned] *) { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+:root:not([data-typography="original"]) .sidebar-rail-badge { font-size: var(--type-badge-size); line-height: var(--type-badge-line); }
+:root:not([data-typography="original"]) [data-section-id="sidebar-tooltip"] { font-size: var(--type-meta-size); line-height: var(--type-meta-line); }
+:root:not([data-typography="original"]) [data-type="glyph"]:not([data-host-owned], [data-host-owned] *)[data-glyph-size="18"] { font-size: 18px !important; }

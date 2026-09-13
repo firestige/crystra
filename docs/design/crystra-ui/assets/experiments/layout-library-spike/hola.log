@@ -1,0 +1,132 @@
+{
+  name: 'development',
+  scope: null,
+  ms: 1382.140625,
+  inputNodes: 7,
+  outputNodes: 7,
+  inputEdges: 8,
+  outputEdges: 8,
+  forwardViolations: 2,
+  file: 'hola-output/development-root'
+}
+{
+  name: 'development',
+  scope: 'plan',
+  ms: 15.488583999999946,
+  inputNodes: 7,
+  outputNodes: 7,
+  inputEdges: 7,
+  outputEdges: 7,
+  forwardViolations: 2,
+  file: 'hola-output/development-plan'
+}
+{
+  name: 'development',
+  scope: 'work',
+  ms: 10.411624999999958,
+  inputNodes: 6,
+  outputNodes: 6,
+  inputEdges: 6,
+  outputEdges: 6,
+  forwardViolations: 1,
+  file: 'hola-output/development-work'
+}
+{
+  name: 'development',
+  scope: 'delivery',
+  ms: 10.400209000000132,
+  inputNodes: 7,
+  outputNodes: 7,
+  inputEdges: 7,
+  outputEdges: 7,
+  forwardViolations: 7,
+  file: 'hola-output/development-delivery'
+}
+{
+  name: 'development',
+  scope: 'tdd',
+  ms: 9.697333000000071,
+  inputNodes: 7,
+  outputNodes: 7,
+  inputEdges: 8,
+  outputEdges: 8,
+  forwardViolations: 5,
+  file: 'hola-output/development-tdd'
+}
+{
+  name: 'architecture',
+  scope: null,
+  ms: 4.02858399999991,
+  inputNodes: 5,
+  outputNodes: 5,
+  inputEdges: 4,
+  outputEdges: 4,
+  forwardViolations: 4,
+  file: 'hola-output/architecture-root'
+}
+{
+  name: 'architecture',
+  scope: 'explore',
+  ms: 3.546041999999943,
+  inputNodes: 4,
+  outputNodes: 4,
+  inputEdges: 3,
+  outputEdges: 3,
+  forwardViolations: 3,
+  file: 'hola-output/architecture-explore'
+}
+{
+  name: 'architecture',
+  scope: 'architecture',
+  ms: 7.699583999999959,
+  inputNodes: 6,
+  outputNodes: 6,
+  inputEdges: 6,
+  outputEdges: 6,
+  forwardViolations: 1,
+  file: 'hola-output/architecture-architecture'
+}
+{
+  name: 'architecture',
+  scope: 'reviewing',
+  ms: 7.251458999999841,
+  inputNodes: 6,
+  outputNodes: 6,
+  inputEdges: 6,
+  outputEdges: 6,
+  forwardViolations: 6,
+  file: 'hola-output/architecture-reviewing'
+}
+{
+  name: 'research',
+  scope: null,
+  ms: 3.6327920000001086,
+  inputNodes: 5,
+  outputNodes: 5,
+  inputEdges: 4,
+  outputEdges: 4,
+  forwardViolations: 4,
+  file: 'hola-output/research-root'
+}
+{
+  name: 'research',
+  scope: 'collect',
+  ms: 10.220916999999872,
+  inputNodes: 8,
+  outputNodes: 8,
+  inputEdges: 9,
+  outputEdges: 9,
+  forwardViolations: 4,
+  file: 'hola-output/research-collect'
+}
+{
+  name: 'research',
+  scope: 'compute',
+  ms: 7.263124999999945,
+  inputNodes: 6,
+  outputNodes: 6,
+  inputEdges: 6,
+  outputEdges: 6,
+  forwardViolations: 1,
+  file: 'hola-output/research-compute'
+}

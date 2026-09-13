@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cytoscape": "^3.34.3",
+    "cytoscape-fcose": "^2.2.0",
+    "libavoid-js": "^0.5.0-beta.5",
+    "webcola": "^3.4.0"
+  }
+}

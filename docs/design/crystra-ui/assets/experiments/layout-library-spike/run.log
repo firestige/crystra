@@ -1,0 +1,92 @@
+development null RIGHT done
+development null DOWN done
+development plan RIGHT done
+development plan DOWN done
+development work RIGHT done
+development work DOWN done
+development delivery RIGHT done
+development delivery DOWN done
+development tdd RIGHT done
+development tdd DOWN done
+architecture null RIGHT done
+architecture null DOWN done
+architecture explore RIGHT done
+architecture explore DOWN done
+architecture architecture RIGHT done
+architecture architecture DOWN done
+architecture reviewing RIGHT done
+architecture reviewing DOWN done
+research null RIGHT done
+research null DOWN done
+research collect RIGHT done
+research collect DOWN done
+research compute RIGHT done
+research compute DOWN done
+{
+  'elk / native': {
+    cases: 24,
+    failures: 0,
+    crossings: 0,
+    nodeOverlaps: 0,
+    blocked: 0,
+    violations: 0,
+    nonOrthogonal: 0,
+    maxPlacementMs: 68.31,
+    maxRoutingMs: 0.04
+  },
+  'elk / avoid': {
+    cases: 24,
+    failures: 0,
+    crossings: 0,
+    nodeOverlaps: 0,
+    blocked: 0,
+    violations: 0,
+    nonOrthogonal: 0,
+    maxPlacementMs: 68.31,
+    maxRoutingMs: 6.14
+  },
+  'webcola-basic / avoid': {
+    cases: 24,
+    failures: 0,
+    crossings: 0,
+    nodeOverlaps: 0,
+    blocked: 0,
+    violations: 0,
+    nonOrthogonal: 0,
+    maxPlacementMs: 37.59,
+    maxRoutingMs: 1.31
+  },
+  'webcola / avoid': {
+    cases: 24,
+    failures: 0,
+    crossings: 1,
+    nodeOverlaps: 0,
+    blocked: 0,
+    violations: 0,
+    nonOrthogonal: 0,
+    maxPlacementMs: 16.43,
+    maxRoutingMs: 1.27
+  },
+  'fcose / avoid': {
+    cases: 24,
+    failures: 0,
+    crossings: 4,
+    nodeOverlaps: 0,
+    blocked: 0,
+    violations: 0,
+    nonOrthogonal: 0,
+    maxPlacementMs: 17.29,
+    maxRoutingMs: 1.97
+  },
+  'libcola / avoid': {
+    cases: 24,
+    failures: 0,
+    crossings: 2,
+    nodeOverlaps: 0,
+    blocked: 2,
+    violations: 0,
+    nonOrthogonal: 0,
+    maxPlacementMs: 1391.64,
+    maxRoutingMs: 2.38
+  }
+}

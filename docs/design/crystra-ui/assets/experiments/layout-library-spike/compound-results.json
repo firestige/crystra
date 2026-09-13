@@ -1,0 +1,4952 @@
+[
+  {
+    "name": "development",
+    "direction": "RIGHT",
+    "engine": "elk",
+    "ms": 99.59,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 124,
+        "y": 414.66666666666663
+      },
+      {
+        "id": "plan",
+        "kind": "group",
+        "title": "理解与设计",
+        "width": 600,
+        "height": 221.33333333333331,
+        "x": 501,
+        "y": 454.66666666666663
+      },
+      {
+        "id": "read",
+        "kind": "activity",
+        "title": "理解需求与系统设计",
+        "description": "理解需求与系统设计的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 305,
+        "y": 400
+      },
+      {
+        "id": "clear",
+        "kind": "decision",
+        "title": "材料足够？",
+        "description": "材料足够？的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "width": 136,
+        "height": 136,
+        "x": 485,
+        "y": 485.3333333333333
+      },
+      {
+        "id": "ask",
+        "kind": "activity",
+        "title": "澄清缺口",
+        "description": "澄清缺口的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 653,
+        "y": 400
+      },
+      {
+        "id": "design",
+        "kind": "activity",
+        "title": "完成详细设计与测试目标",
+        "description": "完成详细设计与测试目标的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 216,
+        "height": 88,
+        "x": 681,
+        "y": 508
+      },
+      {
+        "id": "work",
+        "kind": "group",
+        "title": "逐单元实现",
+        "width": 1100,
+        "height": 395,
+        "x": 1409,
+        "y": 220.5
+      },
+      {
+        "id": "next",
+        "kind": "decision",
+        "title": "还有实现单元？",
+        "description": "还有实现单元？的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "width": 136,
+        "height": 136,
+        "x": 939,
+        "y": 338
+      },
+      {
+        "id": "tdd",
+        "kind": "group",
+        "title": "测试与实现循环",
+        "parent": "work",
+        "width": 710,
+        "height": 280,
+        "x": 1567,
+        "y": 175
+      },
+      {
+        "id": "red",
+        "kind": "activity",
+        "title": "编写并校准测试",
+        "description": "编写并校准测试的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1650,
+        "y": 259
+      },
+      {
+        "id": "green",
+        "kind": "activity",
+        "title": "完成最小实现",
+        "description": "完成最小实现的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1830,
+        "y": 201.8
+      },
+      {
+        "id": "pass",
+        "kind": "decision",
+        "title": "测试通过？",
+        "description": "测试通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 1292,
+        "y": 149
+      },
+      {
+        "id": "refactor",
+        "kind": "activity",
+        "title": "重构并运行回归",
+        "description": "重构并运行回归的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1470,
+        "y": 115
+      },
+      {
+        "id": "stable",
+        "kind": "decision",
+        "title": "回归通过？",
+        "description": "回归通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 1654,
+        "y": 115
+      },
+      {
+        "id": "choose",
+        "kind": "activity",
+        "title": "选择待实现单元",
+        "description": "选择待实现单元的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1107,
+        "y": 259
+      },
+      {
+        "id": "delivery",
+        "kind": "group",
+        "title": "测试与复核",
+        "width": 724,
+        "height": 220,
+        "x": 2379,
+        "y": 411.3333333333333
+      },
+      {
+        "id": "pack",
+        "kind": "activity",
+        "title": "汇总测试结果",
+        "description": "汇总设计符合性复核与整体验证的证据，交给顶层判断。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": 2649,
+        "y": 372
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行复核",
+        "description": "并行复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": 2109,
+        "y": 372
+      },
+      {
+        "id": "review",
+        "kind": "activity",
+        "title": "检查设计符合性",
+        "description": "检查设计符合性的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 2289,
+        "y": 465.3333333333333
+      },
+      {
+        "id": "verify",
+        "kind": "activity",
+        "title": "执行整体验证",
+        "description": "执行整体验证的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 2289,
+        "y": 357.3333333333333
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "等待全部复核",
+        "description": "等待全部复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 2469,
+        "y": 372
+      },
+      {
+        "id": "ready",
+        "kind": "decision",
+        "title": "整体测试通过？",
+        "description": "在工作流层级判断整体测试结果；失败时根据原因回到设计、实现，或终止本次工作。",
+        "width": 136,
+        "height": 136,
+        "x": 80,
+        "y": 237
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "完成",
+        "description": "完成的目标与工作规则可继续在对话中细化。",
+        "outcome": "completed",
+        "width": 48,
+        "height": 48,
+        "x": 225,
+        "y": 203
+      },
+      {
+        "id": "aborted",
+        "kind": "end",
+        "title": "退出",
+        "description": "无法继续时结束本次工作，不代表完成目标。",
+        "outcome": "terminated",
+        "width": 48,
+        "height": 48,
+        "x": 225,
+        "y": 272
+      }
+    ],
+    "routedEdgeRecords": 26,
+    "expectedEdges": 26
+  },
+  {
+    "name": "development",
+    "direction": "RIGHT",
+    "engine": "webcola",
+    "ms": 48.87,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": -221.41804320388775,
+        "y": -176.85683904359357
+      },
+      {
+        "id": "ready",
+        "kind": "decision",
+        "title": "整体测试通过？",
+        "description": "在工作流层级判断整体测试结果；失败时根据原因回到设计、实现，或终止本次工作。",
+        "width": 136,
+        "height": 136,
+        "x": -228.7583171369694,
+        "y": -39.886523582096174
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "完成",
+        "description": "完成的目标与工作规则可继续在对话中细化。",
+        "outcome": "completed",
+        "width": 48,
+        "height": 48,
+        "x": 41.07503566485528,
+        "y": -451.2664133411827
+      },
+      {
+        "id": "aborted",
+        "kind": "end",
+        "title": "退出",
+        "description": "无法继续时结束本次工作，不代表完成目标。",
+        "outcome": "terminated",
+        "width": 48,
+        "height": 48,
+        "x": 47.82189652793169,
+        "y": 364.73359765881713
+      },
+      {
+        "id": "next",
+        "kind": "decision",
+        "title": "还有实现单元？",
+        "description": "还有实现单元？的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "width": 136,
+        "height": 136,
+        "x": -56.739671311559654,
+        "y": 76.20363632284798
+      },
+      {
+        "id": "pack",
+        "kind": "activity",
+        "title": "汇总测试结果",
+        "description": "汇总设计符合性复核与整体验证的证据，交给顶层判断。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": -132.76191982380666,
+        "y": 468.73359965881724
+      },
+      {
+        "id": "read",
+        "kind": "activity",
+        "title": "理解需求与系统设计",
+        "description": "理解需求与系统设计的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 113.30920063095368,
+        "y": -555.2664153411829
+      },
+      {
+        "id": "clear",
+        "kind": "decision",
+        "title": "材料足够？",
+        "description": "材料足够？的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "width": 136,
+        "height": 136,
+        "x": -28.93796629140917,
+        "y": -812.5539602349478
+      },
+      {
+        "id": "ask",
+        "kind": "activity",
+        "title": "澄清缺口",
+        "description": "澄清缺口的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -109.02402857428821,
+        "y": -697.836059445854
+      },
+      {
+        "id": "design",
+        "kind": "activity",
+        "title": "完成详细设计与测试目标",
+        "description": "完成详细设计与测试目标的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 216,
+        "height": 88,
+        "x": -86.69192791022192,
+        "y": -581.405231215895
+      },
+      {
+        "id": "choose",
+        "kind": "activity",
+        "title": "选择待实现单元",
+        "description": "选择待实现单元的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -44.692453353339324,
+        "y": -347.26641134118273
+      },
+      {
+        "id": "red",
+        "kind": "activity",
+        "title": "编写并校准测试",
+        "description": "编写并校准测试的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 146.4557224150632,
+        "y": -223.26640934118277
+      },
+      {
+        "id": "green",
+        "kind": "activity",
+        "title": "完成最小实现",
+        "description": "完成最小实现的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 152.699763238349,
+        "y": -135.26640834118277
+      },
+      {
+        "id": "pass",
+        "kind": "decision",
+        "title": "测试通过？",
+        "description": "测试通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 195.24699584212547,
+        "y": -23.266407341182774
+      },
+      {
+        "id": "refactor",
+        "kind": "activity",
+        "title": "重构并运行回归",
+        "description": "重构并运行回归的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 183.27352461379016,
+        "y": 88.73359365881721
+      },
+      {
+        "id": "stable",
+        "kind": "decision",
+        "title": "回归通过？",
+        "description": "回归通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 128.36638098830875,
+        "y": 200.73359465881722
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行复核",
+        "description": "并行复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": 30.999786899742258,
+        "y": 555.1732491458803
+      },
+      {
+        "id": "review",
+        "kind": "activity",
+        "title": "检查设计符合性",
+        "description": "检查设计符合性的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -48.01342831957575,
+        "y": 856.520235551732
+      },
+      {
+        "id": "verify",
+        "kind": "activity",
+        "title": "执行整体验证",
+        "description": "执行整体验证的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 45.16251460662249,
+        "y": 768.5202345517321
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "等待全部复核",
+        "description": "等待全部复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": -117.3730655026843,
+        "y": 674.7853373620206
+      },
+      {
+        "id": "plan",
+        "kind": "group",
+        "title": "理解与设计",
+        "width": 472.0008947192728,
+        "height": 442.8231001442301,
+        "x": 3.4848431413161904,
+        "y": -696.3093756404996
+      },
+      {
+        "id": "work",
+        "kind": "group",
+        "title": "逐单元实现",
+        "width": 498.01091035393654,
+        "height": 768.000006,
+        "x": 88.36745821731263,
+        "y": -42.89781856838442
+      },
+      {
+        "id": "delivery",
+        "kind": "group",
+        "title": "测试与复核",
+        "width": 412.92320697208413,
+        "height": 548.6002151561714,
+        "x": -44.57902398402727,
+        "y": 663.4022970097012
+      },
+      {
+        "id": "tdd",
+        "kind": "group",
+        "title": "测试与实现循环",
+        "parent": "work",
+        "width": 276.3756125814366,
+        "height": 608.000004,
+        "x": 163.1851071035626,
+        "y": 1.1021824316155744
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 26
+  },
+  {
+    "name": "development",
+    "direction": "RIGHT",
+    "engine": "fcose",
+    "ms": 27.6,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 122.00000000000006,
+        "height": 122,
+        "x": 497.33527231185457,
+        "y": 997.5541770177599
+      },
+      {
+        "id": "plan",
+        "kind": "group",
+        "title": "理解与设计",
+        "width": 846.8912945028269,
+        "height": 573.3847287011963,
+        "x": -453.95977246430175,
+        "y": 816.7586198495137
+      },
+      {
+        "id": "work",
+        "kind": "group",
+        "title": "逐单元实现",
+        "width": 1188.5552929331961,
+        "height": 1114.7742555226705,
+        "x": 3.6131207733821498,
+        "y": -547.5638564387766
+      },
+      {
+        "id": "delivery",
+        "kind": "group",
+        "title": "测试与复核",
+        "width": 905.980958693423,
+        "height": 600.4335103283536,
+        "x": 488.6201214374154,
+        "y": 472.6267696167075
+      },
+      {
+        "id": "ready",
+        "kind": "decision",
+        "title": "整体测试通过？",
+        "description": "在工作流层级判断整体测试结果；失败时根据原因回到设计、实现，或终止本次工作。",
+        "width": 210,
+        "height": 210,
+        "x": -654.8856123274395,
+        "y": 401.35705750542877
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "完成",
+        "description": "完成的目标与工作规则可继续在对话中细化。",
+        "outcome": "completed",
+        "width": 122,
+        "height": 122,
+        "x": -776.7020963143472,
+        "y": 313.5995726794497
+      },
+      {
+        "id": "aborted",
+        "kind": "end",
+        "title": "退出",
+        "description": "无法继续时结束本次工作，不代表完成目标。",
+        "outcome": "terminated",
+        "width": 122,
+        "height": 122,
+        "x": -879.1106007841269,
+        "y": 202.28698664816494
+      },
+      {
+        "id": "next",
+        "kind": "decision",
+        "title": "还有实现单元？",
+        "description": "还有实现单元？的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "width": 210,
+        "height": 210,
+        "x": -347.08526492217845,
+        "y": -132.67672867744147
+      },
+      {
+        "id": "pack",
+        "kind": "activity",
+        "title": "汇总测试结果",
+        "description": "汇总设计符合性复核与整体验证的证据，交给顶层判断。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "parent": "delivery",
+        "width": 234,
+        "height": 162,
+        "x": 190.1296420907039,
+        "y": 290.91001445253073
+      },
+      {
+        "id": "tdd",
+        "kind": "group",
+        "title": "测试与实现循环",
+        "parent": "work",
+        "width": 758.358385017591,
+        "height": 713.4943271467564,
+        "x": 181.21157473118478,
+        "y": -710.7038206267337
+      },
+      {
+        "id": "read",
+        "kind": "activity",
+        "title": "理解需求与系统设计",
+        "description": "理解需求与系统设计的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 258,
+        "height": 162,
+        "x": -197.0141252128883,
+        "y": 984.9509842001119
+      },
+      {
+        "id": "clear",
+        "kind": "decision",
+        "title": "材料足够？",
+        "description": "材料足够？的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "width": 210,
+        "height": 210,
+        "x": -516.3912646473532,
+        "y": 891.7277092157078
+      },
+      {
+        "id": "ask",
+        "kind": "activity",
+        "title": "澄清缺口",
+        "description": "澄清缺口的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -259.52404968073523,
+        "y": 738.3429503732561
+      },
+      {
+        "id": "design",
+        "kind": "activity",
+        "title": "完成详细设计与测试目标",
+        "description": "完成详细设计与测试目标的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 290,
+        "height": 162,
+        "x": -694.9054197157152,
+        "y": 648.5662554989156
+      },
+      {
+        "id": "choose",
+        "kind": "activity",
+        "title": "选择待实现单元",
+        "description": "选择待实现单元的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -436.164525693216,
+        "y": -393.3192528054218
+      },
+      {
+        "id": "red",
+        "kind": "activity",
+        "title": "编写并校准测试",
+        "description": "编写并校准测试的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234.00000000000006,
+        "height": 162,
+        "x": 402.5358787690604,
+        "y": -472.45665705335546
+      },
+      {
+        "id": "green",
+        "kind": "activity",
+        "title": "完成最小实现",
+        "description": "完成最小实现的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234.00000000000003,
+        "height": 162,
+        "x": 140.12069134117846,
+        "y": -679.8215938331134
+      },
+      {
+        "id": "pass",
+        "kind": "decision",
+        "title": "测试通过？",
+        "description": "测试通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 210.00000000000006,
+        "height": 210,
+        "x": 417.8907672399802,
+        "y": -683.0818946991011
+      },
+      {
+        "id": "refactor",
+        "kind": "activity",
+        "title": "重构并运行回归",
+        "description": "重构并运行回归的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 204.0983775350174,
+        "y": -898.2591793296449
+      },
+      {
+        "id": "stable",
+        "kind": "decision",
+        "title": "回归通过？",
+        "description": "回归通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 210,
+        "height": 210,
+        "x": -55.46761777761071,
+        "y": -924.9509842001119
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行复核",
+        "description": "并行复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "width": 234,
+        "height": 162,
+        "x": 543.6704612335,
+        "y": 654.3435247808843
+      },
+      {
+        "id": "review",
+        "kind": "activity",
+        "title": "检查设计符合性",
+        "description": "检查设计符合性的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 161.99999999999994,
+        "x": 787.1106007841269,
+        "y": 461.7443155338345
+      },
+      {
+        "id": "verify",
+        "kind": "activity",
+        "title": "执行整体验证",
+        "description": "执行整体验证的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162.00000000000006,
+        "x": 270.83187744432144,
+        "y": 500.56391634096434
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "等待全部复核",
+        "description": "等待全部复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "join": "all",
+        "width": 234,
+        "height": 162,
+        "x": 495.28021259828006,
+        "y": 309.68994765019227
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 26
+  },
+  {
+    "name": "development",
+    "direction": "DOWN",
+    "engine": "elk",
+    "ms": 26.51,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 663.3333333333333,
+        "y": 124
+      },
+      {
+        "id": "plan",
+        "kind": "group",
+        "title": "理解与设计",
+        "width": 420,
+        "height": 376,
+        "x": 596,
+        "y": 389
+      },
+      {
+        "id": "read",
+        "kind": "activity",
+        "title": "理解需求与系统设计",
+        "description": "理解需求与系统设计的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 632.6666666666666,
+        "y": 257
+      },
+      {
+        "id": "clear",
+        "kind": "decision",
+        "title": "材料足够？",
+        "description": "材料足够？的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "width": 136,
+        "height": 136,
+        "x": 663.3333333333333,
+        "y": 389
+      },
+      {
+        "id": "ask",
+        "kind": "activity",
+        "title": "澄清缺口",
+        "description": "澄清缺口的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 478,
+        "y": 521
+      },
+      {
+        "id": "design",
+        "kind": "activity",
+        "title": "完成详细设计与测试目标",
+        "description": "完成详细设计与测试目标的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 216,
+        "height": 88,
+        "x": 686,
+        "y": 521
+      },
+      {
+        "id": "work",
+        "kind": "group",
+        "title": "逐单元实现",
+        "width": 478,
+        "height": 860,
+        "x": 262,
+        "y": 1065
+      },
+      {
+        "id": "next",
+        "kind": "decision",
+        "title": "还有实现单元？",
+        "description": "还有实现单元？的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "width": 136,
+        "height": 136,
+        "x": 421,
+        "y": 715
+      },
+      {
+        "id": "tdd",
+        "kind": "group",
+        "title": "测试与实现循环",
+        "parent": "work",
+        "width": 376,
+        "height": 542,
+        "x": 223,
+        "y": 1187
+      },
+      {
+        "id": "red",
+        "kind": "activity",
+        "title": "编写并校准测试",
+        "description": "编写并校准测试的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 319,
+        "y": 1270
+      },
+      {
+        "id": "green",
+        "kind": "activity",
+        "title": "完成最小实现",
+        "description": "完成最小实现的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 233,
+        "y": 1402
+      },
+      {
+        "id": "pass",
+        "kind": "decision",
+        "title": "测试通过？",
+        "description": "测试通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 161,
+        "y": 996
+      },
+      {
+        "id": "refactor",
+        "kind": "activity",
+        "title": "重构并运行回归",
+        "description": "重构并运行回归的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 127,
+        "y": 1138
+      },
+      {
+        "id": "stable",
+        "kind": "decision",
+        "title": "回归通过？",
+        "description": "回归通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 127,
+        "y": 1270
+      },
+      {
+        "id": "choose",
+        "kind": "activity",
+        "title": "选择待实现单元",
+        "description": "选择待实现单元的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 319,
+        "y": 847
+      },
+      {
+        "id": "delivery",
+        "kind": "group",
+        "title": "测试与复核",
+        "width": 364,
+        "height": 436,
+        "x": 518.3333333333334,
+        "y": 1771
+      },
+      {
+        "id": "pack",
+        "kind": "activity",
+        "title": "汇总测试结果",
+        "description": "汇总设计符合性复核与整体验证的证据，交给顶层判断。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": 455,
+        "y": 1933
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行复核",
+        "description": "并行复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": 455,
+        "y": 1609
+      },
+      {
+        "id": "review",
+        "kind": "activity",
+        "title": "检查设计符合性",
+        "description": "检查设计符合性的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 608.3333333333334,
+        "y": 1717
+      },
+      {
+        "id": "verify",
+        "kind": "activity",
+        "title": "执行整体验证",
+        "description": "执行整体验证的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 428.33333333333337,
+        "y": 1717
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "等待全部复核",
+        "description": "等待全部复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 455,
+        "y": 1825
+      },
+      {
+        "id": "ready",
+        "kind": "decision",
+        "title": "整体测试通过？",
+        "description": "在工作流层级判断整体测试结果；失败时根据原因回到设计、实现，或终止本次工作。",
+        "width": 136,
+        "height": 136,
+        "x": 279,
+        "y": 80
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "完成",
+        "description": "完成的目标与工作规则可继续在对话中细化。",
+        "outcome": "completed",
+        "width": 48,
+        "height": 48,
+        "x": 245,
+        "y": 225
+      },
+      {
+        "id": "aborted",
+        "kind": "end",
+        "title": "退出",
+        "description": "无法继续时结束本次工作，不代表完成目标。",
+        "outcome": "terminated",
+        "width": 48,
+        "height": 48,
+        "x": 314,
+        "y": 225
+      }
+    ],
+    "routedEdgeRecords": 26,
+    "expectedEdges": 26
+  },
+  {
+    "name": "development",
+    "direction": "DOWN",
+    "engine": "webcola",
+    "ms": 88.11,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": -299.1494602863002,
+        "y": -629.8409229524341
+      },
+      {
+        "id": "ready",
+        "kind": "decision",
+        "title": "整体测试通过？",
+        "description": "在工作流层级判断整体测试结果；失败时根据原因回到设计、实现，或终止本次工作。",
+        "width": 136,
+        "height": 136,
+        "x": -120.25064154498534,
+        "y": -287.2811495414373
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "完成",
+        "description": "完成的目标与工作规则可继续在对话中细化。",
+        "outcome": "completed",
+        "width": 48,
+        "height": 48,
+        "x": -321.3903294688029,
+        "y": 508.95945264811985
+      },
+      {
+        "id": "aborted",
+        "kind": "end",
+        "title": "退出",
+        "description": "无法继续时结束本次工作，不代表完成目标。",
+        "outcome": "terminated",
+        "width": 48,
+        "height": 48,
+        "x": -78.34958188251379,
+        "y": 508.95945264811985
+      },
+      {
+        "id": "next",
+        "kind": "decision",
+        "title": "还有实现单元？",
+        "description": "还有实现单元？的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "width": 136,
+        "height": 136,
+        "x": 128.09293296510634,
+        "y": 13.368475599395666
+      },
+      {
+        "id": "pack",
+        "kind": "activity",
+        "title": "汇总测试结果",
+        "description": "汇总设计符合性复核与整体验证的证据，交给顶层判断。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": -256.10325766471266,
+        "y": 228.71916490699508
+      },
+      {
+        "id": "read",
+        "kind": "activity",
+        "title": "理解需求与系统设计",
+        "description": "理解需求与系统设计的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": -383.98255816902275,
+        "y": -244.69547475412912
+      },
+      {
+        "id": "clear",
+        "kind": "decision",
+        "title": "材料足够？",
+        "description": "材料足够？的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "width": 136,
+        "height": 136,
+        "x": -507.86469405520586,
+        "y": -444.63224082603455
+      },
+      {
+        "id": "ask",
+        "kind": "activity",
+        "title": "澄清缺口",
+        "description": "澄清缺口的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -626.9005411969601,
+        "y": -241.09782004295485
+      },
+      {
+        "id": "design",
+        "kind": "activity",
+        "title": "完成详细设计与测试目标",
+        "description": "完成详细设计与测试目标的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 216,
+        "height": 88,
+        "x": -332.2506435457265,
+        "y": -332.6954757541291
+      },
+      {
+        "id": "choose",
+        "kind": "activity",
+        "title": "选择待实现单元",
+        "description": "选择待实现单元的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 15.75751960763641,
+        "y": -139.28114741542083
+      },
+      {
+        "id": "red",
+        "kind": "activity",
+        "title": "编写并校准测试",
+        "description": "编写并校准测试的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 312.0929353286179,
+        "y": -103.28114641648988
+      },
+      {
+        "id": "green",
+        "kind": "activity",
+        "title": "完成最小实现",
+        "description": "完成最小实现的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 551.5119037396239,
+        "y": -103.28114653874913
+      },
+      {
+        "id": "pass",
+        "kind": "decision",
+        "title": "测试通过？",
+        "description": "测试通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 788.1711166925966,
+        "y": -79.27169839985793
+      },
+      {
+        "id": "refactor",
+        "kind": "activity",
+        "title": "重构并运行回归",
+        "description": "重构并运行回归的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 640.1686142659754,
+        "y": -9.205279273402146
+      },
+      {
+        "id": "stable",
+        "kind": "decision",
+        "title": "回归通过？",
+        "description": "回归通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 136,
+        "height": 136,
+        "x": 412.61480470248927,
+        "y": 8.71916090699512
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行复核",
+        "description": "并行复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "width": 160,
+        "height": 88,
+        "x": 228.55451459784896,
+        "y": 228.95944864811983
+      },
+      {
+        "id": "review",
+        "kind": "activity",
+        "title": "检查设计符合性",
+        "description": "检查设计符合性的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 20.422127193670466,
+        "y": 404.95945064811986
+      },
+      {
+        "id": "verify",
+        "kind": "activity",
+        "title": "执行整体验证",
+        "description": "执行整体验证的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 74.39945081616203,
+        "y": 316.9594496481199
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "等待全部复核",
+        "description": "等待全部复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": -235.5442120954966,
+        "y": 404.9594462610541
+      },
+      {
+        "id": "plan",
+        "kind": "group",
+        "title": "理解与设计",
+        "width": 555.3596445762612,
+        "height": 387.3308672946138,
+        "x": -466.6912997783811,
+        "y": -355.1105749464025
+      },
+      {
+        "id": "work",
+        "kind": "group",
+        "title": "逐单元实现",
+        "width": 1029.7887884891552,
+        "height": 368.00024479933427,
+        "x": 414.0872795559859,
+        "y": -35.01939858564215
+      },
+      {
+        "id": "delivery",
+        "kind": "group",
+        "title": "测试与复核",
+        "width": 717.4750993794848,
+        "height": 336.1904573155458,
+        "x": -14.522033875788253,
+        "y": 317.07595647179795
+      },
+      {
+        "id": "tdd",
+        "kind": "group",
+        "title": "测试与实现循环",
+        "parent": "work",
+        "width": 696.8129733412051,
+        "height": 296.0002438970876,
+        "x": 544.575187129961,
+        "y": -35.01939813451881
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 26
+  },
+  {
+    "name": "development",
+    "direction": "DOWN",
+    "engine": "fcose",
+    "ms": 13.34,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 122.00000000000006,
+        "height": 122,
+        "x": 497.33527231185457,
+        "y": 997.5541770177599
+      },
+      {
+        "id": "plan",
+        "kind": "group",
+        "title": "理解与设计",
+        "width": 846.8912945028269,
+        "height": 573.3847287011963,
+        "x": -453.95977246430175,
+        "y": 816.7586198495137
+      },
+      {
+        "id": "work",
+        "kind": "group",
+        "title": "逐单元实现",
+        "width": 1188.5552929331961,
+        "height": 1114.7742555226705,
+        "x": 3.6131207733821498,
+        "y": -547.5638564387766
+      },
+      {
+        "id": "delivery",
+        "kind": "group",
+        "title": "测试与复核",
+        "width": 905.980958693423,
+        "height": 600.4335103283536,
+        "x": 488.6201214374154,
+        "y": 472.6267696167075
+      },
+      {
+        "id": "ready",
+        "kind": "decision",
+        "title": "整体测试通过？",
+        "description": "在工作流层级判断整体测试结果；失败时根据原因回到设计、实现，或终止本次工作。",
+        "width": 210,
+        "height": 210,
+        "x": -654.8856123274395,
+        "y": 401.35705750542877
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "完成",
+        "description": "完成的目标与工作规则可继续在对话中细化。",
+        "outcome": "completed",
+        "width": 122,
+        "height": 122,
+        "x": -776.7020963143472,
+        "y": 313.5995726794497
+      },
+      {
+        "id": "aborted",
+        "kind": "end",
+        "title": "退出",
+        "description": "无法继续时结束本次工作，不代表完成目标。",
+        "outcome": "terminated",
+        "width": 122,
+        "height": 122,
+        "x": -879.1106007841269,
+        "y": 202.28698664816494
+      },
+      {
+        "id": "next",
+        "kind": "decision",
+        "title": "还有实现单元？",
+        "description": "还有实现单元？的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "width": 210,
+        "height": 210,
+        "x": -347.08526492217845,
+        "y": -132.67672867744147
+      },
+      {
+        "id": "pack",
+        "kind": "activity",
+        "title": "汇总测试结果",
+        "description": "汇总设计符合性复核与整体验证的证据，交给顶层判断。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "parent": "delivery",
+        "width": 234,
+        "height": 162,
+        "x": 190.1296420907039,
+        "y": 290.91001445253073
+      },
+      {
+        "id": "tdd",
+        "kind": "group",
+        "title": "测试与实现循环",
+        "parent": "work",
+        "width": 758.358385017591,
+        "height": 713.4943271467564,
+        "x": 181.21157473118478,
+        "y": -710.7038206267337
+      },
+      {
+        "id": "read",
+        "kind": "activity",
+        "title": "理解需求与系统设计",
+        "description": "理解需求与系统设计的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 258,
+        "height": 162,
+        "x": -197.0141252128883,
+        "y": 984.9509842001119
+      },
+      {
+        "id": "clear",
+        "kind": "decision",
+        "title": "材料足够？",
+        "description": "材料足够？的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "width": 210,
+        "height": 210,
+        "x": -516.3912646473532,
+        "y": 891.7277092157078
+      },
+      {
+        "id": "ask",
+        "kind": "activity",
+        "title": "澄清缺口",
+        "description": "澄清缺口的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -259.52404968073523,
+        "y": 738.3429503732561
+      },
+      {
+        "id": "design",
+        "kind": "activity",
+        "title": "完成详细设计与测试目标",
+        "description": "完成详细设计与测试目标的目标与工作规则可继续在对话中细化。",
+        "parent": "plan",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 290,
+        "height": 162,
+        "x": -694.9054197157152,
+        "y": 648.5662554989156
+      },
+      {
+        "id": "choose",
+        "kind": "activity",
+        "title": "选择待实现单元",
+        "description": "选择待实现单元的目标与工作规则可继续在对话中细化。",
+        "parent": "work",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -436.164525693216,
+        "y": -393.3192528054218
+      },
+      {
+        "id": "red",
+        "kind": "activity",
+        "title": "编写并校准测试",
+        "description": "编写并校准测试的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234.00000000000006,
+        "height": 162,
+        "x": 402.5358787690604,
+        "y": -472.45665705335546
+      },
+      {
+        "id": "green",
+        "kind": "activity",
+        "title": "完成最小实现",
+        "description": "完成最小实现的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234.00000000000003,
+        "height": 162,
+        "x": 140.12069134117846,
+        "y": -679.8215938331134
+      },
+      {
+        "id": "pass",
+        "kind": "decision",
+        "title": "测试通过？",
+        "description": "测试通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 210.00000000000006,
+        "height": 210,
+        "x": 417.8907672399802,
+        "y": -683.0818946991011
+      },
+      {
+        "id": "refactor",
+        "kind": "activity",
+        "title": "重构并运行回归",
+        "description": "重构并运行回归的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 204.0983775350174,
+        "y": -898.2591793296449
+      },
+      {
+        "id": "stable",
+        "kind": "decision",
+        "title": "回归通过？",
+        "description": "回归通过？的目标与工作规则可继续在对话中细化。",
+        "parent": "tdd",
+        "width": 210,
+        "height": 210,
+        "x": -55.46761777761071,
+        "y": -924.9509842001119
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行复核",
+        "description": "并行复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "width": 234,
+        "height": 162,
+        "x": 543.6704612335,
+        "y": 654.3435247808843
+      },
+      {
+        "id": "review",
+        "kind": "activity",
+        "title": "检查设计符合性",
+        "description": "检查设计符合性的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 161.99999999999994,
+        "x": 787.1106007841269,
+        "y": 461.7443155338345
+      },
+      {
+        "id": "verify",
+        "kind": "activity",
+        "title": "执行整体验证",
+        "description": "执行整体验证的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162.00000000000006,
+        "x": 270.83187744432144,
+        "y": 500.56391634096434
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "等待全部复核",
+        "description": "等待全部复核的目标与工作规则可继续在对话中细化。",
+        "parent": "delivery",
+        "join": "all",
+        "width": 234,
+        "height": 162,
+        "x": 495.28021259828006,
+        "y": 309.68994765019227
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 26
+  },
+  {
+    "name": "architecture",
+    "direction": "RIGHT",
+    "engine": "elk",
+    "ms": 10.85,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "explore",
+        "kind": "group",
+        "title": "探索问题",
+        "width": 364,
+        "height": 112,
+        "x": 295,
+        "y": 80
+      },
+      {
+        "id": "brainstorm",
+        "kind": "activity",
+        "title": "头脑风暴",
+        "description": "头脑风暴的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 205,
+        "y": 80
+      },
+      {
+        "id": "scope",
+        "kind": "activity",
+        "title": "明确目标与约束",
+        "description": "明确目标与约束的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 385,
+        "y": 80
+      },
+      {
+        "id": "architecture",
+        "kind": "group",
+        "title": "形成架构方案",
+        "width": 1124,
+        "height": 266,
+        "x": 1097,
+        "y": 145
+      },
+      {
+        "id": "reviewing",
+        "kind": "group",
+        "title": "多角度评审",
+        "parent": "architecture",
+        "width": 544,
+        "height": 220,
+        "x": 1350,
+        "y": 134
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行检查",
+        "description": "并行检查的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "width": 160,
+        "height": 88,
+        "x": 1170,
+        "y": 94.66666666666667
+      },
+      {
+        "id": "quality",
+        "kind": "activity",
+        "title": "检查非功能需求",
+        "description": "检查非功能需求的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1350,
+        "y": 188
+      },
+      {
+        "id": "boundaries",
+        "kind": "activity",
+        "title": "检查职责与边界",
+        "description": "检查职责与边界的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1350,
+        "y": 80
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇总评审",
+        "description": "汇总评审的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 1530,
+        "y": 94.66666666666667
+      },
+      {
+        "id": "options",
+        "kind": "activity",
+        "title": "比较架构方案",
+        "description": "比较架构方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 973,
+        "y": 94.66666666666667
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "title": "方案一致？",
+        "description": "方案一致？的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "width": 136,
+        "height": 136,
+        "x": 615,
+        "y": 169
+      },
+      {
+        "id": "adjust",
+        "kind": "activity",
+        "title": "调整方案",
+        "description": "调整方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 793,
+        "y": 135
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 36,
+        "y": 80
+      },
+      {
+        "id": "write",
+        "kind": "activity",
+        "title": "按模板形成设计文档",
+        "description": "按模板形成设计文档的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 1804,
+        "y": 265
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "设计完成",
+        "description": "设计完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 1968,
+        "y": 265
+      }
+    ],
+    "routedEdgeRecords": 13,
+    "expectedEdges": 13
+  },
+  {
+    "name": "architecture",
+    "direction": "RIGHT",
+    "engine": "webcola",
+    "ms": 21.49,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": -653.7373379003361,
+        "y": -227.85325204588608
+      },
+      {
+        "id": "brainstorm",
+        "kind": "activity",
+        "title": "头脑风暴",
+        "description": "头脑风暴的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -361.3634509760556,
+        "y": -272.5592788236195
+      },
+      {
+        "id": "scope",
+        "kind": "activity",
+        "title": "明确目标与约束",
+        "description": "明确目标与约束的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -44.70703522411734,
+        "y": -261.1286246491858
+      },
+      {
+        "id": "options",
+        "kind": "activity",
+        "title": "比较架构方案",
+        "description": "比较架构方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 224.70011375551417,
+        "y": 43.70174310366014
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行检查",
+        "description": "并行检查的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "width": 160,
+        "height": 88,
+        "x": -26.420816120182238,
+        "y": 307.93700529402895
+      },
+      {
+        "id": "quality",
+        "kind": "activity",
+        "title": "检查非功能需求",
+        "description": "检查非功能需求的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 188.70984998276538,
+        "y": 497.1967588704118
+      },
+      {
+        "id": "boundaries",
+        "kind": "activity",
+        "title": "检查职责与边界",
+        "description": "检查职责与边界的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -40.52493595187047,
+        "y": 497.7506883102684
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇总评审",
+        "description": "汇总评审的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 133.57918487981775,
+        "y": 287.16615334671815
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "title": "方案一致？",
+        "description": "方案一致？的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "width": 136,
+        "height": 136,
+        "x": -83.29988824448584,
+        "y": -17.658008796345573
+      },
+      {
+        "id": "adjust",
+        "kind": "activity",
+        "title": "调整方案",
+        "description": "调整方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 64.70011275551417,
+        "y": -41.65800879634557
+      },
+      {
+        "id": "write",
+        "kind": "activity",
+        "title": "按模板形成设计文档",
+        "description": "按模板形成设计文档的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 145.43963188253494,
+        "y": -396.5592808236195
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "设计完成",
+        "description": "设计完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 458.9245711609013,
+        "y": -410.3358949900853
+      },
+      {
+        "id": "explore",
+        "kind": "group",
+        "title": "探索问题",
+        "width": 548.5048469558612,
+        "height": 171.5033584952157,
+        "x": -203.60872963201277,
+        "y": -267.4532316414398
+      },
+      {
+        "id": "architecture",
+        "kind": "group",
+        "title": "形成架构方案",
+        "width": 533.3393552597489,
+        "height": 735.6694672354007,
+        "x": 74.29944131867808,
+        "y": 245.52071737843963
+      },
+      {
+        "id": "reviewing",
+        "kind": "group",
+        "title": "多角度评审",
+        "parent": "architecture",
+        "width": 461.3393552597489,
+        "height": 370.5174535940428,
+        "x": 74.29944131867808,
+        "y": 392.0967241991186
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 13
+  },
+  {
+    "name": "architecture",
+    "direction": "RIGHT",
+    "engine": "fcose",
+    "ms": 7.63,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "explore",
+        "kind": "group",
+        "title": "探索问题",
+        "width": 592.0061257974307,
+        "height": 362.6940978108655,
+        "x": 538.7869511267686,
+        "y": 722.8616411921248
+      },
+      {
+        "id": "architecture",
+        "kind": "group",
+        "title": "形成架构方案",
+        "width": 1146.2329808678592,
+        "height": 922.1799496268166,
+        "x": 419.45709600136547,
+        "y": -35.795092755392574
+      },
+      {
+        "id": "reviewing",
+        "kind": "group",
+        "title": "多角度评审",
+        "parent": "architecture",
+        "width": 623.3452874265797,
+        "height": 470.5572198989035,
+        "x": 643.4009427220052,
+        "y": 152.51627210856392
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -148.2404063270199,
+        "y": 564.88044605438
+      },
+      {
+        "id": "brainstorm",
+        "kind": "activity",
+        "title": "头脑风暴",
+        "description": "头脑风暴的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 397.2838882280531,
+        "y": 660.014592286692
+      },
+      {
+        "id": "scope",
+        "kind": "activity",
+        "title": "明确目标与约束",
+        "description": "明确目标与约束的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 680.290014025484,
+        "y": 785.7086900975576
+      },
+      {
+        "id": "options",
+        "kind": "activity",
+        "title": "比较架构方案",
+        "description": "比较架构方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 0.8406055674358299,
+        "y": 87.92772062233439
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行检查",
+        "description": "并行检查的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "width": 234,
+        "height": 162,
+        "x": 800.573586435295,
+        "y": 226.897662058624
+      },
+      {
+        "id": "quality",
+        "kind": "activity",
+        "title": "检查非功能需求",
+        "description": "检查非功能需求的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 735.1151529057029,
+        "y": 35.737662159112176
+      },
+      {
+        "id": "boundaries",
+        "kind": "activity",
+        "title": "检查职责与边界",
+        "description": "检查职责与边界的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 486.22829900871534,
+        "y": 75.49656119297799
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇总评审",
+        "description": "汇总评审的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "join": "all",
+        "width": 234,
+        "height": 162,
+        "x": 552.7767260230262,
+        "y": 269.2948820580157
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "title": "方案一致？",
+        "description": "方案一致？的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "width": 210,
+        "height": 210,
+        "x": 31.93695383814429,
+        "y": -354.3850675688008
+      },
+      {
+        "id": "adjust",
+        "kind": "activity",
+        "title": "调整方案",
+        "description": "调整方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 39.61348158414728,
+        "y": -122.47524303001319
+      },
+      {
+        "id": "write",
+        "kind": "activity",
+        "title": "按模板形成设计文档",
+        "description": "按模板形成设计文档的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 258,
+        "height": 162,
+        "x": -781.9547272466518,
+        "y": -677.4722159399266
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "设计完成",
+        "description": "设计完成的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -928.573586435295,
+        "y": -841.7086900975576
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 13
+  },
+  {
+    "name": "architecture",
+    "direction": "DOWN",
+    "engine": "elk",
+    "ms": 11.26,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "explore",
+        "kind": "group",
+        "title": "探索问题",
+        "width": 184,
+        "height": 220,
+        "x": 116,
+        "y": 223
+      },
+      {
+        "id": "brainstorm",
+        "kind": "activity",
+        "title": "头脑风暴",
+        "description": "头脑风暴的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 116,
+        "y": 169
+      },
+      {
+        "id": "scope",
+        "kind": "activity",
+        "title": "明确目标与约束",
+        "description": "明确目标与约束的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 116,
+        "y": 277
+      },
+      {
+        "id": "architecture",
+        "kind": "group",
+        "title": "形成架构方案",
+        "width": 410,
+        "height": 764,
+        "x": 217,
+        "y": 773
+      },
+      {
+        "id": "reviewing",
+        "kind": "group",
+        "title": "多角度评审",
+        "parent": "architecture",
+        "width": 364,
+        "height": 328,
+        "x": 206,
+        "y": 954
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行检查",
+        "description": "并行检查的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "width": 160,
+        "height": 88,
+        "x": 142.66666666666666,
+        "y": 846
+      },
+      {
+        "id": "quality",
+        "kind": "activity",
+        "title": "检查非功能需求",
+        "description": "检查非功能需求的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 296,
+        "y": 954
+      },
+      {
+        "id": "boundaries",
+        "kind": "activity",
+        "title": "检查职责与边界",
+        "description": "检查职责与边界的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 116,
+        "y": 954
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇总评审",
+        "description": "汇总评审的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 142.66666666666666,
+        "y": 1062
+      },
+      {
+        "id": "options",
+        "kind": "activity",
+        "title": "比较架构方案",
+        "description": "比较架构方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 142.66666666666666,
+        "y": 721
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "title": "方案一致？",
+        "description": "方案一致？的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "width": 136,
+        "height": 136,
+        "x": 241,
+        "y": 471
+      },
+      {
+        "id": "adjust",
+        "kind": "activity",
+        "title": "调整方案",
+        "description": "调整方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 207,
+        "y": 613
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 116,
+        "y": 36
+      },
+      {
+        "id": "write",
+        "kind": "activity",
+        "title": "按模板形成设计文档",
+        "description": "按模板形成设计文档的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 409,
+        "y": 1252
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "设计完成",
+        "description": "设计完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 409,
+        "y": 1368
+      }
+    ],
+    "routedEdgeRecords": 13,
+    "expectedEdges": 13
+  },
+  {
+    "name": "architecture",
+    "direction": "DOWN",
+    "engine": "webcola",
+    "ms": 11.67,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": -116.48679086305049,
+        "y": -444.3502016924613
+      },
+      {
+        "id": "brainstorm",
+        "kind": "activity",
+        "title": "头脑风暴",
+        "description": "头脑风暴的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -297.6985103224246,
+        "y": -144.53710298620237
+      },
+      {
+        "id": "scope",
+        "kind": "activity",
+        "title": "明确目标与约束",
+        "description": "明确目标与约束的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -297.6985103224246,
+        "y": 156.7257204020078
+      },
+      {
+        "id": "options",
+        "kind": "activity",
+        "title": "比较架构方案",
+        "description": "比较架构方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -46.93899156684549,
+        "y": 369.74416928629415
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行检查",
+        "description": "并行检查的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "width": 160,
+        "height": 88,
+        "x": 29.921943502355944,
+        "y": 157.73776159470432
+      },
+      {
+        "id": "quality",
+        "kind": "activity",
+        "title": "检查非功能需求",
+        "description": "检查非功能需求的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 29.921943502355944,
+        "y": 47.47490305959207
+      },
+      {
+        "id": "boundaries",
+        "kind": "activity",
+        "title": "检查职责与边界",
+        "description": "检查职责与边界的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 30.290873386515802,
+        "y": 245.73776259470438
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇总评审",
+        "description": "汇总评审的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 30.290873386515802,
+        "y": -46.09496675915213
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "title": "方案一致？",
+        "description": "方案一致？的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "width": 136,
+        "height": 136,
+        "x": 76.646322697173,
+        "y": -301.0160476033035
+      },
+      {
+        "id": "adjust",
+        "kind": "activity",
+        "title": "调整方案",
+        "description": "调整方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -28.690426901510495,
+        "y": -170.09496875915215
+      },
+      {
+        "id": "write",
+        "kind": "activity",
+        "title": "按模板形成设计文档",
+        "description": "按模板形成设计文档的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 184,
+        "height": 88,
+        "x": 324.09948360719164,
+        "y": -87.85523196501236
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "设计完成",
+        "description": "设计完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 272.34178989414784,
+        "y": 222.5282028279814
+      },
+      {
+        "id": "explore",
+        "kind": "group",
+        "title": "探索问题",
+        "width": 232,
+        "height": 462.1602103803802,
+        "x": -298.77960270064614,
+        "y": 5.670082125371948
+      },
+      {
+        "id": "architecture",
+        "kind": "group",
+        "title": "形成架构方案",
+        "width": 346.83516852936765,
+        "height": 855.5127893558301,
+        "x": 9.657178266526557,
+        "y": 22.30971420287895
+      },
+      {
+        "id": "reviewing",
+        "kind": "group",
+        "title": "多角度评审",
+        "parent": "architecture",
+        "width": 232.49905543431552,
+        "height": 452.37519505155353,
+        "x": 30.82523481405262,
+        "y": 99.87343282527782
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 13
+  },
+  {
+    "name": "architecture",
+    "direction": "DOWN",
+    "engine": "fcose",
+    "ms": 5.33,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "explore",
+        "kind": "group",
+        "title": "探索问题",
+        "width": 592.0061257974307,
+        "height": 362.6940978108655,
+        "x": 538.7869511267686,
+        "y": 722.8616411921248
+      },
+      {
+        "id": "architecture",
+        "kind": "group",
+        "title": "形成架构方案",
+        "width": 1146.2329808678592,
+        "height": 922.1799496268166,
+        "x": 419.45709600136547,
+        "y": -35.795092755392574
+      },
+      {
+        "id": "reviewing",
+        "kind": "group",
+        "title": "多角度评审",
+        "parent": "architecture",
+        "width": 623.3452874265797,
+        "height": 470.5572198989035,
+        "x": 643.4009427220052,
+        "y": 152.51627210856392
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "开始",
+        "description": "开始的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -148.2404063270199,
+        "y": 564.88044605438
+      },
+      {
+        "id": "brainstorm",
+        "kind": "activity",
+        "title": "头脑风暴",
+        "description": "头脑风暴的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 397.2838882280531,
+        "y": 660.014592286692
+      },
+      {
+        "id": "scope",
+        "kind": "activity",
+        "title": "明确目标与约束",
+        "description": "明确目标与约束的目标与工作规则可继续在对话中细化。",
+        "parent": "explore",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 680.290014025484,
+        "y": 785.7086900975576
+      },
+      {
+        "id": "options",
+        "kind": "activity",
+        "title": "比较架构方案",
+        "description": "比较架构方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 0.8406055674358299,
+        "y": 87.92772062233439
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "并行检查",
+        "description": "并行检查的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "width": 234,
+        "height": 162,
+        "x": 800.573586435295,
+        "y": 226.897662058624
+      },
+      {
+        "id": "quality",
+        "kind": "activity",
+        "title": "检查非功能需求",
+        "description": "检查非功能需求的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 735.1151529057029,
+        "y": 35.737662159112176
+      },
+      {
+        "id": "boundaries",
+        "kind": "activity",
+        "title": "检查职责与边界",
+        "description": "检查职责与边界的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 486.22829900871534,
+        "y": 75.49656119297799
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇总评审",
+        "description": "汇总评审的目标与工作规则可继续在对话中细化。",
+        "parent": "reviewing",
+        "join": "all",
+        "width": 234,
+        "height": 162,
+        "x": 552.7767260230262,
+        "y": 269.2948820580157
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "title": "方案一致？",
+        "description": "方案一致？的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "width": 210,
+        "height": 210,
+        "x": 31.93695383814429,
+        "y": -354.3850675688008
+      },
+      {
+        "id": "adjust",
+        "kind": "activity",
+        "title": "调整方案",
+        "description": "调整方案的目标与工作规则可继续在对话中细化。",
+        "parent": "architecture",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 39.61348158414728,
+        "y": -122.47524303001319
+      },
+      {
+        "id": "write",
+        "kind": "activity",
+        "title": "按模板形成设计文档",
+        "description": "按模板形成设计文档的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 258,
+        "height": 162,
+        "x": -781.9547272466518,
+        "y": -677.4722159399266
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "设计完成",
+        "description": "设计完成的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -928.573586435295,
+        "y": -841.7086900975576
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 13
+  },
+  {
+    "name": "research",
+    "direction": "RIGHT",
+    "engine": "elk",
+    "ms": 11.04,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "collect",
+        "kind": "group",
+        "title": "收集与核对",
+        "width": 898,
+        "height": 269.66666666666663,
+        "x": 562,
+        "y": 146.83333333333331
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "收集两类材料",
+        "description": "收集两类材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 160,
+        "height": 88,
+        "x": 205,
+        "y": 75.33333333333333
+      },
+      {
+        "id": "records",
+        "kind": "activity",
+        "title": "读取项目进展",
+        "description": "读取项目进展的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 399,
+        "y": 225.66666666666666
+      },
+      {
+        "id": "actions",
+        "kind": "activity",
+        "title": "读取关键动作记录",
+        "description": "读取关键动作记录的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 168,
+        "height": 88,
+        "x": 399,
+        "y": 117.66666666666666
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇齐材料",
+        "description": "汇齐材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 583,
+        "y": 132.33333333333331
+      },
+      {
+        "id": "complete",
+        "kind": "decision",
+        "title": "材料完整？",
+        "description": "材料完整？的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 136,
+        "height": 136,
+        "x": 751,
+        "y": 132.33333333333331
+      },
+      {
+        "id": "supplement",
+        "kind": "activity",
+        "title": "请求补充材料",
+        "description": "请求补充材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 919,
+        "y": 68
+      },
+      {
+        "id": "compute",
+        "kind": "group",
+        "title": "计算与检查",
+        "width": 700,
+        "height": 204.66666666666666,
+        "x": 1419,
+        "y": 241.66666666666669
+      },
+      {
+        "id": "calc",
+        "kind": "activity",
+        "title": "计算进展指标",
+        "description": "计算进展指标的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1497,
+        "y": 195.33333333333334
+      },
+      {
+        "id": "check",
+        "kind": "activity",
+        "title": "核对关键动作",
+        "description": "核对关键动作的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1677,
+        "y": 249.33333333333334
+      },
+      {
+        "id": "abnormal",
+        "kind": "decision",
+        "title": "存在异常？",
+        "description": "存在异常？的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "width": 136,
+        "height": 136,
+        "x": 1149,
+        "y": 264
+      },
+      {
+        "id": "investigate",
+        "kind": "activity",
+        "title": "核实并修正记录",
+        "description": "核实并修正记录的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1317,
+        "y": 210
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "本期开始",
+        "description": "本期开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 36,
+        "y": 75.33333333333333
+      },
+      {
+        "id": "report",
+        "kind": "activity",
+        "title": "生成进展表格",
+        "description": "生成进展表格的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 1902,
+        "y": 303.3333333333333
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "本期完成",
+        "description": "本期完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 2054,
+        "y": 303.3333333333333
+      }
+    ],
+    "routedEdgeRecords": 15,
+    "expectedEdges": 15
+  },
+  {
+    "name": "research",
+    "direction": "RIGHT",
+    "engine": "webcola",
+    "ms": 22.78,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "本期开始",
+        "description": "本期开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": -323.2505845465039,
+        "y": 212.89177736936787
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "收集两类材料",
+        "description": "收集两类材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 160,
+        "height": 88,
+        "x": 43.659227667888594,
+        "y": 436.6897962007632
+      },
+      {
+        "id": "records",
+        "kind": "activity",
+        "title": "读取项目进展",
+        "description": "读取项目进展的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -52.68911073369461,
+        "y": 599.3795925665636
+      },
+      {
+        "id": "actions",
+        "kind": "activity",
+        "title": "读取关键动作记录",
+        "description": "读取关键动作记录的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 168,
+        "height": 88,
+        "x": 175.97924634995914,
+        "y": 286.73869686217694
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇齐材料",
+        "description": "汇齐材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": -70.54754086025342,
+        "y": 348.6897952007633
+      },
+      {
+        "id": "complete",
+        "kind": "decision",
+        "title": "材料完整？",
+        "description": "材料完整？的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 136,
+        "height": 136,
+        "x": -116.30762056861063,
+        "y": 111.92084149489835
+      },
+      {
+        "id": "supplement",
+        "kind": "activity",
+        "title": "请求补充材料",
+        "description": "请求补充材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 100.7456755893878,
+        "y": 151.14202403337296
+      },
+      {
+        "id": "calc",
+        "kind": "activity",
+        "title": "计算进展指标",
+        "description": "计算进展指标的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 149.38932050589187,
+        "y": -104.24641713945921
+      },
+      {
+        "id": "check",
+        "kind": "activity",
+        "title": "核对关键动作",
+        "description": "核对关键动作的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 42.09709827817423,
+        "y": -249.463682531608
+      },
+      {
+        "id": "abnormal",
+        "kind": "decision",
+        "title": "存在异常？",
+        "description": "存在异常？的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "width": 136,
+        "height": 136,
+        "x": -217.09195705912052,
+        "y": -318.22985915995207
+      },
+      {
+        "id": "investigate",
+        "kind": "activity",
+        "title": "核实并修正记录",
+        "description": "核实并修正记录的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -35.15816076563649,
+        "y": -343.3487942927646
+      },
+      {
+        "id": "report",
+        "kind": "activity",
+        "title": "生成进展表格",
+        "description": "生成进展表格的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -2.1675282934685556,
+        "y": -578.5372756397733
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "本期完成",
+        "description": "本期完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 311.8419344359866,
+        "y": -547.1264949643494
+      },
+      {
+        "id": "collect",
+        "kind": "group",
+        "title": "收集与核对",
+        "width": 516.8170316916813,
+        "height": 672.3308461768215,
+        "x": 38.54677477360492,
+        "y": 343.815576039398
+      },
+      {
+        "id": "compute",
+        "kind": "group",
+        "title": "计算与检查",
+        "width": 586.220328251855,
+        "height": 399.4102276010642,
+        "x": -28.129684634703096,
+        "y": -224.2978120267652
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 15
+  },
+  {
+    "name": "research",
+    "direction": "RIGHT",
+    "engine": "fcose",
+    "ms": 5.18,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "collect",
+        "kind": "group",
+        "title": "收集与核对",
+        "width": 817.2247762418956,
+        "height": 643.1417604477707,
+        "x": 138.19105876737441,
+        "y": -313.0823213910998
+      },
+      {
+        "id": "compute",
+        "kind": "group",
+        "title": "计算与检查",
+        "width": 667.6695023867744,
+        "height": 516.5787000413893,
+        "x": 297.8399181383568,
+        "y": 376.3638515942905
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "本期开始",
+        "description": "本期开始的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -569.1746693317441,
+        "y": -182.14512402639764
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "收集两类材料",
+        "description": "收集两类材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 234,
+        "height": 162,
+        "x": 205.0199316218442,
+        "y": -110.01144116721449
+      },
+      {
+        "id": "records",
+        "kind": "activity",
+        "title": "读取项目进展",
+        "description": "读取项目进展的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 124.36945647908894,
+        "y": -311.8583542161063
+      },
+      {
+        "id": "actions",
+        "kind": "activity",
+        "title": "读取关键动作记录",
+        "description": "读取关键动作记录的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 242,
+        "height": 162,
+        "x": 388.3034468883222,
+        "y": -317.07320268272076
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇齐材料",
+        "description": "汇齐材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "join": "all",
+        "width": 234,
+        "height": 162,
+        "x": 148.294416930855,
+        "y": -516.1532016149852
+      },
+      {
+        "id": "complete",
+        "kind": "decision",
+        "title": "材料完整？",
+        "description": "材料完整？的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 210,
+        "height": 210,
+        "x": -127.92132935357336,
+        "y": -376.14635507712234
+      },
+      {
+        "id": "supplement",
+        "kind": "activity",
+        "title": "请求补充材料",
+        "description": "请求补充材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -82.75492746957934,
+        "y": -130.96299500719354
+      },
+      {
+        "id": "calc",
+        "kind": "activity",
+        "title": "计算进展指标",
+        "description": "计算进展指标的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 477.174669331744,
+        "y": 516.1532016149852
+      },
+      {
+        "id": "check",
+        "kind": "activity",
+        "title": "核对关键动作",
+        "description": "核对关键动作的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 161.99999999999994,
+        "x": 188.54166144982406,
+        "y": 491.0436895521114
+      },
+      {
+        "id": "abnormal",
+        "kind": "decision",
+        "title": "存在异常？",
+        "description": "存在异常？的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "width": 210,
+        "height": 210,
+        "x": 106.5051669449696,
+        "y": 260.57450157359585
+      },
+      {
+        "id": "investigate",
+        "kind": "activity",
+        "title": "核实并修正记录",
+        "description": "核实并修正记录的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 377.1439795922945,
+        "y": 303.12983309682113
+      },
+      {
+        "id": "report",
+        "kind": "activity",
+        "title": "生成进展表格",
+        "description": "生成进展表格的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -412.08137514052396,
+        "y": -332.4083264928196
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "本期完成",
+        "description": "本期完成的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -542.1304624450934,
+        "y": -467.06673936675315
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 15
+  },
+  {
+    "name": "research",
+    "direction": "DOWN",
+    "engine": "elk",
+    "ms": 10.75,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "collect",
+        "kind": "group",
+        "title": "收集与核对",
+        "width": 436.33333333333337,
+        "height": 602,
+        "x": 230.16666666666669,
+        "y": 414
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "收集两类材料",
+        "description": "收集两类材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 160,
+        "height": 88,
+        "x": 117.33333333333334,
+        "y": 169
+      },
+      {
+        "id": "records",
+        "kind": "activity",
+        "title": "读取项目进展",
+        "description": "读取项目进展的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 356.33333333333337,
+        "y": 287
+      },
+      {
+        "id": "actions",
+        "kind": "activity",
+        "title": "读取关键动作记录",
+        "description": "读取关键动作记录的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 168,
+        "height": 88,
+        "x": 172.33333333333334,
+        "y": 287
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇齐材料",
+        "description": "汇齐材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": 199,
+        "y": 395
+      },
+      {
+        "id": "complete",
+        "kind": "decision",
+        "title": "材料完整？",
+        "description": "材料完整？的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 136,
+        "height": 136,
+        "x": 199,
+        "y": 527
+      },
+      {
+        "id": "supplement",
+        "kind": "activity",
+        "title": "请求补充材料",
+        "description": "请求补充材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 104,
+        "y": 659
+      },
+      {
+        "id": "compute",
+        "kind": "group",
+        "title": "计算与检查",
+        "width": 270.33333333333337,
+        "height": 494,
+        "x": 291.5,
+        "y": 1020
+      },
+      {
+        "id": "calc",
+        "kind": "activity",
+        "title": "计算进展指标",
+        "description": "计算进展指标的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 248.33333333333334,
+        "y": 1103
+      },
+      {
+        "id": "check",
+        "kind": "activity",
+        "title": "核对关键动作",
+        "description": "核对关键动作的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 275,
+        "y": 1211
+      },
+      {
+        "id": "abnormal",
+        "kind": "decision",
+        "title": "存在异常？",
+        "description": "存在异常？的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "width": 136,
+        "height": 136,
+        "x": 346.6666666666667,
+        "y": 853
+      },
+      {
+        "id": "investigate",
+        "kind": "activity",
+        "title": "核实并修正记录",
+        "description": "核实并修正记录的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 312.6666666666667,
+        "y": 995
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "本期开始",
+        "description": "本期开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 117.33333333333334,
+        "y": 36
+      },
+      {
+        "id": "report",
+        "kind": "activity",
+        "title": "生成进展表格",
+        "description": "生成进展表格的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 413.66666666666674,
+        "y": 1364
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "本期完成",
+        "description": "本期完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 413.66666666666674,
+        "y": 1480
+      }
+    ],
+    "routedEdgeRecords": 15,
+    "expectedEdges": 15
+  },
+  {
+    "name": "research",
+    "direction": "DOWN",
+    "engine": "webcola",
+    "ms": 10.28,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "本期开始",
+        "description": "本期开始的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": -353.9701676524531,
+        "y": -54.79749867566409
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "收集两类材料",
+        "description": "收集两类材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 160,
+        "height": 88,
+        "x": -160.76601101939028,
+        "y": 256.04785667444304
+      },
+      {
+        "id": "records",
+        "kind": "activity",
+        "title": "读取项目进展",
+        "description": "读取项目进展的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -135.8391682010569,
+        "y": 168.047855674443
+      },
+      {
+        "id": "actions",
+        "kind": "activity",
+        "title": "读取关键动作记录",
+        "description": "读取关键动作记录的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 168,
+        "height": 88,
+        "x": -139.50342147817318,
+        "y": -53.5494906242337
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇齐材料",
+        "description": "汇齐材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "join": "all",
+        "width": 160,
+        "height": 88,
+        "x": -148.33787198140817,
+        "y": 47.052085166415885
+      },
+      {
+        "id": "complete",
+        "kind": "decision",
+        "title": "材料完整？",
+        "description": "材料完整？的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 136,
+        "height": 136,
+        "x": -85.65755992862483,
+        "y": -264.89692161996425
+      },
+      {
+        "id": "supplement",
+        "kind": "activity",
+        "title": "请求补充材料",
+        "description": "请求补充材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": -145.80158443198306,
+        "y": -150.52269881265738
+      },
+      {
+        "id": "calc",
+        "kind": "activity",
+        "title": "计算进展指标",
+        "description": "计算进展指标的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 162.36044350086436,
+        "y": 123.66143303892626
+      },
+      {
+        "id": "check",
+        "kind": "activity",
+        "title": "核对关键动作",
+        "description": "核对关键动作的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 185.21360379243382,
+        "y": -0.11164902221707515
+      },
+      {
+        "id": "abnormal",
+        "kind": "decision",
+        "title": "存在异常？",
+        "description": "存在异常？的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "width": 136,
+        "height": 136,
+        "x": 183.66257779441597,
+        "y": -279.7372578018258
+      },
+      {
+        "id": "investigate",
+        "kind": "activity",
+        "title": "核实并修正记录",
+        "description": "核实并修正记录的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 185.21360379243382,
+        "y": -110.7665499779717
+      },
+      {
+        "id": "report",
+        "kind": "activity",
+        "title": "生成进展表格",
+        "description": "生成进展表格的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 160,
+        "height": 88,
+        "x": 381.2136057924338,
+        "y": -28.01012164735187
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "本期完成",
+        "description": "本期完成的目标与工作规则可继续在对话中细化。",
+        "width": 48,
+        "height": 48,
+        "x": 78.71195002050807,
+        "y": 354.08295762765744
+      },
+      {
+        "id": "collect",
+        "kind": "group",
+        "title": "收集与核对",
+        "width": 297.46639265392344,
+        "height": 705.6665704767825,
+        "x": -130.07265942226132,
+        "y": -15.99357836021997
+      },
+      {
+        "id": "compute",
+        "kind": "group",
+        "title": "计算与检查",
+        "width": 255.8481184902036,
+        "height": 587.9563068318516,
+        "x": 174.73602170227193,
+        "y": -90.42582486947268
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 15
+  },
+  {
+    "name": "research",
+    "direction": "DOWN",
+    "engine": "fcose",
+    "ms": 5.49,
+    "containmentFailures": 0,
+    "finite": true,
+    "nodes": [
+      {
+        "id": "collect",
+        "kind": "group",
+        "title": "收集与核对",
+        "width": 817.2247762418956,
+        "height": 643.1417604477707,
+        "x": 138.19105876737441,
+        "y": -313.0823213910998
+      },
+      {
+        "id": "compute",
+        "kind": "group",
+        "title": "计算与检查",
+        "width": 667.6695023867744,
+        "height": 516.5787000413893,
+        "x": 297.8399181383568,
+        "y": 376.3638515942905
+      },
+      {
+        "id": "s",
+        "kind": "start",
+        "title": "本期开始",
+        "description": "本期开始的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -569.1746693317441,
+        "y": -182.14512402639764
+      },
+      {
+        "id": "fork",
+        "kind": "fork",
+        "title": "收集两类材料",
+        "description": "收集两类材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 234,
+        "height": 162,
+        "x": 205.0199316218442,
+        "y": -110.01144116721449
+      },
+      {
+        "id": "records",
+        "kind": "activity",
+        "title": "读取项目进展",
+        "description": "读取项目进展的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 124.36945647908894,
+        "y": -311.8583542161063
+      },
+      {
+        "id": "actions",
+        "kind": "activity",
+        "title": "读取关键动作记录",
+        "description": "读取关键动作记录的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 242,
+        "height": 162,
+        "x": 388.3034468883222,
+        "y": -317.07320268272076
+      },
+      {
+        "id": "join",
+        "kind": "join",
+        "title": "汇齐材料",
+        "description": "汇齐材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "join": "all",
+        "width": 234,
+        "height": 162,
+        "x": 148.294416930855,
+        "y": -516.1532016149852
+      },
+      {
+        "id": "complete",
+        "kind": "decision",
+        "title": "材料完整？",
+        "description": "材料完整？的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "width": 210,
+        "height": 210,
+        "x": -127.92132935357336,
+        "y": -376.14635507712234
+      },
+      {
+        "id": "supplement",
+        "kind": "activity",
+        "title": "请求补充材料",
+        "description": "请求补充材料的目标与工作规则可继续在对话中细化。",
+        "parent": "collect",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -82.75492746957934,
+        "y": -130.96299500719354
+      },
+      {
+        "id": "calc",
+        "kind": "activity",
+        "title": "计算进展指标",
+        "description": "计算进展指标的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 477.174669331744,
+        "y": 516.1532016149852
+      },
+      {
+        "id": "check",
+        "kind": "activity",
+        "title": "核对关键动作",
+        "description": "核对关键动作的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 161.99999999999994,
+        "x": 188.54166144982406,
+        "y": 491.0436895521114
+      },
+      {
+        "id": "abnormal",
+        "kind": "decision",
+        "title": "存在异常？",
+        "description": "存在异常？的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "width": 210,
+        "height": 210,
+        "x": 106.5051669449696,
+        "y": 260.57450157359585
+      },
+      {
+        "id": "investigate",
+        "kind": "activity",
+        "title": "核实并修正记录",
+        "description": "核实并修正记录的目标与工作规则可继续在对话中细化。",
+        "parent": "compute",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": 377.1439795922945,
+        "y": 303.12983309682113
+      },
+      {
+        "id": "report",
+        "kind": "activity",
+        "title": "生成进展表格",
+        "description": "生成进展表格的目标与工作规则可继续在对话中细化。",
+        "inputs": [
+          "当前工作材料"
+        ],
+        "outputs": [
+          "阶段成果"
+        ],
+        "resources": [
+          "工作指南"
+        ],
+        "width": 234,
+        "height": 162,
+        "x": -412.08137514052396,
+        "y": -332.4083264928196
+      },
+      {
+        "id": "e",
+        "kind": "end",
+        "title": "本期完成",
+        "description": "本期完成的目标与工作规则可继续在对话中细化。",
+        "width": 122,
+        "height": 122,
+        "x": -542.1304624450934,
+        "y": -467.06673936675315
+      }
+    ],
+    "routedEdgeRecords": 0,
+    "expectedEdges": 15
+  }
+]

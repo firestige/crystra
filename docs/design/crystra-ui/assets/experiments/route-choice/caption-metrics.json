@@ -1,0 +1,44 @@
+{
+  "并行复核": {
+    "text": "并行复核",
+    "width": 76,
+    "height": 26,
+    "baseline": 19,
+    "font": "17px system-ui"
+  },
+  "等待全部复核": {
+    "text": "等待全部复核",
+    "width": 110,
+    "height": 26,
+    "baseline": 19,
+    "font": "17px system-ui"
+  },
+  "并行检查": {
+    "text": "并行检查",
+    "width": 76,
+    "height": 26,
+    "baseline": 19,
+    "font": "17px system-ui"
+  },
+  "汇总评审": {
+    "text": "汇总评审",
+    "width": 76,
+    "height": 26,
+    "baseline": 19,
+    "font": "17px system-ui"
+  },
+  "收集两类材料": {
+    "text": "收集两类材料",
+    "width": 110,
+    "height": 26,
+    "baseline": 19,
+    "font": "17px system-ui"
+  },
+  "汇齐材料": {
+    "text": "汇齐材料",
+    "width": 76,
+    "height": 26,
+    "baseline": 19,
+    "font": "17px system-ui"
+  }
+}

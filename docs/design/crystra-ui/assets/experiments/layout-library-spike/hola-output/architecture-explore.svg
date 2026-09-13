@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" width="100%%" height="100%%" viewBox="-118 -52 376 358">
+<path stroke="black" stroke-width="1" fill="none" d="M 170.00,288.00L 170.00,144.00"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 170.00,144.00 V 10.00 a 10.00,10.00 0 0,0 -10.00,-10.00L 0.00,0.00"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 0.00,0.00 H -90.00 a 10.00,10.00 0 0,0 -10.00,10.00L -100.00,144.00"/>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="90.00" y="100.00" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="165.00" y="149.00">
+0
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="-80.00" y="-44.00" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="-5.00" y="5.00">
+1
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="160.00" y="278.00" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="165.00" y="293.00">
+2
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="-110.00" y="134.00" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="-105.00" y="149.00">
+3
+</text>
+</g>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "states": 23,
+  "contracts": 406,
+  "runtimeRecords": 8438,
+  "errors": [],
+  "scope": "document ownership and sampled runtime/theme checks, not exhaustive production behavior"
+}

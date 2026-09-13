@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions" targetNamespace="https://crystra.test/spike">
+  <bpmn:process id="Process" isExecutable="false">
+    <bpmn:startEvent id="s" name="开始" />
+    <bpmn:subProcess id="plan" name="理解与设计">
+      <bpmn:task id="read" name="理解需求与系统设计" />
+      <bpmn:exclusiveGateway id="clear" name="材料足够？" />
+      <bpmn:task id="ask" name="澄清缺口" />
+      <bpmn:task id="design" name="完成详细设计与测试目标" />
+      <bpmn:sequenceFlow id="edge-2" name="" sourceRef="read" targetRef="clear" />
+      <bpmn:sequenceFlow id="edge-3" name="材料缺失，补充澄清" sourceRef="clear" targetRef="ask" />
+      <bpmn:sequenceFlow id="edge-4" name="" sourceRef="ask" targetRef="read" />
+      <bpmn:sequenceFlow id="edge-5" name="材料完整，开始设计" sourceRef="clear" targetRef="design" />
+      <bpmn:sequenceFlow id="edge-6" name="" sourceRef="design" targetRef="choose" />
+    </bpmn:subProcess>
+    <bpmn:subProcess id="work" name="逐单元实现">
+      <bpmn:exclusiveGateway id="next" name="还有实现单元？" />
+      <bpmn:subProcess id="tdd" name="测试与实现循环">
+        <bpmn:task id="red" name="编写并校准测试" />
+        <bpmn:task id="green" name="完成最小实现" />
+        <bpmn:exclusiveGateway id="pass" name="测试通过？" />
+        <bpmn:task id="refactor" name="重构并运行回归" />
+        <bpmn:exclusiveGateway id="stable" name="回归通过？" />
+        <bpmn:sequenceFlow id="edge-8" name="" sourceRef="red" targetRef="green" />
+        <bpmn:sequenceFlow id="edge-9" name="" sourceRef="green" targetRef="pass" />
+        <bpmn:sequenceFlow id="edge-10" name="测试未通过，继续实现" sourceRef="pass" targetRef="green" />
+        <bpmn:sequenceFlow id="edge-11" name="测试通过，开始重构" sourceRef="pass" targetRef="refactor" />
+        <bpmn:sequenceFlow id="edge-12" name="" sourceRef="refactor" targetRef="stable" />
+        <bpmn:sequenceFlow id="edge-13" name="回归失败，修复实现" sourceRef="stable" targetRef="green" />
+        <bpmn:sequenceFlow id="edge-14" name="回归通过，本单元完成" sourceRef="stable" targetRef="next" />
+      </bpmn:subProcess>
+      <bpmn:task id="choose" name="选择待实现单元" />
+      <bpmn:sequenceFlow id="edge-7" name="" sourceRef="choose" targetRef="red" />
+      <bpmn:sequenceFlow id="edge-15" name="仍有单元待实现" sourceRef="next" targetRef="choose" />
+      <bpmn:sequenceFlow id="edge-16" name="全部单元已完成" sourceRef="next" targetRef="fork" />
+    </bpmn:subProcess>
+    <bpmn:subProcess id="delivery" name="测试与复核">
+      <bpmn:task id="pack" name="汇总测试结果" />
+      <bpmn:parallelGateway id="fork" name="并行复核" />
+      <bpmn:task id="review" name="检查设计符合性" />
+      <bpmn:task id="verify" name="执行整体验证" />
+      <bpmn:parallelGateway id="join" name="等待全部复核" />
+      <bpmn:sequenceFlow id="edge-17" name="" sourceRef="fork" targetRef="review" />
+      <bpmn:sequenceFlow id="edge-18" name="" sourceRef="fork" targetRef="verify" />
+      <bpmn:sequenceFlow id="edge-19" name="" sourceRef="review" targetRef="join" />
+      <bpmn:sequenceFlow id="edge-20" name="" sourceRef="verify" targetRef="join" />
+      <bpmn:sequenceFlow id="edge-21" name="" sourceRef="join" targetRef="pack" />
+      <bpmn:sequenceFlow id="edge-25" name="" sourceRef="pack" targetRef="ready" />
+    </bpmn:subProcess>
+    <bpmn:exclusiveGateway id="ready" name="整体测试通过？" />
+    <bpmn:endEvent id="e" name="完成" />
+    <bpmn:endEvent id="aborted" name="退出">
+      <bpmn:terminateEventDefinition id="aborted_termination" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="edge-1" name="" sourceRef="s" targetRef="read" />
+    <bpmn:sequenceFlow id="edge-24" name="测试通过" sourceRef="ready" targetRef="e" />
+    <bpmn:sequenceFlow id="reconsider-design" name="未通过：设计问题" sourceRef="ready" targetRef="read" />
+    <bpmn:sequenceFlow id="repair-implementation" name="未通过：实现问题" sourceRef="ready" targetRef="choose" />
+    <bpmn:sequenceFlow id="stop-work" name="未通过：决定终止" sourceRef="ready" targetRef="aborted" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process" bpmnElement="Process">
+      <bpmndi:BPMNShape id="s_di" bpmnElement="s">
+        <dc:Bounds x="57" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="plan_di" bpmnElement="plan" isExpanded="true">
+        <dc:Bounds x="25" y="170" width="250" height="640" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="work_di" bpmnElement="work" isExpanded="true">
+        <dc:Bounds x="25" y="870" width="400" height="1200" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="delivery_di" bpmnElement="delivery" isExpanded="true">
+        <dc:Bounds x="25" y="2130" width="250" height="780" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ready_di" bpmnElement="ready" isMarkerVisible="true">
+        <dc:Bounds x="50" y="2985" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e_di" bpmnElement="e">
+        <dc:Bounds x="57" y="3132" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="aborted_di" bpmnElement="aborted">
+        <dc:Bounds x="57" y="3272" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="pack_di" bpmnElement="pack">
+        <dc:Bounds x="100" y="2200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="fork_di" bpmnElement="fork">
+        <dc:Bounds x="125" y="2355" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="review_di" bpmnElement="review">
+        <dc:Bounds x="100" y="2480" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="verify_di" bpmnElement="verify">
+        <dc:Bounds x="100" y="2620" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="join_di" bpmnElement="join">
+        <dc:Bounds x="125" y="2775" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="next_di" bpmnElement="next" isMarkerVisible="true">
+        <dc:Bounds x="125" y="955" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="tdd_di" bpmnElement="tdd" isExpanded="true">
+        <dc:Bounds x="100" y="1080" width="250" height="780" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="choose_di" bpmnElement="choose">
+        <dc:Bounds x="100" y="1920" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="read_di" bpmnElement="read">
+        <dc:Bounds x="100" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="clear_di" bpmnElement="clear" isMarkerVisible="true">
+        <dc:Bounds x="125" y="395" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ask_di" bpmnElement="ask">
+        <dc:Bounds x="100" y="520" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="design_di" bpmnElement="design">
+        <dc:Bounds x="100" y="660" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="red_di" bpmnElement="red">
+        <dc:Bounds x="175" y="1150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="green_di" bpmnElement="green">
+        <dc:Bounds x="175" y="1290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="pass_di" bpmnElement="pass" isMarkerVisible="true">
+        <dc:Bounds x="200" y="1445" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="refactor_di" bpmnElement="refactor">
+        <dc:Bounds x="175" y="1570" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="stable_di" bpmnElement="stable" isMarkerVisible="true">
+        <dc:Bounds x="200" y="1725" width="50" height="50" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

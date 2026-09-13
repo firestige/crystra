@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN" class="h-full bg-[#0d0f12]">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystra · 任务浏览器</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            shell: '#0d0f12', sidebar: '#111317', panel: '#1a1e24', raised: '#20252d',
+            line: '#2b313a', muted: '#8a94a3', accent: '#5b8def', success: '#58c77b', warning: '#d49b32', danger: '#e25b5b'
+          },
+          boxShadow: { panel: '0 18px 45px rgba(0,0,0,.24)' }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    [hidden] { display: none !important; }
+    [data-scrollbar="hidden"] { -ms-overflow-style: none; scrollbar-width: none; }
+    [data-scrollbar="hidden"]::-webkit-scrollbar { display: none; width: 0; height: 0; }
+    [data-browser-task-row][hidden], [data-sidebar-task-row][hidden], [data-section-content][hidden] { display: none !important; }
+    [data-section-id="task-browser-filter-option"][aria-pressed="true"] { border-color: #5b8def; background: rgb(91 141 239 / .10); color: #bfdbfe; }
+    [data-sidebar-section][data-expanded="false"] [data-sidebar-chevron] { transform: rotate(-90deg); }
+  </style>
+</head>
+<body data-ui-locale="zh-CN" class="h-full overflow-hidden bg-shell text-slate-100">
+  <main data-section-id="app-shell" class="grid h-screen grid-cols-[260px_minmax(0,1fr)] overflow-hidden">
+    <aside data-section-id="sidebar" class="flex min-h-0 flex-col border-r border-line bg-sidebar px-3.5 py-4">
+      <div data-section-id="sidebar-logo-row" class="flex h-9 items-center gap-2 px-0.5">
+        <a data-section-id="surface-banner" href="crystra-task-work-v7.html" aria-label="切换到 DeepSeek Harness" title="切换到 DeepSeek Harness" class="flex min-w-0 flex-1 items-center gap-2 rounded-md text-slate-100 transition hover:text-white">
+          <span data-section-id="sidebar-brand-mark" class="grid size-7 shrink-0 place-items-center" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="m12 2 7.8 4.5v9L12 20l-7.8-4.5v-9L12 2Z" stroke="currentColor" stroke-width="1.45"/><path d="m12 2 2.5 7.2L12 20 9.5 9.2 12 2Zm-7.8 4.5 5.3 2.7 5-2.7 5.3 0" stroke="currentColor" stroke-width="1.1" opacity=".72"/></svg>
+          </span>
+          <span data-section-id="sidebar-brand-name" class="truncate text-[19px] font-semibold tracking-[-.025em]">Crystra</span>
+        </a>
+        <button data-section-id="sidebar-toggle" type="button" aria-label="收起侧边栏" class="grid size-8 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x=".75" y=".75" width="14.5" height="14.5" rx="4" stroke="currentColor" stroke-width="1.25"/><path d="M5.25 1.25v13.5" stroke="currentColor" stroke-width="1.25"/></svg>
+        </button>
+      </div>
+
+      <a data-section-id="new-task-action" href="crystra-task-work-v7.html?new_task=1" class="mt-6 flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/[.12] bg-white/[.18] text-sm font-medium text-slate-100 transition hover:bg-white/[.24]">
+        <span data-section-id="new-task-icon" class="grid size-4 shrink-0 place-items-center" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8.00003 0.3237C3.76075 0.3237 0.32373 3.76072 0.32373 8C0.32373 9.17603 0.589121 10.2922 1.0632 11.2901L1.35291 11.8989L2.5705 11.3205L2.28079 10.7117C1.89079 9.89074 1.67301 8.97167 1.67301 8C1.67301 4.50546 4.50549 1.67298 8.00003 1.67298C11.4946 1.67298 14.3271 4.50546 14.3271 8C14.3271 11.4945 11.4946 14.327 8.00003 14.327C7.28473 14.327 6.76077 14.277 6.29621 14.1487C5.83857 14.0224 5.40441 13.8109 4.88514 13.4488C4.12569 12.919 3.03778 12.7316 2.141 13.2978L2.12682 13.307L2.11264 13.3171L1.34886 13.854L1.79659 15.188L2.86122 14.4384C3.19068 14.2305 3.68325 14.2542 4.11326 14.5539C4.72789 14.9826 5.30042 15.2724 5.93762 15.4484C6.56803 15.6224 7.22776 15.6763 8.00003 15.6763C12.2393 15.6763 15.6763 12.2393 15.6763 8C15.6763 3.76072 12.2393 0.3237 8.00003 0.3237ZM7.32033 4.82535V7.32536H4.82538V8.67464H7.32033V11.1747H8.6696V8.67464H11.1747V7.32536H8.6696V4.82535H7.32033Z" fill="currentColor"></path></svg>
+        </span>
+        <span data-section-id="new-task-label">新建任务</span>
+      </a>
+
+      <section data-section-id="task-working-set" data-sidebar-section data-expanded="true" class="mt-5 flex min-h-0 flex-1 flex-col">
+        <header data-section-id="task-section-header" class="relative mx-1 flex h-9 shrink-0 items-center rounded-md bg-white/[.025] transition-colors">
+        <button data-section-id="task-section-toggle" type="button" aria-label="折叠任务列表" aria-expanded="true" class="flex h-full min-w-0 flex-1 items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:text-slate-100">
+          <svg data-section-id="task-section-chevron" data-sidebar-chevron width="12" height="12" viewBox="0 0 12 12" fill="none" class="transition-transform"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-section-id="task-section-label">任务</span><span data-section-id="task-section-attention-badge" title="3 项需要关注" hidden class="ml-1 grid size-[18px] place-items-center rounded-full bg-amber-500/20 text-[10px] text-amber-300">3</span>
+        </button>
+        <div data-section-id="task-search-control" data-open="false" class="ml-auto flex min-w-0 items-center"><button data-section-id="task-search-action" type="button" aria-label="搜索任务" aria-expanded="false" class="grid size-7 shrink-0 place-items-center rounded-md text-slate-400 hover:bg-white/[.06]">⌕</button><input data-section-id="task-search-input" type="text" placeholder="搜索任务…" tabindex="-1" hidden class="h-full min-w-0 flex-1 bg-transparent px-1.5 text-[13px] text-slate-200 outline-none"><button data-section-id="task-search-clear" type="button" aria-label="关闭搜索" hidden class="grid size-7 place-items-center rounded-md text-slate-400 hover:bg-white/[.06]">×</button></div>
+        <div data-section-id="task-section-actions"><button data-section-id="task-view-options-action" type="button" aria-label="视图选项" aria-haspopup="menu" aria-expanded="false" class="grid size-7 place-items-center rounded-md text-slate-400 hover:bg-white/[.06]">☷</button></div>
+        <div data-section-id="task-view-options-menu" role="menu" hidden class="absolute right-0 top-10 z-50 w-52 rounded-xl border border-line bg-[#1a1e24] p-2 text-xs shadow-2xl"><p class="px-2 py-1 text-[10px] text-slate-500">排序方式</p><label class="flex items-center gap-2 rounded-lg px-2 py-2"><input data-section-id="task-sort-created" type="radio" name="sidebar-task-sort" value="created" checked class="accent-blue-500">按创建时间</label><label class="flex items-center gap-2 rounded-lg px-2 py-2"><input data-section-id="task-sort-activity" type="radio" name="sidebar-task-sort" value="activity" class="accent-blue-500">按活跃度</label><div class="my-1 border-t border-line"></div><p class="px-2 py-1 text-[10px] text-slate-500">过滤方式</p><label class="flex items-center gap-2 rounded-lg px-2 py-2"><input data-section-id="task-filter-all" type="radio" name="sidebar-task-filter" value="all" checked class="accent-blue-500">全部</label><label class="flex items-center gap-2 rounded-lg px-2 py-2"><input data-section-id="task-filter-active" type="radio" name="sidebar-task-filter" value="active" class="accent-blue-500">活跃任务</label></div>
+        </header>
+        <div data-section-content data-section-id="task-section-content" class="flex min-h-0 flex-1 flex-col">
+        <div data-section-id="task-list" class="mt-1 min-h-0 flex-1 space-y-0.5 overflow-y-auto" data-scrollbar="hidden">
+          <a href="crystra-task-work-v7.html?task_id=task-market-release" class="flex h-9 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]"><span class="size-2 shrink-0 rounded-full bg-amber-400"></span><span class="min-w-0 flex-1 truncate">发布插件市场方案</span><span class="grid size-[18px] place-items-center rounded-full bg-amber-500/20 text-[10px] text-amber-300">1</span></a>
+          <a href="crystra-task-work-v7.html?task_id=task-ui-workbench" class="flex h-9 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]"><span class="size-2 shrink-0 rounded-full bg-blue-400"></span><span class="min-w-0 flex-1 truncate">UI 工作台设计</span></a>
+          <a href="crystra-task-work-v7.html?task_id=task-plugin-preflight" class="flex h-9 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]"><span class="size-2 shrink-0 rounded-full bg-red-400"></span><span class="min-w-0 flex-1 truncate">插件兼容性预检与冲突诊断</span><span class="grid size-[18px] place-items-center rounded-full bg-red-500/20 text-[10px] text-red-300">2</span></a>
+          <a data-section-id="all-tasks-action" href="crystra-task-browser-v7.html" aria-current="page" class="flex h-9 items-center rounded-md border border-blue-500/60 bg-blue-500/[.08] px-2.5 text-xs text-blue-200"><span class="ml-4">查看所有任务</span><span class="ml-auto">→</span></a>
+        </div>
+        </div>
+      </section>
+
+      <nav data-section-id="workflow-navigation" data-sidebar-section data-expanded="true" class="mt-3 shrink-0">
+        <header data-section-id="workflow-section-header" class="mx-1 flex h-9 items-center rounded-md bg-white/[.025]"><button data-section-id="workflow-section-toggle" type="button" aria-label="折叠工作流列表" aria-expanded="true" class="flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04]"><svg data-section-id="workflow-section-chevron" data-sidebar-chevron width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-section-id="workflow-section-label">工作流</span></button></header>
+        <div data-section-content data-section-id="workflow-section-content" class="mt-1 space-y-0.5">
+          <div data-section-id="workflow-current-list">
+          <a href="crystra-workflow-studio-v7.html?workflow_definition_id=build-and-sign&amp;revision=v3" class="flex h-8 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]"><span class="size-1.5 rounded-full bg-blue-400"></span><span class="min-w-0 flex-1 truncate">build-and-sign</span><span class="text-[10px] text-muted">v3</span></a>
+          </div><a data-section-id="all-workflows-action" href="crystra-workflow-studio-v7.html?view=workflows" class="flex h-8 items-center rounded-md px-2.5 text-xs text-blue-300 hover:bg-white/[.05]"><span class="ml-3.5">查看所有工作流</span><span class="ml-auto">→</span></a>
+        </div>
+      </nav>
+
+      <nav data-section-id="analysis-navigation" data-sidebar-section data-expanded="true" class="mt-2 shrink-0">
+        <header data-section-id="analysis-section-header" class="mx-1 flex h-9 items-center rounded-md bg-white/[.025]"><button data-section-id="analysis-section-toggle" type="button" aria-label="折叠分析列表" aria-expanded="true" class="flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04]"><svg data-section-id="analysis-section-chevron" data-sidebar-chevron width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-section-id="analysis-section-label">分析</span></button></header>
+        <div data-section-content data-section-id="analysis-section-content" class="mt-1 space-y-0.5"><div data-section-id="analysis-secondary-navigation" class="space-y-0.5"><a data-section-id="analysis-dashboard-action" href="crystra-analysis-audit-v7.html?view=dashboard" class="flex h-8 items-center rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]">总览</a><a data-section-id="analysis-traces-action" href="crystra-analysis-audit-v7.html?view=traces" class="flex h-8 items-center rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]">轨迹</a><a data-section-id="analysis-audit-action" href="crystra-analysis-audit-v7.html?view=audit" class="flex h-8 items-center rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]">审计</a><a data-section-id="analysis-compare-action" href="crystra-analysis-audit-v7.html?view=compare" class="flex h-8 items-center rounded-md px-2.5 text-xs text-slate-300 hover:bg-white/[.05]">运行比较</a></div></div>
+      </nav>
+
+      <footer data-section-id="sidebar-footer" class="mt-auto shrink-0 border-t border-line pt-3">
+        <button data-section-id="host-settings" type="button" class="flex h-9 w-full items-center gap-3 rounded-md px-2 text-sm text-slate-300 transition hover:bg-white/[.05] hover:text-white"><span>⚙</span><span>设置</span></button>
+      </footer>
+    </aside>
+
+    <section data-section-id="main-surface-host" class="min-w-0 overflow-hidden bg-[#101216]">
+      <section data-section-id="task-browser-surface" class="flex h-full min-w-0 flex-col overflow-hidden">
+        <header data-section-id="task-browser-header" class="flex min-h-[112px] shrink-0 items-center border-b border-line px-8 py-5">
+          <div><p class="text-[11px] font-semibold uppercase tracking-[.14em] text-muted">全局对象浏览器</p><h1 class="mt-1 text-2xl font-semibold tracking-tight">任务</h1><p class="mt-1 text-sm text-slate-400">查找、比较并重新进入历史与当前任务</p></div>
+          <a data-section-id="task-browser-new-task-action" href="crystra-task-work-v7.html?new_task=1" class="ml-auto flex h-9 items-center gap-2 rounded-lg border border-white/[.12] bg-white/[.08] px-3.5 text-sm text-slate-200 transition hover:bg-white/[.13]"><span class="text-lg leading-none">＋</span><span>新建任务</span></a>
+        </header>
+
+        <div data-section-id="task-browser-content" data-scrollbar="hidden" class="min-h-0 flex-1 overflow-y-auto px-8 py-6">
+          <section data-section-id="task-browser-summary" class="grid grid-cols-4 gap-3">
+            <article class="rounded-xl border border-line bg-panel px-4 py-3"><p class="text-xs text-muted">全部任务</p><p class="mt-2 text-xl font-medium">28</p><p class="mt-1 text-[11px] text-slate-500">最近 30 天新增 12</p></article>
+            <article class="rounded-xl border border-line bg-panel px-4 py-3"><p class="text-xs text-muted">活跃任务</p><p class="mt-2 text-xl font-medium text-blue-300">7</p><p class="mt-1 text-[11px] text-slate-500">运行、等待审核或失败停止</p></article>
+            <article class="rounded-xl border border-amber-500/25 bg-amber-500/[.05] px-4 py-3"><p class="text-xs text-amber-200">需要关注</p><p class="mt-2 text-xl font-medium text-amber-300">3</p><p class="mt-1 text-[11px] text-amber-100/50">分布于 2 个任务</p></article>
+            <article class="rounded-xl border border-line bg-panel px-4 py-3"><p class="text-xs text-muted">累计模型成本</p><p class="mt-2 text-xl font-medium">¥184.60</p><p class="mt-1 text-[11px] text-slate-500">本月 · 22 次交付</p></article>
+          </section>
+
+          <section data-section-id="task-browser-toolbar" class="mt-5 flex items-center gap-3 rounded-xl border border-line bg-panel p-3">
+            <label class="flex h-10 min-w-[300px] flex-1 items-center gap-2 rounded-lg border border-line bg-[#15191f] px-3 text-slate-400 focus-within:border-blue-500/60"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="6.7" cy="6.7" r="5" stroke="currentColor" stroke-width="1.3"/><path d="m10.5 10.5 4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><input data-section-id="task-browser-search" type="search" placeholder="搜索任务、Goal、Workflow 或 Workspace…" class="min-w-0 flex-1 bg-transparent text-sm text-slate-200 outline-none placeholder:text-slate-500"></label>
+            <div data-section-id="task-browser-filter" class="flex items-center gap-1 rounded-lg bg-[#15191f] p-1">
+              <button data-section-id="task-browser-filter-option" data-filter="all" type="button" aria-pressed="true" class="h-8 rounded-md border border-transparent px-3 text-xs text-slate-400">全部</button>
+              <button data-section-id="task-browser-filter-active" data-filter="active" type="button" aria-pressed="false" class="h-8 rounded-md border border-transparent px-3 text-xs text-slate-400">活跃</button>
+              <button data-section-id="task-browser-filter-attention" data-filter="attention" type="button" aria-pressed="false" class="h-8 rounded-md border border-transparent px-3 text-xs text-slate-400">需要关注</button>
+              <button data-section-id="task-browser-filter-complete" data-filter="complete" type="button" aria-pressed="false" class="h-8 rounded-md border border-transparent px-3 text-xs text-slate-400">已完成</button>
+            </div>
+            <label class="flex h-10 items-center gap-2 rounded-lg border border-line bg-[#15191f] px-3 text-xs text-slate-400"><span>排序</span><select data-section-id="task-browser-sort" class="bg-transparent text-slate-200 outline-none"><option value="activity">最近活动</option><option value="created">创建时间</option><option value="attention">关注数量</option><option value="cost">模型成本</option></select></label>
+          </section>
+
+          <section data-section-id="task-browser-list" class="mt-4 overflow-hidden rounded-xl border border-line bg-panel shadow-panel">
+            <div data-section-id="task-browser-list-header" class="grid grid-cols-[minmax(280px,1.6fr)_130px_minmax(170px,.9fr)_110px_130px_100px] gap-4 border-b border-line bg-white/[.025] px-4 py-3 text-[10px] font-semibold uppercase tracking-[.12em] text-muted"><span>任务</span><span>状态</span><span>工作流</span><span>关注</span><span>最近活动</span><span class="text-right">成本</span></div>
+            <div data-section-id="task-browser-list-body" class="divide-y divide-line">
+              <a data-section-id="task-browser-row-market-release" href="crystra-task-work-v7.html?task_id=task-market-release" data-browser-task-row data-task-active="true" data-task-attention="1" data-search="发布插件市场方案 验证发布路径 build-and-sign workflow-self-recursive" class="grid min-h-[72px] grid-cols-[minmax(280px,1.6fr)_130px_minmax(170px,.9fr)_110px_130px_100px] items-center gap-4 px-4 transition hover:bg-white/[.035]"><span class="min-w-0"><span class="block truncate text-sm font-medium text-slate-100">发布插件市场方案</span><span class="mt-1 block truncate text-xs text-muted">验证发布路径，并结晶可复用步骤</span></span><span class="flex items-center gap-2 text-xs text-amber-200"><span class="size-2 rounded-full bg-amber-400"></span>等待审核</span><span class="truncate text-xs text-slate-300">build-and-sign · v3</span><span class="text-xs text-amber-300">1 项</span><span class="text-xs text-slate-400">2 分钟前</span><span class="text-right text-xs text-slate-300">¥12.40</span></a>
+              <a data-section-id="task-browser-row-ui-workbench" href="crystra-task-work-v7.html?task_id=task-ui-workbench" data-browser-task-row data-task-active="true" data-task-attention="0" data-search="UI 工作台设计 crystra-control workflow-self-recursive" class="grid min-h-[72px] grid-cols-[minmax(280px,1.6fr)_130px_minmax(170px,.9fr)_110px_130px_100px] items-center gap-4 px-4 transition hover:bg-white/[.035]"><span class="min-w-0"><span class="block truncate text-sm font-medium text-slate-100">UI 工作台设计</span><span class="mt-1 block truncate text-xs text-muted">补齐 Task、Workflow 与审核工作面</span></span><span class="flex items-center gap-2 text-xs text-blue-200"><span class="size-2 rounded-full bg-blue-400"></span>运行中</span><span class="truncate text-xs text-slate-300">crystra-control · v4</span><span class="text-xs text-muted">—</span><span class="text-xs text-slate-400">18 分钟前</span><span class="text-right text-xs text-slate-300">¥38.20</span></a>
+              <a data-section-id="task-browser-row-plugin-preflight" href="crystra-task-work-v7.html?task_id=task-plugin-preflight" data-browser-task-row data-task-active="true" data-task-attention="2" data-search="插件兼容性预检与冲突诊断 cordis preflight probe-ws" class="grid min-h-[72px] grid-cols-[minmax(280px,1.6fr)_130px_minmax(170px,.9fr)_110px_130px_100px] items-center gap-4 px-4 transition hover:bg-white/[.035]"><span class="min-w-0"><span class="block truncate text-sm font-medium text-slate-100">插件兼容性预检与冲突诊断</span><span class="mt-1 block truncate text-xs text-muted">捕获插件装载失败并生成诊断报告</span></span><span class="flex items-center gap-2 text-xs text-red-200"><span class="size-2 rounded-full bg-red-400"></span>失败停止</span><span class="truncate text-xs text-slate-300">cordis-preflight · v1</span><span class="text-xs text-red-300">2 项</span><span class="text-xs text-slate-400">42 分钟前</span><span class="text-right text-xs text-slate-300">¥9.80</span></a>
+              <a data-section-id="task-browser-row-plugin-research" href="crystra-task-work-v7.html?task_id=task-plugin-research" data-browser-task-row data-task-active="false" data-task-attention="0" data-search="插件兼容性研究 market-research project-ops" class="grid min-h-[72px] grid-cols-[minmax(280px,1.6fr)_130px_minmax(170px,.9fr)_110px_130px_100px] items-center gap-4 px-4 transition hover:bg-white/[.035]"><span class="min-w-0"><span class="block truncate text-sm font-medium text-slate-100">插件兼容性研究</span><span class="mt-1 block truncate text-xs text-muted">分析 Cordis 插件管理与诊断机会</span></span><span class="flex items-center gap-2 text-xs text-emerald-200"><span class="size-2 rounded-full bg-emerald-400"></span>已完成</span><span class="truncate text-xs text-slate-300">market-research · v2</span><span class="text-xs text-muted">—</span><span class="text-xs text-slate-400">昨天</span><span class="text-right text-xs text-slate-300">¥24.60</span></a>
+            </div>
+            <div data-section-id="task-browser-empty-state" hidden class="px-6 py-16 text-center"><p class="text-sm text-slate-300">没有符合条件的任务</p><p class="mt-1 text-xs text-muted">调整搜索或过滤条件后重试</p></div>
+            <footer data-section-id="task-browser-pagination" class="flex items-center border-t border-line px-4 py-3 text-xs text-muted"><span data-section-id="task-browser-result-count">显示 4 / 28 个任务</span><div class="ml-auto flex items-center gap-1"><button type="button" disabled class="h-8 rounded-md px-3 text-slate-600">上一页</button><button type="button" class="grid size-8 place-items-center rounded-md border border-blue-500/60 bg-blue-500/10 text-blue-200">1</button><button type="button" class="grid size-8 place-items-center rounded-md hover:bg-white/[.05]">2</button><button type="button" class="grid size-8 place-items-center rounded-md hover:bg-white/[.05]">3</button><button type="button" class="h-8 rounded-md px-3 hover:bg-white/[.05]">下一页</button></div></footer>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const section = (name) => document.querySelector(`[data-section-id="${name}"]`);
+    const search = section('task-browser-search');
+    const filterButtons = [...document.querySelectorAll('[data-filter]')];
+    const taskRows = [...document.querySelectorAll('[data-browser-task-row]')];
+    const emptyState = section('task-browser-empty-state');
+    const resultCount = section('task-browser-result-count');
+    let activeFilter = 'all';
+
+    const renderTasks = () => {
+      const query = search.value.trim().toLocaleLowerCase('zh-CN');
+      let visibleCount = 0;
+      taskRows.forEach((row) => {
+        const matchesQuery = !query || row.dataset.search.toLocaleLowerCase('zh-CN').includes(query);
+        const matchesFilter = activeFilter === 'all'
+          || (activeFilter === 'active' && row.dataset.taskActive === 'true')
+          || (activeFilter === 'attention' && Number(row.dataset.taskAttention) > 0)
+          || (activeFilter === 'complete' && row.dataset.taskActive === 'false');
+        row.hidden = !(matchesQuery && matchesFilter);
+        if (!row.hidden) visibleCount += 1;
+      });
+      emptyState.hidden = visibleCount !== 0;
+      resultCount.textContent = `显示 ${visibleCount} / 28 个任务`;
+    };
+    search.addEventListener('input', renderTasks);
+    filterButtons.forEach((button) => button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter;
+      filterButtons.forEach((candidate) => candidate.setAttribute('aria-pressed', String(candidate === button)));
+      renderTasks();
+    }));
+
+    const taskWorkingSet = section('task-working-set');
+    const taskSectionHeader = section('task-section-header');
+    const taskSectionToggle = section('task-section-toggle');
+    const taskSectionActions = section('task-section-actions');
+    const taskSectionAttention = section('task-section-attention-badge');
+    const taskSearchControl = section('task-search-control');
+    const taskSearchAction = section('task-search-action');
+    const taskSearchInput = section('task-search-input');
+    const taskSearchClear = section('task-search-clear');
+    const taskViewOptionsAction = section('task-view-options-action');
+    const taskViewOptionsMenu = section('task-view-options-menu');
+    const sidebarTaskList = section('task-list');
+    const allTasksAction = section('all-tasks-action');
+    const sidebarTaskRows = [...sidebarTaskList.querySelectorAll('a[href*="?task_id="]')];
+    const sidebarTaskState = [
+      ['true', '2026-09-07T14:02:00+08:00', '2026-09-07T14:08:00+08:00'],
+      ['true', '2026-09-07T13:47:00+08:00', '2026-09-07T14:09:00+08:00'],
+      ['true', '2026-09-07T13:20:00+08:00', '2026-09-07T13:38:00+08:00'],
+    ];
+    sidebarTaskRows.forEach((row, index) => {
+      row.dataset.sidebarTaskRow = '';
+      row.dataset.taskActive = sidebarTaskState[index][0];
+      row.dataset.createdAt = sidebarTaskState[index][1];
+      row.dataset.lastEventAt = sidebarTaskState[index][2];
+    });
+
+    const renderSidebarTasks = () => {
+      const query = taskSearchInput.value.trim().toLocaleLowerCase('zh-CN');
+      const activeOnly = document.querySelector('input[name="sidebar-task-filter"]:checked')?.value === 'active';
+      const sort = document.querySelector('input[name="sidebar-task-sort"]:checked')?.value ?? 'created';
+      const ordered = [...sidebarTaskRows].sort((left, right) => {
+        const field = sort === 'activity' ? 'lastEventAt' : 'createdAt';
+        return Date.parse(right.dataset[field]) - Date.parse(left.dataset[field]);
+      });
+      ordered.forEach((row) => {
+        row.hidden = (query && !row.textContent.toLocaleLowerCase('zh-CN').includes(query))
+          || (activeOnly && row.dataset.taskActive !== 'true');
+        sidebarTaskList.insertBefore(row, allTasksAction);
+      });
+    };
+
+    const setSidebarSearchOpen = (open) => {
+      const expanded = taskWorkingSet.dataset.expanded === 'true';
+      taskSearchControl.dataset.open = String(open);
+      taskSearchControl.classList.toggle('flex-1', open);
+      taskSectionToggle.hidden = open;
+      taskSectionActions.hidden = open || !expanded;
+      taskSearchInput.hidden = !open;
+      taskSearchClear.hidden = !open;
+      taskSearchInput.tabIndex = open ? 0 : -1;
+      taskSearchAction.setAttribute('aria-expanded', String(open));
+      if (open) taskSearchInput.focus();
+      else {
+        taskSearchInput.value = '';
+        renderSidebarTasks();
+      }
+    };
+    taskSearchAction.addEventListener('click', () => setSidebarSearchOpen(true));
+    taskSearchClear.addEventListener('click', () => setSidebarSearchOpen(false));
+    taskSearchInput.addEventListener('input', renderSidebarTasks);
+    taskSearchInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setSidebarSearchOpen(false);
+    });
+    taskViewOptionsAction.addEventListener('click', () => {
+      const open = taskViewOptionsMenu.hidden;
+      taskViewOptionsMenu.hidden = !open;
+      taskViewOptionsAction.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('input[name="sidebar-task-sort"], input[name="sidebar-task-filter"]').forEach((input) => input.addEventListener('change', renderSidebarTasks));
+
+    document.querySelectorAll('[data-sidebar-section]').forEach((container) => {
+      const toggle = container.querySelector('button[aria-expanded]');
+      const content = container.querySelector('[data-section-content]');
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(expanded));
+        container.dataset.expanded = String(expanded);
+        content.hidden = !expanded;
+        if (container === taskWorkingSet) {
+          setSidebarSearchOpen(false);
+          taskViewOptionsMenu.hidden = true;
+          taskViewOptionsAction.setAttribute('aria-expanded', 'false');
+          taskSectionActions.hidden = !expanded;
+          taskSectionAttention.hidden = expanded;
+        }
+      });
+    });
+    document.addEventListener('click', (event) => {
+      if (!taskSectionHeader.contains(event.target)) {
+        if (taskSearchControl.dataset.open === 'true') setSidebarSearchOpen(false);
+        taskViewOptionsMenu.hidden = true;
+        taskViewOptionsAction.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

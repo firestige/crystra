@@ -1,0 +1,36 @@
+{
+  "capturedAt": "2026-09-08",
+  "url": "http://127.0.0.1:3080/",
+  "theme": "body[data-ds-dark-theme] with browser prefers-color-scheme: dark",
+  "packages": {
+    "@deepseek-ai/dsh-client-ui-theme": "0.1.1-rc.2",
+    "@deepseek-ai/dsh-client-ui-sidebar": "0.1.1-rc.2",
+    "@deepseek-ai/dsh-client-ui-conversation": "0.1.1-rc.2"
+  },
+  "sourceRoot": "/Users/firestige/.nvm/versions/node/v24.12.0/lib/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai",
+  "tokens": {
+    "--dsw-alias-bg-base": "#151517",
+    "--dsw-alias-state-business-primary": "#679efe",
+    "--dsw-alias-state-success-primary": "#22c55e",
+    "--dsw-alias-state-warn-primary": "#f59e0b",
+    "--dsw-alias-state-error-primary": "#f25a5a",
+    "--dsw-specific-sidebar-fill": "#1b1b1c",
+    "--dsw-alias-bg-layer-1": "#232324",
+    "--dsw-alias-bg-layer-2": "#2c2c2e",
+    "--dsw-specific-input-major": "#2c2c2e",
+    "--dsw-alias-bg-layer-3": "#353638",
+    "--dsw-alias-label-primary": "#f9fafb",
+    "--dsw-alias-label-secondary": "#cfd3d6",
+    "--dsw-alias-label-tertiary": "#adb2b8",
+    "--dsw-alias-label-caption": "#81858c",
+    "--dsw-alias-border-l1": "#ffffff0f",
+    "--dsw-alias-border-l2": "#ffffff1f",
+    "--dsw-alias-border-l3": "#ffffff29",
+    "--dsw-alias-interactive-bg-hover": "#ffffff14",
+    "--dsw-alias-interactive-bg-active": "#ffffff24",
+    "--dsw-alias-button-elevated-fill": "#43454a",
+    "--dsw-alias-button-floating-hover": "#353638",
+    "--dsw-alias-button-info-fill": "#679efe",
+    "--dsw-alias-button-info-hover": "#4176e6"
+  }
+}

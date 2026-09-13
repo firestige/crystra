@@ -1,0 +1,1346 @@
+[
+  {
+    "sample": "development",
+    "key": "RIGHT0",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 2386.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 2386.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT1",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 29,
+      "length": 4950.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 4805.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT2",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 24,
+      "length": 5628.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 24,
+      "length": 5628.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT3",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 39,
+      "length": 7880.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 37,
+      "length": 7735.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT4",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4691.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4691.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT5",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 40,
+      "length": 7144.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 38,
+      "length": 6999.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT6",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 35,
+      "length": 7582.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 35,
+      "length": 7582.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT7",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 50,
+      "length": 9834.635294117648
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 48,
+      "length": 9689.400000000001
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT8",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 2386.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 2386.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT9",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 29,
+      "length": 4950.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 4805.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT10",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 36,
+      "length": 12958.400000000001
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 36,
+      "length": 12958.400000000001
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT11",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 51,
+      "length": 15162.635294117648
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 49,
+      "length": 14825.400000000001
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT12",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4691.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4691.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT13",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 40,
+      "length": 7144.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 38,
+      "length": 6999.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT14",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 47,
+      "length": 14872.400000000001
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 47,
+      "length": 14872.400000000001
+    }
+  },
+  {
+    "sample": "development",
+    "key": "RIGHT15",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 62,
+      "length": 17076.63529411765
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 60,
+      "length": 16739.4
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN0",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1777.2352941176468
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1777.2352941176468
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN1",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 4101.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 4133.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN2",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 24,
+      "length": 4574.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 24,
+      "length": 4574.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN3",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 37,
+      "length": 6370.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 37,
+      "length": 6387.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN4",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4179.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4179.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN5",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 38,
+      "length": 5975.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 38,
+      "length": 5911.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN6",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 35,
+      "length": 6331.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 35,
+      "length": 6331.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN7",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 48,
+      "length": 8127.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 48,
+      "length": 8063.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN8",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1777.2352941176468
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1777.2352941176468
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN9",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 4101.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 4133.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN10",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 36,
+      "length": 10484.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 36,
+      "length": 10484.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN11",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 49,
+      "length": 12280.635294117646
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 49,
+      "length": 12144.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN12",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4179.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 25,
+      "length": 4179.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN13",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 38,
+      "length": 5975.6352941176465
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 38,
+      "length": 5911.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN14",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 47,
+      "length": 12160.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 47,
+      "length": 12160.235294117647
+    }
+  },
+  {
+    "sample": "development",
+    "key": "DOWN15",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 60,
+      "length": 13956.635294117646
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 60,
+      "length": 13820.235294117647
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT0",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 240
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 240
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT1",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 392
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 392
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT2",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1772.2352941176468
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1344
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT3",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 17,
+      "length": 1924.2352941176468
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 17,
+      "length": 1496
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT4",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 240
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 240
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT5",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 392
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 392
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT6",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 24,
+      "length": 2656.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 26,
+      "length": 2180
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "RIGHT7",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 2808.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 29,
+      "length": 2332
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN0",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 228
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 228
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN1",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 388
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 388
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN2",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1452.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1308
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN3",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 17,
+      "length": 1612.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 17,
+      "length": 1468
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN4",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 228
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 228
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN5",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 388
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 7,
+      "length": 388
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN6",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 24,
+      "length": 2498.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 26,
+      "length": 2348
+    }
+  },
+  {
+    "sample": "architecture",
+    "key": "DOWN7",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 27,
+      "length": 2658.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 29,
+      "length": 2508
+    }
+  },
+  {
+    "sample": "research",
+    "key": "RIGHT0",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 306
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 306
+    }
+  },
+  {
+    "sample": "research",
+    "key": "RIGHT1",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 21,
+      "length": 2193.235294117647
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 21,
+      "length": 1815
+    }
+  },
+  {
+    "sample": "research",
+    "key": "RIGHT2",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1833.2352941176468
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1476
+    }
+  },
+  {
+    "sample": "research",
+    "key": "RIGHT3",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 31,
+      "length": 3720.4705882352937
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 31,
+      "length": 2985
+    }
+  },
+  {
+    "sample": "research",
+    "key": "DOWN0",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 296
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 4,
+      "length": 296
+    }
+  },
+  {
+    "sample": "research",
+    "key": "DOWN1",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 21,
+      "length": 2119.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 23,
+      "length": 2001
+    }
+  },
+  {
+    "sample": "research",
+    "key": "DOWN2",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1588.4
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 14,
+      "length": 1388
+    }
+  },
+  {
+    "sample": "research",
+    "key": "DOWN3",
+    "baseline": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 31,
+      "length": 3411.8
+    },
+    "candidate": {
+      "crossings": 0,
+      "pairs": [],
+      "overlap": 0,
+      "clearanceDeficit": 0,
+      "blocked": 0,
+      "labelCollisions": 0,
+      "bends": 33,
+      "length": 3093
+    }
+  }
+]

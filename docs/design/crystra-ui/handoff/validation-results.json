@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-07",
+  "scope": "Documentation package checks only",
+  "source_snapshots_checked": 30,
+  "local_originals_unchanged_checked": 27,
+  "new_markdown_documents_checked": 38,
+  "local_links_checked": 904,
+  "unresolved_links": [],
+  "task_static_elements": 328,
+  "task_unique_ids": 328,
+  "unmapped_ids": [],
+  "shared_css_tokens_checked": 20,
+  "page_specific_css_tokens_checked": 1,
+  "failures": [],
+  "limitations": [
+    "No original HTML edits",
+    "No browser rendering or original layout test execution",
+    "No host/API integration or production conformance",
+    "Archived source links are not a complete repository closure",
+    "No accessibility conformance or user test claim"
+  ]
+}

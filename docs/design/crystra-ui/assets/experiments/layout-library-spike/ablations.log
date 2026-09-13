@@ -1,0 +1,26 @@
+[
+  {
+    engine: 'elk',
+    sameInputMaxRelativeMovement: 0,
+    permutedInputMaxRelativeMovement: 68,
+    identicalRoutes5Runs: true
+  },
+  {
+    engine: 'webcola',
+    sameInputMaxRelativeMovement: 0,
+    permutedInputMaxRelativeMovement: 9.638855040017875,
+    identicalRoutes5Runs: true
+  },
+  {
+    engine: 'fcose',
+    sameInputMaxRelativeMovement: 0.3984691475063533,
+    permutedInputMaxRelativeMovement: 8.444572274760231,
+    identicalRoutes5Runs: true
+  },
+  {
+    engine: 'libcola',
+    sameInputMaxRelativeMovement: 0,
+    permutedInputMaxRelativeMovement: 14.256394249598975,
+    identicalRoutes5Runs: true
+  }
+]

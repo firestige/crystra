@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1-draft",
+  "source": {
+    "kind": "example",
+    "id": "research"
+  },
+  "title": "科研管理：核查、计算与补充",
+  "nodes": [
+    {
+      "id": "research0",
+      "title": "整理项目",
+      "kind": "activity",
+      "summary": "",
+      "description": "整理项目",
+      "output": "阶段结果"
+    },
+    {
+      "id": "research1",
+      "title": "计算进展",
+      "kind": "activity",
+      "summary": "",
+      "description": "计算进展",
+      "output": "阶段结果"
+    },
+    {
+      "id": "research2",
+      "title": "核查关键动作",
+      "kind": "decision",
+      "summary": "",
+      "description": "核查关键动作",
+      "output": "阶段结果"
+    },
+    {
+      "id": "research3",
+      "title": "进展汇总",
+      "kind": "final",
+      "summary": "",
+      "description": "进展汇总",
+      "output": "阶段结果"
+    }
+  ],
+  "flows": [
+    {
+      "id": "research-root",
+      "kind": "main",
+      "title": "科研管理：核查、计算与补充",
+      "entryNodeId": "research0",
+      "exitNodeIds": [
+        "research3"
+      ],
+      "nodeIds": [
+        "research0",
+        "research1",
+        "research2",
+        "research3"
+      ],
+      "edges": [
+        {
+          "id": "a",
+          "from": "research0",
+          "to": "research1",
+          "title": "",
+          "outcome": "continue",
+          "kind": "control",
+          "description": ""
+        },
+        {
+          "id": "b",
+          "from": "research1",
+          "to": "research2",
+          "title": "",
+          "outcome": "continue",
+          "kind": "control",
+          "description": ""
+        },
+        {
+          "id": "c",
+          "from": "research2",
+          "to": "research3",
+          "title": "符合要求",
+          "outcome": "success",
+          "kind": "control",
+          "description": "符合要求"
+        },
+        {
+          "id": "d",
+          "from": "research2",
+          "to": "research0",
+          "title": "需要补充",
+          "outcome": "rework",
+          "kind": "control",
+          "description": "需要补充"
+        }
+      ]
+    }
+  ],
+  "relations": []
+}

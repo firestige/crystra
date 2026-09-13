@@ -1,0 +1,4317 @@
+{
+  "before": {
+    "nodes": [
+      {
+        "id": "s",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 284,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 432,
+          "width": 716,
+          "height": 382
+        },
+        "visible": true
+      },
+      {
+        "id": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 874,
+          "width": 1152,
+          "height": 552
+        },
+        "visible": true
+      },
+      {
+        "id": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 1486,
+          "width": 900,
+          "height": 334
+        },
+        "visible": true
+      },
+      {
+        "id": "ready",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 56,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "e",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 0,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "aborted",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 136,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "next",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "pack",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 700,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "tdd",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 242,
+          "width": 1072,
+          "height": 270
+        },
+        "visible": true
+      },
+      {
+        "id": "read",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 502,
+          "y": 184,
+          "width": 174,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "clear",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 194,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "ask",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 259,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "design",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 206,
+          "width": 206,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "choose",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "red",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "green",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "pass",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "refactor",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 676,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "stable",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 896,
+          "y": 116,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "fork",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "review",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "verify",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 206,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "join",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1",
+        "source": "s",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "s",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 625.95,
+            "y": 129.9
+          },
+          {
+            "x": 836.9,
+            "y": 129.9
+          },
+          {
+            "x": 836.9,
+            "y": 242.19
+          }
+        ]
+      },
+      {
+        "id": "edge-2",
+        "source": "read",
+        "target": "clear",
+        "visible": true,
+        "visibleSource": "read",
+        "visibleTarget": "clear",
+        "points": [
+          {
+            "x": 803.01,
+            "y": 266.955
+          },
+          {
+            "x": 798.33,
+            "y": 266.955
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 303.81
+          },
+          {
+            "x": 687.57,
+            "y": 303.81
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 281.19
+          },
+          {
+            "x": 675.87,
+            "y": 281.19
+          }
+        ]
+      },
+      {
+        "id": "edge-3",
+        "source": "clear",
+        "target": "ask",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "ask",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 254.67000000000002
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 254.67000000000002
+          },
+          {
+            "x": 694.59,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 708.24,
+            "y": 214.89000000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-4",
+        "source": "ask",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ask",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 770.64,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 784.2900000000001,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 798.33,
+            "y": 251.745
+          },
+          {
+            "x": 803.01,
+            "y": 251.745
+          }
+        ]
+      },
+      {
+        "id": "edge-5",
+        "source": "clear",
+        "target": "design",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "design",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 267.93
+          },
+          {
+            "x": 681.33,
+            "y": 267.93
+          },
+          {
+            "x": 694.59,
+            "y": 267.93
+          },
+          {
+            "x": 699.27,
+            "y": 267.93
+          }
+        ]
+      },
+      {
+        "id": "edge-6",
+        "source": "design",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "design",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 739.4,
+            "y": 285.09000000000003
+          },
+          {
+            "x": 739.4,
+            "y": 329.9
+          },
+          {
+            "x": 730.5,
+            "y": 329.9
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "edge-7",
+        "source": "choose",
+        "target": "red",
+        "visible": true,
+        "visibleSource": "choose",
+        "visibleTarget": "red",
+        "points": [
+          {
+            "x": 730.5,
+            "y": 409.11
+          },
+          {
+            "x": 730.5,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 489.0455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-8",
+        "source": "red",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "red",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 700.83,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 705.51,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 719.5500000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 724.23,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-9",
+        "source": "green",
+        "target": "pass",
+        "visible": true,
+        "visibleSource": "green",
+        "visibleTarget": "pass",
+        "points": [
+          {
+            "x": 786.63,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 805.35,
+            "y": 476.385
+          },
+          {
+            "x": 810.03,
+            "y": 476.385
+          }
+        ]
+      },
+      {
+        "id": "edge-10",
+        "source": "pass",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 810.03,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 805.35,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 786.63,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-11",
+        "source": "pass",
+        "target": "refactor",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "refactor",
+        "points": [
+          {
+            "x": 863.0699999999999,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 867.75,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 881.7900000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 886.47,
+            "y": 486.33000000000004
+          }
+        ]
+      },
+      {
+        "id": "edge-12",
+        "source": "refactor",
+        "target": "stable",
+        "visible": true,
+        "visibleSource": "refactor",
+        "visibleTarget": "stable",
+        "points": [
+          {
+            "x": 948.87,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 953.5500000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 967.59,
+            "y": 494.325
+          },
+          {
+            "x": 972.27,
+            "y": 494.325
+          }
+        ]
+      },
+      {
+        "id": "edge-13",
+        "source": "stable",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 514.215
+          },
+          {
+            "x": 967.59,
+            "y": 514.215
+          },
+          {
+            "x": 960.57,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 798.33,
+            "y": 526.89
+          },
+          {
+            "x": 792.09,
+            "y": 516.3455555555556
+          },
+          {
+            "x": 786.63,
+            "y": 516.3455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-14",
+        "source": "stable",
+        "target": "next",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "next",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 413.79
+          }
+        ]
+      },
+      {
+        "id": "edge-15",
+        "source": "next",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 391.95
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 391.95
+          },
+          {
+            "x": 694.59,
+            "y": 391.95
+          },
+          {
+            "x": 699.27,
+            "y": 391.95
+          }
+        ]
+      },
+      {
+        "id": "edge-16",
+        "source": "next",
+        "target": "fork",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "fork",
+        "points": [
+          {
+            "x": 649.4,
+            "y": 413.79
+          },
+          {
+            "x": 649.4,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 635.3100000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-17",
+        "source": "fork",
+        "target": "review",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "review",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 644.865
+          },
+          {
+            "x": 689.91,
+            "y": 644.865
+          },
+          {
+            "x": 703.95,
+            "y": 625.95
+          },
+          {
+            "x": 708.63,
+            "y": 625.95
+          }
+        ]
+      },
+      {
+        "id": "edge-18",
+        "source": "fork",
+        "target": "verify",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "verify",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 660.075
+          },
+          {
+            "x": 689.91,
+            "y": 660.075
+          },
+          {
+            "x": 703.95,
+            "y": 678.99
+          },
+          {
+            "x": 708.63,
+            "y": 678.99
+          }
+        ]
+      },
+      {
+        "id": "edge-19",
+        "source": "review",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "review",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 625.95
+          },
+          {
+            "x": 775.71,
+            "y": 625.95
+          },
+          {
+            "x": 789.75,
+            "y": 644.865
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 644.865
+          }
+        ]
+      },
+      {
+        "id": "edge-20",
+        "source": "verify",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "verify",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 678.99
+          },
+          {
+            "x": 775.71,
+            "y": 678.99
+          },
+          {
+            "x": 789.75,
+            "y": 660.075
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 660.075
+          }
+        ]
+      },
+      {
+        "id": "edge-21",
+        "source": "join",
+        "target": "pack",
+        "visible": true,
+        "visibleSource": "join",
+        "visibleTarget": "pack",
+        "points": [
+          {
+            "x": 856.83,
+            "y": 652.47
+          },
+          {
+            "x": 861.51,
+            "y": 652.47
+          },
+          {
+            "x": 875.5500000000001,
+            "y": 652.47
+          },
+          {
+            "x": 880.23,
+            "y": 652.47
+          }
+        ]
+      },
+      {
+        "id": "edge-24",
+        "source": "ready",
+        "target": "e",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "e",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 35.685
+          },
+          {
+            "x": 664.95,
+            "y": 35.685
+          },
+          {
+            "x": 678.99,
+            "y": 19.11
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 19.11
+          }
+        ]
+      },
+      {
+        "id": "edge-25",
+        "source": "pack",
+        "target": "ready",
+        "visible": true,
+        "visibleSource": "pack",
+        "visibleTarget": "ready",
+        "points": [
+          {
+            "x": 880.23,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 67.47
+          }
+        ]
+      },
+      {
+        "id": "reconsider-design",
+        "source": "ready",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 836.9,
+            "y": 45.6
+          },
+          {
+            "x": 836.9,
+            "y": 242.19
+          }
+        ]
+      },
+      {
+        "id": "repair-implementation",
+        "source": "ready",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "stop-work",
+        "source": "ready",
+        "target": "aborted",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "aborted",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 55.575
+          },
+          {
+            "x": 664.95,
+            "y": 55.575
+          },
+          {
+            "x": 678.99,
+            "y": 72.15
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 72.15
+          }
+        ]
+      }
+    ]
+  },
+  "collapsed": {
+    "nodes": [
+      {
+        "id": "s",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 284,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "plan",
+        "collapsed": true,
+        "geometry": {
+          "x": 0,
+          "y": 432,
+          "width": 200,
+          "height": 90
+        },
+        "visible": true
+      },
+      {
+        "id": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 874,
+          "width": 1152,
+          "height": 552
+        },
+        "visible": true
+      },
+      {
+        "id": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 1486,
+          "width": 900,
+          "height": 334
+        },
+        "visible": true
+      },
+      {
+        "id": "ready",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 56,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "e",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 0,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "aborted",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 136,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "next",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "pack",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 700,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "tdd",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 242,
+          "width": 1072,
+          "height": 270
+        },
+        "visible": true
+      },
+      {
+        "id": "read",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 502,
+          "y": 184,
+          "width": 174,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "clear",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 194,
+          "width": 136,
+          "height": 112
+        },
+        "visible": false
+      },
+      {
+        "id": "ask",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 259,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "design",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 206,
+          "width": 206,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "choose",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "red",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "green",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "pass",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "refactor",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 676,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "stable",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 896,
+          "y": 116,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "fork",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "review",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "verify",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 206,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "join",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1",
+        "source": "s",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "s",
+        "visibleTarget": "plan",
+        "points": [
+          {
+            "x": 616.6,
+            "y": 147.03
+          },
+          {
+            "x": 616.6,
+            "y": 158.7
+          },
+          {
+            "x": 646.2,
+            "y": 158.7
+          },
+          {
+            "x": 646.2,
+            "y": 170.43
+          }
+        ]
+      },
+      {
+        "id": "edge-2",
+        "source": "read",
+        "target": "clear",
+        "visible": false
+      },
+      {
+        "id": "edge-3",
+        "source": "clear",
+        "target": "ask",
+        "visible": false
+      },
+      {
+        "id": "edge-4",
+        "source": "ask",
+        "target": "read",
+        "visible": false
+      },
+      {
+        "id": "edge-5",
+        "source": "clear",
+        "target": "design",
+        "visible": false
+      },
+      {
+        "id": "edge-6",
+        "source": "design",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "plan",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 188
+          },
+          {
+            "x": 730.5,
+            "y": 188
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "edge-7",
+        "source": "choose",
+        "target": "red",
+        "visible": true,
+        "visibleSource": "choose",
+        "visibleTarget": "red",
+        "points": [
+          {
+            "x": 730.5,
+            "y": 409.11
+          },
+          {
+            "x": 730.5,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 489.0455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-8",
+        "source": "red",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "red",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 700.83,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 705.51,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 719.5500000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 724.23,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-9",
+        "source": "green",
+        "target": "pass",
+        "visible": true,
+        "visibleSource": "green",
+        "visibleTarget": "pass",
+        "points": [
+          {
+            "x": 786.63,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 805.35,
+            "y": 476.385
+          },
+          {
+            "x": 810.03,
+            "y": 476.385
+          }
+        ]
+      },
+      {
+        "id": "edge-10",
+        "source": "pass",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 810.03,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 805.35,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 786.63,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-11",
+        "source": "pass",
+        "target": "refactor",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "refactor",
+        "points": [
+          {
+            "x": 863.0699999999999,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 867.75,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 881.7900000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 886.47,
+            "y": 486.33000000000004
+          }
+        ]
+      },
+      {
+        "id": "edge-12",
+        "source": "refactor",
+        "target": "stable",
+        "visible": true,
+        "visibleSource": "refactor",
+        "visibleTarget": "stable",
+        "points": [
+          {
+            "x": 948.87,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 953.5500000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 967.59,
+            "y": 494.325
+          },
+          {
+            "x": 972.27,
+            "y": 494.325
+          }
+        ]
+      },
+      {
+        "id": "edge-13",
+        "source": "stable",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 514.215
+          },
+          {
+            "x": 967.59,
+            "y": 514.215
+          },
+          {
+            "x": 960.57,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 798.33,
+            "y": 526.89
+          },
+          {
+            "x": 792.09,
+            "y": 516.3455555555556
+          },
+          {
+            "x": 786.63,
+            "y": 516.3455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-14",
+        "source": "stable",
+        "target": "next",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "next",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 413.79
+          }
+        ]
+      },
+      {
+        "id": "edge-15",
+        "source": "next",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 391.95
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 391.95
+          },
+          {
+            "x": 694.59,
+            "y": 391.95
+          },
+          {
+            "x": 699.27,
+            "y": 391.95
+          }
+        ]
+      },
+      {
+        "id": "edge-16",
+        "source": "next",
+        "target": "fork",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "fork",
+        "points": [
+          {
+            "x": 649.4,
+            "y": 413.79
+          },
+          {
+            "x": 649.4,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 635.3100000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-17",
+        "source": "fork",
+        "target": "review",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "review",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 644.865
+          },
+          {
+            "x": 689.91,
+            "y": 644.865
+          },
+          {
+            "x": 703.95,
+            "y": 625.95
+          },
+          {
+            "x": 708.63,
+            "y": 625.95
+          }
+        ]
+      },
+      {
+        "id": "edge-18",
+        "source": "fork",
+        "target": "verify",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "verify",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 660.075
+          },
+          {
+            "x": 689.91,
+            "y": 660.075
+          },
+          {
+            "x": 703.95,
+            "y": 678.99
+          },
+          {
+            "x": 708.63,
+            "y": 678.99
+          }
+        ]
+      },
+      {
+        "id": "edge-19",
+        "source": "review",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "review",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 625.95
+          },
+          {
+            "x": 775.71,
+            "y": 625.95
+          },
+          {
+            "x": 789.75,
+            "y": 644.865
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 644.865
+          }
+        ]
+      },
+      {
+        "id": "edge-20",
+        "source": "verify",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "verify",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 678.99
+          },
+          {
+            "x": 775.71,
+            "y": 678.99
+          },
+          {
+            "x": 789.75,
+            "y": 660.075
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 660.075
+          }
+        ]
+      },
+      {
+        "id": "edge-21",
+        "source": "join",
+        "target": "pack",
+        "visible": true,
+        "visibleSource": "join",
+        "visibleTarget": "pack",
+        "points": [
+          {
+            "x": 856.83,
+            "y": 652.47
+          },
+          {
+            "x": 861.51,
+            "y": 652.47
+          },
+          {
+            "x": 875.5500000000001,
+            "y": 652.47
+          },
+          {
+            "x": 880.23,
+            "y": 652.47
+          }
+        ]
+      },
+      {
+        "id": "edge-24",
+        "source": "ready",
+        "target": "e",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "e",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 35.685
+          },
+          {
+            "x": 664.95,
+            "y": 35.685
+          },
+          {
+            "x": 678.99,
+            "y": 19.11
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 19.11
+          }
+        ]
+      },
+      {
+        "id": "edge-25",
+        "source": "pack",
+        "target": "ready",
+        "visible": true,
+        "visibleSource": "pack",
+        "visibleTarget": "ready",
+        "points": [
+          {
+            "x": 880.23,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 67.47
+          }
+        ]
+      },
+      {
+        "id": "reconsider-design",
+        "source": "ready",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "plan",
+        "points": [
+          {
+            "x": 633.8,
+            "y": 67.47
+          },
+          {
+            "x": 633.8,
+            "y": 119
+          },
+          {
+            "x": 646.2,
+            "y": 119
+          },
+          {
+            "x": 646.2,
+            "y": 170.43
+          }
+        ]
+      },
+      {
+        "id": "repair-implementation",
+        "source": "ready",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "stop-work",
+        "source": "ready",
+        "target": "aborted",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "aborted",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 55.575
+          },
+          {
+            "x": 664.95,
+            "y": 55.575
+          },
+          {
+            "x": 678.99,
+            "y": 72.15
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 72.15
+          }
+        ]
+      }
+    ]
+  },
+  "restored": {
+    "nodes": [
+      {
+        "id": "s",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 284,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 432,
+          "width": 716,
+          "height": 382
+        },
+        "visible": true
+      },
+      {
+        "id": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 874,
+          "width": 1152,
+          "height": 552
+        },
+        "visible": true
+      },
+      {
+        "id": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 1486,
+          "width": 900,
+          "height": 334
+        },
+        "visible": true
+      },
+      {
+        "id": "ready",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 56,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "e",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 0,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "aborted",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 136,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "next",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "pack",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 700,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "tdd",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 242,
+          "width": 1072,
+          "height": 270
+        },
+        "visible": true
+      },
+      {
+        "id": "read",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 502,
+          "y": 184,
+          "width": 174,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "clear",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 194,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "ask",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 259,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "design",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 206,
+          "width": 206,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "choose",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "red",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "green",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "pass",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "refactor",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 676,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "stable",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 896,
+          "y": 116,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "fork",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "review",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "verify",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 206,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "join",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1",
+        "source": "s",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "s",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 625.95,
+            "y": 129.9
+          },
+          {
+            "x": 836.9,
+            "y": 129.9
+          },
+          {
+            "x": 836.9,
+            "y": 242.19
+          }
+        ]
+      },
+      {
+        "id": "edge-2",
+        "source": "read",
+        "target": "clear",
+        "visible": true,
+        "visibleSource": "read",
+        "visibleTarget": "clear",
+        "points": [
+          {
+            "x": 803.01,
+            "y": 266.955
+          },
+          {
+            "x": 798.33,
+            "y": 266.955
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 303.81
+          },
+          {
+            "x": 687.57,
+            "y": 303.81
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 281.19
+          },
+          {
+            "x": 675.87,
+            "y": 281.19
+          }
+        ]
+      },
+      {
+        "id": "edge-3",
+        "source": "clear",
+        "target": "ask",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "ask",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 254.67000000000002
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 254.67000000000002
+          },
+          {
+            "x": 694.59,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 708.24,
+            "y": 214.89000000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-4",
+        "source": "ask",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ask",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 770.64,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 784.2900000000001,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 798.33,
+            "y": 251.745
+          },
+          {
+            "x": 803.01,
+            "y": 251.745
+          }
+        ]
+      },
+      {
+        "id": "edge-5",
+        "source": "clear",
+        "target": "design",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "design",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 267.93
+          },
+          {
+            "x": 681.33,
+            "y": 267.93
+          },
+          {
+            "x": 694.59,
+            "y": 267.93
+          },
+          {
+            "x": 699.27,
+            "y": 267.93
+          }
+        ]
+      },
+      {
+        "id": "edge-6",
+        "source": "design",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "design",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 739.4,
+            "y": 285.09000000000003
+          },
+          {
+            "x": 739.4,
+            "y": 329.9
+          },
+          {
+            "x": 730.5,
+            "y": 329.9
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "edge-7",
+        "source": "choose",
+        "target": "red",
+        "visible": true,
+        "visibleSource": "choose",
+        "visibleTarget": "red",
+        "points": [
+          {
+            "x": 730.5,
+            "y": 409.11
+          },
+          {
+            "x": 730.5,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 489.0455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-8",
+        "source": "red",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "red",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 700.83,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 705.51,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 719.5500000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 724.23,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-9",
+        "source": "green",
+        "target": "pass",
+        "visible": true,
+        "visibleSource": "green",
+        "visibleTarget": "pass",
+        "points": [
+          {
+            "x": 786.63,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 805.35,
+            "y": 476.385
+          },
+          {
+            "x": 810.03,
+            "y": 476.385
+          }
+        ]
+      },
+      {
+        "id": "edge-10",
+        "source": "pass",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 810.03,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 805.35,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 786.63,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-11",
+        "source": "pass",
+        "target": "refactor",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "refactor",
+        "points": [
+          {
+            "x": 863.0699999999999,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 867.75,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 881.7900000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 886.47,
+            "y": 486.33000000000004
+          }
+        ]
+      },
+      {
+        "id": "edge-12",
+        "source": "refactor",
+        "target": "stable",
+        "visible": true,
+        "visibleSource": "refactor",
+        "visibleTarget": "stable",
+        "points": [
+          {
+            "x": 948.87,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 953.5500000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 967.59,
+            "y": 494.325
+          },
+          {
+            "x": 972.27,
+            "y": 494.325
+          }
+        ]
+      },
+      {
+        "id": "edge-13",
+        "source": "stable",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 514.215
+          },
+          {
+            "x": 967.59,
+            "y": 514.215
+          },
+          {
+            "x": 960.57,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 798.33,
+            "y": 526.89
+          },
+          {
+            "x": 792.09,
+            "y": 516.3455555555556
+          },
+          {
+            "x": 786.63,
+            "y": 516.3455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-14",
+        "source": "stable",
+        "target": "next",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "next",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 413.79
+          }
+        ]
+      },
+      {
+        "id": "edge-15",
+        "source": "next",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 391.95
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 391.95
+          },
+          {
+            "x": 694.59,
+            "y": 391.95
+          },
+          {
+            "x": 699.27,
+            "y": 391.95
+          }
+        ]
+      },
+      {
+        "id": "edge-16",
+        "source": "next",
+        "target": "fork",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "fork",
+        "points": [
+          {
+            "x": 649.4,
+            "y": 413.79
+          },
+          {
+            "x": 649.4,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 635.3100000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-17",
+        "source": "fork",
+        "target": "review",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "review",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 644.865
+          },
+          {
+            "x": 689.91,
+            "y": 644.865
+          },
+          {
+            "x": 703.95,
+            "y": 625.95
+          },
+          {
+            "x": 708.63,
+            "y": 625.95
+          }
+        ]
+      },
+      {
+        "id": "edge-18",
+        "source": "fork",
+        "target": "verify",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "verify",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 660.075
+          },
+          {
+            "x": 689.91,
+            "y": 660.075
+          },
+          {
+            "x": 703.95,
+            "y": 678.99
+          },
+          {
+            "x": 708.63,
+            "y": 678.99
+          }
+        ]
+      },
+      {
+        "id": "edge-19",
+        "source": "review",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "review",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 625.95
+          },
+          {
+            "x": 775.71,
+            "y": 625.95
+          },
+          {
+            "x": 789.75,
+            "y": 644.865
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 644.865
+          }
+        ]
+      },
+      {
+        "id": "edge-20",
+        "source": "verify",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "verify",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 678.99
+          },
+          {
+            "x": 775.71,
+            "y": 678.99
+          },
+          {
+            "x": 789.75,
+            "y": 660.075
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 660.075
+          }
+        ]
+      },
+      {
+        "id": "edge-21",
+        "source": "join",
+        "target": "pack",
+        "visible": true,
+        "visibleSource": "join",
+        "visibleTarget": "pack",
+        "points": [
+          {
+            "x": 856.83,
+            "y": 652.47
+          },
+          {
+            "x": 861.51,
+            "y": 652.47
+          },
+          {
+            "x": 875.5500000000001,
+            "y": 652.47
+          },
+          {
+            "x": 880.23,
+            "y": 652.47
+          }
+        ]
+      },
+      {
+        "id": "edge-24",
+        "source": "ready",
+        "target": "e",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "e",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 35.685
+          },
+          {
+            "x": 664.95,
+            "y": 35.685
+          },
+          {
+            "x": 678.99,
+            "y": 19.11
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 19.11
+          }
+        ]
+      },
+      {
+        "id": "edge-25",
+        "source": "pack",
+        "target": "ready",
+        "visible": true,
+        "visibleSource": "pack",
+        "visibleTarget": "ready",
+        "points": [
+          {
+            "x": 880.23,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 67.47
+          }
+        ]
+      },
+      {
+        "id": "reconsider-design",
+        "source": "ready",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 836.9,
+            "y": 45.6
+          },
+          {
+            "x": 836.9,
+            "y": 242.19
+          }
+        ]
+      },
+      {
+        "id": "repair-implementation",
+        "source": "ready",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "stop-work",
+        "source": "ready",
+        "target": "aborted",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "aborted",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 55.575
+          },
+          {
+            "x": 664.95,
+            "y": 55.575
+          },
+          {
+            "x": 678.99,
+            "y": 72.15
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 72.15
+          }
+        ]
+      }
+    ]
+  },
+  "enter": {
+    "nodes": [
+      {
+        "id": "s",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 284,
+          "width": 48,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 432,
+          "width": 716,
+          "height": 382
+        },
+        "visible": true
+      },
+      {
+        "id": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 874,
+          "width": 1152,
+          "height": 552
+        },
+        "visible": false
+      },
+      {
+        "id": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 1486,
+          "width": 900,
+          "height": 334
+        },
+        "visible": false
+      },
+      {
+        "id": "ready",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 56,
+          "width": 136,
+          "height": 112
+        },
+        "visible": false
+      },
+      {
+        "id": "e",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 0,
+          "width": 48,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "aborted",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 136,
+          "width": 48,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "next",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": false
+      },
+      {
+        "id": "pack",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 700,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "tdd",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 242,
+          "width": 1072,
+          "height": 270
+        },
+        "visible": false
+      },
+      {
+        "id": "read",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 502,
+          "y": 184,
+          "width": 174,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "clear",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 194,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "ask",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 259,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "design",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 206,
+          "width": 206,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "choose",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "red",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "green",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "pass",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": false
+      },
+      {
+        "id": "refactor",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 676,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "stable",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 896,
+          "y": 116,
+          "width": 136,
+          "height": 112
+        },
+        "visible": false
+      },
+      {
+        "id": "fork",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "review",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "verify",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 206,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      },
+      {
+        "id": "join",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1",
+        "source": "s",
+        "target": "read",
+        "visible": false
+      },
+      {
+        "id": "edge-2",
+        "source": "read",
+        "target": "clear",
+        "visible": true,
+        "visibleSource": "read",
+        "visibleTarget": "clear",
+        "points": [
+          {
+            "x": 1180,
+            "y": 446.25
+          },
+          {
+            "x": 1150,
+            "y": 446.25
+          },
+          {
+            "x": 1105,
+            "y": 682.5
+          },
+          {
+            "x": 440,
+            "y": 682.5
+          },
+          {
+            "x": 395,
+            "y": 537.5
+          },
+          {
+            "x": 365,
+            "y": 537.5
+          }
+        ]
+      },
+      {
+        "id": "edge-3",
+        "source": "clear",
+        "target": "ask",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "ask",
+        "points": [
+          {
+            "x": 365,
+            "y": 367.5
+          },
+          {
+            "x": 395,
+            "y": 367.5
+          },
+          {
+            "x": 485,
+            "y": 112.5
+          },
+          {
+            "x": 572.5,
+            "y": 112.5
+          }
+        ]
+      },
+      {
+        "id": "edge-4",
+        "source": "ask",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ask",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 972.5,
+            "y": 112.5
+          },
+          {
+            "x": 1060,
+            "y": 112.5
+          },
+          {
+            "x": 1150,
+            "y": 348.75
+          },
+          {
+            "x": 1180,
+            "y": 348.75
+          }
+        ]
+      },
+      {
+        "id": "edge-5",
+        "source": "clear",
+        "target": "design",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "design",
+        "points": [
+          {
+            "x": 365,
+            "y": 452.5
+          },
+          {
+            "x": 400,
+            "y": 452.5
+          },
+          {
+            "x": 485,
+            "y": 452.5
+          },
+          {
+            "x": 515,
+            "y": 452.5
+          }
+        ]
+      },
+      {
+        "id": "edge-6",
+        "source": "design",
+        "target": "choose",
+        "visible": false
+      },
+      {
+        "id": "edge-7",
+        "source": "choose",
+        "target": "red",
+        "visible": false
+      },
+      {
+        "id": "edge-8",
+        "source": "red",
+        "target": "green",
+        "visible": false
+      },
+      {
+        "id": "edge-9",
+        "source": "green",
+        "target": "pass",
+        "visible": false
+      },
+      {
+        "id": "edge-10",
+        "source": "pass",
+        "target": "green",
+        "visible": false
+      },
+      {
+        "id": "edge-11",
+        "source": "pass",
+        "target": "refactor",
+        "visible": false
+      },
+      {
+        "id": "edge-12",
+        "source": "refactor",
+        "target": "stable",
+        "visible": false
+      },
+      {
+        "id": "edge-13",
+        "source": "stable",
+        "target": "green",
+        "visible": false
+      },
+      {
+        "id": "edge-14",
+        "source": "stable",
+        "target": "next",
+        "visible": false
+      },
+      {
+        "id": "edge-15",
+        "source": "next",
+        "target": "choose",
+        "visible": false
+      },
+      {
+        "id": "edge-16",
+        "source": "next",
+        "target": "fork",
+        "visible": false
+      },
+      {
+        "id": "edge-17",
+        "source": "fork",
+        "target": "review",
+        "visible": false
+      },
+      {
+        "id": "edge-18",
+        "source": "fork",
+        "target": "verify",
+        "visible": false
+      },
+      {
+        "id": "edge-19",
+        "source": "review",
+        "target": "join",
+        "visible": false
+      },
+      {
+        "id": "edge-20",
+        "source": "verify",
+        "target": "join",
+        "visible": false
+      },
+      {
+        "id": "edge-21",
+        "source": "join",
+        "target": "pack",
+        "visible": false
+      },
+      {
+        "id": "edge-24",
+        "source": "ready",
+        "target": "e",
+        "visible": false
+      },
+      {
+        "id": "edge-25",
+        "source": "pack",
+        "target": "ready",
+        "visible": false
+      },
+      {
+        "id": "reconsider-design",
+        "source": "ready",
+        "target": "read",
+        "visible": false
+      },
+      {
+        "id": "repair-implementation",
+        "source": "ready",
+        "target": "choose",
+        "visible": false
+      },
+      {
+        "id": "stop-work",
+        "source": "ready",
+        "target": "aborted",
+        "visible": false
+      }
+    ]
+  },
+  "home": {
+    "nodes": [
+      {
+        "id": "s",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 284,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 432,
+          "width": 716,
+          "height": 382
+        },
+        "visible": true
+      },
+      {
+        "id": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 874,
+          "width": 1152,
+          "height": 552
+        },
+        "visible": true
+      },
+      {
+        "id": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 1486,
+          "width": 900,
+          "height": 334
+        },
+        "visible": true
+      },
+      {
+        "id": "ready",
+        "collapsed": false,
+        "geometry": {
+          "x": 0,
+          "y": 56,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "e",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 0,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "aborted",
+        "collapsed": false,
+        "geometry": {
+          "x": 196,
+          "y": 136,
+          "width": 48,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "next",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "pack",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 700,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "tdd",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 242,
+          "width": 1072,
+          "height": 270
+        },
+        "visible": true
+      },
+      {
+        "id": "read",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 502,
+          "y": 184,
+          "width": 174,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "clear",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 194,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "ask",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 259,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "design",
+        "parent": "plan",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 206,
+          "width": 206,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "choose",
+        "parent": "work",
+        "collapsed": false,
+        "geometry": {
+          "x": 236,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "red",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "green",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 132.962962962963,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "pass",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 70,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "refactor",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 676,
+          "y": 82,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "stable",
+        "parent": "tdd",
+        "collapsed": false,
+        "geometry": {
+          "x": 896,
+          "y": 116,
+          "width": 136,
+          "height": 112
+        },
+        "visible": true
+      },
+      {
+        "id": "fork",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 40,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "review",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 70,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "verify",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 260,
+          "y": 206,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      },
+      {
+        "id": "join",
+        "parent": "delivery",
+        "collapsed": false,
+        "geometry": {
+          "x": 480,
+          "y": 138,
+          "width": 160,
+          "height": 88
+        },
+        "visible": true
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1",
+        "source": "s",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "s",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 625.95,
+            "y": 129.9
+          },
+          {
+            "x": 836.9,
+            "y": 129.9
+          },
+          {
+            "x": 836.9,
+            "y": 242.19
+          }
+        ]
+      },
+      {
+        "id": "edge-2",
+        "source": "read",
+        "target": "clear",
+        "visible": true,
+        "visibleSource": "read",
+        "visibleTarget": "clear",
+        "points": [
+          {
+            "x": 803.01,
+            "y": 266.955
+          },
+          {
+            "x": 798.33,
+            "y": 266.955
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 303.81
+          },
+          {
+            "x": 687.57,
+            "y": 303.81
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 281.19
+          },
+          {
+            "x": 675.87,
+            "y": 281.19
+          }
+        ]
+      },
+      {
+        "id": "edge-3",
+        "source": "clear",
+        "target": "ask",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "ask",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 254.67000000000002
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 254.67000000000002
+          },
+          {
+            "x": 694.59,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 708.24,
+            "y": 214.89000000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-4",
+        "source": "ask",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ask",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 770.64,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 784.2900000000001,
+            "y": 214.89000000000001
+          },
+          {
+            "x": 798.33,
+            "y": 251.745
+          },
+          {
+            "x": 803.01,
+            "y": 251.745
+          }
+        ]
+      },
+      {
+        "id": "edge-5",
+        "source": "clear",
+        "target": "design",
+        "visible": true,
+        "visibleSource": "clear",
+        "visibleTarget": "design",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 267.93
+          },
+          {
+            "x": 681.33,
+            "y": 267.93
+          },
+          {
+            "x": 694.59,
+            "y": 267.93
+          },
+          {
+            "x": 699.27,
+            "y": 267.93
+          }
+        ]
+      },
+      {
+        "id": "edge-6",
+        "source": "design",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "design",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 739.4,
+            "y": 285.09000000000003
+          },
+          {
+            "x": 739.4,
+            "y": 329.9
+          },
+          {
+            "x": 730.5,
+            "y": 329.9
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "edge-7",
+        "source": "choose",
+        "target": "red",
+        "visible": true,
+        "visibleSource": "choose",
+        "visibleTarget": "red",
+        "points": [
+          {
+            "x": 730.5,
+            "y": 409.11
+          },
+          {
+            "x": 730.5,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 449.1
+          },
+          {
+            "x": 669.6,
+            "y": 489.0455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-8",
+        "source": "red",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "red",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 700.83,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 705.51,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 719.5500000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 724.23,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-9",
+        "source": "green",
+        "target": "pass",
+        "visible": true,
+        "visibleSource": "green",
+        "visibleTarget": "pass",
+        "points": [
+          {
+            "x": 786.63,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 496.0655555555556
+          },
+          {
+            "x": 805.35,
+            "y": 476.385
+          },
+          {
+            "x": 810.03,
+            "y": 476.385
+          }
+        ]
+      },
+      {
+        "id": "edge-10",
+        "source": "pass",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 810.03,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 805.35,
+            "y": 496.27500000000003
+          },
+          {
+            "x": 791.3100000000001,
+            "y": 506.20555555555563
+          },
+          {
+            "x": 786.63,
+            "y": 506.20555555555563
+          }
+        ]
+      },
+      {
+        "id": "edge-11",
+        "source": "pass",
+        "target": "refactor",
+        "visible": true,
+        "visibleSource": "pass",
+        "visibleTarget": "refactor",
+        "points": [
+          {
+            "x": 863.0699999999999,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 867.75,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 881.7900000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 886.47,
+            "y": 486.33000000000004
+          }
+        ]
+      },
+      {
+        "id": "edge-12",
+        "source": "refactor",
+        "target": "stable",
+        "visible": true,
+        "visibleSource": "refactor",
+        "visibleTarget": "stable",
+        "points": [
+          {
+            "x": 948.87,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 953.5500000000001,
+            "y": 486.33000000000004
+          },
+          {
+            "x": 967.59,
+            "y": 494.325
+          },
+          {
+            "x": 972.27,
+            "y": 494.325
+          }
+        ]
+      },
+      {
+        "id": "edge-13",
+        "source": "stable",
+        "target": "green",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "green",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 514.215
+          },
+          {
+            "x": 967.59,
+            "y": 514.215
+          },
+          {
+            "x": 960.57,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 874.77,
+            "y": 526.89
+          },
+          {
+            "x": 798.33,
+            "y": 526.89
+          },
+          {
+            "x": 792.09,
+            "y": 516.3455555555556
+          },
+          {
+            "x": 786.63,
+            "y": 516.3455555555556
+          }
+        ]
+      },
+      {
+        "id": "edge-14",
+        "source": "stable",
+        "target": "next",
+        "visible": true,
+        "visibleSource": "stable",
+        "visibleTarget": "next",
+        "points": [
+          {
+            "x": 972.27,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 504.3
+          },
+          {
+            "x": 649.4,
+            "y": 413.79
+          }
+        ]
+      },
+      {
+        "id": "edge-15",
+        "source": "next",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 675.87,
+            "y": 391.95
+          },
+          {
+            "x": 680.5500000000001,
+            "y": 391.95
+          },
+          {
+            "x": 694.59,
+            "y": 391.95
+          },
+          {
+            "x": 699.27,
+            "y": 391.95
+          }
+        ]
+      },
+      {
+        "id": "edge-16",
+        "source": "next",
+        "target": "fork",
+        "visible": true,
+        "visibleSource": "next",
+        "visibleTarget": "fork",
+        "points": [
+          {
+            "x": 649.4,
+            "y": 413.79
+          },
+          {
+            "x": 649.4,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 524.6
+          },
+          {
+            "x": 654,
+            "y": 635.3100000000001
+          }
+        ]
+      },
+      {
+        "id": "edge-17",
+        "source": "fork",
+        "target": "review",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "review",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 644.865
+          },
+          {
+            "x": 689.91,
+            "y": 644.865
+          },
+          {
+            "x": 703.95,
+            "y": 625.95
+          },
+          {
+            "x": 708.63,
+            "y": 625.95
+          }
+        ]
+      },
+      {
+        "id": "edge-18",
+        "source": "fork",
+        "target": "verify",
+        "visible": true,
+        "visibleSource": "fork",
+        "visibleTarget": "verify",
+        "points": [
+          {
+            "x": 685.23,
+            "y": 660.075
+          },
+          {
+            "x": 689.91,
+            "y": 660.075
+          },
+          {
+            "x": 703.95,
+            "y": 678.99
+          },
+          {
+            "x": 708.63,
+            "y": 678.99
+          }
+        ]
+      },
+      {
+        "id": "edge-19",
+        "source": "review",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "review",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 625.95
+          },
+          {
+            "x": 775.71,
+            "y": 625.95
+          },
+          {
+            "x": 789.75,
+            "y": 644.865
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 644.865
+          }
+        ]
+      },
+      {
+        "id": "edge-20",
+        "source": "verify",
+        "target": "join",
+        "visible": true,
+        "visibleSource": "verify",
+        "visibleTarget": "join",
+        "points": [
+          {
+            "x": 771.03,
+            "y": 678.99
+          },
+          {
+            "x": 775.71,
+            "y": 678.99
+          },
+          {
+            "x": 789.75,
+            "y": 660.075
+          },
+          {
+            "x": 794.4300000000001,
+            "y": 660.075
+          }
+        ]
+      },
+      {
+        "id": "edge-21",
+        "source": "join",
+        "target": "pack",
+        "visible": true,
+        "visibleSource": "join",
+        "visibleTarget": "pack",
+        "points": [
+          {
+            "x": 856.83,
+            "y": 652.47
+          },
+          {
+            "x": 861.51,
+            "y": 652.47
+          },
+          {
+            "x": 875.5500000000001,
+            "y": 652.47
+          },
+          {
+            "x": 880.23,
+            "y": 652.47
+          }
+        ]
+      },
+      {
+        "id": "edge-24",
+        "source": "ready",
+        "target": "e",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "e",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 35.685
+          },
+          {
+            "x": 664.95,
+            "y": 35.685
+          },
+          {
+            "x": 678.99,
+            "y": 19.11
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 19.11
+          }
+        ]
+      },
+      {
+        "id": "edge-25",
+        "source": "pack",
+        "target": "ready",
+        "visible": true,
+        "visibleSource": "pack",
+        "visibleTarget": "ready",
+        "points": [
+          {
+            "x": 880.23,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 652.5
+          },
+          {
+            "x": 633.8,
+            "y": 67.47
+          }
+        ]
+      },
+      {
+        "id": "reconsider-design",
+        "source": "ready",
+        "target": "read",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "read",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 836.9,
+            "y": 45.6
+          },
+          {
+            "x": 836.9,
+            "y": 242.19
+          }
+        ]
+      },
+      {
+        "id": "repair-implementation",
+        "source": "ready",
+        "target": "choose",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "choose",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 45.6
+          },
+          {
+            "x": 730.5,
+            "y": 374.79
+          }
+        ]
+      },
+      {
+        "id": "stop-work",
+        "source": "ready",
+        "target": "aborted",
+        "visible": true,
+        "visibleSource": "ready",
+        "visibleTarget": "aborted",
+        "points": [
+          {
+            "x": 660.27,
+            "y": 55.575
+          },
+          {
+            "x": 664.95,
+            "y": 55.575
+          },
+          {
+            "x": 678.99,
+            "y": 72.15
+          },
+          {
+            "x": 683.6700000000001,
+            "y": 72.15
+          }
+        ]
+      }
+    ]
+  }
+}

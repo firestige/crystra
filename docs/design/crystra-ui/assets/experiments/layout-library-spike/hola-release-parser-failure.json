@@ -1,0 +1,122 @@
+[
+  {
+    "name": "development",
+    "scope": null,
+    "ms": 1293.6723749999999,
+    "inputNodes": 7,
+    "outputNodes": 15,
+    "inputEdges": 8,
+    "forwardViolations": 5,
+    "file": "hola-output/development-root"
+  },
+  {
+    "name": "development",
+    "scope": "plan",
+    "ms": 4.044208000000026,
+    "inputNodes": 7,
+    "outputNodes": 14,
+    "inputEdges": 7,
+    "forwardViolations": 4,
+    "file": "hola-output/development-plan"
+  },
+  {
+    "name": "development",
+    "scope": "work",
+    "ms": 5.672792000000072,
+    "inputNodes": 6,
+    "outputNodes": 12,
+    "inputEdges": 6,
+    "forwardViolations": 4,
+    "file": "hola-output/development-work"
+  },
+  {
+    "name": "development",
+    "scope": "delivery",
+    "ms": 4.16208400000005,
+    "inputNodes": 7,
+    "outputNodes": 14,
+    "inputEdges": 7,
+    "forwardViolations": 7,
+    "file": "hola-output/development-delivery"
+  },
+  {
+    "name": "development",
+    "scope": "tdd",
+    "ms": 5.335417000000007,
+    "inputNodes": 7,
+    "outputNodes": 15,
+    "inputEdges": 8,
+    "forwardViolations": 5,
+    "file": "hola-output/development-tdd"
+  },
+  {
+    "name": "architecture",
+    "scope": null,
+    "ms": 4.270624999999882,
+    "inputNodes": 5,
+    "outputNodes": 9,
+    "inputEdges": 4,
+    "forwardViolations": 3,
+    "file": "hola-output/architecture-root"
+  },
+  {
+    "name": "architecture",
+    "scope": "explore",
+    "ms": 4.193333000000166,
+    "inputNodes": 4,
+    "outputNodes": 7,
+    "inputEdges": 3,
+    "forwardViolations": 3,
+    "file": "hola-output/architecture-explore"
+  },
+  {
+    "name": "architecture",
+    "scope": "architecture",
+    "ms": 4.0629579999999805,
+    "inputNodes": 6,
+    "outputNodes": 12,
+    "inputEdges": 6,
+    "forwardViolations": 4,
+    "file": "hola-output/architecture-architecture"
+  },
+  {
+    "name": "architecture",
+    "scope": "reviewing",
+    "ms": 4.36483300000009,
+    "inputNodes": 6,
+    "outputNodes": 12,
+    "inputEdges": 6,
+    "forwardViolations": 6,
+    "file": "hola-output/architecture-reviewing"
+  },
+  {
+    "name": "research",
+    "scope": null,
+    "ms": 3.964625000000069,
+    "inputNodes": 5,
+    "outputNodes": 9,
+    "inputEdges": 4,
+    "forwardViolations": 4,
+    "file": "hola-output/research-root"
+  },
+  {
+    "name": "research",
+    "scope": "collect",
+    "ms": 4.107749999999896,
+    "inputNodes": 8,
+    "outputNodes": 17,
+    "inputEdges": 9,
+    "forwardViolations": 7,
+    "file": "hola-output/research-collect"
+  },
+  {
+    "name": "research",
+    "scope": "compute",
+    "ms": 3.3863750000000437,
+    "inputNodes": 6,
+    "outputNodes": 12,
+    "inputEdges": 6,
+    "forwardViolations": 4,
+    "file": "hola-output/research-compute"
+  }
+]

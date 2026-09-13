@@ -1,0 +1,18 @@
+{
+  "cases": 120,
+  "errors": [],
+  "wasmMetrics": {
+    "nodeOverlaps": 0,
+    "blocked": 0,
+    "crossings": 0,
+    "sharedLength": 370.61,
+    "nonOrthogonal": 0,
+    "bends": 6,
+    "length": 1624.52,
+    "constraintViolations": 0,
+    "width": 965.63,
+    "height": 546.06,
+    "finite": true,
+    "missingRoutes": 0
+  }
+}

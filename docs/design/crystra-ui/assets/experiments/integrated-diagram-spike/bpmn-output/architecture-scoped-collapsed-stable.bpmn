@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions" targetNamespace="https://crystra.test/spike">
+  <bpmn:process id="Process" isExecutable="false">
+    <bpmn:subProcess id="explore" name="探索问题">
+      <bpmn:incoming>edge-1</bpmn:incoming>
+      <bpmn:outgoing>edge-3</bpmn:outgoing>
+      <bpmn:startEvent id="explore_start">
+        <bpmn:outgoing>explore_entry_bridge</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="explore_end">
+        <bpmn:incoming>explore_exit_bridge</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:task id="brainstorm" name="头脑风暴">
+        <bpmn:incoming>explore_entry_bridge</bpmn:incoming>
+        <bpmn:outgoing>edge-2</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="scope" name="明确目标与约束">
+        <bpmn:incoming>edge-2</bpmn:incoming>
+        <bpmn:outgoing>explore_exit_bridge</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:sequenceFlow id="edge-2" name="" sourceRef="brainstorm" targetRef="scope" />
+      <bpmn:sequenceFlow id="explore_entry_bridge" name="" sourceRef="explore_start" targetRef="brainstorm" />
+      <bpmn:sequenceFlow id="explore_exit_bridge" name="" sourceRef="scope" targetRef="explore_end" />
+    </bpmn:subProcess>
+    <bpmn:subProcess id="architecture" name="形成架构方案">
+      <bpmn:incoming>edge-3</bpmn:incoming>
+      <bpmn:outgoing>edge-12</bpmn:outgoing>
+      <bpmn:startEvent id="architecture_start">
+        <bpmn:outgoing>architecture_entry_bridge</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="architecture_end">
+        <bpmn:incoming>architecture_exit_bridge</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:subProcess id="reviewing" name="多角度评审">
+        <bpmn:incoming>edge-4</bpmn:incoming>
+        <bpmn:outgoing>edge-9</bpmn:outgoing>
+        <bpmn:startEvent id="reviewing_start">
+          <bpmn:outgoing>reviewing_entry_bridge</bpmn:outgoing>
+        </bpmn:startEvent>
+        <bpmn:endEvent id="reviewing_end">
+          <bpmn:incoming>reviewing_exit_bridge</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:parallelGateway id="fork" name="并行检查">
+          <bpmn:incoming>reviewing_entry_bridge</bpmn:incoming>
+          <bpmn:outgoing>edge-5</bpmn:outgoing>
+          <bpmn:outgoing>edge-6</bpmn:outgoing>
+        </bpmn:parallelGateway>
+        <bpmn:task id="quality" name="检查非功能需求">
+          <bpmn:incoming>edge-5</bpmn:incoming>
+          <bpmn:outgoing>edge-7</bpmn:outgoing>
+        </bpmn:task>
+        <bpmn:task id="boundaries" name="检查职责与边界">
+          <bpmn:incoming>edge-6</bpmn:incoming>
+          <bpmn:outgoing>edge-8</bpmn:outgoing>
+        </bpmn:task>
+        <bpmn:parallelGateway id="join" name="汇总评审">
+          <bpmn:incoming>edge-7</bpmn:incoming>
+          <bpmn:incoming>edge-8</bpmn:incoming>
+          <bpmn:outgoing>reviewing_exit_bridge</bpmn:outgoing>
+        </bpmn:parallelGateway>
+        <bpmn:sequenceFlow id="edge-5" name="" sourceRef="fork" targetRef="quality" />
+        <bpmn:sequenceFlow id="edge-6" name="" sourceRef="fork" targetRef="boundaries" />
+        <bpmn:sequenceFlow id="edge-7" name="" sourceRef="quality" targetRef="join" />
+        <bpmn:sequenceFlow id="edge-8" name="" sourceRef="boundaries" targetRef="join" />
+        <bpmn:sequenceFlow id="reviewing_entry_bridge" name="" sourceRef="reviewing_start" targetRef="fork" />
+        <bpmn:sequenceFlow id="reviewing_exit_bridge" name="" sourceRef="join" targetRef="reviewing_end" />
+      </bpmn:subProcess>
+      <bpmn:task id="options" name="比较架构方案">
+        <bpmn:incoming>edge-11</bpmn:incoming>
+        <bpmn:incoming>architecture_entry_bridge</bpmn:incoming>
+        <bpmn:outgoing>edge-4</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="decision" name="方案一致？">
+        <bpmn:incoming>edge-9</bpmn:incoming>
+        <bpmn:outgoing>edge-10</bpmn:outgoing>
+        <bpmn:outgoing>architecture_exit_bridge</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="adjust" name="调整方案">
+        <bpmn:incoming>edge-10</bpmn:incoming>
+        <bpmn:outgoing>edge-11</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:sequenceFlow id="edge-4" name="" sourceRef="options" targetRef="reviewing" />
+      <bpmn:sequenceFlow id="edge-9" name="" sourceRef="reviewing" targetRef="decision" />
+      <bpmn:sequenceFlow id="edge-10" name="有冲突" sourceRef="decision" targetRef="adjust" />
+      <bpmn:sequenceFlow id="edge-11" name="" sourceRef="adjust" targetRef="options" />
+      <bpmn:sequenceFlow id="architecture_entry_bridge" name="" sourceRef="architecture_start" targetRef="options" />
+      <bpmn:sequenceFlow id="architecture_exit_bridge" name="" sourceRef="decision" targetRef="architecture_end" />
+    </bpmn:subProcess>
+    <bpmn:startEvent id="s" name="开始">
+      <bpmn:outgoing>edge-1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="write" name="按模板形成设计文档">
+      <bpmn:incoming>edge-12</bpmn:incoming>
+      <bpmn:outgoing>edge-13</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="e" name="设计完成">
+      <bpmn:incoming>edge-13</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="edge-1" name="" sourceRef="s" targetRef="explore" />
+    <bpmn:sequenceFlow id="edge-3" name="" sourceRef="explore" targetRef="architecture" />
+    <bpmn:sequenceFlow id="edge-12" name="一致" sourceRef="architecture" targetRef="write" />
+    <bpmn:sequenceFlow id="edge-13" name="" sourceRef="write" targetRef="e" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process" bpmnElement="Process">
+      <bpmndi:BPMNShape id="s_di" bpmnElement="s">
+        <dc:Bounds x="57" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="explore_di" bpmnElement="explore">
+        <dc:Bounds x="175" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="architecture_di" bpmnElement="architecture">
+        <dc:Bounds x="325" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="write_di" bpmnElement="write">
+        <dc:Bounds x="475" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e_di" bpmnElement="e">
+        <dc:Bounds x="657" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-1_di" bpmnElement="edge-1">
+        <di:waypoint x="93" y="70" />
+        <di:waypoint x="175" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-3_di" bpmnElement="edge-3">
+        <di:waypoint x="275" y="70" />
+        <di:waypoint x="325" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-12_di" bpmnElement="edge-12">
+        <di:waypoint x="425" y="70" />
+        <di:waypoint x="475" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-13_di" bpmnElement="edge-13">
+        <di:waypoint x="575" y="70" />
+        <di:waypoint x="657" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="architecture_start_di" bpmnElement="architecture_start">
+        <dc:Bounds x="57" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="options_di" bpmnElement="options">
+        <dc:Bounds x="175" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="reviewing_di" bpmnElement="reviewing">
+        <dc:Bounds x="325" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision" isMarkerVisible="true">
+        <dc:Bounds x="500" y="45" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="adjust_di" bpmnElement="adjust">
+        <dc:Bounds x="625" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="architecture_end_di" bpmnElement="architecture_end">
+        <dc:Bounds x="657" y="192" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="architecture_entry_bridge_di" bpmnElement="architecture_entry_bridge">
+        <di:waypoint x="93" y="70" />
+        <di:waypoint x="175" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-4_di" bpmnElement="edge-4">
+        <di:waypoint x="275" y="70" />
+        <di:waypoint x="325" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-9_di" bpmnElement="edge-9">
+        <di:waypoint x="425" y="70" />
+        <di:waypoint x="500" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-10_di" bpmnElement="edge-10">
+        <di:waypoint x="550" y="70" />
+        <di:waypoint x="625" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="architecture_exit_bridge_di" bpmnElement="architecture_exit_bridge">
+        <di:waypoint x="525" y="95" />
+        <di:waypoint x="525" y="210" />
+        <di:waypoint x="657" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-11_di" bpmnElement="edge-11">
+        <di:waypoint x="675" y="110" />
+        <di:waypoint x="675" y="140" />
+        <di:waypoint x="225" y="140" />
+        <di:waypoint x="225" y="110" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="explore_start_di" bpmnElement="explore_start">
+        <dc:Bounds x="57" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="brainstorm_di" bpmnElement="brainstorm">
+        <dc:Bounds x="175" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="scope_di" bpmnElement="scope">
+        <dc:Bounds x="325" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="explore_end_di" bpmnElement="explore_end">
+        <dc:Bounds x="507" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="explore_entry_bridge_di" bpmnElement="explore_entry_bridge">
+        <di:waypoint x="93" y="70" />
+        <di:waypoint x="175" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-2_di" bpmnElement="edge-2">
+        <di:waypoint x="275" y="70" />
+        <di:waypoint x="325" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="explore_exit_bridge_di" bpmnElement="explore_exit_bridge">
+        <di:waypoint x="425" y="70" />
+        <di:waypoint x="507" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="reviewing_start_di" bpmnElement="reviewing_start">
+        <dc:Bounds x="57" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="fork_di" bpmnElement="fork">
+        <dc:Bounds x="200" y="45" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="quality_di" bpmnElement="quality">
+        <dc:Bounds x="325" y="30" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="join_di" bpmnElement="join">
+        <dc:Bounds x="500" y="45" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="reviewing_end_di" bpmnElement="reviewing_end">
+        <dc:Bounds x="657" y="52" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="boundaries_di" bpmnElement="boundaries">
+        <dc:Bounds x="325" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="reviewing_entry_bridge_di" bpmnElement="reviewing_entry_bridge">
+        <di:waypoint x="93" y="70" />
+        <di:waypoint x="200" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-5_di" bpmnElement="edge-5">
+        <di:waypoint x="250" y="70" />
+        <di:waypoint x="325" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-6_di" bpmnElement="edge-6">
+        <di:waypoint x="225" y="95" />
+        <di:waypoint x="225" y="210" />
+        <di:waypoint x="325" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-7_di" bpmnElement="edge-7">
+        <di:waypoint x="425" y="70" />
+        <di:waypoint x="500" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="reviewing_exit_bridge_di" bpmnElement="reviewing_exit_bridge">
+        <di:waypoint x="550" y="70" />
+        <di:waypoint x="657" y="70" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-8_di" bpmnElement="edge-8">
+        <di:waypoint x="425" y="210" />
+        <di:waypoint x="525" y="210" />
+        <di:waypoint x="525" y="95" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

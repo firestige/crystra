@@ -1,0 +1,22 @@
+@startuml
+skinparam defaultFontName "PingFang SC"
+start
+partition "收集项目信息" {
+fork
+:收集项目进度;
+fork again
+:确认关键动作;
+end fork
+while (信息完整？) is (否)
+:补充缺失信息;
+endwhile (是)
+}
+partition "计算与分析" {
+repeat
+:计算项目指标;
+:检查异常;
+repeat while (存在异常？) is (是) not (否)
+:输出项目表格;
+}
+stop
+@enduml

@@ -1,0 +1,208 @@
+development RIGHT {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 62,
+  length: 17076.63529411765
+} {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 65,
+  length: 17667.4
+} [
+  {
+    x: {
+      id: '["auxiliary-block","clear","ask"]',
+      parent: 'plan',
+      trigger: 'clear',
+      handler: 'ask',
+      edge: 'edge-3',
+      returnEdge: 'edge-4'
+    },
+    positions: [ [Object], [Object] ]
+  }
+]
+development DOWN {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 60,
+  length: 13956.635294117646
+} {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 65,
+  length: 14896.235294117647
+} [
+  {
+    x: {
+      id: '["auxiliary-block","clear","ask"]',
+      parent: 'plan',
+      trigger: 'clear',
+      handler: 'ask',
+      edge: 'edge-3',
+      returnEdge: 'edge-4'
+    },
+    positions: [ [Object], [Object] ]
+  }
+]
+architecture RIGHT {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 27,
+  length: 2808.235294117647
+} {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 32,
+  length: 2843
+} [
+  {
+    x: {
+      id: '["auxiliary-block","decision","adjust"]',
+      parent: 'architecture',
+      trigger: 'decision',
+      handler: 'adjust',
+      edge: 'edge-10',
+      returnEdge: 'edge-11'
+    },
+    positions: [ [Object], [Object] ]
+  }
+]
+architecture DOWN {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 27,
+  length: 2658.4
+} {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 32,
+  length: 3046
+} [
+  {
+    x: {
+      id: '["auxiliary-block","decision","adjust"]',
+      parent: 'architecture',
+      trigger: 'decision',
+      handler: 'adjust',
+      edge: 'edge-10',
+      returnEdge: 'edge-11'
+    },
+    positions: [ [Object], [Object] ]
+  }
+]
+research RIGHT {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 31,
+  length: 3720.4705882352937
+} {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 41,
+  length: 4121
+} [
+  {
+    x: {
+      id: '["auxiliary-block","complete","supplement"]',
+      parent: 'collect',
+      trigger: 'complete',
+      handler: 'supplement',
+      edge: 'edge-7',
+      returnEdge: 'edge-8'
+    },
+    positions: [ [Object], [Object] ]
+  },
+  {
+    x: {
+      id: '["auxiliary-block","abnormal","investigate"]',
+      parent: 'compute',
+      trigger: 'abnormal',
+      handler: 'investigate',
+      edge: 'edge-12',
+      returnEdge: 'edge-13'
+    },
+    positions: [ [Object], [Object] ]
+  }
+]
+research DOWN {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 31,
+  length: 3411.8
+} {
+  crossings: 0,
+  pairs: [],
+  overlap: 0,
+  clearanceDeficit: 0,
+  blocked: 0,
+  labelCollisions: 0,
+  bends: 41,
+  length: 4319
+} [
+  {
+    x: {
+      id: '["auxiliary-block","complete","supplement"]',
+      parent: 'collect',
+      trigger: 'complete',
+      handler: 'supplement',
+      edge: 'edge-7',
+      returnEdge: 'edge-8'
+    },
+    positions: [ [Object], [Object] ]
+  },
+  {
+    x: {
+      id: '["auxiliary-block","abnormal","investigate"]',
+      parent: 'compute',
+      trigger: 'abnormal',
+      handler: 'investigate',
+      edge: 'edge-12',
+      returnEdge: 'edge-13'
+    },
+    positions: [ [Object], [Object] ]
+  }
+]

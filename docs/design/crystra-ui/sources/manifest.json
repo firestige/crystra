@@ -1,0 +1,185 @@
+[
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/task-control-workbenches-design-input.zh-CN.md",
+    "snapshot": "sources/ui/task-control-workbenches-design-input.zh-CN.md",
+    "role": "ui-authority",
+    "sha256": "0cac8d835ed810894504fe99cc54c0161264e6eadbca1fccfe7e6716d314753f"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/task-browser-design-memo.zh-CN.md",
+    "snapshot": "sources/ui/task-browser-design-memo.zh-CN.md",
+    "role": "memo",
+    "sha256": "1781fdf12ee9031214657d5859c3a59e9bdb067994ab1f6d726a27647bfad999"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/task-page-prototype-contract-index.zh-CN.md",
+    "snapshot": "sources/ui/task-page-prototype-contract-index.zh-CN.md",
+    "role": "memo",
+    "sha256": "828ec5400af7486a50a07f01eefb6e3e9a54adca937bd9b91657c45af2446172"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/workflow-pages-design-memo.zh-CN.md",
+    "snapshot": "sources/ui/workflow-pages-design-memo.zh-CN.md",
+    "role": "memo",
+    "sha256": "7155a36881fe076432d576f8ada1ea5b8947432e8e43477e3f92dfc12661d461"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-analysis-audit-v6.png",
+    "snapshot": "sources/ui/assets/crystra-analysis-audit-v6.png",
+    "role": "impression",
+    "sha256": "8d57074e828f4f04af73b79a9c7cf37ef63a9d035508c8557ba49442685df7a2"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-analysis-audit-v7.html",
+    "snapshot": "sources/ui/assets/crystra-analysis-audit-v7.html",
+    "role": "prototype-reference",
+    "sha256": "0d0660b20c1eac02c26d03930380c418a47459e2593c5084deb14942721821b8"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-task-browser-v7.html",
+    "snapshot": "sources/ui/assets/crystra-task-browser-v7.html",
+    "role": "prototype-reference",
+    "sha256": "c31e768ca827da4abf9d7235a86d3e5ca30665ed651709bebc734e6c481ea3da"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-task-work-v6.png",
+    "snapshot": "sources/ui/assets/crystra-task-work-v6.png",
+    "role": "impression",
+    "sha256": "7f1b177852186cf9855de98324df592c51bc7af43a09fcb0603702ea654b2643"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-task-work-v7.html",
+    "snapshot": "sources/ui/assets/crystra-task-work-v7.html",
+    "role": "prototype-reference",
+    "sha256": "1450bf8e742e1aa607777e1956bc3109fbc0ea23614b7d74bedb2e91224448db"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-task-work-v7.layout.test.mjs",
+    "snapshot": "sources/ui/assets/crystra-task-work-v7.layout.test.mjs",
+    "role": "prototype-reference",
+    "sha256": "06f323d6d8605db2ead99fbc0a074f89b5f9af2d674cb6495fbb90828b386ecb"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-workflow-studio-v6.png",
+    "snapshot": "sources/ui/assets/crystra-workflow-studio-v6.png",
+    "role": "impression",
+    "sha256": "adc6dbb81d71cc153e784f61497ed2868b8a0811f2e3aabd7fd4945a6920a9e1"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/tmp/20260905/crystra-rename-narrative/assets/crystra-workflow-studio-v7.html",
+    "snapshot": "sources/ui/assets/crystra-workflow-studio-v7.html",
+    "role": "prototype-reference",
+    "sha256": "177be38184707fcd26eb4cf35126e999d0ad6c4bf2119eced7c3236a5185161c"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/agent-architecture.md",
+    "snapshot": "sources/system/agent-architecture.md",
+    "role": "system-design-with-own-status",
+    "sha256": "232a0052ff7eca57b73ecd8e9b518fd896090e391e7e2125bebce2140846f146"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/execution/project-execution-system.md",
+    "snapshot": "sources/system/systems/execution/project-execution-system.md",
+    "role": "system-design-with-own-status",
+    "sha256": "27603f88e400c4beebe4aed9668432accea2e19359ddd4f1f1af184fb6d088ba"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/evidence/evidence-system.md",
+    "snapshot": "sources/system/systems/evidence/evidence-system.md",
+    "role": "system-design-with-own-status",
+    "sha256": "c6017d50a9eaee82757cdeb60f1bcbe37849d58282655e78d9a71ab9c8e2dad4"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/evidence/delivery-manifest-projection.md",
+    "snapshot": "sources/system/systems/evidence/delivery-manifest-projection.md",
+    "role": "system-design-with-own-status",
+    "sha256": "56f52fc6d7dce9fb4f7f45f8cd2ec9cd16322ff010fc02098cd39d2c0816eedf"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/evidence/delivery-observation-lifecycle.md",
+    "snapshot": "sources/system/systems/evidence/delivery-observation-lifecycle.md",
+    "role": "system-design-with-own-status",
+    "sha256": "3d25c960d8e984f80121f4ce6857c4ea239c3ae8f85a7a40fc3a46be7ad08ff8"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/evolution/evolution-system.md",
+    "snapshot": "sources/system/systems/evolution/evolution-system.md",
+    "role": "system-design-with-own-status",
+    "sha256": "0c5406670d034124f6e6bea2c0dd74b27bca56d2a77400fb86f48ccb702c0866"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/evolution/metric-computability.md",
+    "snapshot": "sources/system/systems/evolution/metric-computability.md",
+    "role": "system-design-with-own-status",
+    "sha256": "ba890328df47ba6093532f97d6937ea4e9fba840e2bf7ac67a58413cd6e97e6e"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/contracts/evaluation/metric-catalog.md",
+    "snapshot": "sources/system/contracts/evaluation/metric-catalog.md",
+    "role": "system-design-with-own-status",
+    "sha256": "602bc43accf86911a2d3d89a346058277c5ebb86bc2cc152eaa39000d6768326"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/contracts/evidence-query/evidence-query.md",
+    "snapshot": "sources/system/contracts/evidence-query/evidence-query.md",
+    "role": "system-design-with-own-status",
+    "sha256": "ce13b76cb3c2737e8243c97de880574060a61c05a6a7a67182a2804c04a2a8ef"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/contracts/workflow/workflow-definition-dsl.md",
+    "snapshot": "sources/system/contracts/workflow/workflow-definition-dsl.md",
+    "role": "system-design-with-own-status",
+    "sha256": "ca5944798d33ea268162848c466df7a966e09de3760f69ea9be047ea0d4fffa4"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/workflow-composition-model.md",
+    "snapshot": "sources/system/workflow-composition-model.md",
+    "role": "system-design-with-own-status",
+    "sha256": "6a059ba9fbc4126fb885fa72921448321cefd3cb4f928617325a856106a4125a"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/systems/bi/bi-studio-ui-ux-design.md",
+    "snapshot": "sources/system/systems/bi/bi-studio-ui-ux-design.md",
+    "role": "system-design-with-own-status",
+    "sha256": "2b80aafb97bcab518033433a330fca84622a5c885fcd7ea53fdd96d1099b64c9"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/reference/wsr-authority-mapping.md",
+    "snapshot": "sources/system/reference/wsr-authority-mapping.md",
+    "role": "system-design-with-own-status",
+    "sha256": "641572603419129f08db369bc85fc8074f57398d62ce6e9961a046d36d9b90d9"
+  },
+  {
+    "source": "/Users/firestige/.codex/skills/doc-coauthoring/SKILL.md",
+    "snapshot": "sources/methods/doc-coauthoring.SKILL.md",
+    "role": "method-only",
+    "sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4"
+  },
+  {
+    "source": "https://github.com/anthropics/knowledge-work-plugins/blob/1f517b9de47e827c80cd933ed364e16838072239/design/skills/design-system/SKILL.md",
+    "snapshot": "sources/methods/design-system.SKILL.md",
+    "role": "method-only",
+    "sha256": "fb31bd0144c43955106f01927126ae9fd2d4148be44c8d5887b3391f40c31445",
+    "git_revision": "1f517b9de47e827c80cd933ed364e16838072239"
+  },
+  {
+    "source": "https://github.com/anthropics/knowledge-work-plugins/blob/1f517b9de47e827c80cd933ed364e16838072239/design/skills/design-handoff/SKILL.md",
+    "snapshot": "sources/methods/design-handoff.SKILL.md",
+    "role": "method-only",
+    "sha256": "38f1efc807928030654218443ad07f6a37ac82de6b4d627a03113a3568d787b7",
+    "git_revision": "1f517b9de47e827c80cd933ed364e16838072239"
+  },
+  {
+    "source": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/4aad0584d92131626b16d4ff4d77f0455385013c/.claude/skills/ui-ux-pro-max/SKILL.md",
+    "snapshot": "sources/methods/ui-ux-pro-max.SKILL.md",
+    "role": "method-only",
+    "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9",
+    "git_revision": "4aad0584d92131626b16d4ff4d77f0455385013c"
+  },
+  {
+    "source": "/Users/firestige/Projects/workflow-self-recursive/docs/contracts/evaluation/metric-catalog-2-candidate.md",
+    "snapshot": "sources/system/contracts/evaluation/metric-catalog-2-candidate.md",
+    "role": "system-design-with-own-status",
+    "sha256": "02f81c5f8a6cfa8bee63c80b802b4e6eacc7307a334cdc3f340957276354bef9"
+  }
+]

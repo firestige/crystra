@@ -1,0 +1,78 @@
+{
+  "experimental": true,
+  "checks": [
+    "stable interface identity",
+    "continuous border attachments",
+    "orthogonal routes",
+    "no leaf overlap",
+    "external size changes preserve child layout"
+  ],
+  "metrics": [
+    {
+      "sample": "development",
+      "direction": "RIGHT",
+      "fullWidth": 4898,
+      "strictCrossings": 0,
+      "blocks": [
+        {
+          "group": "plan",
+          "strictCrossings": 0
+        },
+        {
+          "group": "work",
+          "strictCrossings": 0
+        },
+        {
+          "group": "delivery",
+          "strictCrossings": 0
+        },
+        {
+          "group": "tdd",
+          "strictCrossings": 0
+        }
+      ]
+    },
+    {
+      "sample": "architecture",
+      "direction": "RIGHT",
+      "fullWidth": 2338,
+      "strictCrossings": 0,
+      "blocks": [
+        {
+          "group": "explore",
+          "strictCrossings": 0
+        },
+        {
+          "group": "architecture",
+          "strictCrossings": 0
+        },
+        {
+          "group": "reviewing",
+          "strictCrossings": 0
+        }
+      ]
+    },
+    {
+      "sample": "research",
+      "direction": "RIGHT",
+      "fullWidth": 2624,
+      "strictCrossings": 0,
+      "blocks": [
+        {
+          "group": "collect",
+          "strictCrossings": 0
+        },
+        {
+          "group": "compute",
+          "strictCrossings": 0
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No guarantee of optimal cycle order",
+    "Auxiliary interface sides use provisional defaults",
+    "All-expanded diagrams can remain very wide",
+    "Crossing counts exclude collinear overlap, node obstruction and label collisions"
+  ]
+}

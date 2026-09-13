@@ -1,0 +1,34 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+const require=createRequire(new URL('../../../../wsr-ui/package.json',import.meta.url));
+const ts=require('typescript');
+const read=name=>readFile(new URL(name,import.meta.url),'utf8');
+export async function buildResourceBrowser({entry,surface,output,title,extraCss=''}){
+const switchRoot=new URL('../../../../wsr-ui/packages/bi/dist-browser-switch/',import.meta.url);
+const switchHtml=await readFile(new URL('browser-switch.html',switchRoot),'utf8');
+const switchJs=switchHtml.match(/<script[^>]*src="([^"]+)"/)[1];
+const switchCss=switchHtml.match(/<link[^>]*href="([^"]+\.css)"/)[1];
+await writeFile(new URL('browser-view-switch.js',import.meta.url),await readFile(new URL(switchJs.replace(/^\//,''),switchRoot)));
+await writeFile(new URL('browser-view-switch.css',import.meta.url),await readFile(new URL(switchCss.replace(/^\//,''),switchRoot)));
+await writeFile(new URL('select-dropdown.css',import.meta.url),await read('../../../../wsr-ui/packages/bi/src/select-dropdown.css'));
+const source=await read('crystra-task-work-v8-sidebar.html');
+let shell=source.slice(0,source.indexOf('</aside>')+8);
+shell=shell.replace('Crystra · Task 工作台','Crystra · '+title);
+shell=shell.replace('</head>','<link rel="stylesheet" href="browser-view-switch.css"><link rel="stylesheet" href="task-browser.css">'+(extraCss?'<link rel="stylesheet" href="'+extraCss+'">':'')+'</head>');
+shell=shell.replace(/<script src="icon-preview.js"[^>]*><\/script>/,'');
+shell=shell.replaceAll('crystra-task-work-v7.html','crystra-task-work-v8-sidebar.html').replaceAll('crystra-task-browser-v7.html','crystra-task-browser-v8.html');
+let sidebar=source.slice(source.indexOf("    const taskSearchControl ="),source.indexOf('    const previewSurface ='));
+sidebar=sidebar.replace(/    const newTaskEmptyState =[\s\S]*?(?=    const setTaskSearchOpen)/,'');
+const motion=source.slice(source.indexOf('  <div data-section-id="sidebar-tooltip"'),source.indexOf('<details id="icon-preview"'));
+const icons={};
+for(const name of ['plus','search','table','clipboard-list','file','target','chevron-down','arrows-exchange']) icons[name]=(await read(`icons/tabler-${name}.svg`)).replace('<svg','<svg aria-hidden="true"');
+const tabler=require('@iconify-json/tabler/icons.json');
+for(const name of ['archive','x','dots','photo','pencil','pin','pinned-off','git-branch']) icons[name]=`<svg aria-hidden="true" data-iconify="tabler:${name}" viewBox="0 0 24 24">${tabler.icons[name].body}</svg>`;
+icons['sort-descending']=`<svg aria-hidden="true" data-iconify="tabler:sort-descending" viewBox="0 0 24 24">${tabler.icons['sort-descending'].body}</svg>`;
+const script=ts.transpileModule((await read('resource-browser.ts'))+'\n'+await read(entry),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
+const switchBundle=await read('browser-view-switch.js');
+const html=shell+'\n'+await read(surface)+'\n</main>\n<script>const section = name => document.querySelector(`[data-section-id="${name}"]`);\n'+sidebar+'</script>\n'+motion+'\n<script>const browserIcons='+JSON.stringify(icons)+';\n'+script+'</script><script type="module">'+switchBundle.replace(/<\/script/gi,'<\\/script')+'</script></body></html>';
+await writeFile(new URL(output,import.meta.url),html);
+console.log('Built '+output+' with shared browser interactions and accepted shell.');
+await import('./sync-search-components.mjs?build='+output);
+}

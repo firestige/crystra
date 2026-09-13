@@ -1,0 +1,111 @@
+{
+  "status": "accepted",
+  "default": "dsh",
+  "authority": "User explicitly removes the 15px icon / 30px copy-button exception; unify by role.",
+  "roles": {
+    "disclosure": 0,
+    "inline-action": 1,
+    "content-marker": 1,
+    "navigation": 2,
+    "primary-action": 2,
+    "brand-slot": 3,
+    "context-marker": 3
+  },
+  "candidates": {
+    "compact": {
+      "levels": [
+        12,
+        14,
+        18,
+        24
+      ],
+      "toolButton": 28,
+      "primaryButton": 32,
+      "railButton": 40,
+      "roleSizes": {
+        "disclosure": 12,
+        "inline-action": 14,
+        "content-marker": 14,
+        "navigation": 18,
+        "primary-action": 18,
+        "brand-slot": 24,
+        "context-marker": 24
+      }
+    },
+    "balanced": {
+      "levels": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "toolButton": 32,
+      "primaryButton": 36,
+      "railButton": 40,
+      "roleSizes": {
+        "disclosure": 12,
+        "inline-action": 16,
+        "content-marker": 16,
+        "navigation": 20,
+        "primary-action": 20,
+        "brand-slot": 24,
+        "context-marker": 24
+      }
+    },
+    "prominent": {
+      "levels": [
+        14,
+        18,
+        24,
+        28
+      ],
+      "toolButton": 36,
+      "primaryButton": 40,
+      "railButton": 40,
+      "roleSizes": {
+        "disclosure": 14,
+        "inline-action": 18,
+        "content-marker": 18,
+        "navigation": 24,
+        "primary-action": 24,
+        "brand-slot": 28,
+        "context-marker": 28
+      }
+    },
+    "dsh": {
+      "levels": [
+        12,
+        14,
+        18,
+        24
+      ],
+      "toolButton": 28,
+      "primaryButton": 36,
+      "railButton": 40,
+      "roleSizes": {
+        "disclosure": 12,
+        "inline-action": 14,
+        "content-marker": 14,
+        "navigation": 18,
+        "primary-action": 18,
+        "brand-slot": 24,
+        "context-marker": 24
+      }
+    }
+  },
+  "hostReference": {
+    "package": "@deepseek-ai/dsh-client-ui-sidebar",
+    "source": "lib/client.js:214",
+    "component": "IconNewChatOutline16",
+    "expanded": 14,
+    "collapsed": 18,
+    "note": "Installed DSH source; same existing SVG shape. User prefers prominent but prioritizes host alignment."
+  },
+  "selected": "dsh",
+  "comparisonOnly": [
+    "compact",
+    "balanced",
+    "prominent",
+    "original"
+  ]
+}

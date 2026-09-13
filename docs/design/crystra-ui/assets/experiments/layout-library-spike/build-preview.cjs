@@ -1,0 +1,1 @@
+const fs=require('node:fs');const data=JSON.parse(fs.readFileSync('gallery.json'));const html=fs.readFileSync('preview.template.html','utf8').replace('/*DATA*/',JSON.stringify(data).replaceAll('<','\\u003c'));fs.writeFileSync('preview.html',html);

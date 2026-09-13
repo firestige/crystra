@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" width="100%%" height="100%%" viewBox="15.5714 427.608 1144.86 590.429">
+<path stroke="black" stroke-width="1" fill="none" d="M 1072.43,1000.04L 1072.43,804.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 1072.43,804.61 V 489.61 a 10.00,10.00 0 0,0 -10.00,-10.00L 566.43,479.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 1072.43,804.61L 819.43,804.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 566.43,479.61L 566.43,804.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 819.43,804.61L 566.43,804.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 566.43,804.61L 265.00,804.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 265.00,804.61L 33.57,804.61"/>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="185.00" y="760.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="260.00" y="809.61">
+0
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="992.43" y="760.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="1067.43" y="809.61">
+1
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="486.43" y="435.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="561.43" y="484.61">
+2
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="739.43" y="760.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="814.43" y="809.61">
+3
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="486.43" y="760.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="561.43" y="809.61">
+4
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="1062.43" y="990.04" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="1067.43" y="1005.04">
+5
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="23.57" y="794.61" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="28.57" y="809.61">
+6
+</text>
+</g>
+</svg>

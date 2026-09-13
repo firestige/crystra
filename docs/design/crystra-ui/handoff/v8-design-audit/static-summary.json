@@ -1,0 +1,26 @@
+{
+  "crystra-task-work-v8-sidebar.html": {
+    "elements": 377,
+    "interactive": 96,
+    "semantic": 359,
+    "exactIdReference": 323
+  },
+  "crystra-task-browser-v8.html": {
+    "elements": 128,
+    "interactive": 60,
+    "semantic": 116,
+    "exactIdReference": 67
+  },
+  "crystra-workflow-explorer-v8.html": {
+    "elements": 130,
+    "interactive": 62,
+    "semantic": 116,
+    "exactIdReference": 61
+  },
+  "crystra-analysis-audit-v8.html": {
+    "elements": 95,
+    "interactive": 43,
+    "semantic": 88,
+    "exactIdReference": 69
+  }
+}

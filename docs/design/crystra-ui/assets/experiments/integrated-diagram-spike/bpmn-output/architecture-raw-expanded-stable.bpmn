@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions" targetNamespace="https://crystra.test/spike">
+  <bpmn:process id="Process" isExecutable="false">
+    <bpmn:subProcess id="explore" name="探索问题">
+      <bpmn:task id="brainstorm" name="头脑风暴">
+        <bpmn:incoming>edge-1</bpmn:incoming>
+        <bpmn:outgoing>edge-2</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="scope" name="明确目标与约束">
+        <bpmn:incoming>edge-2</bpmn:incoming>
+        <bpmn:outgoing>edge-3</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:sequenceFlow id="edge-2" name="" sourceRef="brainstorm" targetRef="scope" />
+      <bpmn:sequenceFlow id="edge-3" name="" sourceRef="scope" targetRef="options" />
+    </bpmn:subProcess>
+    <bpmn:subProcess id="architecture" name="形成架构方案">
+      <bpmn:subProcess id="reviewing" name="多角度评审">
+        <bpmn:parallelGateway id="fork" name="并行检查">
+          <bpmn:incoming>edge-4</bpmn:incoming>
+          <bpmn:outgoing>edge-5</bpmn:outgoing>
+          <bpmn:outgoing>edge-6</bpmn:outgoing>
+        </bpmn:parallelGateway>
+        <bpmn:task id="quality" name="检查非功能需求">
+          <bpmn:incoming>edge-5</bpmn:incoming>
+          <bpmn:outgoing>edge-7</bpmn:outgoing>
+        </bpmn:task>
+        <bpmn:task id="boundaries" name="检查职责与边界">
+          <bpmn:incoming>edge-6</bpmn:incoming>
+          <bpmn:outgoing>edge-8</bpmn:outgoing>
+        </bpmn:task>
+        <bpmn:parallelGateway id="join" name="汇总评审">
+          <bpmn:incoming>edge-7</bpmn:incoming>
+          <bpmn:incoming>edge-8</bpmn:incoming>
+          <bpmn:outgoing>edge-9</bpmn:outgoing>
+        </bpmn:parallelGateway>
+        <bpmn:sequenceFlow id="edge-5" name="" sourceRef="fork" targetRef="quality" />
+        <bpmn:sequenceFlow id="edge-6" name="" sourceRef="fork" targetRef="boundaries" />
+        <bpmn:sequenceFlow id="edge-7" name="" sourceRef="quality" targetRef="join" />
+        <bpmn:sequenceFlow id="edge-8" name="" sourceRef="boundaries" targetRef="join" />
+        <bpmn:sequenceFlow id="edge-9" name="" sourceRef="join" targetRef="decision" />
+      </bpmn:subProcess>
+      <bpmn:task id="options" name="比较架构方案">
+        <bpmn:incoming>edge-3</bpmn:incoming>
+        <bpmn:incoming>edge-11</bpmn:incoming>
+        <bpmn:outgoing>edge-4</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="decision" name="方案一致？">
+        <bpmn:incoming>edge-9</bpmn:incoming>
+        <bpmn:outgoing>edge-10</bpmn:outgoing>
+        <bpmn:outgoing>edge-12</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="adjust" name="调整方案">
+        <bpmn:incoming>edge-10</bpmn:incoming>
+        <bpmn:outgoing>edge-11</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:sequenceFlow id="edge-4" name="" sourceRef="options" targetRef="fork" />
+      <bpmn:sequenceFlow id="edge-10" name="有冲突" sourceRef="decision" targetRef="adjust" />
+      <bpmn:sequenceFlow id="edge-11" name="" sourceRef="adjust" targetRef="options" />
+      <bpmn:sequenceFlow id="edge-12" name="一致" sourceRef="decision" targetRef="write" />
+    </bpmn:subProcess>
+    <bpmn:startEvent id="s" name="开始">
+      <bpmn:outgoing>edge-1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="write" name="按模板形成设计文档">
+      <bpmn:incoming>edge-12</bpmn:incoming>
+      <bpmn:outgoing>edge-13</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="e" name="设计完成">
+      <bpmn:incoming>edge-13</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="edge-1" name="" sourceRef="s" targetRef="brainstorm" />
+    <bpmn:sequenceFlow id="edge-13" name="" sourceRef="write" targetRef="e" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process" bpmnElement="Process">
+      <bpmndi:BPMNShape id="explore_di" bpmnElement="explore" isExpanded="true">
+        <dc:Bounds x="25" y="30" width="1450" height="360" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="architecture_di" bpmnElement="architecture" isExpanded="true">
+        <dc:Bounds x="25" y="450" width="2050" height="780" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="s_di" bpmnElement="s">
+        <dc:Bounds x="57" y="1312" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="brainstorm_di" bpmnElement="brainstorm">
+        <dc:Bounds x="2125" y="1290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="scope_di" bpmnElement="scope">
+        <dc:Bounds x="2275" y="1290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="options_di" bpmnElement="options">
+        <dc:Bounds x="2425" y="1290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="fork_di" bpmnElement="fork">
+        <dc:Bounds x="2600" y="1305" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="quality_di" bpmnElement="quality">
+        <dc:Bounds x="2725" y="1290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="join_di" bpmnElement="join">
+        <dc:Bounds x="2900" y="1305" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision" isMarkerVisible="true">
+        <dc:Bounds x="3050" y="1305" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="adjust_di" bpmnElement="adjust">
+        <dc:Bounds x="3175" y="1290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="boundaries_di" bpmnElement="boundaries">
+        <dc:Bounds x="2725" y="1430" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="write_di" bpmnElement="write">
+        <dc:Bounds x="3175" y="1430" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e_di" bpmnElement="e">
+        <dc:Bounds x="3357" y="1452" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-1_di" bpmnElement="edge-1">
+        <di:waypoint x="93" y="1330" />
+        <di:waypoint x="2125" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-2_di" bpmnElement="edge-2">
+        <di:waypoint x="2225" y="1330" />
+        <di:waypoint x="2275" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-3_di" bpmnElement="edge-3">
+        <di:waypoint x="2375" y="1330" />
+        <di:waypoint x="2425" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-4_di" bpmnElement="edge-4">
+        <di:waypoint x="2525" y="1330" />
+        <di:waypoint x="2600" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-5_di" bpmnElement="edge-5">
+        <di:waypoint x="2650" y="1330" />
+        <di:waypoint x="2725" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-6_di" bpmnElement="edge-6">
+        <di:waypoint x="2625" y="1355" />
+        <di:waypoint x="2625" y="1470" />
+        <di:waypoint x="2725" y="1470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-7_di" bpmnElement="edge-7">
+        <di:waypoint x="2825" y="1330" />
+        <di:waypoint x="2900" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-9_di" bpmnElement="edge-9">
+        <di:waypoint x="2950" y="1330" />
+        <di:waypoint x="3050" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-10_di" bpmnElement="edge-10">
+        <di:waypoint x="3100" y="1330" />
+        <di:waypoint x="3175" y="1330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-12_di" bpmnElement="edge-12">
+        <di:waypoint x="3075" y="1355" />
+        <di:waypoint x="3075" y="1470" />
+        <di:waypoint x="3175" y="1470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-11_di" bpmnElement="edge-11">
+        <di:waypoint x="3225" y="1370" />
+        <di:waypoint x="3225" y="1400" />
+        <di:waypoint x="2475" y="1400" />
+        <di:waypoint x="2475" y="1370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-8_di" bpmnElement="edge-8">
+        <di:waypoint x="2825" y="1470" />
+        <di:waypoint x="2925" y="1470" />
+        <di:waypoint x="2925" y="1355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-13_di" bpmnElement="edge-13">
+        <di:waypoint x="3275" y="1470" />
+        <di:waypoint x="3357" y="1470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="reviewing_di" bpmnElement="reviewing" isExpanded="true">
+        <dc:Bounds x="100" y="520" width="1000" height="360" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="options_di" bpmnElement="options">
+        <dc:Bounds x="100" y="940" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="fork_di" bpmnElement="fork">
+        <dc:Bounds x="1175" y="955" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="quality_di" bpmnElement="quality">
+        <dc:Bounds x="1300" y="940" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="join_di" bpmnElement="join">
+        <dc:Bounds x="1475" y="955" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision" isMarkerVisible="true">
+        <dc:Bounds x="1625" y="955" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="adjust_di" bpmnElement="adjust">
+        <dc:Bounds x="1750" y="940" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="boundaries_di" bpmnElement="boundaries">
+        <dc:Bounds x="1300" y="1080" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="write_di" bpmnElement="write">
+        <dc:Bounds x="1750" y="1080" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e_di" bpmnElement="e">
+        <dc:Bounds x="1932" y="1102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-4_di" bpmnElement="edge-4">
+        <di:waypoint x="200" y="980" />
+        <di:waypoint x="1175" y="980" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-5_di" bpmnElement="edge-5">
+        <di:waypoint x="1225" y="980" />
+        <di:waypoint x="1300" y="980" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-6_di" bpmnElement="edge-6">
+        <di:waypoint x="1200" y="1005" />
+        <di:waypoint x="1200" y="1120" />
+        <di:waypoint x="1300" y="1120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-7_di" bpmnElement="edge-7">
+        <di:waypoint x="1400" y="980" />
+        <di:waypoint x="1475" y="980" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-9_di" bpmnElement="edge-9">
+        <di:waypoint x="1525" y="980" />
+        <di:waypoint x="1625" y="980" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-10_di" bpmnElement="edge-10">
+        <di:waypoint x="1675" y="980" />
+        <di:waypoint x="1750" y="980" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-12_di" bpmnElement="edge-12">
+        <di:waypoint x="1650" y="1005" />
+        <di:waypoint x="1650" y="1120" />
+        <di:waypoint x="1750" y="1120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-11_di" bpmnElement="edge-11">
+        <di:waypoint x="1800" y="1020" />
+        <di:waypoint x="1800" y="560" />
+        <di:waypoint x="150" y="560" />
+        <di:waypoint x="150" y="1020" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-8_di" bpmnElement="edge-8">
+        <di:waypoint x="1400" y="1120" />
+        <di:waypoint x="1500" y="1120" />
+        <di:waypoint x="1500" y="1005" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-13_di" bpmnElement="edge-13">
+        <di:waypoint x="1850" y="1120" />
+        <di:waypoint x="1932" y="1120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="brainstorm_di" bpmnElement="brainstorm">
+        <dc:Bounds x="100" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="scope_di" bpmnElement="scope">
+        <dc:Bounds x="250" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="options_di" bpmnElement="options">
+        <dc:Bounds x="400" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="fork_di" bpmnElement="fork">
+        <dc:Bounds x="575" y="115" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="quality_di" bpmnElement="quality">
+        <dc:Bounds x="700" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="join_di" bpmnElement="join">
+        <dc:Bounds x="875" y="115" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision" isMarkerVisible="true">
+        <dc:Bounds x="1025" y="115" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="adjust_di" bpmnElement="adjust">
+        <dc:Bounds x="1150" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="boundaries_di" bpmnElement="boundaries">
+        <dc:Bounds x="700" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="write_di" bpmnElement="write">
+        <dc:Bounds x="1150" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e_di" bpmnElement="e">
+        <dc:Bounds x="1332" y="262" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-2_di" bpmnElement="edge-2">
+        <di:waypoint x="200" y="140" />
+        <di:waypoint x="250" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-3_di" bpmnElement="edge-3">
+        <di:waypoint x="350" y="140" />
+        <di:waypoint x="400" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-4_di" bpmnElement="edge-4">
+        <di:waypoint x="500" y="140" />
+        <di:waypoint x="575" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-5_di" bpmnElement="edge-5">
+        <di:waypoint x="625" y="140" />
+        <di:waypoint x="700" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-6_di" bpmnElement="edge-6">
+        <di:waypoint x="600" y="165" />
+        <di:waypoint x="600" y="280" />
+        <di:waypoint x="700" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-7_di" bpmnElement="edge-7">
+        <di:waypoint x="800" y="140" />
+        <di:waypoint x="875" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-9_di" bpmnElement="edge-9">
+        <di:waypoint x="925" y="140" />
+        <di:waypoint x="1025" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-10_di" bpmnElement="edge-10">
+        <di:waypoint x="1075" y="140" />
+        <di:waypoint x="1150" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-12_di" bpmnElement="edge-12">
+        <di:waypoint x="1050" y="165" />
+        <di:waypoint x="1050" y="280" />
+        <di:waypoint x="1150" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-11_di" bpmnElement="edge-11">
+        <di:waypoint x="1200" y="180" />
+        <di:waypoint x="1200" y="140" />
+        <di:waypoint x="450" y="140" />
+        <di:waypoint x="450" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-8_di" bpmnElement="edge-8">
+        <di:waypoint x="800" y="280" />
+        <di:waypoint x="900" y="280" />
+        <di:waypoint x="900" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-13_di" bpmnElement="edge-13">
+        <di:waypoint x="1250" y="280" />
+        <di:waypoint x="1332" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="fork_di" bpmnElement="fork">
+        <dc:Bounds x="200" y="605" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="quality_di" bpmnElement="quality">
+        <dc:Bounds x="325" y="590" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="join_di" bpmnElement="join">
+        <dc:Bounds x="500" y="605" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="decision_di" bpmnElement="decision" isMarkerVisible="true">
+        <dc:Bounds x="650" y="605" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="adjust_di" bpmnElement="adjust">
+        <dc:Bounds x="775" y="590" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="boundaries_di" bpmnElement="boundaries">
+        <dc:Bounds x="325" y="730" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="write_di" bpmnElement="write">
+        <dc:Bounds x="775" y="730" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e_di" bpmnElement="e">
+        <dc:Bounds x="957" y="752" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-5_di" bpmnElement="edge-5">
+        <di:waypoint x="250" y="630" />
+        <di:waypoint x="325" y="630" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-6_di" bpmnElement="edge-6">
+        <di:waypoint x="225" y="655" />
+        <di:waypoint x="225" y="770" />
+        <di:waypoint x="325" y="770" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-7_di" bpmnElement="edge-7">
+        <di:waypoint x="425" y="630" />
+        <di:waypoint x="500" y="630" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-9_di" bpmnElement="edge-9">
+        <di:waypoint x="550" y="630" />
+        <di:waypoint x="650" y="630" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-10_di" bpmnElement="edge-10">
+        <di:waypoint x="700" y="630" />
+        <di:waypoint x="775" y="630" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-12_di" bpmnElement="edge-12">
+        <di:waypoint x="675" y="655" />
+        <di:waypoint x="675" y="770" />
+        <di:waypoint x="775" y="770" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-11_di" bpmnElement="edge-11">
+        <di:waypoint x="825" y="670" />
+        <di:waypoint x="825" y="140" />
+        <di:waypoint x="450" y="140" />
+        <di:waypoint x="450" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-8_di" bpmnElement="edge-8">
+        <di:waypoint x="425" y="770" />
+        <di:waypoint x="525" y="770" />
+        <di:waypoint x="525" y="655" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge-13_di" bpmnElement="edge-13">
+        <di:waypoint x="875" y="770" />
+        <di:waypoint x="957" y="770" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

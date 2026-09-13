@@ -1,0 +1,1256 @@
+[
+  {
+    "sample": "development",
+    "search": {
+      "RIGHT": {
+        "config": {
+          "edgeSides": {
+            "repair-implementation": "SOUTH",
+            "edge-13": "SOUTH"
+          },
+          "portFlips": {
+            "[\"clear\",\"EAST\"]": true
+          },
+          "nodePlacement": {
+            "plan": "NETWORK_SIMPLEX"
+          }
+        },
+        "baseline": {
+          "crossings": 4,
+          "pairs": [
+            [
+              "edge-3",
+              "edge-5"
+            ],
+            [
+              "edge-10",
+              "edge-13"
+            ],
+            [
+              "edge-15",
+              "repair-implementation"
+            ],
+            [
+              "reconsider-design",
+              "repair-implementation"
+            ]
+          ],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 62,
+          "length": 19235.03529411765
+        },
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 62,
+          "length": 17076.63529411765
+        },
+        "accepted": [
+          {
+            "kind": "side",
+            "edge": "repair-implementation",
+            "side": "SOUTH",
+            "score": {
+              "crossings": 2,
+              "pairs": [
+                [
+                  "edge-3",
+                  "edge-5"
+                ],
+                [
+                  "edge-10",
+                  "edge-13"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 62,
+              "length": 17931.63529411765
+            }
+          },
+          {
+            "kind": "side",
+            "edge": "edge-13",
+            "side": "SOUTH",
+            "score": {
+              "crossings": 1,
+              "pairs": [
+                [
+                  "edge-3",
+                  "edge-5"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 62,
+              "length": 17380.63529411765
+            }
+          },
+          {
+            "kind": "order",
+            "node": "clear",
+            "side": "EAST",
+            "score": {
+              "crossings": 0,
+              "pairs": [
+                [
+                  "edge-5",
+                  "reconsider-design"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 913,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 60,
+              "length": 17036.63529411765
+            }
+          },
+          {
+            "kind": "placement",
+            "scope": "plan",
+            "strategy": "NETWORK_SIMPLEX",
+            "score": {
+              "crossings": 0,
+              "pairs": [],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 62,
+              "length": 17076.63529411765
+            }
+          }
+        ],
+        "evaluated": 136
+      },
+      "DOWN": {
+        "config": {
+          "edgeSides": {
+            "repair-implementation": "EAST",
+            "edge-13": "EAST"
+          },
+          "portFlips": {
+            "[\"clear\",\"SOUTH\"]": true
+          }
+        },
+        "baseline": {
+          "crossings": 4,
+          "pairs": [
+            [
+              "edge-3",
+              "edge-5"
+            ],
+            [
+              "edge-10",
+              "edge-13"
+            ],
+            [
+              "edge-15",
+              "repair-implementation"
+            ],
+            [
+              "reconsider-design",
+              "repair-implementation"
+            ]
+          ],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 62,
+          "length": 16761.870588235295
+        },
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 60,
+          "length": 13956.635294117646
+        },
+        "accepted": [
+          {
+            "kind": "side",
+            "edge": "repair-implementation",
+            "side": "EAST",
+            "score": {
+              "crossings": 2,
+              "pairs": [
+                [
+                  "edge-3",
+                  "edge-5"
+                ],
+                [
+                  "edge-10",
+                  "edge-13"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 62,
+              "length": 15046.635294117646
+            }
+          },
+          {
+            "kind": "order",
+            "node": "clear",
+            "side": "SOUTH",
+            "score": {
+              "crossings": 1,
+              "pairs": [
+                [
+                  "edge-10",
+                  "edge-13"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 60,
+              "length": 14608.635294117646
+            }
+          },
+          {
+            "kind": "side",
+            "edge": "edge-13",
+            "side": "EAST",
+            "score": {
+              "crossings": 0,
+              "pairs": [],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 60,
+              "length": 13956.635294117646
+            }
+          }
+        ],
+        "evaluated": 116
+      }
+    },
+    "states": [
+      {
+        "key": "RIGHT0",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 2386.4
+        }
+      },
+      {
+        "key": "RIGHT1",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 29,
+          "length": 4950.6352941176465
+        }
+      },
+      {
+        "key": "RIGHT2",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 24,
+          "length": 5628.4
+        }
+      },
+      {
+        "key": "RIGHT3",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 39,
+          "length": 7880.6352941176465
+        }
+      },
+      {
+        "key": "RIGHT4",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 25,
+          "length": 4691.4
+        }
+      },
+      {
+        "key": "RIGHT5",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 40,
+          "length": 7144.6352941176465
+        }
+      },
+      {
+        "key": "RIGHT6",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 35,
+          "length": 7582.4
+        }
+      },
+      {
+        "key": "RIGHT7",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 50,
+          "length": 9834.635294117648
+        }
+      },
+      {
+        "key": "RIGHT8",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 2386.4
+        }
+      },
+      {
+        "key": "RIGHT9",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 29,
+          "length": 4950.6352941176465
+        }
+      },
+      {
+        "key": "RIGHT10",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 36,
+          "length": 12958.400000000001
+        }
+      },
+      {
+        "key": "RIGHT11",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 51,
+          "length": 15162.635294117648
+        }
+      },
+      {
+        "key": "RIGHT12",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 25,
+          "length": 4691.4
+        }
+      },
+      {
+        "key": "RIGHT13",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 40,
+          "length": 7144.6352941176465
+        }
+      },
+      {
+        "key": "RIGHT14",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 47,
+          "length": 14872.400000000001
+        }
+      },
+      {
+        "key": "RIGHT15",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 62,
+          "length": 17076.63529411765
+        }
+      },
+      {
+        "key": "DOWN0",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 1777.2352941176468
+        }
+      },
+      {
+        "key": "DOWN1",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 4101.6352941176465
+        }
+      },
+      {
+        "key": "DOWN2",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 24,
+          "length": 4574.235294117647
+        }
+      },
+      {
+        "key": "DOWN3",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 37,
+          "length": 6370.6352941176465
+        }
+      },
+      {
+        "key": "DOWN4",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 25,
+          "length": 4179.235294117647
+        }
+      },
+      {
+        "key": "DOWN5",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 38,
+          "length": 5975.6352941176465
+        }
+      },
+      {
+        "key": "DOWN6",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 35,
+          "length": 6331.235294117647
+        }
+      },
+      {
+        "key": "DOWN7",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 48,
+          "length": 8127.6352941176465
+        }
+      },
+      {
+        "key": "DOWN8",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 1777.2352941176468
+        }
+      },
+      {
+        "key": "DOWN9",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 4101.6352941176465
+        }
+      },
+      {
+        "key": "DOWN10",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 36,
+          "length": 10484.235294117647
+        }
+      },
+      {
+        "key": "DOWN11",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 49,
+          "length": 12280.635294117646
+        }
+      },
+      {
+        "key": "DOWN12",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 25,
+          "length": 4179.235294117647
+        }
+      },
+      {
+        "key": "DOWN13",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 38,
+          "length": 5975.6352941176465
+        }
+      },
+      {
+        "key": "DOWN14",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 47,
+          "length": 12160.235294117647
+        }
+      },
+      {
+        "key": "DOWN15",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 60,
+          "length": 13956.635294117646
+        }
+      }
+    ]
+  },
+  {
+    "sample": "architecture",
+    "search": {
+      "RIGHT": {
+        "config": {},
+        "baseline": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 2808.235294117647
+        },
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 2808.235294117647
+        },
+        "accepted": [],
+        "evaluated": 1
+      },
+      "DOWN": {
+        "config": {},
+        "baseline": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 2658.4
+        },
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 2658.4
+        },
+        "accepted": [],
+        "evaluated": 1
+      }
+    },
+    "states": [
+      {
+        "key": "RIGHT0",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 4,
+          "length": 240
+        }
+      },
+      {
+        "key": "RIGHT1",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 7,
+          "length": 392
+        }
+      },
+      {
+        "key": "RIGHT2",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 1772.2352941176468
+        }
+      },
+      {
+        "key": "RIGHT3",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 17,
+          "length": 1924.2352941176468
+        }
+      },
+      {
+        "key": "RIGHT4",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 4,
+          "length": 240
+        }
+      },
+      {
+        "key": "RIGHT5",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 7,
+          "length": 392
+        }
+      },
+      {
+        "key": "RIGHT6",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 24,
+          "length": 2656.235294117647
+        }
+      },
+      {
+        "key": "RIGHT7",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 2808.235294117647
+        }
+      },
+      {
+        "key": "DOWN0",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 4,
+          "length": 228
+        }
+      },
+      {
+        "key": "DOWN1",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 7,
+          "length": 388
+        }
+      },
+      {
+        "key": "DOWN2",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 1452.4
+        }
+      },
+      {
+        "key": "DOWN3",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 17,
+          "length": 1612.4
+        }
+      },
+      {
+        "key": "DOWN4",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 4,
+          "length": 228
+        }
+      },
+      {
+        "key": "DOWN5",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 7,
+          "length": 388
+        }
+      },
+      {
+        "key": "DOWN6",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 24,
+          "length": 2498.4
+        }
+      },
+      {
+        "key": "DOWN7",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 27,
+          "length": 2658.4
+        }
+      }
+    ]
+  },
+  {
+    "sample": "research",
+    "search": {
+      "RIGHT": {
+        "config": {
+          "edgeSides": {
+            "edge-8": "NORTH"
+          },
+          "portFlips": {
+            "[\"abnormal\",\"EAST\"]": true,
+            "[\"fork\",\"NORTH\"]": true
+          }
+        },
+        "baseline": {
+          "crossings": 3,
+          "pairs": [
+            [
+              "edge-2",
+              "edge-3"
+            ],
+            [
+              "edge-8",
+              "edge-9"
+            ],
+            [
+              "edge-13",
+              "edge-14"
+            ]
+          ],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 31,
+          "length": 4073.4705882352937
+        },
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 31,
+          "length": 3720.4705882352937
+        },
+        "accepted": [
+          {
+            "kind": "side",
+            "edge": "edge-8",
+            "side": "NORTH",
+            "score": {
+              "crossings": 2,
+              "pairs": [
+                [
+                  "edge-2",
+                  "edge-3"
+                ],
+                [
+                  "edge-13",
+                  "edge-14"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 31,
+              "length": 3841.4705882352937
+            }
+          },
+          {
+            "kind": "order",
+            "node": "abnormal",
+            "side": "EAST",
+            "score": {
+              "crossings": 1,
+              "pairs": [
+                [
+                  "edge-2",
+                  "edge-3"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 31,
+              "length": 3770.4705882352937
+            }
+          },
+          {
+            "kind": "order",
+            "node": "fork",
+            "side": "NORTH",
+            "score": {
+              "crossings": 0,
+              "pairs": [],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 31,
+              "length": 3720.4705882352937
+            }
+          }
+        ],
+        "evaluated": 104
+      },
+      "DOWN": {
+        "config": {
+          "edgeSides": {
+            "edge-8": "WEST",
+            "edge-13": "WEST"
+          },
+          "portFlips": {
+            "[\"fork\",\"NORTH\"]": true
+          }
+        },
+        "baseline": {
+          "crossings": 3,
+          "pairs": [
+            [
+              "edge-2",
+              "edge-3"
+            ],
+            [
+              "edge-8",
+              "edge-9"
+            ],
+            [
+              "edge-13",
+              "edge-14"
+            ]
+          ],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 31,
+          "length": 3899.8
+        },
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 31,
+          "length": 3411.8
+        },
+        "accepted": [
+          {
+            "kind": "side",
+            "edge": "edge-8",
+            "side": "WEST",
+            "score": {
+              "crossings": 2,
+              "pairs": [
+                [
+                  "edge-2",
+                  "edge-3"
+                ],
+                [
+                  "edge-13",
+                  "edge-14"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 31,
+              "length": 3485.8
+            }
+          },
+          {
+            "kind": "order",
+            "node": "fork",
+            "side": "NORTH",
+            "score": {
+              "crossings": 1,
+              "pairs": [
+                [
+                  "edge-13",
+                  "edge-14"
+                ]
+              ],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 31,
+              "length": 3445.8
+            }
+          },
+          {
+            "kind": "side",
+            "edge": "edge-13",
+            "side": "WEST",
+            "score": {
+              "crossings": 0,
+              "pairs": [],
+              "overlap": 0,
+              "clearanceDeficit": 0,
+              "blocked": 0,
+              "labelCollisions": 0,
+              "bends": 31,
+              "length": 3411.8
+            }
+          }
+        ],
+        "evaluated": 113
+      }
+    },
+    "states": [
+      {
+        "key": "RIGHT0",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 4,
+          "length": 306
+        }
+      },
+      {
+        "key": "RIGHT1",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 21,
+          "length": 2193.235294117647
+        }
+      },
+      {
+        "key": "RIGHT2",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 1833.2352941176468
+        }
+      },
+      {
+        "key": "RIGHT3",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 31,
+          "length": 3720.4705882352937
+        }
+      },
+      {
+        "key": "DOWN0",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 4,
+          "length": 296
+        }
+      },
+      {
+        "key": "DOWN1",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 21,
+          "length": 2119.4
+        }
+      },
+      {
+        "key": "DOWN2",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 14,
+          "length": 1588.4
+        }
+      },
+      {
+        "key": "DOWN3",
+        "quality": {
+          "crossings": 0,
+          "pairs": [],
+          "overlap": 0,
+          "clearanceDeficit": 0,
+          "blocked": 0,
+          "labelCollisions": 0,
+          "bends": 31,
+          "length": 3411.8
+        }
+      }
+    ]
+  }
+]

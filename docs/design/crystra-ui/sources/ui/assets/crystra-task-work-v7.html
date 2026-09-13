@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="zh-CN" class="h-full bg-[#0d0f12]">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystra · 任务工作台印象图</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            shell: '#0d0f12', sidebar: '#111317', surface: '#15181d', panel: '#1a1e24', raised: '#20252d',
+            line: '#2b313a', muted: '#8a94a3', accent: '#5b8def', success: '#58c77b', warning: '#d49b32', danger: '#e25b5b'
+          },
+          boxShadow: { panel: '0 18px 45px rgba(0,0,0,.24)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { scrollbar-width: thin; scrollbar-color: #3a424d transparent; }
+    [data-scrollbar="hidden"] { -ms-overflow-style: none; scrollbar-width: none; }
+    [data-scrollbar="hidden"]::-webkit-scrollbar { display: none; width: 0; height: 0; }
+    [data-task-row][hidden] { display: none; }
+    [data-section-id="task-section-label"][hidden],
+    [data-section-id="task-section-actions"][hidden],
+    [data-section-id="task-search-input"][hidden],
+    [data-section-id="task-search-clear"][hidden] { display: none; }
+    [data-section-id="task-section-toggle"][hidden],
+    [data-section-id="task-search-control"][hidden],
+    [data-section-id="task-section-content"][hidden],
+    [data-section-id="task-section-attention-badge"][hidden],
+    [data-section-id="workflow-section-content"][hidden],
+    [data-section-id="analysis-section-content"][hidden] { display: none !important; }
+    [data-section-id="task-working-set"][data-expanded="false"] { flex: 0 0 auto !important; }
+    [data-section-id="task-working-set"][data-expanded="false"] [data-section-id="task-section-toggle"] { width: 100%; }
+    [data-section-id="task-working-set"][data-expanded="false"] [data-section-id="task-section-chevron"],
+    [data-section-id="workflow-navigation"][data-expanded="false"] [data-section-id="workflow-section-chevron"],
+    [data-section-id="analysis-navigation"][data-expanded="false"] [data-section-id="analysis-section-chevron"] { transform: rotate(-90deg); }
+    [data-section-id="task-search-control"][data-open="true"] { width: 100%; height: 100%; flex: 1 1 100%; margin-left: 0; padding: 0 .25rem; border: 1px solid #343a44; border-radius: .75rem; background: #181b20; }
+    [data-section-id="task-section-header"]:hover { background: rgb(255 255 255 / .055); }
+    [data-section-id="task-section-header"]:has([data-section-id="task-search-control"]:hover),
+    [data-section-id="task-section-header"]:has([data-section-id="task-section-actions"]:hover) { background: rgb(255 255 255 / .025); }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    [data-section-id="better-sidebar-edge-handle"][hidden],
+    [data-section-id="better-sidebar-surface"][hidden],
+    [data-section-id="new-task-empty-state"][hidden] { display: none !important; }
+    [data-section-id="better-sidebar-edge-handle"] { position: fixed; z-index: 70; transition: right .24s ease, bottom .24s ease; }
+    [data-section-id="better-sidebar-edge-handle"][data-edge="right"] { right: 0; top: 46%; width: 38px; height: 54px; overflow: hidden; }
+    [data-section-id="better-sidebar-edge-handle"][data-edge="bottom"] { bottom: 0; left: calc(50% + 130px); width: 54px; height: 38px; overflow: hidden; transform: translateX(-50%); }
+    [data-section-id="better-sidebar-toggle"] { display: grid; place-items: center; border: 1px solid rgb(91 141 239 / .5); background: rgb(23 29 38 / .88); color: #93c5fd; box-shadow: 0 8px 24px rgb(0 0 0 / .34), 0 0 14px rgb(59 130 246 / .12); backdrop-filter: blur(10px); transition: transform .18s ease, opacity .18s ease, background .18s ease; }
+    [data-section-id="better-sidebar-edge-handle"][data-edge="right"] [data-section-id="better-sidebar-toggle"] { width: 38px; height: 54px; border-radius: 14px 0 0 14px; transform: translateX(30px); opacity: .42; }
+    [data-section-id="better-sidebar-edge-handle"][data-edge="bottom"] [data-section-id="better-sidebar-toggle"] { width: 54px; height: 38px; border-radius: 14px 14px 0 0; transform: translateY(30px); opacity: .42; }
+    [data-section-id="better-sidebar-edge-handle"]:hover [data-section-id="better-sidebar-toggle"],
+    [data-section-id="better-sidebar-edge-handle"]:focus-within [data-section-id="better-sidebar-toggle"],
+    [data-section-id="better-sidebar-edge-handle"][data-armed="true"] [data-section-id="better-sidebar-toggle"],
+    [data-section-id="better-sidebar-edge-handle"][data-open="true"] [data-section-id="better-sidebar-toggle"] { transform: translate(0); opacity: 1; }
+    [data-section-id="better-sidebar-edge-handle"][data-open="true"][data-edge="right"] { right: 400px; }
+    [data-section-id="app-shell"][data-layout-mode="ultrawide"] [data-section-id="better-sidebar-edge-handle"][data-open="true"][data-edge="right"] { right: clamp(640px, 23vw, 900px); }
+    [data-section-id="better-sidebar-edge-handle"][data-open="true"][data-edge="bottom"] { bottom: clamp(240px, 32vh, 340px); }
+    @media (hover: none), (pointer: coarse) {
+      [data-section-id="better-sidebar-edge-handle"][data-edge="right"] [data-section-id="better-sidebar-toggle"] { transform: translateX(34px); opacity: .68; }
+      [data-section-id="better-sidebar-edge-handle"][data-edge="bottom"] [data-section-id="better-sidebar-toggle"] { transform: translateY(34px); opacity: .68; }
+      [data-section-id="better-sidebar-edge-handle"][data-armed="true"] [data-section-id="better-sidebar-toggle"],
+      [data-section-id="better-sidebar-edge-handle"][data-open="true"] [data-section-id="better-sidebar-toggle"] { transform: translate(0); opacity: 1; }
+    }
+    [data-section-id="app-shell"] { grid-template-columns: 260px minmax(0, 1fr); }
+    [data-section-id="task-workspace"] { grid-column: 2; grid-row: 1; }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="right"] {
+      grid-template-columns: 260px minmax(0, 1fr) 400px;
+    }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="right"][data-layout-mode="ultrawide"] {
+      grid-template-columns: 260px minmax(0, 1fr) clamp(640px, 23vw, 900px);
+    }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="right"] [data-section-id="better-sidebar-surface"] {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="bottom"] {
+      grid-template-rows: minmax(0, 1fr) clamp(240px, 32vh, 340px);
+    }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="bottom"] [data-section-id="sidebar"] {
+      grid-row: 1 / 3;
+    }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="bottom"] [data-section-id="task-workspace"] {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    [data-section-id="app-shell"][data-utility-open="true"][data-utility-placement="bottom"] [data-section-id="better-sidebar-surface"] {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    [data-section-id="app-shell"][data-layout-mode="wide"] [data-section-id="task-layout-region"] {
+      grid-template-columns: minmax(420px, 480px) minmax(680px, 1fr);
+    }
+    [data-section-id="app-shell"][data-layout-mode="ultrawide"] [data-section-id="task-layout-region"] {
+      grid-template-columns: minmax(500px, 560px) minmax(1000px, 1fr);
+    }
+    [data-section-id="better-sidebar-host-slot"] { grid-template-columns: minmax(190px, .72fr) minmax(0, 1.28fr); }
+    [data-section-id="better-sidebar-surface"][data-density="compact"] [data-section-id="better-sidebar-host-slot"] { grid-template-columns: minmax(180px, .6fr) minmax(0, 1.4fr); }
+    [data-section-id="better-sidebar-surface"][data-density="expanded"] [data-section-id="better-sidebar-host-slot"] { grid-template-columns: minmax(240px, .72fr) minmax(360px, 1.28fr); }
+    @media (max-width: 1439px) {
+      [data-section-id="app-shell"] { grid-template-columns: 220px minmax(0, 1fr); }
+      [data-section-id="task-layout-region"] { grid-template-columns: minmax(340px, 38fr) minmax(540px, 62fr); }
+      [data-section-id="workspace-header"] { min-height: 96px; padding-left: 20px; padding-right: 20px; }
+      [data-section-id="task-execution-summary"] { overflow-x: auto; }
+    }
+    [data-control-surface] { display: none; }
+    [data-section-id="control-workspace"]:has(input[value="grilling"]:checked) [data-control-surface="grilling"],
+    [data-section-id="control-workspace"]:has(input[value="plan"]:checked) [data-control-surface="plan"],
+    [data-section-id="control-workspace"]:has(input[value="execution"]:checked) [data-control-surface="execution"],
+    [data-section-id="control-workspace"]:has(input[value="gate"]:checked) [data-control-surface="gate"],
+    [data-section-id="control-workspace"]:has(input[value="delivery"]:checked) [data-control-surface="delivery"] { display: block; }
+    [data-surface-option] { position: relative; border: 1px solid transparent; border-radius: .75rem; }
+    [data-surface-option]:has(input:checked) { border-color: #5b8def; background: rgb(91 141 239 / .12); color: #fff; box-shadow: none; }
+    [data-surface-option][data-system-active="true"]::before { content: ""; position: absolute; left: 10px; top: 50%; width: 6px; height: 6px; border-radius: 999px; background: #60a5fa; box-shadow: 0 0 8px #3b82f6; transform: translateY(-50%); }
+    [data-dag-node][data-search-match="true"] rect { stroke: #7fb0ff; stroke-width: 4; }
+    @keyframes execution-edge-sweep { to { stroke-dashoffset: -420; } }
+    @keyframes execution-node-breathe { 0%, 100% { opacity: .18; stroke-width: 4; } 50% { opacity: .82; stroke-width: 8; } }
+    [data-section-id="execution-running-sweep"] { animation: execution-edge-sweep 1.05s linear infinite; filter: drop-shadow(0 0 7px #53b7ff); }
+    [data-section-id="execution-degraded-sweep"] { animation: execution-edge-sweep 2.8s linear infinite; filter: drop-shadow(0 0 8px #ffd36a); }
+    [data-section-id="execution-running-halo"] { animation: execution-node-breathe 2.2s ease-in-out infinite; }
+    [data-section-id="execution-error-halo"] { animation: execution-node-breathe 1.25s ease-in-out infinite; filter: drop-shadow(0 0 9px #ff4d5f); }
+    [data-section-id="execution-workflow-run-map"][data-effects="off"] [data-section-id="execution-flow-particles"],
+    [data-section-id="execution-workflow-run-map"][data-effects="off"] [data-section-id="execution-running-halo"],
+    [data-section-id="execution-workflow-run-map"][data-effects="off"] [data-section-id="execution-error-halo"] { display: none; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-edge-degraded"] { stroke: #d49b32; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-degraded-sweep"] { stroke: #ffd36a; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-running-halo"] { stroke: #d49b32; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-body"] { fill: #2c2518; stroke: #d49b32; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-map-status"] { fill: #f1bf55; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-progress-bar"] { background: linear-gradient(90deg, #b7791f, #f6c453); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-pace-arrowhead"] { fill: #d49b32; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-status"],
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-progress-value"],
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-run-pace-copy"] { color: #d49b32; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-status"] { background: rgb(245 158 11 / .1); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-active-check"] { border-color: rgb(245 158 11 / .25); background: rgb(245 158 11 / .05); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="slow"] [data-section-id="execution-current-node-active-dot"] { color: #d49b32; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-edge-degraded"] { stroke: #3487e8; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-degraded-sweep"] { stroke: #8cd8ff; animation-duration: .62s; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-running-halo"] { stroke: #4aa8ff; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-body"] { fill: #172b47; stroke: #4aa8ff; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-map-status"] { fill: #8cd8ff; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-progress-bar"] { background: linear-gradient(90deg, #2563eb, #35d0ff); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-pace-arrowhead"] { fill: #3487e8; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-status"],
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-progress-value"],
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-run-pace-copy"] { color: #7dd3fc; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-status"] { background: rgb(59 130 246 / .1); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-active-check"] { border-color: rgb(59 130 246 / .25); background: rgb(59 130 246 / .06); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="fast"] [data-section-id="execution-current-node-active-dot"] { color: #7dd3fc; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-edge-degraded"] { stroke: #4f9af0; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-degraded-sweep"] { stroke: #73c6ff; animation-duration: 1.05s; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-running-halo"] { stroke: #4f9af0; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-body"] { fill: #17253a; stroke: #4f9af0; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-map-status"] { fill: #93c5fd; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-progress-bar"] { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-pace-arrowhead"] { fill: #4f9af0; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-status"],
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-progress-value"],
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-run-pace-copy"] { color: #93c5fd; }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-status"] { background: rgb(59 130 246 / .1); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-active-check"] { border-color: rgb(59 130 246 / .2); background: rgb(59 130 246 / .04); }
+    [data-section-id="execution-dashboard"][data-runtime-pace="normal"] [data-section-id="execution-current-node-active-dot"] { color: #93c5fd; }
+    [data-section-id="execution-speed-signal"][data-runtime-pace="slow"] { border-color: rgb(245 158 11 / .3); background: rgb(245 158 11 / .1); color: #fde68a; }
+    [data-section-id="execution-speed-signal"][data-runtime-pace="slow"] [data-section-id="execution-speed-signal-dot"] { background: #fbbf24; box-shadow: 0 0 7px #f59e0b; }
+    [data-section-id="execution-speed-signal"][data-runtime-pace="fast"],
+    [data-section-id="execution-speed-signal"][data-runtime-pace="normal"] { border-color: rgb(59 130 246 / .32); background: rgb(59 130 246 / .1); color: #bae6fd; }
+    [data-section-id="execution-speed-signal"][data-runtime-pace="fast"] [data-section-id="execution-speed-signal-dot"],
+    [data-section-id="execution-speed-signal"][data-runtime-pace="normal"] [data-section-id="execution-speed-signal-dot"] { background: #60a5fa; box-shadow: 0 0 8px #3b82f6; }
+  </style>
+</head>
+<body data-ui-locale="zh-CN" class="h-full overflow-hidden bg-shell text-slate-100 antialiased">
+  <main data-section-id="app-shell" data-layout-mode="standard" data-better-sidebar-available="false" data-utility-open="false" data-utility-placement="bottom" class="grid h-screen min-h-[760px]">
+    <aside data-section-id="sidebar" class="flex min-h-0 flex-col border-r border-line bg-sidebar px-3.5 py-4">
+      <div data-section-id="sidebar-logo-row" class="flex h-9 items-center gap-2 px-0.5">
+        <button data-section-id="surface-banner" type="button" aria-label="切换到 DeepSeek Harness" title="切换到 DeepSeek Harness" class="group flex min-w-0 flex-1 items-center gap-2.5 text-left text-slate-100 transition-colors hover:text-white">
+          <span data-section-id="sidebar-brand-mark" class="grid h-6 w-6 shrink-0 place-items-center text-sky-300 transition-colors group-hover:text-sky-200">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2.75 20 7.6l-2.15 10.15L12 21.25l-5.85-3.5L4 7.6 12 2.75Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+              <path d="m4 7.6 4.55 1.25L12 2.75l3.45 6.1L20 7.6M8.55 8.85 12 21.25l3.45-12.4M6.15 17.75 12 14.3l5.85 3.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" opacity=".92"/>
+              <path d="m8.55 8.85 3.45 5.4 3.45-5.4" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round" opacity=".58"/>
+            </svg>
+          </span>
+          <span data-section-id="sidebar-brand-name" class="truncate text-[19px] font-semibold tracking-[-.025em]">Crystra</span>
+        </button>
+        <button data-section-id="sidebar-toggle" type="button" aria-label="收起侧边栏" title="收起侧边栏" class="grid size-8 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <rect x=".75" y=".75" width="14.5" height="14.5" rx="4" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M5.25 1.25v13.5" stroke="currentColor" stroke-width="1.25"/>
+          </svg>
+        </button>
+      </div>
+
+      <button data-section-id="new-task-action" type="button" aria-label="新建任务" class="mt-6 flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/[.12] bg-white/[.18] text-sm font-medium text-slate-100 transition-colors hover:bg-white/[.24] active:bg-white/[.28]">
+        <span data-section-id="new-task-icon" class="grid size-4 shrink-0 place-items-center" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.00003 0.3237C3.76075 0.3237 0.32373 3.76072 0.32373 8C0.32373 9.17603 0.589121 10.2922 1.0632 11.2901L1.35291 11.8989L2.5705 11.3205L2.28079 10.7117C1.89079 9.89074 1.67301 8.97167 1.67301 8C1.67301 4.50546 4.50549 1.67298 8.00003 1.67298C11.4946 1.67298 14.3271 4.50546 14.3271 8C14.3271 11.4945 11.4946 14.327 8.00003 14.327C7.28473 14.327 6.76077 14.277 6.29621 14.1487C5.83857 14.0224 5.40441 13.8109 4.88514 13.4488C4.12569 12.919 3.03778 12.7316 2.141 13.2978L2.12682 13.307L2.11264 13.3171L1.34886 13.854L1.79659 15.188L2.86122 14.4384C3.19068 14.2305 3.68325 14.2542 4.11326 14.5539C4.72789 14.9826 5.30042 15.2724 5.93762 15.4484C6.56803 15.6224 7.22776 15.6763 8.00003 15.6763C12.2393 15.6763 15.6763 12.2393 15.6763 8C15.6763 3.76072 12.2393 0.3237 8.00003 0.3237ZM7.32033 4.82535V7.32536H4.82538V8.67464H7.32033V11.1747H8.6696V8.67464H11.1747V7.32536H8.6696V4.82535H7.32033Z" fill="currentColor"></path>
+          </svg>
+        </span>
+        <span data-section-id="new-task-label">新建任务</span>
+      </button>
+
+      <section data-section-id="task-working-set" data-expanded="true" class="mt-5 flex min-h-0 flex-1 flex-col">
+        <header data-section-id="task-section-header" class="relative mx-1 flex h-9 shrink-0 items-center rounded-md bg-white/[.025] transition-colors">
+          <button data-section-id="task-section-toggle" type="button" aria-label="折叠任务列表" aria-expanded="true" class="flex h-full min-w-0 flex-1 items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition-colors hover:text-slate-100">
+            <svg data-section-id="task-section-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="shrink-0 transition-transform"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-section-id="task-section-label" class="truncate">任务</span>
+            <span data-section-id="task-section-attention-badge" title="3 项需要关注" hidden class="ml-1 grid size-[18px] place-items-center rounded-full bg-amber-500/20 text-[10px] font-medium tracking-normal text-amber-300">3</span>
+          </button>
+          <div data-section-id="task-search-control" data-open="false" class="ml-auto flex min-w-0 items-center">
+            <button data-section-id="task-search-action" type="button" aria-label="搜索任务" aria-expanded="false" class="grid size-7 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M11.895 6.647A5.266 5.266 0 1 1 1.352 6.647a5.266 5.266 0 0 1 10.543 0Zm-.365 5.826L15.044 16 16 15.041l-3.514-3.527-.956.959Z" fill="currentColor"/></svg>
+            </button>
+            <input data-section-id="task-search-input" type="text" placeholder="搜索任务…" maxlength="500" tabindex="-1" hidden class="h-full min-w-0 flex-1 border-0 bg-transparent px-1.5 text-[13px] text-slate-200 outline-none placeholder:text-slate-500">
+            <button data-section-id="task-search-clear" type="button" aria-label="关闭搜索" hidden class="grid size-7 shrink-0 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="m10.607 4.403-2.597 2.597 2.597 2.597-1.01 1.01L7 8.01l-2.597 2.597-1.01-1.01L5.99 7 3.393 4.403l1.01-1.01L7 5.99l2.597-2.597 1.01 1.01Z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div data-section-id="task-section-actions" class="flex items-center gap-0.5">
+            <button data-section-id="task-view-options-action" type="button" aria-label="视图选项" aria-haspopup="menu" aria-expanded="false" class="grid size-7 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-slate-100">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 3h6m3 0h5M1 8h2m3 0h9M1 13h8m3 0h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="8.5" cy="3" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="4.5" cy="8" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="10.5" cy="13" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+            </button>
+          </div>
+
+          <div data-section-id="task-view-options-menu" role="menu" hidden class="absolute right-0 top-10 z-50 w-52 rounded-xl border border-line bg-[#1a1e24] p-2 text-xs shadow-2xl shadow-black/50">
+            <p class="px-2 py-1 text-[10px] font-medium text-slate-500">排序方式</p>
+            <label class="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-slate-200 hover:bg-white/[.05]"><input data-section-id="task-sort-created" type="radio" name="task-sort" value="created" checked class="accent-blue-500"><span>按创建时间</span><span class="ml-auto text-[10px] text-slate-500">最新优先</span></label>
+            <label class="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-slate-200 hover:bg-white/[.05]"><input data-section-id="task-sort-activity" type="radio" name="task-sort" value="activity" class="accent-blue-500"><span>按活跃度</span><span class="ml-auto text-[10px] text-slate-500">事件冒泡</span></label>
+            <div class="my-1 border-t border-line"></div>
+            <p class="px-2 py-1 text-[10px] font-medium text-slate-500">过滤方式</p>
+            <label class="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-slate-200 hover:bg-white/[.05]"><input data-section-id="task-filter-all" type="radio" name="task-filter" value="all" checked class="accent-blue-500"><span>全部</span></label>
+            <label class="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-slate-200 hover:bg-white/[.05]"><input data-section-id="task-filter-active" type="radio" name="task-filter" value="active" class="accent-blue-500"><span>活跃任务</span></label>
+          </div>
+        </header>
+
+        <div data-section-id="task-section-content" class="flex min-h-0 flex-1 flex-col">
+        <div data-section-id="task-list" data-scrollbar="hidden" class="mt-1 min-h-0 flex-1 space-y-0.5 overflow-y-auto">
+          <button data-section-id="task-current" data-task-row data-task-id="task-market-release" data-task-state="review" data-task-active="true" data-created-at="2026-09-07T14:02:00+08:00" data-last-event-at="2026-09-07T14:08:00+08:00" aria-current="true" type="button" class="flex h-10 w-full min-w-0 items-center gap-2 rounded-lg border border-blue-500/70 bg-blue-500/[.08] px-2.5 text-left">
+            <span data-section-id="task-current-status" title="需要审查" class="size-2 shrink-0 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(251,191,36,.55)]"></span>
+            <span data-section-id="task-current-title" title="发布插件市场方案" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-medium text-slate-100">发布插件市场方案</span>
+            <span class="shrink-0 text-[10px] text-slate-500">2 分钟</span>
+            <span data-section-id="task-current-attention-badge" title="1 项需要关注" class="grid size-[18px] shrink-0 place-items-center rounded-full bg-amber-500/20 text-[10px] font-medium text-amber-300">1</span>
+          </button>
+          <button data-section-id="task-running" data-task-row data-task-id="task-ui-workbench" data-task-state="running" data-task-active="true" data-created-at="2026-09-07T13:47:00+08:00" data-last-event-at="2026-09-07T14:09:00+08:00" type="button" class="flex h-10 w-full min-w-0 items-center gap-2 rounded-lg px-2.5 text-left text-slate-300 transition hover:bg-white/[.05]">
+            <span data-section-id="task-running-status" title="运行中" class="size-2 shrink-0 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,.5)]"></span>
+            <span title="UI 工作台设计" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px]">UI 工作台设计</span>
+            <span class="shrink-0 text-[10px] text-slate-500">18 分钟</span>
+          </button>
+          <button data-section-id="task-failed" data-task-row data-task-id="task-plugin-preflight" data-task-state="failed" data-task-active="true" data-created-at="2026-09-07T13:20:00+08:00" data-last-event-at="2026-09-07T13:38:00+08:00" type="button" class="flex h-10 w-full min-w-0 items-center gap-2 rounded-lg px-2.5 text-left text-slate-300 transition hover:bg-white/[.05]">
+            <span data-section-id="task-failed-status" title="失败停止" class="size-2 shrink-0 rounded-full bg-red-400 shadow-[0_0_6px_rgba(248,113,113,.45)]"></span>
+            <span title="插件兼容性预检与冲突诊断" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px]">插件兼容性预检与冲突诊断</span>
+            <span class="shrink-0 text-[10px] text-slate-500">42 分钟</span>
+            <span data-section-id="task-failed-attention-badge" title="2 项需要关注" class="grid size-[18px] shrink-0 place-items-center rounded-full bg-red-500/20 text-[10px] font-medium text-red-300">2</span>
+          </button>
+          <button data-section-id="task-complete" data-task-row data-task-id="task-plugin-research" data-task-state="complete" data-task-active="false" data-created-at="2026-09-06T10:10:00+08:00" data-last-event-at="2026-09-06T18:35:00+08:00" type="button" class="flex h-10 w-full min-w-0 items-center gap-2 rounded-lg px-2.5 text-left text-slate-300 transition hover:bg-white/[.05]">
+            <span data-section-id="task-complete-status" title="全部完成" class="size-2 shrink-0 rounded-full bg-emerald-400"></span>
+            <span title="插件兼容性研究" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px]">插件兼容性研究</span>
+            <span class="shrink-0 text-[10px] text-slate-500">昨天</span>
+          </button>
+          <a data-section-id="all-tasks-action" href="crystra-task-browser-v7.html" class="flex h-9 items-center rounded-lg px-2.5 text-xs text-blue-300 transition hover:bg-white/[.05]"><span class="ml-4">查看所有任务</span><span class="ml-auto">→</span></a>
+        </div>
+        </div>
+      </section>
+
+      <nav data-section-id="workflow-navigation" data-expanded="true" class="mt-3 shrink-0">
+        <header data-section-id="workflow-section-header" class="mx-1 flex h-9 items-center rounded-md bg-white/[.025]">
+          <button data-section-id="workflow-section-toggle" type="button" aria-label="折叠工作流列表" aria-expanded="true" class="flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04] hover:text-slate-100">
+            <svg data-section-id="workflow-section-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="transition-transform"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-section-id="workflow-section-label" class="truncate">工作流</span>
+          </button>
+        </header>
+        <div data-section-id="workflow-section-content" class="space-y-0.5">
+          <div data-section-id="workflow-current-list" class="space-y-0.5">
+            <a href="crystra-workflow-studio-v7.html?workflow_definition_id=build-and-sign&amp;revision=v3&amp;from_task_id=task-market-release" data-workflow-definition-id="build-and-sign" class="flex h-8 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="size-1.5 shrink-0 rounded-full bg-blue-400 shadow-[0_0_5px_rgba(96,165,250,.5)]"></span><span class="min-w-0 flex-1 truncate">build-and-sign</span><span class="shrink-0 text-[10px] text-muted">v3</span></a>
+            <a href="crystra-workflow-studio-v7.html?workflow_definition_id=market-validation&amp;revision=v2&amp;from_task_id=task-market-release" data-workflow-definition-id="market-validation" class="flex h-8 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="size-1.5 shrink-0 rounded-full bg-slate-500"></span><span class="min-w-0 flex-1 truncate">market-validation</span><span class="shrink-0 text-[10px] text-muted">v2</span></a>
+            <a href="crystra-workflow-studio-v7.html?workflow_definition_id=publish-documentation&amp;revision=v1&amp;from_task_id=task-market-release" data-workflow-definition-id="publish-documentation" class="flex h-8 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="size-1.5 shrink-0 rounded-full bg-slate-500"></span><span class="min-w-0 flex-1 truncate">publish-documentation</span><span class="shrink-0 text-[10px] text-muted">v1</span></a>
+          </div>
+          <a data-section-id="all-workflows-action" href="crystra-workflow-studio-v7.html?view=workflows" class="flex h-8 items-center rounded-md px-2.5 text-xs text-blue-300 transition hover:bg-white/[.05]"><span class="ml-3.5">查看所有工作流</span><span class="ml-auto">→</span></a>
+        </div>
+      </nav>
+
+      <nav data-section-id="analysis-navigation" data-expanded="true" class="mt-2 shrink-0">
+        <header data-section-id="analysis-section-header" class="mx-1 flex h-9 items-center rounded-md bg-white/[.025]">
+          <button data-section-id="analysis-section-toggle" type="button" aria-label="折叠分析列表" aria-expanded="true" class="flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04] hover:text-slate-100">
+            <svg data-section-id="analysis-section-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="transition-transform"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-section-id="analysis-section-label" class="truncate">分析</span>
+          </button>
+        </header>
+        <div data-section-id="analysis-section-content" class="space-y-0.5">
+          <div data-section-id="analysis-secondary-navigation" class="space-y-0.5">
+            <a data-section-id="analysis-dashboard-action" href="crystra-analysis-audit-v7.html?view=dashboard" class="flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="grid w-4 shrink-0 place-items-center text-slate-500">▦</span><span class="min-w-0 flex-1 truncate">总览</span></a>
+            <a data-section-id="analysis-traces-action" href="crystra-analysis-audit-v7.html?view=traces" class="flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="grid w-4 shrink-0 place-items-center text-slate-500">⌁</span><span class="min-w-0 flex-1 truncate">轨迹</span><span class="grid min-w-[17px] shrink-0 place-items-center rounded-full bg-amber-500/15 px-1 text-[9px] text-amber-300">3</span></a>
+            <a data-section-id="analysis-audit-action" href="crystra-analysis-audit-v7.html?view=audit" class="flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="grid w-4 shrink-0 place-items-center text-slate-500">◎</span><span class="min-w-0 flex-1 truncate">审计</span></a>
+            <a data-section-id="analysis-compare-action" href="crystra-analysis-audit-v7.html?view=compare" class="flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]"><span class="grid w-4 shrink-0 place-items-center text-slate-500">⇄</span><span class="min-w-0 flex-1 truncate">运行比较</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <footer data-section-id="sidebar-footer" class="mt-auto shrink-0 border-t border-line pt-3">
+        <button data-section-id="host-settings" type="button" class="flex h-9 w-full items-center gap-3 rounded-md px-2 text-sm text-slate-300 transition hover:bg-white/[.05] hover:text-white"><span>⚙</span><span>设置</span></button>
+      </footer>
+    </aside>
+
+    <section data-section-id="task-workspace" class="relative flex min-w-0 flex-col overflow-hidden bg-[#101216]">
+      <section data-section-id="new-task-empty-state" hidden class="absolute inset-0 z-40 grid place-items-center bg-[#101216] px-8">
+        <div data-section-id="new-task-composer-seat" class="w-full max-w-[720px] -translate-y-10">
+          <p class="mb-5 text-center text-xl font-medium tracking-tight text-slate-200">开始一个新任务</p>
+          <section data-section-id="new-task-hero-composer-placeholder" data-provider="dsh-client-ui-conversation" data-slot="conversation.composer.bar" data-variant="hero" class="rounded-2xl border border-line bg-[#24282f] p-4 shadow-panel">
+            <p class="min-h-14 text-sm text-muted">描述你想完成的工作…</p>
+            <div class="flex items-center gap-3 text-xs text-muted">
+              <button type="button" class="grid size-8 place-items-center rounded-full bg-white/5 text-xl" aria-label="添加附件">＋</button>
+              <button data-section-id="new-task-workspace-slot-placeholder" data-provider="dsh-client-ui-workspace" data-slot="conversation.hero.workspace" data-prototype-placeholder="true" type="button" aria-haspopup="menu" title="原型占位：正式实现由 DSH Workspace Slot 渲染" class="flex h-8 min-w-0 max-w-[260px] items-center gap-2 rounded-lg px-2 text-slate-300 transition hover:bg-white/[.06] hover:text-slate-100">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="shrink-0"><path d="M1.25 4.25A1.75 1.75 0 0 1 3 2.5h2.45c.5 0 .97.21 1.3.58l.67.75c.14.16.34.25.55.25H13A1.75 1.75 0 0 1 14.75 5.83v5.67A1.75 1.75 0 0 1 13 13.25H3a1.75 1.75 0 0 1-1.75-1.75V4.25Z" stroke="currentColor" stroke-width="1.25"/></svg>
+                <span class="truncate">workflow-self-recursive</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" class="shrink-0"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span class="ml-auto">DeepSeek-V4-Flash 高⌄</span>
+              <button type="button" class="grid size-9 place-items-center rounded-full bg-blue-600 text-lg text-white" aria-label="发送">↑</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <header data-section-id="workspace-header" class="flex min-h-[112px] items-center justify-between gap-8 border-b border-line px-7 py-4">
+        <div class="min-w-0">
+          <div class="flex items-start gap-4">
+            <span class="grid size-12 shrink-0 place-items-center rounded-lg border border-line bg-panel text-xl">↗</span>
+            <div class="min-w-0">
+              <h1 class="truncate text-2xl font-semibold tracking-tight">发布插件市场方案</h1>
+              <p class="mt-1 truncate text-sm text-slate-300">验证发布路径，并将重复步骤结晶为低成本 Workflow</p>
+              <div data-section-id="task-context" class="mt-2 flex flex-wrap items-center gap-2 text-xs text-muted">
+                <span>工作流 v3</span><span>·</span><span>运行 #08</span>
+                <span class="rounded bg-amber-500/15 px-2 py-1 font-medium text-warning">等待审核</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section data-section-id="task-execution-summary" class="mx-5 mt-4 flex min-h-[88px] items-stretch rounded-xl border border-line bg-[#15191f] px-5 py-3 shadow-panel">
+        <div data-section-id="run-health" class="flex w-[160px] shrink-0 items-center gap-3 border-r border-line pr-5">
+          <span class="relative grid size-9 place-items-center rounded-full border border-emerald-500/40 bg-emerald-500/10 text-success"><span class="absolute size-2 animate-ping rounded-full bg-emerald-400 opacity-40"></span>●</span>
+          <div><p class="text-sm font-medium">运行正常</p><p class="mt-1 text-xs text-success">持续产生进展</p></div>
+        </div>
+
+        <div data-section-id="current-activity" class="flex min-w-0 flex-1 flex-col justify-center border-r border-line px-5">
+          <p class="text-[11px] font-medium uppercase tracking-[.12em] text-muted">当前活动</p>
+          <p class="mt-1 truncate text-sm text-slate-200">安全扫描、发布说明生成、市场兼容检查</p>
+        </div>
+
+        <div data-section-id="execution-counts" class="flex w-[265px] shrink-0 flex-col justify-center border-r border-line px-5">
+          <div class="flex items-baseline gap-3"><p class="text-sm font-medium"><span class="text-success">8</span> 已完成</p><p class="text-sm font-medium"><span class="text-slate-100">6</span> 当前剩余</p></div>
+          <div class="mt-2 flex items-center gap-2 text-xs"><span class="rounded-full bg-blue-500/15 px-2 py-0.5 text-blue-300">运行 3</span><span class="rounded-full bg-white/5 px-2 py-0.5 text-slate-300">排队 1</span><span class="rounded-full bg-slate-500/15 px-2 py-0.5 text-slate-300">阻塞 2</span></div>
+        </div>
+
+        <div data-section-id="attention-summary" class="flex w-[218px] shrink-0 items-center gap-3 border-r border-line px-5">
+          <span class="grid size-8 place-items-center rounded-full bg-amber-500/15 text-warning">!</span>
+          <div><p class="text-sm font-medium text-amber-200">1 项需要你审核</p><button data-section-id="attention-open-gates" class="mt-1 text-xs text-warning">处理后解除 2 项阻塞 →</button></div>
+        </div>
+
+        <div class="flex w-[240px] shrink-0 items-center justify-between pl-5">
+          <div data-section-id="latest-activity" class="min-w-0"><p class="text-[11px] font-medium uppercase tracking-[.12em] text-muted">最近活动</p><p class="mt-1 truncate text-xs text-slate-300">安全扫描通过 · 2 分钟前</p></div>
+          <div data-section-id="run-consumption" class="ml-4 shrink-0 text-right"><p class="text-sm">18 分钟</p><p class="mt-1 text-xs text-muted">¥12.40</p></div>
+        </div>
+      </section>
+
+      <div data-section-id="task-layout-region" class="mt-4 grid min-h-0 flex-1 grid-cols-[minmax(0,38fr)_minmax(0,62fr)] gap-4 px-5 pb-5">
+        <section data-section-id="input-stream" class="flex min-h-0 flex-col overflow-hidden rounded-xl border border-line bg-[#15191f] shadow-panel">
+          <div data-section-id="conversation-feed" data-scrollbar="hidden" class="min-h-0 flex-1 space-y-4 overflow-auto px-5 py-4">
+            <article class="rounded-xl bg-[#252b34] p-4"><div class="mb-2 flex items-center gap-2 text-xs"><span class="grid size-6 place-items-center rounded-full bg-slate-500">●</span><strong>你</strong><span class="text-muted">14:01</span></div><p class="text-sm leading-6 text-slate-200">请基于当前计划检查发布路径，并识别可以复用的模块化步骤。</p></article>
+            <article class="px-1"><div class="mb-2 flex items-center gap-2 text-xs"><span class="text-blue-400">◆</span><strong>DeepSeek</strong><span class="text-muted">14:01</span></div><p class="text-sm leading-6 text-slate-300">已完成路径验证与步骤抽取，当前处于验证阶段，需要审阅结果。</p></article>
+            <article class="rounded-lg border border-line bg-panel p-3"><div class="flex items-center gap-3"><span class="grid size-8 place-items-center rounded-md border border-line">◇</span><div><div class="text-sm">validate-publish-path</div><div class="mt-1 text-xs text-muted">1 分 24 秒 · ¥0.38</div></div><span class="ml-auto rounded bg-emerald-500/10 px-2 py-1 text-xs text-success">已完成</span></div></article>
+            <article class="rounded-lg border border-amber-500/30 bg-amber-500/10 p-3"><div class="font-medium text-amber-200">需要决策</div><p class="mt-1 text-xs text-amber-100/70">请审阅检查点结果并决定下一步。</p></article>
+            <article data-section-id="input-approval-card" class="rounded-lg border border-line bg-panel p-4"><div class="mb-3 text-sm font-medium">请确认以下事项</div><label data-section-id="input-approval-publish-path" class="flex gap-2 py-1.5 text-xs text-slate-300"><input type="checkbox" class="accent-blue-500">发布路径是否完整且可执行？</label><label data-section-id="input-approval-reuse-abstraction" class="flex gap-2 py-1.5 text-xs text-slate-300"><input type="checkbox" class="accent-blue-500">可复用步骤的抽象是否合理？</label><button data-section-id="input-approval-submit" class="mt-3 float-right rounded-md border border-blue-500/50 px-3 py-1.5 text-xs text-blue-300">提交</button><div class="clear-both"></div></article>
+          </div>
+          <section data-section-id="composer" class="m-4 rounded-2xl border border-line bg-[#24282f] p-4 shadow-panel">
+            <div data-section-id="composer-reply-subject" class="mb-3 hidden items-center gap-2 rounded-lg border border-amber-500/20 bg-amber-500/5 px-3 py-2 text-xs"><span class="text-muted">正在回复</span><span data-section-id="composer-reply-subject-copy" class="truncate text-amber-100">G-3 · 签名配置重试</span><button data-section-id="composer-reply-subject-clear" type="button" class="ml-auto grid size-5 shrink-0 place-items-center rounded text-muted hover:bg-white/5 hover:text-slate-200" aria-label="清除回复对象">×</button></div>
+            <p class="min-h-10 text-sm text-muted">继续描述、纠偏或批准…</p>
+            <div class="flex items-center gap-3 text-xs text-muted"><button data-section-id="composer-add" class="grid size-8 place-items-center rounded-full bg-white/5 text-xl">＋</button><button data-section-id="composer-write-mode">◈ 工作区写入⌄</button><span class="ml-auto">DeepSeek-V4-Flash 高⌄</span><button data-section-id="composer-send" class="grid size-9 place-items-center rounded-full bg-blue-600 text-lg text-white">↑</button></div>
+          </section>
+        </section>
+
+        <section data-section-id="control-workspace" class="flex min-h-0 flex-col overflow-hidden">
+          <nav data-section-id="task-workbench-navigation" aria-label="任务工作面" class="mb-3 flex shrink-0 items-center gap-1 rounded-xl border border-line bg-panel p-1.5 text-xs text-muted shadow-panel">
+            <label data-section-id="workbench-nav-grilling" data-surface-option class="cursor-pointer rounded-lg px-3 py-2"><input data-section-id="preview-surface-grilling" class="sr-only" type="radio" name="control-surface" value="grilling"><span>需求</span><span class="ml-1 text-[10px] text-emerald-300">已对齐</span></label>
+            <label data-section-id="workbench-nav-plan" data-surface-option class="cursor-pointer rounded-lg px-3 py-2"><input data-section-id="preview-surface-plan" class="sr-only" type="radio" name="control-surface" value="plan"><span>计划</span><span class="ml-1 text-[10px] text-slate-400">v4</span></label>
+            <label data-section-id="workbench-nav-execution" data-surface-option data-system-active="true" class="cursor-pointer rounded-lg py-2 pl-5 pr-3"><input data-section-id="preview-surface-execution" class="sr-only" type="radio" name="control-surface" value="execution"><span>执行</span><span data-section-id="workbench-system-focus" data-system-surface="execution" class="ml-1 text-[10px] text-blue-300">系统当前</span></label>
+            <label data-section-id="workbench-nav-gate" data-surface-option class="cursor-pointer rounded-lg px-3 py-2"><input data-section-id="preview-surface-gate" class="sr-only" type="radio" name="control-surface" value="gate" checked><span>审核</span><span class="ml-1 rounded-full bg-amber-500/15 px-1.5 py-0.5 text-[10px] text-warning">1</span></label>
+            <label data-section-id="workbench-nav-delivery" data-surface-option class="cursor-pointer rounded-lg px-3 py-2"><input data-section-id="preview-surface-delivery" class="sr-only" type="radio" name="control-surface" value="delivery"><span>交付</span><span class="ml-1 text-[10px] text-emerald-300">可交付</span></label>
+          </nav>
+
+          <div data-section-id="control-workspace-scroll-region" data-scrollbar="hidden" class="min-h-0 flex-1 overflow-auto">
+          <section data-section-id="gate-review-workbench" data-control-surface="gate" class="space-y-3">
+          <div data-section-id="gate-main-view" class="space-y-3">
+          <section data-section-id="gate-review-overview" class="relative rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3.5">
+            <div data-section-id="gate-queue-navigation" class="mb-3 flex items-center gap-2 border-b border-amber-500/15 pb-3 text-xs">
+              <button data-section-id="gate-queue-toggle" type="button" class="flex items-center gap-2 rounded-lg border border-amber-500/25 bg-black/15 px-3 py-1.5 text-amber-100 transition hover:border-amber-400/50" aria-expanded="false"><span data-section-id="gate-queue-count">待决策 3</span><svg class="size-3.5" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span data-section-id="gate-queue-position" class="rounded bg-white/5 px-2 py-1 text-muted">1 / 3</span>
+              <span data-section-id="gate-current-impact" class="text-warning">阻塞主路径</span>
+            </div>
+            <section data-section-id="gate-decision-queue" class="absolute left-4 top-[50px] z-30 hidden w-[430px] rounded-xl border border-line bg-[#20242b] p-2 shadow-2xl">
+              <div class="flex items-center px-2 py-2"><h3 class="text-xs font-medium text-slate-200">待决策</h3><span class="ml-auto text-[10px] text-muted">按控制影响排序</span></div>
+              <button data-section-id="gate-queue-item-g3" data-gate-select="g3" type="button" class="flex w-full items-start gap-3 rounded-lg border border-blue-500/30 bg-blue-500/5 px-3 py-2.5 text-left"><span class="mt-1 size-2 shrink-0 rounded-full bg-blue-400"></span><span class="min-w-0"><span class="block text-xs text-slate-100">G-3 · 是否允许修改签名配置并重试？</span><span class="mt-1 block text-[11px] text-muted">Wave 2 · 阻塞主路径 · 等待用户</span></span></button>
+              <button data-section-id="gate-queue-item-g5" data-gate-select="g5" type="button" class="mt-1 flex w-full items-start gap-3 rounded-lg border border-transparent px-3 py-2.5 text-left transition hover:border-line hover:bg-white/[.03]"><span class="mt-1 size-2 shrink-0 rounded-full bg-amber-400"></span><span class="min-w-0"><span class="block text-xs text-slate-100">G-5 · 是否接受发布说明覆盖率偏差？</span><span class="mt-1 block text-[11px] text-muted">Wave 4 · 不阻塞主路径 · 等待用户</span></span></button>
+              <button data-section-id="gate-queue-item-g6" data-gate-select="g6" type="button" class="mt-1 flex w-full items-start gap-3 rounded-lg border border-transparent px-3 py-2.5 text-left transition hover:border-line hover:bg-white/[.03]"><span class="mt-1 size-2 shrink-0 rounded-full bg-slate-500"></span><span class="min-w-0"><span class="block text-xs text-slate-100">G-6 · 是否允许候选包进入公开发布？</span><span class="mt-1 block text-[11px] text-muted">最终关口 · 等待 G-3、G-5</span></span></button>
+            </section>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 grid size-8 shrink-0 place-items-center rounded-full bg-amber-500/15 text-warning">!</span>
+              <div data-section-id="gate-decision-question" class="min-w-0">
+                <p data-section-id="gate-decision-question-kicker" class="text-[10px] font-semibold uppercase tracking-[.12em] text-warning">审核检查点 · G-3</p>
+                <h2 data-section-id="gate-decision-question-title" class="mt-1 text-base font-medium text-slate-100">是否允许 Wave 2 修改签名配置并重新执行？</h2>
+                <div class="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-300">
+                  <span data-section-id="gate-trigger-context"><span class="text-muted">触发原因：</span>恢复策略已连续失败 3 次</span>
+                  <span data-section-id="gate-location-context"><span class="text-muted">位置：</span>Plan Run 08 / Wave 2 / Gate G-3</span>
+                </div>
+              </div>
+              <span data-section-id="gate-decision-status" class="ml-auto shrink-0 rounded bg-amber-500/15 px-2.5 py-1 text-xs text-warning">等待用户决定</span>
+            </div>
+          </section>
+
+          <div data-section-id="gate-decision-board" class="grid grid-cols-[1.1fr_.9fr] gap-3">
+            <section data-section-id="gate-decision-state" class="rounded-xl border border-line bg-panel p-4">
+              <div class="flex items-center"><h3 class="text-sm font-medium">当前决策状态</h3></div>
+
+              <section data-section-id="gate-relevant-decisions" class="mt-4 rounded-lg bg-raised p-3">
+                <div class="flex items-center"><p class="text-xs font-medium text-slate-200">与本次问题相关的已确认决定</p><span data-section-id="gate-relevant-decisions-count" class="ml-auto rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-success">3 项已确认</span></div>
+                <ul data-section-id="gate-relevant-decisions-list" class="mt-2.5 grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-300">
+                  <li class="flex"><span class="mr-2 text-success">✓</span>保持公开 API 兼容</li>
+                  <li class="flex"><span class="mr-2 text-success">✓</span>禁止自动公开发布</li>
+                  <li class="col-span-2 flex"><span class="mr-2 text-success">✓</span>失败后必须回到人工关口</li>
+                </ul>
+              </section>
+
+              <section data-section-id="gate-current-interpretation" class="mt-3 rounded-lg border border-blue-500/30 bg-blue-500/5 p-3">
+                <div class="flex items-center"><p class="text-xs font-medium text-blue-200">AI 当前理解</p><span data-section-id="gate-current-interpretation-status" class="ml-auto rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-300">等待明确确认</span></div>
+                <p data-section-id="gate-current-interpretation-copy" class="mt-2 text-sm leading-6 text-slate-100">允许修改签名配置并重新执行 Wave 2；成功或失败后返回 Gate G-3，且不自动进入公开发布。</p>
+              </section>
+
+              <section data-section-id="gate-understanding-delta" class="mt-3">
+                <p class="text-xs font-medium text-slate-300">相对既有决定</p>
+                <div data-section-id="gate-understanding-delta-list" class="mt-2 grid grid-cols-2 gap-2 text-xs">
+                  <div class="rounded-lg border border-blue-500/20 bg-blue-500/5 px-3 py-2"><span class="mr-2 text-blue-300">+</span>新增 Wave 2 重试授权</div>
+                  <div class="rounded-lg border border-line bg-raised px-3 py-2"><span class="mr-2 text-muted">=</span>发布权限没有变化</div>
+                  <div class="col-span-2 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-amber-100"><span class="mr-2 text-warning">!</span>修改签名配置可能触及既有“配置冻结”决定，确认前需要用户裁决。</div>
+                </div>
+              </section>
+            </section>
+
+            <section data-section-id="gate-execution-preview" class="rounded-xl border border-line bg-panel p-4">
+              <div class="flex items-center"><div><p class="text-[10px] font-semibold uppercase tracking-[.12em] text-muted">确认后的控制效果</p><h3 data-section-id="gate-execution-preview-title" class="mt-1 text-sm font-medium">确认后将执行</h3></div><span data-section-id="gate-execution-preview-status" class="ml-auto rounded bg-amber-500/10 px-2 py-1 text-[10px] text-warning">尚未授权</span></div>
+              <ol data-section-id="gate-execution-steps" class="mt-5 space-y-0 text-xs">
+                <li class="grid grid-cols-[24px_1fr] gap-3"><div class="flex flex-col items-center"><span class="grid size-6 place-items-center rounded-full border border-blue-400/50 bg-blue-500/10 text-[10px] text-blue-200">1</span><span class="h-7 w-px bg-line"></span></div><div class="pt-1"><p class="text-slate-200">恢复 Wave 2</p><p class="mt-1 text-muted">保持既有 Goal 与交付范围</p></div></li>
+                <li class="grid grid-cols-[24px_1fr] gap-3"><div class="flex flex-col items-center"><span class="grid size-6 place-items-center rounded-full border border-blue-400/50 bg-blue-500/10 text-[10px] text-blue-200">2</span><span class="h-7 w-px bg-line"></span></div><div class="pt-1"><p class="text-slate-200">仅修改签名配置</p><p class="mt-1 text-muted">不改公开 API 与其他构建步骤</p></div></li>
+                <li class="grid grid-cols-[24px_1fr] gap-3"><div class="flex flex-col items-center"><span class="grid size-6 place-items-center rounded-full border border-blue-400/50 bg-blue-500/10 text-[10px] text-blue-200">3</span><span class="h-7 w-px bg-line"></span></div><div class="pt-1"><p class="text-slate-200">重跑构建与签名验证</p><p class="mt-1 text-muted">保留仍有效的安全扫描证据</p></div></li>
+                <li class="grid grid-cols-[24px_1fr] gap-3"><div class="flex flex-col items-center"><span class="grid size-6 place-items-center rounded-full border border-amber-400/50 bg-amber-500/10 text-[10px] text-amber-200">4</span></div><div class="pt-1"><p class="text-slate-200">返回 Gate G-3</p><p class="mt-1 text-muted">成功或失败均不自动发布</p></div></li>
+              </ol>
+              <div data-section-id="gate-preserved-boundary" class="mt-4 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2.5 text-xs text-slate-300"><span class="mr-2 text-success">◆</span><span data-section-id="gate-preserved-boundary-copy">保持不变：发布权限、API 兼容要求、人工关口</span></div>
+            </section>
+          </div>
+
+          <section data-section-id="gate-evidence" class="rounded-xl border border-line bg-panel p-4">
+            <div class="flex items-center"><div><h3 class="text-sm font-medium">证据与上下文</h3><p class="mt-1 text-xs text-muted">快速核对当前问题的来源、边界与执行事实</p></div><span class="ml-auto rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted">5 个入口</span></div>
+            <div class="mt-3 grid grid-cols-5 gap-2 text-left text-xs">
+              <a data-section-id="gate-evidence-plan-context" href="?surface=plan&amp;plan_view=document&amp;plan_anchor=wave-2&amp;from_gate_id=G-3" class="rounded-lg border border-line bg-raised p-3 text-left transition hover:border-slate-500"><span data-section-id="gate-evidence-plan-title" class="block text-slate-200">Wave 2 执行计划</span><span data-section-id="gate-evidence-plan-copy" class="mt-1.5 block text-[11px] text-muted">核对原定恢复边界</span><span data-section-id="gate-evidence-plan-action" class="mt-3 block text-[10px] text-blue-300">打开 Plan 章节 →</span></a>
+              <a data-section-id="gate-evidence-trigger-record" href="crystra-analysis-audit-v7.html?plan_run_id=plan-v4%2Frun-08&amp;wave_id=wave-2&amp;workflow_run_id=workflow-v3%2Frun-08&amp;trace_root_id=trace-7f42a&amp;attempt=3&amp;span_id=build-sign&amp;event_id=signature-validation-failed&amp;from_gate_id=G-3" class="rounded-lg border border-red-500/25 bg-red-500/5 p-3 text-left transition hover:border-red-400/50"><span data-section-id="gate-evidence-trigger-title" class="block text-slate-200">第 3 次失败 Trace</span><span data-section-id="gate-evidence-trigger-copy" class="mt-1.5 block text-[11px] text-red-200/70">查看升级触发事实</span><span data-section-id="gate-evidence-trigger-action" class="mt-3 block text-[10px] text-red-300">在分析中查看 →</span></a>
+              <a data-section-id="gate-evidence-proposed-change" href="?surface=gate&amp;gate_id=g3&amp;context=proposed-change" class="rounded-lg border border-line bg-raised p-3 text-left transition hover:border-slate-500"><span data-section-id="gate-evidence-change-title" class="block text-slate-200">签名配置差异</span><span data-section-id="gate-evidence-change-copy" class="mt-1.5 block text-[11px] text-muted">3 处准备修改</span><span data-section-id="gate-evidence-change-action" class="mt-3 block text-[10px] text-blue-300">查看差异 →</span></a>
+              <a data-section-id="gate-evidence-validation-result" href="?surface=gate&amp;gate_id=g3&amp;context=validation-result" class="rounded-lg border border-line bg-raised p-3 text-left transition hover:border-slate-500"><span data-section-id="gate-evidence-validation-title" class="block text-slate-200">安全扫描结果</span><span data-section-id="gate-evidence-validation-copy" class="mt-1.5 block text-[11px] text-success">既有证据仍有效</span><span data-section-id="gate-evidence-validation-action" class="mt-3 block text-[10px] text-blue-300">打开证据 →</span></a>
+              <a data-section-id="gate-evidence-governing-decision" href="?surface=gate&amp;gate_id=g3&amp;context=governing-decision" class="rounded-lg border border-amber-500/25 bg-amber-500/5 p-3 text-left transition hover:border-amber-400/50"><span data-section-id="gate-evidence-decision-title" class="block text-slate-200">配置冻结决定</span><span data-section-id="gate-evidence-decision-copy" class="mt-1.5 block text-[11px] text-amber-200/70">可能与当前理解冲突</span><span data-section-id="gate-evidence-decision-action" class="mt-3 block text-[10px] text-amber-300">定位原始决定 →</span></a>
+            </div>
+          </section>
+          </div>
+
+          <section data-section-id="gate-context-inspector" class="hidden min-h-[570px] flex-col overflow-hidden rounded-xl border border-line bg-panel shadow-panel">
+            <header data-section-id="gate-context-header" class="flex shrink-0 items-center border-b border-line px-5 py-3">
+              <a data-section-id="gate-context-back" href="?surface=gate&amp;gate_id=g3" class="mr-4 rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300">← 返回 G-3</a>
+              <div><p data-section-id="gate-context-kind" class="text-[10px] font-semibold uppercase tracking-[.12em] text-muted">上下文检查</p><h2 data-section-id="gate-context-title" class="mt-1 text-sm font-medium">签名配置差异</h2></div>
+              <span data-section-id="gate-context-revision" class="ml-auto rounded bg-white/5 px-2 py-1 font-mono text-[10px] text-muted">immutable revision</span>
+            </header>
+            <div data-section-id="gate-context-body" class="min-h-0 flex-1 overflow-auto p-5">
+              <section data-section-id="gate-context-summary" class="rounded-xl border border-blue-500/25 bg-blue-500/5 p-4"><p class="text-xs text-blue-200">与当前 Gate 的关系</p><p data-section-id="gate-context-summary-copy" class="mt-2 text-sm leading-6 text-slate-200"></p></section>
+              <div data-section-id="gate-context-detail-grid" class="mt-4 grid grid-cols-2 gap-3">
+                <section data-section-id="gate-context-primary" class="rounded-xl border border-line bg-raised p-4"><h3 data-section-id="gate-context-primary-title" class="text-xs font-medium text-slate-200"></h3><div data-section-id="gate-context-primary-copy" class="mt-3 whitespace-pre-line font-mono text-xs leading-6 text-slate-300"></div></section>
+                <section data-section-id="gate-context-secondary" class="rounded-xl border border-line bg-raised p-4"><h3 data-section-id="gate-context-secondary-title" class="text-xs font-medium text-slate-200"></h3><div data-section-id="gate-context-secondary-copy" class="mt-3 whitespace-pre-line text-xs leading-6 text-slate-300"></div></section>
+              </div>
+              <section data-section-id="gate-context-provenance" class="mt-4 rounded-xl border border-line bg-raised p-4"><div class="flex items-center"><h3 class="text-xs font-medium text-slate-200">身份与来源</h3><span class="ml-auto text-[10px] text-success">精确版本</span></div><dl data-section-id="gate-context-provenance-fields" class="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 font-mono text-[11px] text-muted"></dl></section>
+            </div>
+          </section>
+
+        </section>
+
+          <section data-section-id="grilling-workbench" data-control-surface="grilling" class="space-y-3">
+            <section data-section-id="grilling-overview" class="flex items-center gap-4 rounded-xl border border-blue-500/35 bg-blue-500/10 px-4 py-3"><span class="grid size-9 place-items-center rounded-full bg-blue-500/15 text-blue-300">?</span><div><h2 class="font-medium">需求澄清 · 第 2 轮</h2><p class="mt-0.5 text-xs text-muted">12 个已知问题 · 7 个已解决 · 3 个待回答 · 2 个条件问题</p></div><div class="ml-auto text-right text-xs"><p class="text-blue-300">还剩 3 个主题</p><p class="mt-1 text-muted">问题预算：5</p></div></section>
+            <div class="grid grid-cols-[.9fr_1.35fr] gap-3">
+              <section data-section-id="grilling-question-map" class="rounded-xl border border-line bg-panel p-4"><div class="flex items-center"><h3 class="text-sm font-medium">问题地图</h3><span class="ml-auto text-xs text-muted">根据需求澄清 IR 生成</span></div><div class="mt-4 space-y-2 text-xs"><div class="flex items-center rounded-lg bg-raised p-3"><span class="text-success">✓</span><span class="ml-2">目标与结果</span><span class="ml-auto text-muted">3/3</span></div><div class="flex items-center rounded-lg bg-raised p-3"><span class="text-success">✓</span><span class="ml-2">范围与非目标</span><span class="ml-auto text-muted">2/2</span></div><div class="flex items-center rounded-lg border border-blue-500/40 bg-blue-500/10 p-3"><span class="text-blue-300">●</span><span class="ml-2">约束与资源</span><span class="ml-auto text-blue-300">2/4</span></div><div class="flex items-center rounded-lg bg-raised p-3"><span class="text-muted">○</span><span class="ml-2">验收与证据</span><span class="ml-auto text-muted">0/2</span></div><div class="flex items-center rounded-lg bg-raised p-3"><span class="text-warning">+</span><span class="ml-2">授权边界</span><span class="ml-auto text-warning">新增</span></div></div><div class="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs"><p class="font-medium text-amber-200">为何新增这个问题？</p><p class="mt-1 leading-5 text-muted">实际发布需要外部凭据，因此新增授权边界问题。</p></div></section>
+              <section data-section-id="grilling-live-brief" class="rounded-xl border border-line bg-panel p-4"><div class="flex items-start"><div><h3 class="text-sm font-medium">实时简报</h3><p class="mt-1 text-xs text-muted">当前权威理解 · 增量编译</p></div><span class="ml-auto rounded-full bg-white/5 px-2 py-1 text-[10px] text-muted">9 个字段 · 6 个已解决</span></div><div class="mt-4 space-y-2 text-xs"><article class="rounded-lg bg-raised p-3"><div class="flex items-center"><p class="font-medium text-slate-200">目标</p><span class="ml-auto text-success">已确认</span></div><p class="mt-1 leading-5 text-slate-300">验证 DSH 插件的完整市场发布路径，并形成可重放、可结晶的流程。</p></article><article class="rounded-lg bg-raised p-3"><div class="flex items-center"><p class="font-medium text-slate-200">约束</p><span class="ml-auto text-success">已确认</span></div><p class="mt-1 leading-5 text-slate-300">不修改 DSH 核心；优先复用宿主认证与 UI。</p></article><article class="grid grid-cols-2 gap-2"><div class="rounded-lg border border-slate-600/40 bg-raised p-3"><div class="flex"><p class="font-medium">自动公开发布</p><span class="ml-auto text-slate-400">已排除</span></div><p class="mt-2 text-muted">必须由用户授权</p></div><div class="rounded-lg border border-amber-500/30 bg-amber-500/5 p-3"><div class="flex"><p class="font-medium">私有分发</p><span class="ml-auto text-warning">未解决</span></div><p class="mt-2 text-muted">等待本轮回答</p></div></article><article class="rounded-lg border border-red-500/25 bg-red-500/5 p-3"><div class="flex"><p class="font-medium text-red-200">回滚边界</p><span class="ml-auto text-red-300">缺失</span></div><p class="mt-1 text-muted">发布后的健康检查与失败恢复尚未定义。</p></article><section data-section-id="grilling-brief-changes" class="rounded-lg border border-blue-500/30 bg-blue-500/5 p-3"><div class="flex items-center"><p class="font-medium text-blue-200">本轮变更</p><span class="ml-auto text-blue-300">2 项更新</span></div><div class="mt-2 space-y-1.5 font-mono text-[11px]"><p class="text-emerald-300">+ 公开发布必须由用户授权</p><p class="text-red-300 line-through">− Agent 可以自动完成整个发布流程</p></div></section></div></section>
+            </div>
+          </section>
+
+          <section data-section-id="plan-workbench" data-control-surface="plan">
+            <section data-section-id="plan-document-viewer" class="hidden min-h-[570px] flex-col overflow-hidden rounded-xl border border-line bg-panel shadow-panel">
+              <header data-section-id="plan-document-header" class="flex shrink-0 items-center border-b border-line px-5 py-3">
+                <button data-section-id="plan-document-back" type="button" class="mr-4 rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300">← 返回计划摘要</button>
+                <div><h2 class="font-medium">plan.md</h2><p class="mt-1 text-xs text-muted">修订版 4 · 源提交 abc123 · 2 分钟前编译</p></div>
+                <span class="ml-auto rounded bg-emerald-500/10 px-2 py-1 text-xs text-success">只读</span>
+              </header>
+
+              <div data-section-id="plan-document-page" class="grid min-h-[500px] grid-cols-[175px_minmax(0,1fr)]">
+                <nav data-section-id="plan-document-outline" class="border-r border-line p-4 text-xs text-muted">
+                  <ol class="space-y-3"><li class="text-slate-200">1. 目标与完成判定</li><li>2. 动机</li><li>3. 范围与授权</li><li><button data-section-id="plan-document-dag-chapter-entry" type="button" class="text-left text-blue-300">4. 影响与 DAG →</button></li><li>5. 执行批次</li><li>来源与上下文</li></ol>
+                </nav>
+                <article data-section-id="plan-document-content" class="max-h-[500px] overflow-auto p-6 text-xs leading-6 text-slate-300"><div data-section-id="plan-linked-gate-context" class="mb-5 hidden items-center rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-blue-200"><span data-section-id="plan-linked-gate-copy"></span><span class="ml-auto text-[10px] text-blue-300">精确计划版本</span></div><h3 class="text-lg font-semibold text-slate-100">发布插件市场方案 — 执行计划</h3><p class="mt-2 text-muted">来源：任务 024 · 当前批次：wave0 · 下一步：固定市场规则版本</p><h4 class="mt-6 font-semibold text-slate-100">1. 目标与完成判定</h4><p class="mt-2">生成经过沙盒验证、可由用户授权发布的插件候选。完成要求包括构建、签名、安全扫描、沙盒安装和发布路径重放。</p><h4 class="mt-6 font-semibold text-slate-100">3. 范围、非目标与授权</h4><p class="mt-2">可自主执行构建、测试与沙盒安装；新增生产依赖、修改公开契约或使用发布凭据必须请示。</p><section data-section-id="plan-document-wave-anchor"><h4 class="mt-6 font-semibold text-slate-100">4. 影响与依赖</h4><p class="mt-2">wave0 → wave1A / wave1B → wave2 → 发布关口。签名与沙盒环境版本差异构成当前主要风险。</p><h4 class="mt-6 font-semibold text-slate-100">5. 执行批次</h4><p class="mt-2">每个批次包含外部可验证的验收项、退出条件、失败注记与证据指针。完整内容在权威计划文档中保存，不在摘要工作面重复。</p></section></article>
+              </div>
+
+              <section data-section-id="plan-full-dag" class="hidden min-h-0 flex-1 flex-col">
+                <div data-section-id="plan-dag-toolbar" class="flex shrink-0 items-center gap-2 border-b border-line px-4 py-2.5 text-xs">
+                  <button data-section-id="plan-dag-document-back" type="button" class="rounded-lg border border-line bg-raised px-3 py-2 text-slate-300">← 计划目录</button>
+                  <div class="ml-2"><p class="font-medium text-slate-100">4. 影响与 DAG</p><p class="mt-0.5 text-[10px] text-muted">完整拓扑 · 只读浏览</p></div>
+                  <label data-section-id="plan-dag-search" class="ml-auto flex items-center gap-2 rounded-lg border border-line bg-[#11151a] px-3 py-2 text-muted"><span>搜索</span><input type="search" placeholder="节点名称或标识" class="w-32 bg-transparent text-slate-200 outline-none placeholder:text-slate-600"></label>
+                  <button data-section-id="plan-dag-collapse-branches" type="button" class="rounded-lg border border-line bg-raised px-3 py-2">折叠普通分支</button>
+                  <button data-section-id="plan-dag-zoom-out" type="button" aria-label="缩小" class="grid size-8 place-items-center rounded-lg border border-line bg-raised text-base">−</button>
+                  <button data-section-id="plan-dag-zoom-in" type="button" aria-label="放大" class="grid size-8 place-items-center rounded-lg border border-line bg-raised text-base">＋</button>
+                  <button data-section-id="plan-dag-fit-view" type="button" class="rounded-lg border border-line bg-raised px-3 py-2">适应窗口</button>
+                </div>
+
+                <div class="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)_220px]">
+                  <section data-section-id="plan-dag-viewport" class="relative min-h-[470px] cursor-grab overflow-hidden bg-[#0f1720] active:cursor-grabbing">
+                    <svg data-section-id="plan-dag-canvas" data-scale="0.44" data-pan-x="8" data-pan-y="100" class="absolute left-0 top-0 h-[620px] w-[1280px] select-none" style="transform: translate(8px, 100px) scale(.44); transform-origin: 0 0" viewBox="0 0 1280 620" role="img" aria-label="可缩放和拖动的完整计划 DAG">
+                      <defs><pattern data-section-id="plan-dag-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#263443"/></pattern></defs><rect width="1280" height="620" fill="url(#plan-dag-grid)"/>
+                      <g fill="none" stroke="#526170" stroke-width="3"><path d="M190 300H260"/><path d="M420 300C470 300 465 140 520 140"/><path d="M420 300H520"/><path d="M420 300C470 300 465 460 520 460"/><path d="M700 140C760 140 755 300 820 300"/><path d="M700 300H820"/><path d="M700 460C760 460 755 300 820 300"/><path d="M1000 300H1080"/><path d="M905 348C900 550 610 555 610 508" stroke="#d49b32" stroke-dasharray="9 7"/></g>
+                      <g data-dag-node="goal" data-node-label="发布候选可验证" class="cursor-pointer"><rect x="30" y="255" width="160" height="90" rx="14" fill="#123029" stroke="#2f9f70" stroke-width="2"/><text x="52" y="282" fill="#8a94a3" font-size="13">目标</text><text x="52" y="314" fill="#e5e7eb" font-size="16">发布候选可验证</text></g>
+                      <g data-dag-node="research" data-node-label="市场规则研究" class="cursor-pointer"><rect x="260" y="255" width="160" height="90" rx="14" fill="#172b47" stroke="#5b8def" stroke-width="2"/><text x="282" y="282" fill="#8a94a3" font-size="13">批次 0</text><text x="282" y="314" fill="#e5e7eb" font-size="16">市场规则固定</text></g>
+                      <g data-dag-ordinary-branch data-dag-node="security" data-node-label="安全检查" class="cursor-pointer"><rect x="520" y="95" width="180" height="90" rx="14" fill="#172b47" stroke="#5b8def"/><text x="542" y="122" fill="#8a94a3" font-size="13">批次 1A</text><text x="542" y="154" fill="#e5e7eb" font-size="16">安全与依赖检查</text></g>
+                      <g data-dag-node="build" data-node-label="构建与签名验证" class="cursor-pointer"><rect x="520" y="255" width="180" height="90" rx="14" fill="#1d2229" stroke="#697586"/><text x="542" y="282" fill="#8a94a3" font-size="13">批次 1B</text><text x="542" y="314" fill="#e5e7eb" font-size="16">构建与签名验证</text></g>
+                      <g data-dag-ordinary-branch data-dag-node="docs" data-node-label="发布说明生成" class="cursor-pointer"><rect x="520" y="415" width="180" height="90" rx="14" fill="#1d2229" stroke="#697586"/><text x="542" y="442" fill="#8a94a3" font-size="13">批次 1C</text><text x="542" y="474" fill="#e5e7eb" font-size="16">发布说明生成</text></g>
+                      <g data-dag-node="integration" data-node-label="沙盒集成验证" class="cursor-pointer"><rect x="820" y="255" width="180" height="90" rx="14" fill="#2d2819" stroke="#d49b32" stroke-width="2"/><text x="842" y="282" fill="#d49b32" font-size="13">批次 2 · 关注</text><text x="842" y="314" fill="#e5e7eb" font-size="16">沙盒集成验证</text></g>
+                      <g data-dag-node="gate" data-node-label="用户发布授权" class="cursor-pointer"><rect x="1080" y="255" width="160" height="90" rx="14" fill="#282132" stroke="#9c6ade" stroke-width="2"/><text x="1102" y="282" fill="#b7a0e8" font-size="13">人工关口</text><text x="1102" y="314" fill="#e5e7eb" font-size="16">用户发布授权</text></g>
+                      <text x="680" y="575" fill="#d49b32" font-size="14">验证失败 → 修改实现 → 重新验证</text>
+                    </svg>
+                    <aside data-section-id="plan-dag-minimap" class="absolute bottom-4 right-4 h-24 w-40 rounded-lg border border-line bg-[#18212b]/95 p-2 shadow-panel"><div class="relative h-full w-full rounded border border-slate-600/50"><span class="absolute left-2 top-8 h-3 w-5 rounded-sm bg-emerald-600"></span><span class="absolute left-12 top-2 h-3 w-7 rounded-sm bg-blue-600"></span><span class="absolute left-12 top-8 h-3 w-7 rounded-sm bg-slate-600"></span><span class="absolute left-12 top-14 h-3 w-7 rounded-sm bg-slate-600"></span><span class="absolute left-24 top-8 h-3 w-7 rounded-sm bg-amber-600"></span><span class="absolute right-2 top-8 h-3 w-5 rounded-sm bg-purple-600"></span><span class="absolute inset-2 rounded border border-blue-400/70"></span></div></aside>
+                  </section>
+
+                  <aside data-section-id="plan-dag-node-details" class="border-l border-line bg-[#171b21] p-4 text-xs"><p class="text-[10px] font-semibold uppercase tracking-[.12em] text-muted">节点详情</p><h3 data-section-id="plan-dag-node-title" class="mt-2 text-base font-medium">沙盒集成验证</h3><span class="mt-2 inline-block rounded bg-amber-500/10 px-2 py-1 text-warning">需要关注</span><dl class="mt-5 space-y-4"><div><dt class="text-muted">进入条件</dt><dd class="mt-1 text-slate-300">构建、签名和安全检查完成</dd></div><div><dt class="text-muted">退出条件</dt><dd class="mt-1 text-slate-300">安装、启动和卸载均可重放</dd></div><div><dt class="text-muted">风险</dt><dd class="mt-1 text-warning">签名环境与运行时版本不同</dd></div><div><dt class="text-muted">证据</dt><dd class="mt-1 text-blue-300">sandbox-run-08.json</dd></div></dl><p class="mt-6 border-t border-line pt-4 text-muted">修改节点或依赖，请在左侧输入流中描述。</p></aside>
+                </div>
+              </section>
+            </section>
+
+            <section data-section-id="plan-summary" class="space-y-3">
+              <section data-section-id="plan-overview" class="flex items-center gap-4 rounded-xl border border-blue-500/35 bg-blue-500/10 px-4 py-3"><span class="grid size-9 place-items-center rounded-full bg-blue-500/15 text-blue-300">⌘</span><div><h2 class="font-medium">计划 v4 · 等待审核</h2><p class="mt-0.5 text-xs text-muted">这条路径是否可信，并可授权进行自治执行？</p></div><div class="ml-auto flex items-center gap-2 text-xs"><span class="rounded bg-blue-500/15 px-2 py-1 text-blue-300">3 项变更</span><span class="rounded bg-amber-500/15 px-2 py-1 text-warning">2 项关注</span><button data-section-id="plan-document-entry" type="button" class="ml-1 rounded-lg border border-blue-400/30 bg-[#18243a] px-3 py-2 text-blue-200">查看完整计划 →</button></div></section>
+
+              <div class="grid grid-cols-[.78fr_1.42fr] gap-3">
+                <section data-section-id="plan-outcome-summary" class="rounded-xl border border-line bg-panel p-4"><div class="flex items-center"><h3 class="text-sm font-medium">目标与完成判定</h3><span class="ml-auto text-xs text-success">已对齐</span></div><p class="mt-3 text-sm leading-6 text-slate-200">生成经过沙盒验证、可由用户授权发布的插件候选。</p><div class="mt-4 grid grid-cols-2 gap-2 text-xs"><div class="rounded-lg bg-raised p-3"><p class="text-muted">完成标准</p><p class="mt-1 text-lg">5</p><p class="text-success">全部已定义</p></div><div class="rounded-lg bg-raised p-3"><p class="text-muted">非目标</p><p class="mt-1 text-lg">2</p><p class="text-slate-300">已明确</p></div></div><p class="mt-4 text-xs text-muted">公开发布不在本次执行范围内。</p></section>
+                <section data-section-id="plan-dag-projection" class="rounded-xl border border-line bg-panel p-4"><div class="flex items-start"><div><h3 class="text-sm font-medium">当前计划结构</h3><p class="mt-1 text-xs text-muted">Task Plan v4 · 可由追加目标或 Replan 产生新版本</p></div><button data-section-id="plan-dag-entry" type="button" class="ml-auto rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300">查看完整 DAG →</button></div><svg class="mt-3 h-[218px] w-full rounded-lg border border-line bg-[#111923]" viewBox="0 0 760 250" role="img" aria-label="当前 Task 计划中包含并行分支、汇合、关口和恢复循环的 DAG"><g fill="none" stroke="#546171" stroke-width="2"><path d="M145 125H205"/><path d="M205 125C230 125 225 67 260 67"/><path d="M205 125C230 125 225 183 260 183"/><path d="M405 67C445 67 440 125 475 125"/><path d="M405 183C445 183 440 125 475 125"/><path d="M610 125H655"/><path d="M542 158C540 226 335 226 335 205" stroke="#d49b32" stroke-dasharray="6 5"/></g><g font-family="Inter, sans-serif" font-size="12"><rect x="25" y="94" width="120" height="62" rx="10" fill="#123029" stroke="#2f9f70"/><text x="43" y="116" fill="#8a94a3">目标</text><text x="43" y="139" fill="#e5e7eb">发布候选可验证</text><rect x="260" y="36" width="145" height="62" rx="10" fill="#172b47" stroke="#5b8def"/><text x="278" y="58" fill="#8a94a3">批次 1A</text><text x="278" y="81" fill="#e5e7eb">市场规则研究</text><rect x="260" y="152" width="145" height="62" rx="10" fill="#1d2229" stroke="#3b4450"/><text x="278" y="174" fill="#8a94a3">批次 1B</text><text x="278" y="197" fill="#e5e7eb">构建与签名验证</text><rect x="475" y="94" width="135" height="62" rx="10" fill="#2d2819" stroke="#d49b32"/><text x="493" y="116" fill="#d49b32">批次 2</text><text x="493" y="139" fill="#e5e7eb">集成验证</text><rect x="655" y="94" width="82" height="62" rx="10" fill="#282132" stroke="#9c6ade"/><text x="674" y="116" fill="#b7a0e8">关口</text><text x="674" y="139" fill="#e5e7eb">授权</text><text x="414" y="236" fill="#d49b32">验证失败 → 修改实现</text></g></svg></section>
+              </div>
+
+              <section data-section-id="plan-readiness-summaries" class="grid grid-cols-3 gap-3"><article data-section-id="plan-control-envelope-summary" class="rounded-xl border border-line bg-panel p-4"><div class="flex"><h3 class="text-sm font-medium">控制边界</h3><span class="ml-auto text-success">准备就绪</span></div><div class="mt-3 grid grid-cols-2 gap-y-2 text-xs"><span class="text-muted">进入条件</span><span class="text-right">4/4 已就绪</span><span class="text-muted">退出条件</span><span class="text-right">3 项已定义</span><span class="text-muted">人工关口</span><span class="text-right">2</span><span class="text-muted">预算</span><span class="text-right">¥30 · 3 次循环</span></div></article><article data-section-id="plan-proof-readiness" class="rounded-xl border border-line bg-panel p-4"><div class="flex"><h3 class="text-sm font-medium">证明准备度</h3><span class="ml-auto text-warning">1 个缺口</span></div><div class="mt-3 grid grid-cols-2 gap-y-2 text-xs"><span class="text-muted">主张映射</span><span class="text-right">5/5</span><span class="text-muted">证据方法</span><span class="text-right">5 项已定义</span><span class="text-muted">验证者分离</span><span class="text-right text-success">通过</span><span class="text-muted">覆盖缺口</span><span class="text-right text-warning">1</span></div></article><article data-section-id="plan-context-health" class="rounded-xl border border-line bg-panel p-4"><div class="flex"><h3 class="text-sm font-medium">权威上下文</h3><span class="ml-auto text-warning">需检查</span></div><div class="mt-3 grid grid-cols-2 gap-y-2 text-xs"><span class="text-muted">已固定来源</span><span class="text-right">6</span><span class="text-muted">过期来源</span><span class="text-right text-warning">1</span><span class="text-muted">产出保管</span><span class="text-right text-success">已定义</span><span class="text-muted">对象身份</span><span class="text-right text-success">精确</span></div></article></section>
+
+              <div class="grid grid-cols-[1.2fr_.8fr] gap-3"><section data-section-id="plan-attention-summary" class="rounded-xl border border-amber-500/30 bg-amber-500/5 p-4"><div class="flex items-center"><h3 class="text-sm font-medium text-amber-200">需要关注</h3><span class="ml-auto rounded-full bg-amber-500/10 px-2 py-0.5 text-xs text-warning">2</span></div><ul class="mt-3 space-y-2 text-xs text-slate-300"><li>! 市场规则来源尚未固定版本</li><li>! 签名环境与沙盒运行时版本不同</li></ul></section><section data-section-id="plan-change-summary" class="rounded-xl border border-line bg-panel p-4"><div class="flex"><h3 class="text-sm font-medium">相较 v3 的变更</h3><span class="ml-auto text-xs text-blue-300">3</span></div><ul class="mt-3 space-y-2 text-xs"><li class="text-emerald-300">+ 沙盒安装验证</li><li class="text-emerald-300">+ 公开发布人工关口</li><li class="text-amber-300">~ 预算 ¥20 → ¥30</li></ul></section></div>
+            </section>
+          </section>
+
+          <section data-section-id="execution-workbench" data-control-surface="execution">
+            <section data-section-id="execution-plan-run-overview" data-plan-run-id="plan-v4/run-08" class="overflow-hidden rounded-xl border border-line bg-panel shadow-panel">
+              <header data-section-id="execution-plan-run-header" class="flex items-center border-b border-line px-4 py-3">
+                <span class="grid size-9 place-items-center rounded-full border border-blue-500/35 bg-blue-500/10 text-blue-300">◇</span>
+                <div class="ml-3"><h2 class="font-medium">计划执行总览</h2><p class="mt-0.5 text-xs text-muted">计划 v4 · 运行 #08 · 展示 Wave 级执行状态与当前前沿</p></div>
+                <div class="ml-auto flex items-center gap-3 text-xs"><span class="text-success">2 个 Wave 已完成</span><span class="text-warning">1 个正在执行</span><span class="text-muted">2 个未开始</span></div>
+              </header>
+
+              <section data-section-id="execution-plan-run-summary" class="grid grid-cols-5 border-b border-line bg-[#151a20] text-xs">
+                <div class="border-r border-line px-4 py-3"><p class="text-muted">计划健康</p><p class="mt-1 text-success">正常推进</p></div>
+                <div class="border-r border-line px-4 py-3"><p class="text-muted">完成</p><p class="mt-1 text-slate-200">2 / 5 Wave</p></div>
+                <div class="border-r border-line px-4 py-3"><p class="text-muted">当前前沿</p><p class="mt-1 text-warning">批次 1B</p></div>
+                <div class="border-r border-line px-4 py-3"><p class="text-muted">阻塞</p><p class="mt-1 text-slate-200">0</p></div>
+                <div class="px-4 py-3"><p class="text-muted">累计消耗</p><p class="mt-1 text-slate-200">18 分钟 · ¥12.40</p></div>
+              </section>
+
+              <div class="grid min-h-[520px] grid-cols-[minmax(0,1.45fr)_minmax(260px,.55fr)]">
+                <section data-section-id="execution-plan-run-map" class="border-r border-line bg-[#101821] p-4">
+                  <div class="flex items-start"><div><h3 class="text-sm font-medium">计划 DAG 的实际执行投影</h3><p class="mt-1 text-xs text-muted">节点是 Wave 或 Gate；选择 Wave 可查看其内部 Workflow Run</p></div><div class="ml-auto flex gap-3 text-[10px] text-muted"><span><i class="mr-1 inline-block h-0.5 w-4 bg-emerald-500 align-middle"></i>完成</span><span><i class="mr-1 inline-block h-0.5 w-4 bg-amber-400 align-middle"></i>执行中</span><span><i class="mr-1 inline-block h-0.5 w-4 bg-slate-500 align-middle"></i>未开始</span></div></div>
+                  <svg data-section-id="execution-plan-run-canvas" class="mt-4 h-[420px] w-full rounded-lg border border-line bg-[#0e151d]" style="background-image: radial-gradient(#263443 1px, transparent 1px); background-size: 24px 24px" viewBox="0 0 900 430" role="img" aria-label="计划 DAG 的 Wave 级执行状态">
+                    <g fill="none" stroke-width="3"><path d="M145 215H205" stroke="#2f9f70"/><path d="M325 215H360V105H410" stroke="#2f9f70"/><path d="M325 215H410" stroke="#d49b32"/><path d="M540 105H575V215H625" stroke="#53606e"/><path d="M540 215H625" stroke="#53606e"/><path d="M750 215H790" stroke="#53606e"/><path d="M688 249V350H475V249" stroke="#66717f" stroke-dasharray="7 6"/></g>
+                    <g data-section-id="execution-plan-edge-arrows"><path d="M205 215l-10-6v12Z" fill="#2f9f70"/><path d="M410 105l-10-6v12Z" fill="#2f9f70"/><path d="M410 215l-10-6v12Z" fill="#d49b32"/><path d="M625 215l-10-6v12Z" fill="#66717f"/><path d="M790 215l-10-6v12Z" fill="#66717f"/><path d="M475 249l-6 11h12Z" fill="#66717f"/></g>
+                    <g font-family="Inter, sans-serif"><g data-section-id="execution-plan-node-goal"><rect x="25" y="181" width="120" height="68" rx="11" fill="#123029" stroke="#2f9f70" stroke-width="2"/><text x="43" y="205" fill="#79d19a" font-size="11">计划入口 · 完成</text><text x="43" y="230" fill="#f1f5f9" font-size="14">目标已授权</text></g><g data-section-id="execution-plan-wave-0"><rect x="205" y="181" width="120" height="68" rx="11" fill="#123029" stroke="#2f9f70" stroke-width="2"/><text x="223" y="205" fill="#79d19a" font-size="11">Wave 0 · 完成</text><text x="223" y="230" fill="#f1f5f9" font-size="14">固定规则</text></g><g data-section-id="execution-plan-wave-1a"><rect x="410" y="71" width="130" height="68" rx="11" fill="#123029" stroke="#2f9f70" stroke-width="2"/><text x="428" y="95" fill="#79d19a" font-size="11">Wave 1A · 完成</text><text x="428" y="120" fill="#f1f5f9" font-size="14">安全检查</text></g><g data-section-id="execution-plan-wave-1b" role="button" tabindex="0" aria-label="查看批次 1B 的工作流运行" class="cursor-pointer"><rect x="410" y="181" width="130" height="68" rx="11" fill="#2c2518" stroke="#d49b32" stroke-width="3"/><rect x="402" y="173" width="146" height="84" rx="16" fill="none" stroke="#d49b32" stroke-width="5" opacity=".18"/><text x="428" y="205" fill="#f1bf55" font-size="11">Wave 1B · 执行中</text><text x="428" y="230" fill="#f1f5f9" font-size="14">构建与签名</text></g><g data-section-id="execution-plan-wave-2"><rect x="625" y="181" width="125" height="68" rx="11" fill="#1d2229" stroke="#586271"/><text x="643" y="205" fill="#8a94a3" font-size="11">Wave 2 · 未开始</text><text x="643" y="230" fill="#d4d8de" font-size="14">沙盒验证</text></g><g data-section-id="execution-plan-gate"><rect x="790" y="181" width="88" height="68" rx="11" fill="#282132" stroke="#9c6ade"/><text x="806" y="205" fill="#b7a0e8" font-size="11">Gate · 未开始</text><text x="806" y="230" fill="#f1f5f9" font-size="14">发布</text></g></g>
+                    <text x="566" y="343" fill="#8a94a3" font-size="11">[验证失败] 返回 Wave 1B</text>
+                  </svg>
+                </section>
+
+                <aside data-section-id="execution-plan-frontier" class="flex min-w-0 flex-col bg-[#171b21] p-4">
+                  <p class="text-[10px] font-semibold uppercase tracking-[.12em] text-muted">当前执行前沿</p><h3 class="mt-2 text-lg font-medium">Wave 1B · 构建与签名</h3><p class="mt-1 text-xs text-muted">来自计划 v4 · wave/build-and-sign</p>
+                  <div class="mt-5 rounded-lg border border-amber-500/25 bg-amber-500/5 p-3 text-xs"><div class="flex"><span class="text-muted">状态</span><span class="ml-auto text-warning">执行中 · 偏慢</span></div><div class="mt-3 flex"><span class="text-muted">处理方法</span><span class="ml-auto text-slate-200">workflow/build-sign-v3</span></div><div class="mt-3 flex"><span class="text-muted">运行实例</span><span class="ml-auto text-slate-200">run-08</span></div></div>
+                  <section data-section-id="execution-plan-wave-outcome" class="mt-4 rounded-lg border border-line bg-raised p-3"><div class="flex text-xs"><span class="text-muted">Wave 退出条件</span><span class="ml-auto text-warning">3 / 5</span></div><p class="mt-3 text-xs leading-5 text-slate-300">生成签名候选、校验摘要，并把可安装包交给 Wave 2。</p></section>
+                  <p class="mt-auto text-xs leading-5 text-muted">选择图中的 Wave 1B，进入该 Wave 的 Workflow Run；返回后仍保留 Plan Run 的全局上下文。</p>
+                </aside>
+              </div>
+            </section>
+
+            <section data-section-id="execution-wave-run-detail" class="hidden space-y-3">
+              <div data-section-id="execution-wave-run-toolbar" class="relative">
+                <nav data-section-id="execution-level-breadcrumb" aria-label="执行层级" class="flex items-center rounded-xl border border-line bg-panel px-4 py-3 text-xs"><button data-section-id="execution-wave-run-back" type="button" class="text-blue-300">← 计划执行</button><span class="mx-2 text-muted">/</span><span class="text-slate-300">批次 1B</span><span class="mx-2 text-muted">/</span><span class="text-slate-100">工作流运行</span><span class="ml-auto text-muted">trace-7f42a</span><button data-section-id="execution-wave-run-metadata-toggle" type="button" aria-expanded="false" class="ml-3 inline-flex h-8 w-[92px] items-center justify-center gap-1.5 rounded-lg border border-line bg-raised text-slate-300"><span>运行身份</span><svg data-section-id="execution-wave-run-metadata-chevron" viewBox="0 0 20 20" class="size-[14px] shrink-0 transition-transform duration-150" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4.5 7.25L10 12.75L15.5 7.25"/></svg></button><a data-section-id="execution-wave-run-analysis-link" href="crystra-analysis-audit-v7.html?plan_run_id=plan-v4%2Frun-08&amp;wave_id=wave-1b&amp;workflow_run_id=workflow-v3%2Frun-08&amp;trace_root_id=trace-7f42a" class="ml-2 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-1.5 text-blue-300">在分析中查看 ↗</a></nav>
+                <section data-section-id="execution-wave-run-metadata" data-plan-run-id="plan-v4/run-08" data-wave-id="wave-1b" data-workflow-id="build-sign@v3" data-workflow-run-id="workflow-v3/run-08" data-trace-root-id="trace-7f42a" class="absolute right-0 top-full z-30 mt-2 hidden w-[620px] rounded-xl border border-line bg-[#1a1e24]/[.98] px-4 py-3 shadow-2xl backdrop-blur">
+                  <div class="flex items-center"><div><h2 class="text-sm font-medium">Wave Run 元数据</h2><p class="mt-1 text-[11px] text-muted">不可变运行身份 · Analysis 与 Audit 使用同一组关联键</p></div><span class="ml-auto rounded-md border border-emerald-500/25 bg-emerald-500/10 px-2 py-1 text-[10px] text-success">分析关联已固定</span></div>
+                  <dl class="mt-3 divide-y divide-line overflow-hidden rounded-lg border border-line bg-[#151a20] text-[11px]">
+                    <div data-section-id="execution-wave-metadata-plan-run" class="grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5"><dt class="text-muted">Plan Run</dt><dd class="min-w-0 break-all font-mono text-slate-200">plan-v4/run-08</dd><button data-section-id="execution-wave-copy-plan-run" data-wave-copy-value="plan-v4/run-08" type="button" title="复制 Plan Run" aria-label="复制 Plan Run" class="grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300"><svg data-copy-icon viewBox="0 0 20 20" class="size-[15px]" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6.5" y="6.5" width="9" height="9" rx="1.5"/><path d="M4.5 13.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></svg><span data-copy-success class="hidden text-success">✓</span></button></div>
+                    <div data-section-id="execution-wave-metadata-wave" class="grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5"><dt class="text-muted">Wave</dt><dd class="min-w-0 break-all font-mono text-slate-200">wave-1b</dd><button data-section-id="execution-wave-copy-wave" data-wave-copy-value="wave-1b" type="button" title="复制 Wave" aria-label="复制 Wave" class="grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300"><svg data-copy-icon viewBox="0 0 20 20" class="size-[15px]" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6.5" y="6.5" width="9" height="9" rx="1.5"/><path d="M4.5 13.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></svg><span data-copy-success class="hidden text-success">✓</span></button></div>
+                    <div data-section-id="execution-wave-metadata-workflow" class="grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5"><dt class="text-muted">Workflow 定义</dt><dd class="min-w-0 break-all font-mono text-slate-200">build-sign@v3</dd><button data-section-id="execution-wave-copy-workflow" data-wave-copy-value="build-sign@v3" type="button" title="复制 Workflow 定义" aria-label="复制 Workflow 定义" class="grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300"><svg data-copy-icon viewBox="0 0 20 20" class="size-[15px]" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6.5" y="6.5" width="9" height="9" rx="1.5"/><path d="M4.5 13.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></svg><span data-copy-success class="hidden text-success">✓</span></button></div>
+                    <div data-section-id="execution-wave-metadata-run" class="grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5"><dt class="text-muted">Workflow Run</dt><dd class="min-w-0 break-all font-mono text-slate-200">workflow-v3/run-08</dd><button data-section-id="execution-wave-copy-run" data-wave-copy-value="workflow-v3/run-08" type="button" title="复制 Workflow Run" aria-label="复制 Workflow Run" class="grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300"><svg data-copy-icon viewBox="0 0 20 20" class="size-[15px]" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6.5" y="6.5" width="9" height="9" rx="1.5"/><path d="M4.5 13.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></svg><span data-copy-success class="hidden text-success">✓</span></button></div>
+                    <div data-section-id="execution-wave-metadata-trace-root" class="grid grid-cols-[128px_minmax(0,1fr)_30px] items-center gap-3 px-3 py-2.5"><dt class="text-muted">Trace Root</dt><dd class="min-w-0 break-all font-mono text-blue-300">trace-7f42a</dd><button data-section-id="execution-wave-copy-trace-root" data-wave-copy-value="trace-7f42a" type="button" title="复制 Trace Root" aria-label="复制 Trace Root" class="grid size-[30px] place-items-center rounded-md border border-line bg-raised text-slate-400 transition hover:border-blue-500/40 hover:text-blue-300"><svg data-copy-icon viewBox="0 0 20 20" class="size-[15px]" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6.5" y="6.5" width="9" height="9" rx="1.5"/><path d="M4.5 13.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v1"/></svg><span data-copy-success class="hidden text-success">✓</span></button></div>
+                  </dl>
+                </section>
+              </div>
+            <section data-section-id="execution-dashboard" data-runtime-pace="slow" class="overflow-hidden rounded-xl border border-line bg-panel shadow-panel">
+              <header data-section-id="execution-dashboard-header" class="flex items-center border-b border-line px-4 py-3">
+                <span class="relative grid size-9 place-items-center rounded-full border border-amber-500/40 bg-amber-500/10 text-warning">●</span>
+                <div class="ml-3"><h2 class="font-medium">工作流正在执行</h2><p class="mt-0.5 text-xs text-muted">工作流 v3 · 运行 #08 · 当前路径与定义一致</p></div>
+                <div data-section-id="execution-dashboard-health" class="ml-auto mr-3 flex items-center gap-3 text-xs"><span class="text-warning">运行可继续</span><span class="text-muted">1 个失败分支已隔离</span></div>
+                <button data-section-id="execution-effects-toggle" type="button" aria-pressed="true" class="flex items-center gap-2 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-xs text-blue-200"><span data-section-id="execution-effects-indicator" class="size-2 rounded-full bg-blue-400 shadow-[0_0_10px_#60a5fa]"></span><span data-section-id="execution-effects-label">动态效果：开</span></button>
+              </header>
+
+              <section data-section-id="execution-observability-slots" class="flex items-center gap-2 border-b border-line bg-[#151a20] px-4 py-2 text-[11px]">
+                <span class="mr-1 font-medium text-muted">可观测信号</span>
+                <button data-section-id="execution-speed-signal" type="button" data-signal-source="runtime-duration/median-5-runs" data-runtime-pace="slow" class="flex items-center gap-2 rounded-md border px-2.5 py-1.5"><span data-section-id="execution-speed-signal-dot" class="size-1.5 rounded-full"></span><span data-section-id="execution-speed-signal-copy">速度 0.72× · 低于前 5 轮中位数</span><span class="opacity-50">演示切换</span></button>
+                <div data-section-id="execution-error-signal" data-signal-source="runtime-error-count" class="flex items-center gap-2 rounded-md border border-red-500/25 bg-red-500/10 px-2.5 py-1.5 text-red-200"><span class="size-1.5 rounded-full bg-red-400"></span>发布说明 · 错误 1</div>
+                <div data-section-id="execution-observability-extension-slot" class="ml-auto rounded-md border border-dashed border-slate-600 px-2.5 py-1.5 text-muted">＋ 可观测组件提醒槽位</div>
+              </section>
+
+              <div class="grid min-h-[500px] grid-cols-[minmax(0,1.42fr)_minmax(255px,.58fr)]">
+                <section data-section-id="execution-workflow-run-map" data-workflow-run-id="workflow-v3/run-08" data-effects="on" data-runtime-pace="slow" class="flex min-w-0 flex-col border-r border-line bg-[#101821]">
+                  <div data-section-id="execution-run-map-heading" class="flex items-center px-4 pt-3"><div><h3 class="text-sm font-medium">已发生路径与下一步候选</h3><p class="mt-1 text-xs text-muted">实线是已提交事实；虚线候选来自 Workflow 的允许关系，Planner 尚未选择</p></div><div class="ml-auto flex flex-wrap justify-end gap-x-2.5 gap-y-1 text-[10px] text-muted"><span data-section-id="execution-legend-success"><i class="mr-1 inline-block h-0.5 w-4 bg-emerald-500 align-middle"></i>成功</span><span data-section-id="execution-legend-running"><i class="mr-1 inline-block h-0.5 w-4 bg-blue-400 align-middle shadow-[0_0_6px_#60a5fa]"></i>运行</span><span data-section-id="execution-legend-failed"><i class="mr-1 inline-block h-0.5 w-4 bg-red-500 align-middle"></i>失败</span><span data-section-id="execution-legend-paused"><i class="mr-1 inline-block w-4 border-t border-dashed border-slate-400 align-middle"></i>暂停</span><span data-section-id="execution-legend-gate"><i class="mr-1 inline-block size-2 rotate-45 border border-amber-500 align-middle"></i>判断</span></div></div>
+
+                  <div data-section-id="execution-run-map-viewport" class="min-h-0 flex-1 p-3">
+                    <svg data-section-id="execution-run-map-canvas" class="h-full min-h-[390px] w-full rounded-lg border border-line bg-[#0e151d]" style="background-image: radial-gradient(#263443 1px, transparent 1px); background-size: 24px 24px" viewBox="0 0 920 500" role="img" aria-label="按状态区分连接线并带有扫光动效的工作流运行路径">
+
+                      <g data-section-id="execution-observed-path">
+                      <g data-section-id="execution-edge-success" fill="none" stroke="#2f9f70" stroke-width="3"><path d="M128 242H190"/><path d="M310 242H345V90H380"/></g>
+                      <g data-section-id="execution-edge-running" fill="none" stroke="#3487e8" stroke-width="3"><path d="M310 242H380"/></g>
+                      <g fill="none" stroke-width="3"><path data-section-id="execution-edge-degraded" d="M310 242H380"/></g>
+                      <g data-section-id="execution-edge-failed" fill="none" stroke="#e25b5b" stroke-width="3" stroke-dasharray="8 5"><path d="M310 242H345V330H380"/></g>
+                      <g data-section-id="execution-edge-paused" fill="none" stroke="#66717f" stroke-width="2" stroke-dasharray="4 7"><path d="M310 242H330V420H380"/></g>
+                      </g>
+                      <g data-section-id="execution-next-action-frontier" fill="none" stroke="#66717f" stroke-width="2" stroke-dasharray="4 7" opacity=".72"><path d="M505 90H560V225H585"/><path d="M505 210H545V242H585"/><path d="M710 242H750"/><path d="M790 242H825"/></g>
+
+                      <g data-section-id="execution-flow-particles" fill="none" stroke-linecap="round" stroke-dashoffset="0">
+                        <g data-section-id="execution-running-sweep" stroke="#73c6ff"><path d="M310 242H380" stroke-width="16" stroke-dasharray="110 310" opacity=".13"/><path d="M310 242H380" stroke-width="7" stroke-dasharray="66 354" opacity=".68"/><path d="M310 242H380" stroke="#d9f4ff" stroke-width="2.5" stroke-dasharray="18 402"/></g>
+                        <g data-section-id="execution-degraded-sweep"><path d="M310 242H380" stroke-width="18" stroke-dasharray="110 310" opacity=".12"/><path d="M310 242H380" stroke-width="8" stroke-dasharray="66 354" opacity=".7"/><path d="M310 242H380" stroke="#fff1b2" stroke-width="2.5" stroke-dasharray="18 402"/></g>
+                      </g>
+
+                      <g data-section-id="execution-edge-arrowheads"><path d="M190 242l-10-6v12Z" fill="#2f9f70"/><path d="M380 90l-10-6v12Z" fill="#2f9f70"/><path d="M585 225l-10-6v12Z" fill="#2f9f70"/><path d="M585 242l-10-6v12Z" fill="#3487e8"/><path data-section-id="execution-pace-arrowhead" d="M380 242l-10-6v12Z"/><path d="M380 330l-10-6v12Z" fill="#e25b5b"/><path d="M380 420l-10-6v12Z" fill="#66717f"/><path d="M750 242l-9-5v10Z" fill="#66717f"/><path d="M825 242l-9-5v10Z" fill="#66717f"/></g>
+
+                      <g data-section-id="execution-node-goal"><rect x="18" y="210" width="110" height="64" rx="10" fill="#123029" stroke="#2f9f70" stroke-width="2"/><text x="34" y="232" fill="#8a94a3" font-size="10">目标 · 成功</text><text x="34" y="255" fill="#e5e7eb" font-size="13">候选可验证</text></g>
+                      <g data-section-id="execution-node-rules"><rect x="190" y="210" width="120" height="64" rx="10" fill="#123029" stroke="#2f9f70" stroke-width="2"/><text x="206" y="232" fill="#79d19a" font-size="10">批次 0 · 成功</text><text x="206" y="255" fill="#e5e7eb" font-size="13">市场规则固定</text></g>
+                      <g data-section-id="execution-node-security"><rect x="380" y="58" width="125" height="64" rx="10" fill="#123029" stroke="#2f9f70"/><text x="396" y="80" fill="#79d19a" font-size="10">批次 1A · 成功</text><text x="396" y="103" fill="#e5e7eb" font-size="13">安全检查</text></g>
+                      <g data-section-id="execution-node-build"><rect data-section-id="execution-running-halo" x="372" y="170" width="141" height="80" rx="15" fill="none" stroke-width="6" opacity=".5"/><rect data-section-id="execution-current-node-body" x="380" y="178" width="125" height="64" rx="10" fill="#2c2518" stroke="#d49b32" stroke-width="2"/><text data-section-id="execution-current-node-map-status" x="396" y="200" fill="#f1bf55" font-size="10">批次 1B · 运行偏慢</text><text x="396" y="223" fill="#f1f5f9" font-size="13">构建与签名</text></g>
+                      <g data-section-id="execution-node-docs"><rect data-section-id="execution-error-halo" x="372" y="290" width="141" height="80" rx="15" fill="#e25b5b" stroke="#ff7474" opacity=".25"/><rect x="380" y="298" width="125" height="64" rx="10" fill="#30191c" stroke="#e25b5b" stroke-width="2"/><text x="396" y="320" fill="#ff8f8f" font-size="10">批次 1C · 失败</text><text x="396" y="343" fill="#f1f5f9" font-size="13">发布说明</text></g>
+                      <g data-section-id="execution-node-paused"><rect x="380" y="388" width="125" height="64" rx="10" fill="#1b1f25" stroke="#66717f" stroke-dasharray="5 4"/><text x="396" y="410" fill="#8a94a3" font-size="10">批次 1D · 暂停</text><text x="396" y="433" fill="#cbd1d9" font-size="13">兼容性抽样</text></g>
+                      <g data-section-id="execution-node-sandbox"><rect x="585" y="210" width="125" height="64" rx="10" fill="#1d2229" stroke="#586271"/><text x="601" y="232" fill="#8a94a3" font-size="10">候选 Action</text><text x="601" y="255" fill="#d4d8de" font-size="13">沙盒验证</text></g>
+
+                      <g data-section-id="execution-loop-control">
+                        <g data-section-id="execution-loop-decision"><path d="M770 220L792 242L770 264L748 242Z" fill="#2d2819" stroke="#d49b32" stroke-width="2"/><text x="754" y="291" fill="#d49b32" font-size="10">验证通过？</text></g>
+                        <path data-section-id="execution-loop-return" d="M770 264V468H350V210H380" fill="none" stroke="#d49b32" stroke-width="2.5" stroke-dasharray="7 6"/><path d="M380 210l-10-6v12Z" fill="#d49b32"/><text x="565" y="461" fill="#d49b32" font-size="10">[失败且可重试] 第 2 / 3 次</text><text x="797" y="234" fill="#8a94a3" font-size="10">[通过]</text>
+                      </g>
+                      <g data-section-id="execution-node-gate" opacity=".72"><rect x="825" y="210" width="78" height="64" rx="10" fill="#282132" stroke="#9c6ade" stroke-dasharray="5 4"/><text x="841" y="232" fill="#b7a0e8" font-size="10">候选边界</text><text x="841" y="255" fill="#f1f5f9" font-size="13">发布</text></g>
+
+                      <g data-section-id="execution-run-frontier"><path d="M442 252V272" stroke="#d49b32" stroke-width="2" stroke-dasharray="4 4"/><rect x="374" y="260" width="136" height="28" rx="14" fill="#2a2418" stroke="#8d681e"/><text x="391" y="279" fill="#f1bf55" font-size="10">当前执行前沿 · 待选择</text></g>
+                    </svg>
+                  </div>
+
+                  <footer data-section-id="execution-run-event-strip" class="flex items-center border-t border-line px-4 py-3 text-xs"><span class="text-red-300">!</span><span class="ml-2 text-slate-300">发布说明生成失败，已隔离且不阻塞主路径</span><span class="ml-2 text-muted">1 分钟前</span><span data-section-id="execution-run-pace-copy" class="ml-auto">当前速度低于基线</span></footer>
+                </section>
+
+                <aside data-section-id="execution-current-node" class="flex min-w-0 flex-col bg-[#171b21] p-4">
+                  <div class="flex items-start"><div><p class="text-[10px] font-semibold uppercase tracking-[.12em] text-muted">当前节点</p><h3 class="mt-2 text-lg font-medium">构建与签名验证</h3><p class="mt-1 text-xs text-muted">批次 1B · build-and-sign</p></div><span data-section-id="execution-current-node-status" class="ml-auto rounded bg-amber-500/10 px-2 py-1 text-xs text-warning">运行偏慢</span></div>
+
+                  <section data-section-id="execution-current-node-progress" class="mt-5"><div class="flex text-xs"><span class="text-muted">节点进度</span><span data-section-id="execution-current-node-progress-value" class="ml-auto">68%</span></div><div class="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-700"><div data-section-id="execution-current-node-progress-bar" class="h-full w-[68%] rounded-full transition-colors"></div></div><p data-section-id="execution-current-node-duration-copy" class="mt-2 text-[11px] text-muted">已运行 4 分 18 秒 · 预计慢 28%</p></section>
+
+                  <section data-section-id="execution-current-output" class="mt-5 rounded-lg border border-line bg-raised p-3"><div class="flex items-center"><p class="text-xs text-muted">当前产出</p><span class="ml-auto text-[10px] text-success">持续更新</span></div><p class="mt-2 truncate text-sm text-slate-100">publish-candidate-v0.8.2.tgz</p><p class="mt-1 text-[11px] text-muted">12.8 MB · 36 秒前更新</p></section>
+
+                  <section data-section-id="execution-current-node-checks" class="mt-4 space-y-2 text-xs"><div class="flex rounded-lg bg-raised px-3 py-2.5"><span class="text-success">✓</span><span class="ml-2">包元数据已规范化</span></div><div class="flex rounded-lg bg-raised px-3 py-2.5"><span class="text-success">✓</span><span class="ml-2">清单兼容性已验证</span></div><div data-section-id="execution-current-node-active-check" class="flex rounded-lg border px-3 py-2.5"><span data-section-id="execution-current-node-active-dot">●</span><span class="ml-2">生成签名并校验摘要</span></div></section>
+
+                  <section data-section-id="execution-next-boundary" class="mt-auto rounded-lg border border-amber-500/25 bg-amber-500/5 p-3"><div class="flex items-center"><p class="text-xs font-medium text-amber-200">下一个控制边界</p><span class="ml-auto text-xs text-warning">约 8 分钟</span></div><p class="mt-2 text-xs leading-5 text-slate-300">进入沙盒验证；若失败则沿活动图回路返回本节点，最多重试 3 次。</p></section>
+                </aside>
+              </div>
+            </section>
+            </section>
+          </section>
+
+          <section data-section-id="delivery-workbench" data-control-surface="delivery" class="space-y-3">
+            <section data-section-id="delivery-current-readiness" data-deliverability="ready" class="flex items-center gap-4 rounded-xl border border-emerald-500/35 bg-emerald-500/10 px-4 py-3"><span class="grid size-9 place-items-center rounded-full bg-emerald-500/15 text-success">✓</span><div><h2 class="font-medium">当前可交付</h2><p class="mt-0.5 text-xs text-muted">当前目标的必要验收条件已有证据支持；这是一项实时判断，不会关闭任务。</p></div><span class="ml-auto rounded bg-emerald-500/15 px-2 py-1 text-xs text-success">4 / 4 已满足</span></section>
+            <section data-section-id="delivery-readiness-invalidated-by-input" class="flex items-center rounded-xl border border-blue-500/25 bg-blue-500/5 px-4 py-3 text-xs"><span class="text-blue-300">↻</span><p class="ml-3 text-slate-300">继续在输入流中追加目标或要求 Replan 后，系统会更新计划，并重新计算这里的可交付状态。</p><span class="ml-auto text-muted">最近计算：2 分钟前</span></section>
+            <div class="grid grid-cols-[1.15fr_.85fr] gap-3"><section data-section-id="delivery-artifacts" class="rounded-xl border border-line bg-panel p-4"><div class="flex items-center"><h3 class="text-sm font-medium">当前交付候选</h3><span class="ml-auto text-xs text-muted">3 项产物 · 随 Task 更新</span></div><div class="mt-4 space-y-2 text-xs"><article class="flex items-center rounded-lg bg-raised p-3"><span class="text-blue-300">◇</span><div class="ml-3"><p>publish-candidate-v0.8.2.tgz</p><p class="mt-1 text-muted">已签名 · 已通过沙盒验证</p></div><span class="ml-auto text-success">当前有效</span></article><article class="flex items-center rounded-lg bg-raised p-3"><span class="text-blue-300">□</span><div class="ml-3"><p>publish-path-report.md</p><p class="mt-1 text-muted">当前报告</p></div><span class="ml-auto text-success">当前有效</span></article><article class="flex items-center rounded-lg bg-raised p-3"><span class="text-blue-300">⌘</span><div class="ml-3"><p>workflow-candidates.md</p><p class="mt-1 text-muted">3 个结晶候选</p></div><span class="ml-auto text-success">当前有效</span></article></div></section><section data-section-id="delivery-acceptance" class="rounded-xl border border-line bg-panel p-4"><div class="flex"><h3 class="text-sm font-medium">当前验收覆盖</h3><span class="ml-auto text-xs text-success">没有阻断缺口</span></div><ul class="mt-4 space-y-3 text-xs"><li class="flex"><span class="text-success">✓</span><span class="ml-2">发布路径完整且可重放</span></li><li class="flex"><span class="text-success">✓</span><span class="ml-2">签名与安全扫描通过</span></li><li class="flex"><span class="text-success">✓</span><span class="ml-2">沙盒安装验证成功</span></li><li class="flex"><span class="text-success">✓</span><span class="ml-2">公开发布保持人工授权</span></li></ul></section></div>
+            <div class="grid grid-cols-2 gap-3"><section data-section-id="delivery-residual-risk" class="rounded-xl border border-amber-500/25 bg-panel p-4"><div class="flex"><h3 class="text-sm font-medium">当前残余风险</h3><span class="ml-auto rounded bg-amber-500/10 px-2 py-1 text-xs text-warning">不阻断交付</span></div><p class="mt-3 text-xs leading-5 text-slate-300">Node 22 的长期兼容性仍需在真实市场环境验证；追加兼容性目标后将重新进入计划与执行。</p></section><section data-section-id="delivery-economics" class="rounded-xl border border-line bg-panel p-4"><h3 class="text-sm font-medium">任务累计成本</h3><div class="mt-4 grid grid-cols-3 gap-3 text-xs"><div><p class="text-muted">耗时</p><p class="mt-1 text-lg">31 分钟</p></div><div><p class="text-muted">智能体成本</p><p class="mt-1 text-lg">¥18.60</p></div><div><p class="text-muted">你的注意力</p><p class="mt-1 text-lg">7 分钟</p></div></div></section></div>
+          </section>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div data-section-id="better-sidebar-edge-handle" data-edge="bottom" data-open="false" data-armed="false" hidden>
+      <button data-section-id="better-sidebar-toggle" type="button" aria-label="展开文件工具面" aria-expanded="false" title="文件工具面">
+        <svg data-section-id="better-sidebar-handle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1.25 4.25A1.75 1.75 0 0 1 3 2.5h2.45c.5 0 .97.21 1.3.58l.67.75c.14.16.34.25.55.25H13A1.75 1.75 0 0 1 14.75 5.83v5.67A1.75 1.75 0 0 1 13 13.25H3a1.75 1.75 0 0 1-1.75-1.75V4.25Z" stroke="currentColor" stroke-width="1.25"/></svg>
+      </button>
+    </div>
+
+    <aside data-section-id="better-sidebar-surface" data-provider="dsh-better-sidebar" data-density="compact" hidden class="min-h-0 min-w-0 flex-col overflow-hidden border-l border-line bg-[#12151a] shadow-[-18px_0_40px_rgba(0,0,0,.22)]">
+      <header class="flex h-12 shrink-0 items-center gap-2 border-b border-line px-3">
+        <span class="grid size-7 place-items-center rounded-md bg-blue-500/10 text-blue-300">▧</span>
+        <div class="min-w-0"><p class="truncate text-xs font-medium text-slate-200">文件</p><p class="truncate text-[10px] text-muted">Better Sidebar · 当前任务工作区</p></div>
+        <button data-section-id="better-sidebar-close" type="button" aria-label="关闭文件工具面" class="ml-auto grid size-7 place-items-center rounded-md text-slate-400 transition hover:bg-white/[.06] hover:text-white">×</button>
+      </header>
+      <div data-section-id="better-sidebar-host-slot" class="grid min-h-0 flex-1">
+        <section class="min-h-0 overflow-hidden border-r border-line bg-[#15181d] p-3">
+          <div class="flex items-center text-[11px] text-muted"><span>资源管理器</span><span class="ml-auto">•••</span></div>
+          <div class="mt-3 space-y-1 text-xs text-slate-300">
+            <div class="rounded-md bg-white/[.04] px-2 py-1.5">⌄ workflow-self-recursive</div>
+            <div class="pl-3"><div class="px-2 py-1.5">⌄ tmp</div><div class="rounded-md bg-blue-500/10 px-2 py-1.5 text-blue-200">　task-control…md</div><div class="px-2 py-1.5">　plan.md</div></div>
+          </div>
+        </section>
+        <section class="flex min-h-0 min-w-0 flex-col bg-[#101216]">
+          <div class="flex h-9 shrink-0 items-center border-b border-line px-3 text-[11px] text-slate-300"><span class="truncate">task-control-workbenches-design-input.zh-CN.md</span><span class="ml-auto text-muted">预览</span></div>
+          <div class="min-h-0 flex-1 overflow-hidden p-4 font-mono text-[11px] leading-5 text-slate-400"><p class="text-slate-200"># Task 控制工作面交互设计输入</p><p class="mt-3">Crystra 的 Task 页面由稳定的输入面、控制投影与可选工具面组成……</p><p class="mt-3 text-blue-300">@ 引用到当前 Input</p></div>
+        </section>
+      </div>
+    </aside>
+  </main>
+  <script>
+    const section = (name) => document.querySelector(`[data-section-id="${name}"]`);
+    const shellParams = new URLSearchParams(window.location.search);
+    const appShell = section('app-shell');
+    const betterSidebarEdgeHandle = section('better-sidebar-edge-handle');
+    const betterSidebarToggle = section('better-sidebar-toggle');
+    const betterSidebarSurface = section('better-sidebar-surface');
+    const betterSidebarClose = section('better-sidebar-close');
+    const betterSidebarAvailable = shellParams.get('better_sidebar') === '1';
+    const layoutModeForWidth = (width) => {
+      if (width < 1440) return 'compact';
+      if (width < 1920) return 'standard';
+      if (width < 2880) return 'wide';
+      return 'ultrawide';
+    };
+    const renderAdaptiveLayout = () => {
+      const mode = layoutModeForWidth(window.innerWidth);
+      appShell.dataset.layoutMode = mode;
+      appShell.dataset.utilityPlacement = mode === 'compact' || mode === 'standard' ? 'bottom' : 'right';
+      betterSidebarEdgeHandle.dataset.edge = appShell.dataset.utilityPlacement;
+      betterSidebarSurface.dataset.density = mode === 'ultrawide' ? 'expanded' : 'compact';
+      if (!betterSidebarAvailable) {
+        appShell.dataset.utilityOpen = 'false';
+        betterSidebarEdgeHandle.hidden = true;
+        betterSidebarSurface.hidden = true;
+      }
+    };
+    const setBetterSidebarOpen = (open) => {
+      if (!betterSidebarAvailable) return;
+      appShell.dataset.utilityOpen = String(open);
+      betterSidebarEdgeHandle.dataset.open = String(open);
+      betterSidebarEdgeHandle.dataset.armed = 'false';
+      betterSidebarToggle.setAttribute('aria-expanded', String(open));
+      betterSidebarToggle.setAttribute('aria-label', open ? '收起文件工具面' : '展开文件工具面');
+      betterSidebarSurface.hidden = !open;
+      betterSidebarSurface.classList.toggle('flex', open);
+    };
+    appShell.dataset.betterSidebarAvailable = String(betterSidebarAvailable);
+    betterSidebarEdgeHandle.hidden = !betterSidebarAvailable;
+    betterSidebarToggle.addEventListener('click', () => {
+      const touchPointer = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+      if (touchPointer && appShell.dataset.utilityOpen !== 'true' && betterSidebarEdgeHandle.dataset.armed !== 'true') {
+        betterSidebarEdgeHandle.dataset.armed = 'true';
+        return;
+      }
+      setBetterSidebarOpen(appShell.dataset.utilityOpen !== 'true');
+    });
+    betterSidebarClose.addEventListener('click', () => setBetterSidebarOpen(false));
+    document.addEventListener('pointerdown', (event) => {
+      if (betterSidebarEdgeHandle.dataset.armed === 'true' && !betterSidebarEdgeHandle.contains(event.target)) {
+        betterSidebarEdgeHandle.dataset.armed = 'false';
+      }
+    });
+    window.addEventListener('resize', renderAdaptiveLayout);
+    renderAdaptiveLayout();
+    const taskSearchControl = section('task-search-control');
+    const taskSearchAction = section('task-search-action');
+    const taskSearchInput = section('task-search-input');
+    const taskSearchClear = section('task-search-clear');
+    const taskWorkingSet = section('task-working-set');
+    const taskSectionToggle = section('task-section-toggle');
+    const taskSectionLabel = section('task-section-label');
+    const taskSectionContent = section('task-section-content');
+    const taskSectionAttention = section('task-section-attention-badge');
+    const taskSectionActions = section('task-section-actions');
+    const taskViewOptionsAction = section('task-view-options-action');
+    const taskViewOptionsMenu = section('task-view-options-menu');
+    const taskList = section('task-list');
+    const allTasksAction = section('all-tasks-action');
+    const newTaskAction = section('new-task-action');
+    const newTaskEmptyState = section('new-task-empty-state');
+
+    const setNewTaskEmptyStateOpen = (open) => {
+      newTaskEmptyState.hidden = !open;
+    };
+    newTaskAction.addEventListener('click', () => setNewTaskEmptyStateOpen(true));
+    document.querySelectorAll('[data-task-row]').forEach((row) => {
+      row.addEventListener('click', () => setNewTaskEmptyStateOpen(false));
+    });
+
+    const setTaskSearchOpen = (open) => {
+      taskSearchControl.dataset.open = String(open);
+      taskSearchAction.setAttribute('aria-expanded', String(open));
+      taskSearchInput.hidden = !open;
+      taskSearchClear.hidden = !open;
+      taskSearchInput.tabIndex = open ? 0 : -1;
+      taskSectionToggle.hidden = open;
+      taskSectionLabel.hidden = open;
+      taskSectionActions.hidden = open;
+      if (open) taskSearchInput.focus();
+    };
+    taskSearchAction.addEventListener('click', () => {
+      const willOpen = taskSearchControl.dataset.open !== 'true';
+      if (!willOpen) taskSearchInput.value = '';
+      setTaskSearchOpen(willOpen);
+      renderTaskList();
+    });
+    taskSearchClear.addEventListener('click', () => {
+      taskSearchInput.value = '';
+      setTaskSearchOpen(false);
+      renderTaskList();
+    });
+    taskSearchInput.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      taskSearchInput.value = '';
+      setTaskSearchOpen(false);
+      renderTaskList();
+    });
+
+    const setTaskViewOptionsOpen = (open) => {
+      taskViewOptionsAction.setAttribute('aria-expanded', String(open));
+      taskViewOptionsMenu.hidden = !open;
+    };
+    taskViewOptionsAction.addEventListener('click', () => {
+      setTaskViewOptionsOpen(taskViewOptionsAction.getAttribute('aria-expanded') !== 'true');
+    });
+
+    const setTaskSectionExpanded = (expanded) => {
+      taskWorkingSet.dataset.expanded = String(expanded);
+      taskSectionToggle.setAttribute('aria-expanded', String(expanded));
+      if (!expanded) {
+        taskSearchInput.value = '';
+        setTaskSearchOpen(false);
+        setTaskViewOptionsOpen(false);
+      }
+      taskSectionContent.hidden = !expanded;
+      taskSearchControl.hidden = !expanded;
+      taskSectionActions.hidden = !expanded;
+      taskSectionAttention.hidden = expanded;
+      if (!expanded) renderTaskList();
+    };
+    taskSectionToggle.addEventListener('click', () => {
+      setTaskSectionExpanded(taskSectionToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    const wireSidebarDisclosure = (containerName, toggleName, contentName) => {
+      const container = section(containerName);
+      const toggle = section(toggleName);
+      const content = section(contentName);
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(expanded));
+        container.dataset.expanded = String(expanded);
+        content.hidden = !expanded;
+      });
+    };
+    wireSidebarDisclosure('workflow-navigation', 'workflow-section-toggle', 'workflow-section-content');
+    wireSidebarDisclosure('analysis-navigation', 'analysis-section-toggle', 'analysis-section-content');
+
+    const renderTaskList = () => {
+      const sortMode = document.querySelector('input[name="task-sort"]:checked').value;
+      const filterMode = document.querySelector('input[name="task-filter"]:checked').value;
+      const query = taskSearchInput.value.trim().toLocaleLowerCase('zh-CN');
+      const taskRows = [...taskList.querySelectorAll('[data-task-row]')];
+      const timeField = sortMode === 'activity' ? 'lastEventAt' : 'createdAt';
+      taskRows
+        .sort((left, right) => new Date(right.dataset[timeField]) - new Date(left.dataset[timeField]))
+        .forEach((row) => taskList.insertBefore(row, allTasksAction));
+      taskRows.forEach((row) => {
+        const matchesFilter = filterMode === 'all' || row.dataset.taskActive === 'true';
+        const matchesQuery = !query || row.textContent.toLocaleLowerCase('zh-CN').includes(query);
+        row.hidden = !(matchesFilter && matchesQuery);
+      });
+    };
+    document.querySelectorAll('input[name="task-sort"], input[name="task-filter"]').forEach((input) => input.addEventListener('change', renderTaskList));
+    taskSearchInput.addEventListener('input', renderTaskList);
+    renderTaskList();
+
+    document.addEventListener('click', (event) => {
+      if (taskSearchControl.dataset.open === 'true' && !taskSearchControl.contains(event.target)) {
+        taskSearchInput.value = '';
+        setTaskSearchOpen(false);
+        renderTaskList();
+      }
+      if (!taskViewOptionsMenu.hidden && !taskViewOptionsMenu.contains(event.target) && !taskViewOptionsAction.contains(event.target)) {
+        setTaskViewOptionsOpen(false);
+      }
+    });
+
+    const previewSurface = new URLSearchParams(window.location.search).get('surface');
+    const allowedPreviewSurfaces = ['grilling', 'plan', 'execution', 'gate', 'delivery'];
+    if (allowedPreviewSurfaces.includes(previewSurface)) {
+      const previewOption = document.querySelector(`input[name="control-surface"][value="${previewSurface}"]`);
+      if (previewOption) previewOption.checked = true;
+    }
+    const renderWorkbenchNavigation = () => {
+      const selected = document.querySelector('input[name="control-surface"]:checked');
+      document.querySelectorAll('[data-surface-option]').forEach((option) => {
+        const current = option.querySelector('input') === selected;
+        option.setAttribute('aria-current', current ? 'page' : 'false');
+      });
+    };
+    renderWorkbenchNavigation();
+    document.querySelectorAll('input[name="control-surface"]').forEach((input) => input.addEventListener('change', renderWorkbenchNavigation));
+    document.querySelectorAll('[data-target-surface]').forEach((control) => {
+      control.addEventListener('click', () => {
+        const target = document.querySelector(`input[name="control-surface"][value="${control.dataset.targetSurface}"]`);
+        if (!target) return;
+        target.checked = true;
+        target.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    });
+
+    const gateProfiles = {
+      g3: {
+        id: 'G-3', position: '1 / 3', impact: '阻塞主路径', subject: '签名配置重试',
+        question: '是否允许 Wave 2 修改签名配置并重新执行？',
+        trigger: '恢复策略已连续失败 3 次', location: 'Plan Run 08 / Wave 2 / Gate G-3', status: '等待用户决定',
+        decisions: ['保持公开 API 兼容', '禁止自动公开发布', '失败后必须回到人工关口'],
+        interpretation: '允许修改签名配置并重新执行 Wave 2；成功或失败后返回 Gate G-3，且不自动进入公开发布。',
+        interpretationStatus: '等待明确确认',
+        deltas: [
+          { mark: '+', text: '新增 Wave 2 重试授权', tone: 'blue' },
+          { mark: '=', text: '发布权限没有变化', tone: 'neutral' },
+          { mark: '!', text: '修改签名配置可能触及既有“配置冻结”决定，确认前需要用户裁决。', tone: 'warning', wide: true },
+        ],
+        previewTitle: '确认后将执行', previewStatus: '尚未授权',
+        steps: [
+          ['恢复 Wave 2', '保持既有 Goal 与交付范围'],
+          ['仅修改签名配置', '不改公开 API 与其他构建步骤'],
+          ['重跑构建与签名验证', '保留仍有效的安全扫描证据'],
+          ['返回 Gate G-3', '成功或失败均不自动发布'],
+        ],
+        preserved: '保持不变：发布权限、API 兼容要求、人工关口',
+        evidence: [
+          ['Wave 2 执行计划', '核对原定恢复边界', '打开 Plan 章节 →', 'neutral'],
+          ['第 3 次失败 Trace', '查看升级触发事实', '在分析中查看 →', 'danger'],
+          ['签名配置差异', '3 处准备修改', '查看差异 →', 'neutral'],
+          ['安全扫描结果', '既有证据仍有效', '打开证据 →', 'success'],
+          ['配置冻结决定', '可能与当前理解冲突', '定位原始决定 →', 'warning'],
+        ],
+      },
+      g5: {
+        id: 'G-5', position: '2 / 3', impact: '不阻塞主路径', subject: '发布说明覆盖率偏差',
+        question: '是否接受发布说明覆盖率低于计划目标？',
+        trigger: '2 项边缘场景缺少可验证示例', location: 'Plan Run 08 / Wave 4 / Gate G-5', status: '等待用户决定',
+        decisions: ['必须覆盖主要发布路径', '非关键缺口必须登记为残余风险', '公开发布仍需最终授权'],
+        interpretation: '保留当前发布说明，将 2 项边缘场景登记为残余风险并结束 Wave 4；不因此获得公开发布权限。',
+        interpretationStatus: '等待明确确认',
+        deltas: [
+          { mark: '+', text: '接受 2 项边缘场景缺口', tone: 'blue' },
+          { mark: '=', text: '最终发布授权没有变化', tone: 'neutral' },
+          { mark: '!', text: '其中 1 项涉及 Node 22，可能提高后续兼容性支持成本。', tone: 'warning', wide: true },
+        ],
+        previewTitle: '确认后将执行', previewStatus: '尚未授权',
+        steps: [
+          ['冻结当前发布说明', '不再生成缺失的边缘示例'],
+          ['登记 2 项残余风险', '保留缺口与影响范围'],
+          ['将 Wave 4 标记为完成', '不改变其他 Wave 的状态'],
+          ['等待最终发布关口', '不自动进入公开发布'],
+        ],
+        preserved: '保持不变：主要路径覆盖、最终发布权限、风险可追溯性',
+        evidence: [
+          ['Wave 4 文档计划', '核对原定覆盖范围', '打开 Plan 章节 →', 'neutral'],
+          ['覆盖率缺口报告', '查看 2 项缺失场景', '打开报告 →', 'warning'],
+          ['发布说明差异', '确认保留的当前版本', '查看差异 →', 'neutral'],
+          ['主路径验证结果', '必要路径均有证据', '打开证据 →', 'success'],
+          ['文档完成标准', '核对残余风险边界', '定位原始决定 →', 'neutral'],
+        ],
+      },
+      g6: {
+        id: 'G-6', position: '3 / 3', impact: '等待 G-3、G-5', subject: '最终发布授权',
+        question: '是否允许候选包进入公开发布？',
+        trigger: '最终发布属于预设人工权限边界', location: 'Plan Run 08 / Final Gate G-6', status: '等待前置决定',
+        decisions: ['禁止自动公开发布', '必要 Wave 必须形成退出证据', '残余风险必须显式呈现'],
+        interpretation: '尚无可执行决定。G-3 与 G-5 仍未解决；系统只保留候选包，不会请求或执行公开发布。',
+        interpretationStatus: '等待前置决定',
+        deltas: [
+          { mark: '=', text: '没有新增发布授权', tone: 'neutral' },
+          { mark: '=', text: '候选包保持隔离', tone: 'neutral' },
+          { mark: '!', text: 'G-3 与 G-5 尚未关闭，当前 Gate 不具备可决条件。', tone: 'warning', wide: true },
+        ],
+        previewTitle: '当前不会执行', previewStatus: '被依赖阻止',
+        steps: [
+          ['等待 G-3', '签名配置重试尚未裁决'],
+          ['等待 G-5', '文档覆盖率偏差尚未裁决'],
+          ['重新汇总最终证据', '前置决定可能改变证据有效性'],
+          ['请求明确发布授权', '只有用户确认后才可迁移'],
+        ],
+        preserved: '保持不变：候选包隔离、公开发布权限、最终人工关口',
+        evidence: [
+          ['最终发布计划', '核对发布控制边界', '打开 Plan 章节 →', 'neutral'],
+          ['Gate 依赖关系', 'G-3、G-5 尚未关闭', '查看依赖 →', 'warning'],
+          ['候选包清单', '当前产物保持隔离', '打开清单 →', 'neutral'],
+          ['最终验证摘要', '等待前置决定后刷新', '打开证据 →', 'neutral'],
+          ['发布权限决定', '必须由用户明确授权', '定位原始决定 →', 'warning'],
+        ],
+      },
+    };
+
+    const gateQueue = section('gate-decision-queue');
+    const gateQueueToggle = section('gate-queue-toggle');
+    const composerReplySubject = section('composer-reply-subject');
+    const composerReplySubjectCopy = section('composer-reply-subject-copy');
+    const gateEvidenceFields = [
+      ['plan-title', 'plan-copy', 'plan-action', 'gate-evidence-plan-context'],
+      ['trigger-title', 'trigger-copy', 'trigger-action', 'gate-evidence-trigger-record'],
+      ['change-title', 'change-copy', 'change-action', 'gate-evidence-proposed-change'],
+      ['validation-title', 'validation-copy', 'validation-action', 'gate-evidence-validation-result'],
+      ['decision-title', 'decision-copy', 'decision-action', 'gate-evidence-governing-decision'],
+    ];
+    const gateEvidenceRoutes = {
+      g3: [
+        '?surface=plan&plan_view=document&plan_anchor=wave-2&from_gate_id=G-3',
+        'crystra-analysis-audit-v7.html?plan_run_id=plan-v4%2Frun-08&wave_id=wave-2&workflow_run_id=workflow-v3%2Frun-08&trace_root_id=trace-7f42a&attempt=3&span_id=build-sign&event_id=signature-validation-failed&from_gate_id=G-3',
+        '?surface=gate&gate_id=g3&context=proposed-change',
+        '?surface=gate&gate_id=g3&context=validation-result',
+        '?surface=gate&gate_id=g3&context=governing-decision',
+      ],
+      g5: [
+        '?surface=plan&plan_view=document&plan_anchor=wave-4&from_gate_id=G-5',
+        '?surface=gate&gate_id=g5&context=trigger-record',
+        '?surface=gate&gate_id=g5&context=proposed-change',
+        '?surface=gate&gate_id=g5&context=validation-result',
+        '?surface=gate&gate_id=g5&context=governing-decision',
+      ],
+      g6: [
+        '?surface=plan&plan_view=document&plan_anchor=final-gate&from_gate_id=G-6',
+        '?surface=gate&gate_id=g6&context=trigger-record',
+        '?surface=gate&gate_id=g6&context=proposed-change',
+        '?surface=gate&gate_id=g6&context=validation-result',
+        '?surface=gate&gate_id=g6&context=governing-decision',
+      ],
+    };
+    const gateContextDetails = {
+      g3: {
+        'proposed-change': ['资产差异', '签名配置差异', '展示 AI 准备提交的配置变更，并核对它是否越过配置冻结边界。', '获批版本', 'signing.algorithm = ed25519\nsigning.key_source = release-vault\nartifact = candidate-v0.8.2', '候选修改', 'signing.key_source → isolated-vault\nsigning.retry_policy → verify-once\n影响：仅 build-and-sign 节点', 'artifact:signing-config@sha256:4c2f\nproposal:patch-91\ndecision:decision-42'],
+        'validation-result': ['证据回执', '安全扫描结果', '核对既有安全证据是否仍适用于准备修改的候选包。', '支持的 Claim', '候选包未发现阻断级安全问题\nVerdict: PASS\nScope: artifact sha256:91ab…', '有效性', '规则集：market-security@2026.09\n记录时间：14:03:18\n配置变化不改变已扫描 artifact', 'evidence:evidence-77\nworkflow_run:workflow-v3/run-08\nspan:security-scan'],
+        'governing-decision': ['决定回执', '配置冻结决定', '核对用户此前授予的权限边界，以及当前候选修改是否与之冲突。', '用户原始决定', '“进入验证阶段后冻结签名配置；如需修改，必须重新请示。”', '结构化效果', 'authority: user\nforbid: autonomous mutation of signing.*\nstatus: ACTIVE', 'decision:decision-42\nsource_message:msg-184\nir_revision:control-ir@38'],
+      },
+      g5: {
+        'trigger-record': ['缺口报告', '覆盖率缺口报告', '说明为什么文档覆盖率偏差被升级为当前 Gate。', '缺失场景', 'Node 22 长期兼容性\n离线安装失败恢复', '影响判断', '主要发布路径不受影响\n后续支持成本仍不确定', 'report:coverage-gap@18\nwave:wave-4\ngate:G-5'],
+        'proposed-change': ['资产差异', '发布说明差异', '核对 AI 准备保留的发布说明，以及被明确登记为残余风险的内容。', '计划目标', '28 个文档场景\n全部提供可验证示例', '候选结果', '26 个场景已完成\n2 个场景进入残余风险', 'artifact:release-notes@sha256:83ce\nproposal:patch-104\ngate:G-5'],
+        'validation-result': ['证据回执', '主路径验证结果', '核对缺失场景是否会影响当前发布主路径。', '支持的 Claim', '主要安装与升级路径均有可重放证据\nVerdict: PASS', '证据边界', '不覆盖 Node 22 长期兼容性\n不覆盖离线恢复说明', 'evidence:evidence-93\nworkflow_run:docs-v2/run-04\nspan:main-path-doc-check'],
+        'governing-decision': ['决定回执', '文档完成标准', '核对用户允许哪些非关键缺口作为残余风险进入后续 Gate。', '用户原始决定', '“主路径必须完整；边缘场景可以登记风险，但不能无声遗漏。”', '结构化效果', 'required: main path coverage\nallow: explicit residual risk\nstatus: ACTIVE', 'decision:decision-51\nsource_message:msg-209\nir_revision:control-ir@44'],
+      },
+      g6: {
+        'trigger-record': ['控制关系', 'Gate 依赖关系', '核对最终发布 Gate 为什么尚未具备可决条件。', '未关闭依赖', 'G-3 · 签名配置重试\nG-5 · 文档覆盖率偏差', '当前效果', '候选包保持隔离\n不会生成发布授权请求', 'plan_run:plan-v4/run-08\ngate:G-6\ndepends_on:G-3,G-5'],
+        'proposed-change': ['资产清单', '候选包清单', '核对最终 Gate 将要授权的精确产物，而不是可变的“最新候选包”。', '候选对象', 'publish-candidate-v0.8.2.tgz\nsha256:91ab…', '当前状态', 'ISOLATED\n尚未绑定最终发布凭据', 'artifact:candidate@sha256:91ab\ngate:G-6\nrevision:immutable'],
+        'validation-result': ['证据回执', '最终验证摘要', '汇总最终发布所需证据；前置 Gate 改变产物后必须重新计算。', '当前状态', 'WAITING_DEPENDENCIES\nG-3、G-5 未关闭', '禁止行为', '不得沿用失效证据\n不得自动发布', 'evidence_set:final-set@pending\nplan_run:plan-v4/run-08\ngate:G-6'],
+        'governing-decision': ['决定回执', '发布权限决定', '核对公开发布始终要求用户明确授权的既有决定。', '用户原始决定', '“可以自主生成候选包，但公开发布必须由我确认。”', '结构化效果', 'authority: user\naction: public_publish\nstatus: ACTIVE', 'decision:decision-12\nsource_message:msg-41\nir_revision:control-ir@9'],
+      },
+    };
+    const renderGate = (key) => {
+      const profile = gateProfiles[key];
+      section('gate-queue-position').textContent = profile.position;
+      section('gate-current-impact').textContent = profile.impact;
+      section('gate-decision-question-kicker').textContent = `审核检查点 · ${profile.id}`;
+      section('gate-decision-question-title').textContent = profile.question;
+      section('gate-trigger-context').innerHTML = `<span class="text-muted">触发原因：</span>${profile.trigger}`;
+      section('gate-location-context').innerHTML = `<span class="text-muted">位置：</span>${profile.location}`;
+      section('gate-decision-status').textContent = profile.status;
+      section('gate-relevant-decisions-count').textContent = `${profile.decisions.length} 项已确认`;
+      section('gate-relevant-decisions-list').innerHTML = profile.decisions.map((decision, index) => `<li class="${index === profile.decisions.length - 1 ? 'col-span-2 ' : ''}flex"><span class="mr-2 text-success">✓</span>${decision}</li>`).join('');
+      section('gate-current-interpretation-status').textContent = profile.interpretationStatus;
+      section('gate-current-interpretation-copy').textContent = profile.interpretation;
+      section('gate-understanding-delta-list').innerHTML = profile.deltas.map((delta) => {
+        const tone = delta.tone === 'blue' ? 'border-blue-500/20 bg-blue-500/5' : delta.tone === 'warning' ? 'border-amber-500/25 bg-amber-500/5 text-amber-100' : 'border-line bg-raised';
+        const markTone = delta.tone === 'blue' ? 'text-blue-300' : delta.tone === 'warning' ? 'text-warning' : 'text-muted';
+        return `<div class="${delta.wide ? 'col-span-2 ' : ''}rounded-lg border px-3 py-2 ${tone}"><span class="mr-2 ${markTone}">${delta.mark}</span>${delta.text}</div>`;
+      }).join('');
+      section('gate-execution-preview-title').textContent = profile.previewTitle;
+      section('gate-execution-preview-status').textContent = profile.previewStatus;
+      section('gate-execution-steps').innerHTML = profile.steps.map((step, index) => `<li class="grid grid-cols-[24px_1fr] gap-3"><div class="flex flex-col items-center"><span class="grid size-6 place-items-center rounded-full border ${index === profile.steps.length - 1 ? 'border-amber-400/50 bg-amber-500/10 text-amber-200' : 'border-blue-400/50 bg-blue-500/10 text-blue-200'} text-[10px]">${index + 1}</span>${index < profile.steps.length - 1 ? '<span class="h-7 w-px bg-line"></span>' : ''}</div><div class="pt-1"><p class="text-slate-200">${step[0]}</p><p class="mt-1 text-muted">${step[1]}</p></div></li>`).join('');
+      section('gate-preserved-boundary-copy').textContent = profile.preserved;
+      profile.evidence.forEach((evidence, index) => {
+        const fields = gateEvidenceFields[index];
+        section(`gate-evidence-${fields[0]}`).textContent = evidence[0];
+        section(`gate-evidence-${fields[1]}`).textContent = evidence[1];
+        section(`gate-evidence-${fields[2]}`).textContent = evidence[2];
+        section(fields[3]).setAttribute('href', gateEvidenceRoutes[key][index]);
+      });
+      const gateSurfaceSelected = document.querySelector('input[name="control-surface"][value="gate"]').checked;
+      composerReplySubject.classList.toggle('hidden', !gateSurfaceSelected);
+      composerReplySubject.classList.toggle('flex', gateSurfaceSelected);
+      composerReplySubjectCopy.textContent = `${profile.id} · ${profile.subject}`;
+      document.querySelectorAll('[data-gate-select]').forEach((item) => {
+        const active = item.dataset.gateSelect === key;
+        item.classList.toggle('border-blue-500/30', active);
+        item.classList.toggle('bg-blue-500/5', active);
+        item.classList.toggle('border-transparent', !active);
+        item.setAttribute('aria-current', active ? 'true' : 'false');
+      });
+      gateQueue.classList.add('hidden');
+      gateQueueToggle.setAttribute('aria-expanded', 'false');
+    };
+    const renderGateContext = (gateKey, contextKey) => {
+      const detail = gateContextDetails[gateKey]?.[contextKey];
+      if (!detail) return false;
+      section('gate-main-view').classList.add('hidden');
+      section('gate-context-inspector').classList.remove('hidden');
+      section('gate-context-inspector').classList.add('flex');
+      section('gate-context-back').href = `?surface=gate&gate_id=${gateKey}`;
+      section('gate-context-back').textContent = `← 返回 ${gateProfiles[gateKey].id}`;
+      section('gate-context-kind').textContent = detail[0];
+      section('gate-context-title').textContent = detail[1];
+      section('gate-context-summary-copy').textContent = detail[2];
+      section('gate-context-primary-title').textContent = detail[3];
+      section('gate-context-primary-copy').textContent = detail[4];
+      section('gate-context-secondary-title').textContent = detail[5];
+      section('gate-context-secondary-copy').textContent = detail[6];
+      section('gate-context-provenance-fields').innerHTML = detail[7].split('\n').map((field) => {
+        const [name, ...value] = field.split(':');
+        return `<div><dt class="text-muted">${name}</dt><dd class="mt-1 break-all text-slate-300">${value.join(':')}</dd></div>`;
+      }).join('');
+      section('gate-context-revision').textContent = '不可变版本';
+      return true;
+    };
+    gateQueueToggle.addEventListener('click', () => {
+      const open = gateQueueToggle.getAttribute('aria-expanded') !== 'true';
+      gateQueue.classList.toggle('hidden', !open);
+      gateQueueToggle.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('[data-gate-select]').forEach((item) => item.addEventListener('click', () => renderGate(item.dataset.gateSelect)));
+    section('composer-reply-subject-clear').addEventListener('click', () => {
+      composerReplySubject.classList.add('hidden');
+      composerReplySubject.classList.remove('flex');
+    });
+    document.querySelectorAll('input[name="control-surface"]').forEach((input) => input.addEventListener('change', () => {
+      const showingGate = input.value === 'gate' && input.checked;
+      composerReplySubject.classList.toggle('hidden', !showingGate);
+      composerReplySubject.classList.toggle('flex', showingGate);
+    }));
+    const gateRouteParams = new URLSearchParams(window.location.search);
+    const selectedGateKey = Object.hasOwn(gateProfiles, gateRouteParams.get('gate_id')) ? gateRouteParams.get('gate_id') : 'g3';
+    renderGate(selectedGateKey);
+    if (gateRouteParams.get('context')) renderGateContext(selectedGateKey, gateRouteParams.get('context'));
+    section('attention-open-gates').addEventListener('click', () => {
+      const gateSurface = document.querySelector('input[name="control-surface"][value="gate"]');
+      gateSurface.checked = true;
+      gateSurface.dispatchEvent(new Event('change', { bubbles: true }));
+      renderGate('g3');
+      gateQueue.classList.remove('hidden');
+      gateQueueToggle.setAttribute('aria-expanded', 'true');
+    });
+
+    const planSummary = section('plan-summary');
+    const planViewer = section('plan-document-viewer');
+    const planDocumentPage = section('plan-document-page');
+    const planDagPage = section('plan-full-dag');
+
+    const openPlanViewer = (pageName) => {
+      planSummary.classList.add('hidden');
+      planViewer.classList.remove('hidden');
+      planViewer.classList.add('flex');
+      const showDag = pageName === 'dag';
+      planDocumentPage.classList.toggle('hidden', showDag);
+      planDagPage.classList.toggle('hidden', !showDag);
+      planDagPage.classList.toggle('flex', showDag);
+    };
+
+    section('plan-document-entry').addEventListener('click', () => openPlanViewer('document'));
+    section('plan-dag-entry').addEventListener('click', () => openPlanViewer('dag'));
+    section('plan-document-dag-chapter-entry').addEventListener('click', () => openPlanViewer('dag'));
+    section('plan-dag-document-back').addEventListener('click', () => openPlanViewer('document'));
+    const planRouteParams = new URLSearchParams(window.location.search);
+    const planReturnGateId = planRouteParams.get('from_gate_id');
+    section('plan-document-back').addEventListener('click', () => {
+      if (planReturnGateId) {
+        window.location.href = `?surface=gate&gate_id=${planReturnGateId.toLowerCase().replace('-', '')}`;
+        return;
+      }
+      planViewer.classList.add('hidden');
+      planViewer.classList.remove('flex');
+      planSummary.classList.remove('hidden');
+    });
+    if (planRouteParams.get('plan_view') === 'document') {
+      openPlanViewer('document');
+      const linkedPlanContext = section('plan-linked-gate-context');
+      linkedPlanContext.classList.remove('hidden');
+      linkedPlanContext.classList.add('flex');
+      section('plan-linked-gate-copy').textContent = `来自 ${planReturnGateId ?? 'Gate'} · 已定位 ${planRouteParams.get('plan_anchor') ?? '计划上下文'}`;
+      if (planReturnGateId) section('plan-document-back').textContent = `← 返回 ${planReturnGateId}`;
+      section('plan-document-wave-anchor').classList.add('rounded-lg', 'ring-1', 'ring-blue-500/30', 'bg-blue-500/5', 'p-3');
+    }
+
+    const dagCanvas = section('plan-dag-canvas');
+    const dagViewport = section('plan-dag-viewport');
+    const dagState = { scale: .44, x: 8, y: 100, dragging: false, pointerX: 0, pointerY: 0 };
+    const renderDagTransform = () => {
+      dagCanvas.dataset.scale = dagState.scale.toFixed(2);
+      dagCanvas.dataset.panX = Math.round(dagState.x);
+      dagCanvas.dataset.panY = Math.round(dagState.y);
+      dagCanvas.style.transform = `translate(${dagState.x}px, ${dagState.y}px) scale(${dagState.scale})`;
+    };
+    const changeDagScale = (delta) => {
+      dagState.scale = Math.min(1.5, Math.max(.35, dagState.scale + delta));
+      renderDagTransform();
+    };
+
+    section('plan-dag-zoom-in').addEventListener('click', () => changeDagScale(.1));
+    section('plan-dag-zoom-out').addEventListener('click', () => changeDagScale(-.1));
+    section('plan-dag-fit-view').addEventListener('click', () => {
+      dagState.scale = .44;
+      dagState.x = 8;
+      dagState.y = 100;
+      renderDagTransform();
+    });
+
+    dagViewport.addEventListener('pointerdown', (event) => {
+      dagState.dragging = true;
+      dagState.pointerX = event.clientX;
+      dagState.pointerY = event.clientY;
+      dagViewport.setPointerCapture(event.pointerId);
+    });
+    dagViewport.addEventListener('pointermove', (event) => {
+      if (!dagState.dragging) return;
+      dagState.x += event.clientX - dagState.pointerX;
+      dagState.y += event.clientY - dagState.pointerY;
+      dagState.pointerX = event.clientX;
+      dagState.pointerY = event.clientY;
+      renderDagTransform();
+    });
+    const stopDagPan = () => { dagState.dragging = false; };
+    dagViewport.addEventListener('pointerup', stopDagPan);
+    dagViewport.addEventListener('pointercancel', stopDagPan);
+
+    const dagSearchInput = section('plan-dag-search').querySelector('input');
+    dagSearchInput.addEventListener('input', () => {
+      const query = dagSearchInput.value.trim().toLocaleLowerCase('zh-CN');
+      document.querySelectorAll('[data-dag-node]').forEach((node) => {
+        const matches = query && node.dataset.nodeLabel.toLocaleLowerCase('zh-CN').includes(query);
+        node.dataset.searchMatch = matches ? 'true' : 'false';
+        node.style.opacity = query && !matches ? '.28' : '1';
+      });
+    });
+
+    let ordinaryBranchesCollapsed = false;
+    section('plan-dag-collapse-branches').addEventListener('click', (event) => {
+      ordinaryBranchesCollapsed = !ordinaryBranchesCollapsed;
+      document.querySelectorAll('[data-dag-ordinary-branch]').forEach((node) => {
+        node.style.display = ordinaryBranchesCollapsed ? 'none' : '';
+      });
+      event.currentTarget.textContent = ordinaryBranchesCollapsed ? '展开普通分支' : '折叠普通分支';
+    });
+
+    document.querySelectorAll('[data-dag-node]').forEach((node) => {
+      node.addEventListener('click', () => {
+        section('plan-dag-node-title').textContent = node.dataset.nodeLabel;
+      });
+    });
+
+    const executionPlanRunOverview = section('execution-plan-run-overview');
+    const executionWaveRunDetail = section('execution-wave-run-detail');
+    const executionPlanWave1b = section('execution-plan-wave-1b');
+    const executionWaveRunMetadata = section('execution-wave-run-metadata');
+    const executionWaveRunMetadataToggle = section('execution-wave-run-metadata-toggle');
+    const executionWaveRunMetadataChevron = section('execution-wave-run-metadata-chevron');
+    const setWaveMetadataOpen = (open) => {
+      executionWaveRunMetadata.classList.toggle('hidden', !open);
+      executionWaveRunMetadataToggle.setAttribute('aria-expanded', String(open));
+      executionWaveRunMetadataChevron.classList.toggle('rotate-180', open);
+    };
+    const openWaveRun = () => {
+      executionPlanRunOverview.classList.add('hidden');
+      executionWaveRunDetail.classList.remove('hidden');
+    };
+    const closeWaveRun = () => {
+      setWaveMetadataOpen(false);
+      executionWaveRunDetail.classList.add('hidden');
+      executionPlanRunOverview.classList.remove('hidden');
+    };
+    executionPlanWave1b.addEventListener('click', openWaveRun);
+    executionPlanWave1b.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openWaveRun();
+      }
+    });
+    section('execution-wave-run-back').addEventListener('click', closeWaveRun);
+    executionWaveRunMetadataToggle.addEventListener('click', () => {
+      setWaveMetadataOpen(executionWaveRunMetadataToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    const copyWaveMetadataValue = async (button) => {
+      const payload = button.dataset.waveCopyValue;
+      try {
+        await navigator.clipboard.writeText(payload);
+      } catch {
+        const fallback = document.createElement('textarea');
+        fallback.value = payload;
+        document.body.appendChild(fallback);
+        fallback.select();
+        document.execCommand('copy');
+        fallback.remove();
+      }
+      const icon = button.querySelector('[data-copy-icon]');
+      const success = button.querySelector('[data-copy-success]');
+      icon.classList.add('hidden');
+      success.classList.remove('hidden');
+      window.setTimeout(() => {
+        success.classList.add('hidden');
+        icon.classList.remove('hidden');
+      }, 1200);
+    };
+    document.querySelectorAll('[data-wave-copy-value]').forEach((button) => {
+      button.addEventListener('click', () => copyWaveMetadataValue(button));
+    });
+
+    const executionRunMap = section('execution-workflow-run-map');
+    const executionDashboard = section('execution-dashboard');
+    const executionEffectsToggle = section('execution-effects-toggle');
+    const executionEffectsLabel = section('execution-effects-label');
+    const executionEffectsIndicator = section('execution-effects-indicator');
+    const setExecutionEffects = (enabled) => {
+      executionRunMap.dataset.effects = enabled ? 'on' : 'off';
+      executionEffectsToggle.setAttribute('aria-pressed', String(enabled));
+      executionEffectsLabel.textContent = enabled ? '动态效果：开' : '动态效果：关';
+      executionEffectsIndicator.classList.toggle('bg-blue-400', enabled);
+      executionEffectsIndicator.classList.toggle('bg-slate-500', !enabled);
+      executionEffectsIndicator.classList.toggle('shadow-[0_0_10px_#60a5fa]', enabled);
+    };
+    setExecutionEffects(!window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    executionEffectsToggle.addEventListener('click', () => {
+      setExecutionEffects(executionEffectsToggle.getAttribute('aria-pressed') !== 'true');
+    });
+
+    const executionSpeedSignal = section('execution-speed-signal');
+    const executionSpeedSignalCopy = section('execution-speed-signal-copy');
+    const executionCurrentNodeStatus = section('execution-current-node-status');
+    const executionCurrentNodeMapStatus = section('execution-current-node-map-status');
+    const executionCurrentNodeDurationCopy = section('execution-current-node-duration-copy');
+    const executionRunPaceCopy = section('execution-run-pace-copy');
+    const paceProfiles = {
+      slow: { next: 'fast', signal: '速度 0.72× · 低于前 5 轮中位数', status: '运行偏慢', duration: '已运行 4 分 18 秒 · 预计慢 28%', footer: '当前速度低于基线' },
+      fast: { next: 'normal', signal: '速度 1.34× · 高于前 5 轮中位数', status: '运行超前', duration: '已运行 2 分 19 秒 · 预计快 34%', footer: '当前速度高于基线' },
+      normal: { next: 'slow', signal: '速度 1.02× · 接近前 5 轮中位数', status: '运行正常', duration: '已运行 3 分 11 秒 · 接近历史基线', footer: '当前速度接近基线' },
+    };
+    const setExecutionPace = (pace) => {
+      executionDashboard.dataset.runtimePace = pace;
+      executionRunMap.dataset.runtimePace = pace;
+      executionSpeedSignal.dataset.runtimePace = pace;
+      executionSpeedSignalCopy.textContent = paceProfiles[pace].signal;
+      executionCurrentNodeStatus.textContent = paceProfiles[pace].status;
+      executionCurrentNodeMapStatus.textContent = `批次 1B · ${paceProfiles[pace].status}`;
+      executionCurrentNodeDurationCopy.textContent = paceProfiles[pace].duration;
+      executionRunPaceCopy.textContent = paceProfiles[pace].footer;
+    };
+    executionSpeedSignal.addEventListener('click', () => {
+      setExecutionPace(paceProfiles[executionRunMap.dataset.runtimePace].next);
+    });
+  </script>
+</body>
+</html>

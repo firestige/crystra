@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" width="100%%" height="100%%" viewBox="10.5 296.21 667.5 449">
+<path stroke="black" stroke-width="1" fill="none" d="M 28.50,727.21 H 84.00 a 10.00,10.00 0 0,0 10.00,-10.00 V 673.71 a 10.00,10.00 0 0,1 10.00,-10.00L 229.50,663.71"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 229.50,661.71L 229.50,372.21"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 229.50,372.21L 471.00,372.21"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 471.00,372.21 V 651.71 a 10.00,10.00 0 0,1 -10.00,10.00L 229.50,661.71"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 471.00,372.21L 660.00,372.21"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 28.50,596.21 H 84.00 a 10.00,10.00 0 0,1 10.00,10.00 V 649.71 a 10.00,10.00 0 0,0 10.00,10.00L 229.50,659.71"/>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="403.00" y="304.21" width="136.00" height="136.00"/>
+<text font-family="sans-serif" x="466.00" y="377.21">
+0
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="149.50" y="328.21" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="224.50" y="377.21">
+1
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="149.50" y="617.71" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="224.50" y="666.71">
+2
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="18.50" y="717.21" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="23.50" y="732.21">
+3
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="650.00" y="362.21" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="655.00" y="377.21">
+4
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="18.50" y="586.21" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="23.50" y="601.21">
+5
+</text>
+</g>
+</svg>

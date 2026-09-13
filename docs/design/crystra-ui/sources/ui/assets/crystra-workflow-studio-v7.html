@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN" class="h-full bg-[#0d0f12]">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystra · Workflow Studio impression</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          shell: '#0d0f12', sidebar: '#111317', surface: '#15181d', panel: '#1a1e24', raised: '#20252d',
+          line: '#2b313a', muted: '#8a94a3', accent: '#5b8def', success: '#58c77b', warning: '#d49b32', danger: '#e25b5b', crystal: '#50c8c6'
+        },
+        boxShadow: { panel: '0 18px 45px rgba(0,0,0,.24)' }
+      }}
+    }
+  </script>
+  <style>
+    * { scrollbar-width: thin; scrollbar-color: #3a424d transparent; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  </style>
+</head>
+<body class="h-full overflow-hidden bg-shell text-slate-100 antialiased">
+  <main data-section-id="app-shell" class="grid h-screen min-h-[760px] grid-cols-[260px_minmax(0,1fr)]">
+    <aside data-section-id="sidebar" class="flex min-h-0 flex-col border-r border-line bg-sidebar px-3.5 py-4">
+      <button data-section-id="surface-banner" type="button" class="flex h-14 items-center gap-3 rounded-lg border border-line bg-[#181b20] px-4 text-left shadow-panel transition hover:border-slate-500"><span class="grid size-7 place-items-center text-sky-300">◇</span><span class="text-lg font-semibold tracking-tight">Crystra</span><span class="ml-auto text-lg text-muted">⇄</span></button>
+      <button data-section-id="new-task-action" type="button" class="mt-8 h-11 rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 font-medium text-white shadow-lg shadow-blue-950/30">＋ New Task</button>
+
+      <nav data-section-id="work-navigation" class="mt-8">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Work</p>
+        <ul class="space-y-1 text-sm"><li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-warning">◉</span><span>Needs attention</span><span class="ml-auto rounded-full bg-amber-500/15 px-2 py-0.5 text-xs text-warning">2</span></li><li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-accent">◉</span><span>Running</span><span class="ml-auto rounded-full bg-blue-500/15 px-2 py-0.5 text-xs text-blue-300">3</span></li><li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-muted">▣</span><span>Drafts</span><span class="ml-auto rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted">1</span></li><li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-success">✓</span><span>Completed</span></li></ul>
+      </nav>
+
+      <nav data-section-id="build-navigation" class="mt-6">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Build</p>
+        <div class="-mx-1 flex items-center gap-3 rounded-md border-l-2 border-accent bg-white/10 px-3 py-2.5 text-sm"><span>⌘</span><span>Workflows</span><span class="ml-auto rounded-full bg-blue-500/15 px-2 py-0.5 text-xs text-blue-300">8</span></div>
+      </nav>
+
+      <section data-section-id="workflow-list" class="mt-4 min-h-0 flex-1 overflow-auto pl-2">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Workflows</p>
+        <div class="space-y-1 text-[13px]"><a href="?workflow_definition_id=build-and-sign&amp;revision=v3" data-workflow-definition-id="build-and-sign" class="block rounded-md px-3 py-2.5 text-slate-300 transition hover:bg-white/5"><div class="flex items-center gap-2"><span class="text-crystal">◇</span><span class="truncate">build-and-sign</span></div><p class="mt-1 pl-5 text-xs text-muted">v3 · 当前 Task 引用</p></a><a href="?workflow_definition_id=market-validation&amp;revision=v2" data-workflow-definition-id="market-validation" class="block rounded-md px-3 py-2.5 text-slate-300 transition hover:bg-white/5"><div class="flex items-center gap-2"><span class="text-slate-500">◇</span><span class="truncate">market-validation</span></div><p class="mt-1 pl-5 text-xs text-muted">v2 · 当前 Task 引用</p></a><a href="?workflow_definition_id=publish-documentation&amp;revision=v1" data-workflow-definition-id="publish-documentation" class="block rounded-md px-3 py-2.5 text-slate-300 transition hover:bg-white/5"><div class="flex items-center gap-2"><span class="text-slate-500">◇</span><span class="truncate">publish-documentation</span></div><p class="mt-1 pl-5 text-xs text-muted">v1 · 当前 Task 引用</p></a></div>
+      </section>
+
+      <nav data-section-id="library-navigation" class="mt-4 border-t border-line pt-4"><p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Library</p><div class="space-y-1 text-sm"><div class="flex items-center gap-3 rounded-md px-2 py-2"><span>◇</span><span>Assets</span></div><div class="flex items-center gap-3 rounded-md px-2 py-2"><span>□</span><span>Resources</span></div></div></nav>
+      <button data-section-id="host-settings" type="button" class="mt-3 flex items-center gap-3 border-t border-line px-2 pt-4 text-sm text-slate-300"><span>⚙</span><span>Settings</span></button>
+    </aside>
+
+    <section data-section-id="workflow-workspace" class="flex min-w-0 flex-col overflow-hidden bg-[#101216]">
+      <header data-section-id="workspace-header" class="flex min-h-[112px] items-center justify-between gap-8 border-b border-line px-7 py-4">
+        <div class="flex min-w-0 items-start gap-4"><span class="grid size-12 shrink-0 place-items-center rounded-lg border border-line bg-panel text-xl text-crystal">◇</span><div class="min-w-0"><h1 class="truncate text-2xl font-semibold tracking-tight">Plugin Release</h1><p class="mt-1 truncate text-sm text-slate-300">把运行中反复出现的 Agent 决策结晶为更便宜、更稳定的 Workflow</p><div data-section-id="workflow-context" class="mt-2 flex flex-wrap items-center gap-2 text-xs text-muted"><span>v3 → Draft v4</span><span>·</span><span>From Task 024 · Run #08</span><span class="rounded bg-amber-500/15 px-2 py-1 text-warning">Validation required</span></div></div></div>
+        <nav data-section-id="workflow-navigation" class="flex shrink-0 items-center rounded-lg border border-line bg-panel p-1 text-sm"><button data-section-id="workflow-tab-studio" class="rounded-md bg-blue-600 px-4 py-2">Studio</button><button data-section-id="workflow-tab-versions" class="px-4 py-2 text-muted">Versions</button><button data-section-id="workflow-tab-runs" class="px-4 py-2 text-muted">Runs</button></nav>
+      </header>
+
+      <div class="grid min-h-0 flex-1 grid-cols-[35%_65%]">
+        <section data-section-id="design-input" class="flex min-h-0 flex-col border-r border-line bg-[#12151a]">
+          <div class="border-b border-line px-5 py-3"><p class="text-[11px] font-semibold uppercase tracking-[.14em] text-muted">Design input</p><p class="mt-1 text-xs text-slate-300">描述意图，LLM 生成配置；右侧负责可检查的投影。</p></div>
+          <div data-section-id="design-conversation" class="min-h-0 flex-1 space-y-4 overflow-auto px-5 py-4">
+            <article class="rounded-xl bg-[#252b34] p-4"><div class="mb-2 flex items-center gap-2 text-xs"><span class="grid size-6 place-items-center rounded-full bg-slate-500">●</span><strong>You</strong><span class="text-muted">2:18 PM</span></div><p class="text-sm leading-6 text-slate-200">市场兼容性检查已经连续多次出现，而且输入输出稳定。把它固化，但保留风险较高时的人审入口。</p></article>
+            <article class="px-1"><div class="mb-2 flex items-center gap-2 text-xs"><span class="text-blue-400">◆</span><strong>DeepSeek</strong><span class="text-muted">2:18 PM</span></div><p class="text-sm leading-6 text-slate-300">我会将普通检查替换为确定性代码节点，并把高风险结果路由到人工复核。投影已更新，尚未写入版本。</p></article>
+            <article class="rounded-lg border border-crystal/30 bg-crystal/10 p-4"><div class="flex items-center"><span class="text-crystal">◇</span><strong class="ml-2 text-sm">Proposed crystallization</strong><span class="ml-auto text-xs text-crystal">Draft</span></div><div class="mt-3 grid grid-cols-2 gap-2 text-xs"><div class="rounded border border-line bg-panel p-2"><span class="text-muted">Before</span><p class="mt-1">Agent decision</p></div><div class="rounded border border-crystal/30 bg-panel p-2"><span class="text-muted">After</span><p class="mt-1 text-crystal">Code + risk gate</p></div></div></article>
+            <article class="rounded-lg border border-line bg-panel p-4"><h3 class="text-sm font-medium">需要确认</h3><p class="mt-2 text-xs leading-5 text-muted">风险阈值设为 0.7；低于阈值自动继续，高于阈值进入 Review。</p><div class="mt-3 flex gap-2"><button data-section-id="workflow-apply-draft" class="rounded border border-blue-500/50 px-3 py-1.5 text-xs text-blue-300">应用到草稿</button><button data-section-id="workflow-adjust-threshold" class="rounded border border-line px-3 py-1.5 text-xs">调整阈值</button></div></article>
+          </div>
+          <section data-section-id="design-composer" class="m-4 rounded-2xl border border-line bg-[#24282f] p-4 shadow-panel"><p class="min-h-10 text-sm text-muted">描述修改、约束或验证要求…</p><div class="flex items-center gap-3 text-xs text-muted"><button data-section-id="workflow-composer-add" class="grid size-8 place-items-center rounded-full bg-white/5 text-xl">＋</button><button data-section-id="workflow-composer-mode">◈ Workflow Write⌄</button><span class="ml-auto">DeepSeek-V4-Flash High⌄</span><button data-section-id="workflow-composer-send" class="grid size-9 place-items-center rounded-full bg-blue-600 text-lg text-white">↑</button></div></section>
+        </section>
+
+        <section data-section-id="workflow-projection" class="flex min-h-0 flex-col overflow-hidden">
+          <div data-section-id="workflow-revision" class="flex min-h-[58px] items-center gap-3 border-b border-line px-5"><div><p class="text-sm font-medium">Draft v4 projection</p><p class="text-xs text-muted">Generated from intent · no manual wiring required</p></div><div class="ml-auto flex gap-2 text-xs"><button data-section-id="workflow-fit-map" class="rounded-md border border-line bg-panel px-3 py-2">Fit map</button><button data-section-id="workflow-inspect-diff" class="rounded-md border border-line bg-panel px-3 py-2">Inspect diff</button></div></div>
+
+          <div class="grid min-h-0 flex-1 grid-rows-[minmax(330px,1fr)_250px]">
+            <section data-section-id="workflow-map" class="min-h-0 overflow-auto border-b border-line bg-[#101821] p-5">
+              <div class="flex items-center text-xs text-muted"><span>ACTUAL WORKFLOW · DAG PROJECTION</span><span class="ml-auto">7 nodes · 2 branches · 1 review gate</span></div>
+              <div class="mt-10 grid grid-cols-[1fr_42px_1fr_42px_1fr_42px_1fr] items-center gap-1 text-xs">
+                <article class="rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-3"><span class="text-muted">INPUT</span><p class="mt-2 font-medium">Release request</p><p class="mt-2 text-success">schema validated</p></article><div class="text-center text-muted">→</div>
+                <article class="rounded-lg border border-line bg-panel p-3"><span class="text-muted">CODE</span><p class="mt-2 font-medium">Package validation</p><p class="mt-2 text-slate-300">deterministic</p></article><div class="text-center text-muted">→</div>
+                <article class="rounded-lg border-2 border-crystal bg-crystal/10 p-3 shadow-[0_0_28px_rgba(80,200,198,.12)]"><div class="flex"><span class="text-crystal">CRYSTALLIZED</span><span class="ml-auto text-crystal">◇</span></div><p class="mt-2 font-medium">Market compatibility</p><p class="mt-2 text-crystal">code + risk score</p></article><div class="text-center text-muted">→</div>
+                <article class="rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-3"><span class="text-muted">OUTPUT</span><p class="mt-2 font-medium">Publish package</p><p class="mt-2 text-success">verified</p></article>
+              </div>
+              <div class="mx-auto mt-7 grid max-w-[54%] grid-cols-[1fr_42px_1fr] items-center text-xs"><article class="rounded-lg border border-amber-500/50 bg-amber-500/10 p-3"><span class="text-warning">IF RISK ≥ 0.7</span><p class="mt-2 font-medium">Human review</p></article><div class="text-center text-muted">→</div><article class="rounded-lg border border-line bg-panel p-3"><span class="text-muted">CORRECTION</span><p class="mt-2 font-medium">Adjust policy</p></article></div>
+            </section>
+
+            <div class="grid min-h-0 grid-cols-[1.15fr_1fr_1fr]">
+              <section data-section-id="crystallization-inspector" class="overflow-auto border-r border-line p-4"><div class="flex items-center"><h2 class="text-sm font-medium">Crystallization inspector</h2><span class="ml-auto rounded bg-crystal/10 px-2 py-1 text-xs text-crystal">Selected</span></div><dl class="mt-4 grid grid-cols-[110px_1fr] gap-y-3 text-xs"><dt class="text-muted">Source</dt><dd>Agent decision · Run #08</dd><dt class="text-muted">Replacement</dt><dd>market-check.ts</dd><dt class="text-muted">Fallback</dt><dd>Human review</dd><dt class="text-muted">Projected saving</dt><dd class="text-success">¥4.10 / run</dd></dl></section>
+              <section data-section-id="version-diff" class="overflow-auto border-r border-line p-4"><h2 class="text-sm font-medium">Version diff</h2><div class="mt-4 space-y-2 text-xs"><div class="rounded bg-red-500/10 p-2 text-red-300">− Agent: market check</div><div class="rounded bg-emerald-500/10 p-2 text-emerald-300">+ Code: compatibility check</div><div class="rounded bg-emerald-500/10 p-2 text-emerald-300">+ Gate: risk ≥ 0.7</div><div class="rounded bg-emerald-500/10 p-2 text-emerald-300">+ Review fallback</div></div></section>
+              <section data-section-id="validation-gates" class="overflow-auto p-4"><h2 class="text-sm font-medium">Validation</h2><ul class="mt-4 space-y-3 text-xs"><li class="flex"><span class="text-success">✓</span><span class="ml-2">Input contract</span></li><li class="flex"><span class="text-success">✓</span><span class="ml-2">Historical replay</span></li><li class="flex"><span class="text-warning">!</span><span class="ml-2">Threshold approval</span></li><li class="flex"><span class="text-muted">○</span><span class="ml-2">Shadow run</span></li></ul></section>
+            </div>
+          </div>
+
+          <footer data-section-id="workflow-actions" class="flex min-h-[62px] items-center gap-3 border-t border-line bg-[#12151a] px-5"><span class="text-xs text-muted">Draft has 1 unresolved validation</span><button data-section-id="workflow-save-draft" class="ml-auto rounded-md border border-line bg-panel px-5 py-2 text-sm">Save draft</button><button data-section-id="workflow-validate" class="rounded-md bg-blue-600 px-5 py-2 text-sm font-medium">Validate workflow</button></footer>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script>
+    const workflowRoute = new URLSearchParams(window.location.search);
+    const selectedWorkflowId = workflowRoute.get('workflow_definition_id');
+    if (selectedWorkflowId) {
+      const selectedWorkflowAnchor = document.querySelector(`[data-workflow-definition-id="${selectedWorkflowId}"]`);
+      if (selectedWorkflowAnchor) {
+        selectedWorkflowAnchor.classList.add('border-l-2', 'border-accent', 'bg-white/10', 'text-slate-100');
+        selectedWorkflowAnchor.setAttribute('aria-current', 'true');
+        selectedWorkflowAnchor.scrollIntoView({ block: 'nearest' });
+      }
+    }
+  </script>
+</body>
+</html>

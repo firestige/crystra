@@ -1,0 +1,10 @@
+/* Workflow field composition; shared controls and resource layout use task-browser.css. */
+.workflow-browser .tone-confirmed{color:var(--palette-green-base)}
+.workflow-revision{position:absolute;left:12px;top:110px;border-radius:4px;padding:3px 6px;background:var(--palette-neutral-card);color:var(--palette-neutral-secondary);font-size:11px;line-height:16px;font-variant-numeric:tabular-nums}
+.workflow-browser #browser-list th:nth-child(1),.workflow-browser #browser-list th:nth-child(8){width:44px}
+.workflow-browser #browser-list th:nth-child(2){width:34%}
+.workflow-browser #browser-list th:nth-child(3){width:9%}
+.workflow-browser #browser-list th:nth-child(4){width:10%}
+.workflow-browser #browser-list th:nth-child(5){width:7%}
+.workflow-browser #browser-list th:nth-child(6),.workflow-browser #browser-list th:nth-child(7){width:16%}
+.workflow-version-cell,.workflow-node-cell{font-variant-numeric:tabular-nums;white-space:nowrap}

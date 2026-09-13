@@ -1,0 +1,191 @@
+{
+  "status": "accepted",
+  "baseline": "Task v8; accepted balanced typography",
+  "default": "balanced",
+  "units": "CSS px; SVG roles are viewBox units",
+  "candidates": {
+    "balanced": {
+      "page-title": {
+        "size": 24,
+        "lineHeight": 32,
+        "weight": 600
+      },
+      "section-title": {
+        "size": 18,
+        "lineHeight": 26,
+        "weight": 600
+      },
+      "card-title": {
+        "size": 16,
+        "lineHeight": 24,
+        "weight": 600
+      },
+      "item-title": {
+        "size": 14,
+        "lineHeight": 20,
+        "weight": 500
+      },
+      "body": {
+        "size": 14,
+        "lineHeight": 24,
+        "weight": 400
+      },
+      "body-compact": {
+        "size": 14,
+        "lineHeight": 20,
+        "weight": 400
+      },
+      "header-description": {
+        "size": 14,
+        "lineHeight": 22,
+        "weight": 400
+      },
+      "description": {
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 400
+      },
+      "meta": {
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 400
+      },
+      "label": {
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 600
+      },
+      "control": {
+        "size": 14,
+        "lineHeight": 20,
+        "weight": 500
+      },
+      "code": {
+        "size": 12,
+        "lineHeight": 20,
+        "weight": 400
+      },
+      "metric": {
+        "size": 20,
+        "lineHeight": 28,
+        "weight": 500
+      },
+      "brand": {
+        "size": 20,
+        "lineHeight": 28,
+        "weight": 600
+      },
+      "badge": {
+        "size": 11,
+        "lineHeight": 14,
+        "weight": 500
+      },
+      "graph-title": {
+        "size": 13,
+        "lineHeight": 18,
+        "weight": 500
+      },
+      "graph-meta": {
+        "size": 11,
+        "lineHeight": 16,
+        "weight": 400
+      }
+    }
+  },
+  "roles": {
+    "page-title": {
+      "description": "页面主标题",
+      "originalSizePx": "24 / 32",
+      "weight": 600
+    },
+    "section-title": {
+      "description": "工作面焦点、当前问题、展开视图标题",
+      "originalSizePx": "16–20",
+      "weight": 600
+    },
+    "card-title": {
+      "description": "卡片与信息分组标题",
+      "originalSizePx": "12–14",
+      "weight": 600
+    },
+    "item-title": {
+      "description": "列表、证据入口、步骤的主标题",
+      "originalSizePx": "12–14",
+      "weight": 500
+    },
+    "body": {
+      "description": "连续说明、AI 理解、Chat 正文",
+      "originalSizePx": "12–14",
+      "weight": 400
+    },
+    "body-compact": {
+      "description": "检查清单、短事实、结构化内容",
+      "originalSizePx": "12",
+      "weight": 400
+    },
+    "header-description": {
+      "description": "页面标题下的一行说明",
+      "originalSizePx": "14",
+      "weight": 400
+    },
+    "description": {
+      "description": "列表副标题、卡片辅助说明",
+      "originalSizePx": "11–12",
+      "weight": 400
+    },
+    "meta": {
+      "description": "版本、时间、计数、来源与状态标签",
+      "originalSizePx": "10–12",
+      "weight": 400
+    },
+    "label": {
+      "description": "分区标签、字段组提示、kicker",
+      "originalSizePx": "10–11",
+      "weight": 600
+    },
+    "control": {
+      "description": "导航、菜单、按钮、输入文字",
+      "originalSizePx": "12–14",
+      "weight": 500
+    },
+    "code": {
+      "description": "代码、路径、精确标识与预览",
+      "originalSizePx": "11–12",
+      "weight": 400
+    },
+    "metric": {
+      "description": "独立汇总指标",
+      "originalSizePx": "18",
+      "weight": 500
+    },
+    "brand": {
+      "description": "品牌字标；独立于内容等级",
+      "originalSizePx": "19",
+      "weight": 600
+    },
+    "badge": {
+      "description": "受约束的计数徽标、步骤编号",
+      "originalSizePx": "9–10",
+      "weight": 500
+    },
+    "graph-title": {
+      "description": "SVG 节点主标签；viewBox 单位",
+      "originalSizePx": "12–14",
+      "weight": 500
+    },
+    "graph-meta": {
+      "description": "SVG 状态与边标签；viewBox 单位",
+      "originalSizePx": "10–12",
+      "weight": 400
+    }
+  },
+  "selected": "balanced",
+  "selection": {
+    "date": "2026-09-08",
+    "basis": "用户：均衡比较好",
+    "scope": "B typography roles, sizes, line heights and weights; excludes header geometry and color"
+  },
+  "candidateStatus": {
+    "balanced": "accepted"
+  }
+}

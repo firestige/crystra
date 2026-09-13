@@ -1,0 +1,169 @@
+{
+  "cases": [
+    {
+      "system": "bpmn-next",
+      "name": "development",
+      "state": "collapsed",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "development",
+      "state": "plan",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "development",
+      "state": "expanded",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "architecture",
+      "state": "collapsed",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "architecture",
+      "state": "plan",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "architecture",
+      "state": "expanded",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "research",
+      "state": "collapsed",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "research",
+      "state": "plan",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-next",
+      "name": "research",
+      "state": "expanded",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "development",
+      "state": "collapsed",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "development",
+      "state": "plan",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "development",
+      "state": "expanded",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "architecture",
+      "state": "collapsed",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "architecture",
+      "state": "plan",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "architecture",
+      "state": "expanded",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "research",
+      "state": "collapsed",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "research",
+      "state": "plan",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "bpmn-stable",
+      "name": "research",
+      "state": "expanded",
+      "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "development",
+      "state": "collapsed",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "development",
+      "state": "plan",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "development",
+      "state": "expanded",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "architecture",
+      "state": "collapsed",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "architecture",
+      "state": "plan",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "architecture",
+      "state": "expanded",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "research",
+      "state": "collapsed",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "research",
+      "state": "plan",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    },
+    {
+      "system": "maxgraph",
+      "name": "research",
+      "state": "expanded",
+      "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+    }
+  ],
+  "errors": [],
+  "bpmnDrilldown": "plan_plane",
+  "plantuml": 3
+}

@@ -1,0 +1,176 @@
+{
+  "status": "first-batch-accepted-second-batch-review",
+  "source": "wsr-ui/packages/bi/src/components/design-system.tsx",
+  "scope": "Existing v8 instances; host Input, Sidebar animation, charts and scrolling are preserved.",
+  "instances": [
+    {
+      "id": "gate-decision-state",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "plan-outcome-summary",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "plan-control-envelope-summary",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "plan-proof-readiness",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "plan-context-health",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "grilling-question-map",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "grilling-live-brief",
+      "component": "Card",
+      "props": {
+        "level": "panel",
+        "padding": "regular",
+        "tone": "neutral",
+        "border": "solid"
+      }
+    },
+    {
+      "id": "gate-context-back",
+      "component": "Button",
+      "props": {
+        "appearance": "outline",
+        "tone": "primary",
+        "size": "regular"
+      },
+      "nativeTag": "a"
+    },
+    {
+      "id": "plan-document-back",
+      "component": "Button",
+      "props": {
+        "appearance": "outline",
+        "tone": "primary",
+        "size": "regular"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "execution-wave-copy-plan-run",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "execution-wave-copy-wave",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "execution-wave-copy-workflow",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "execution-wave-copy-run",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "execution-wave-copy-trace-root",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "plan-dag-zoom-in",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "plan-dag-zoom-out",
+      "component": "IconButton",
+      "props": {
+        "appearance": "outline",
+        "tone": "neutral",
+        "size": "compact"
+      },
+      "nativeTag": "button"
+    },
+    {
+      "id": "task-workbench-navigation",
+      "component": "Tabs",
+      "props": {
+        "appearance": "soft",
+        "size": "regular"
+      },
+      "adapter": "Prototype retains native radio controls and existing surface handlers; React sample uses tab/tabpanel semantics."
+    }
+  ]
+}

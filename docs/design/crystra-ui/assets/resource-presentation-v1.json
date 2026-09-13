@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "crystra.resource-presentation@1",
+  "status": "design-candidate",
+  "workspaces": {
+    "workflow-package/implementation": [
+      {
+        "id": "tool.implementation-workflow-cli",
+        "type": "cli",
+        "name": "Implementation Workflow CLI",
+        "entryRef": "cli.readme",
+        "memberRefs": [
+          "cli.readme",
+          "cli.implementation-custodian",
+          "cli.implementation-preflight",
+          "cli.implementation-test",
+          "cli.implementation-writer",
+          "cli.lib.core",
+          "cli.package",
+          "cli.tests.conformance.test",
+          "cli.tests.custodian.test",
+          "cli.tests.harness.test",
+          "cli.tests.helpers",
+          "cli.tests.preflight.test",
+          "cli.tests.writer-policy.test"
+        ],
+        "renderer": "markdown"
+      }
+    ]
+  }
+}

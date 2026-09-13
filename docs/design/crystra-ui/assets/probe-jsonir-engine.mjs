@@ -1,0 +1,25 @@
+import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+import {validateActivityIR} from '../../../../wsr-ui/packages/bi/src/domain/workflow-activity-ir.ts';
+import {layoutActivityFlow} from '../../../../wsr-ui/packages/bi/src/domain/workflow-activity-layout.ts';
+const out=new URL('../handoff/jsonir-engine-probe/',import.meta.url);mkdirSync(out,{recursive:true});
+const node=(id,title,kind='activity')=>({id,title,kind,summary:'',description:title,output:'阶段结果'});
+const edge=(id,from,to,title='',outcome='continue')=>({id,from,to,title,outcome,kind:'control',description:title});
+const samples=[
+ {id:'architecture',title:'系统设计：探索、评审与修订',names:['澄清问题','探索方案','方案评审','设计交付']},
+ {id:'research',title:'科研管理：核查、计算与补充',names:['整理项目','计算进展','核查关键动作','进展汇总']},
+];
+const cases=samples.map(s=>({schemaVersion:'0.1-draft',source:{kind:'example',id:s.id},title:s.title,nodes:s.names.map((n,i)=>node(s.id+i,n,i===2?'decision':i===3?'final':'activity')),flows:[{id:s.id+'-root',kind:'main',title:s.title,entryNodeId:s.id+'0',exitNodeIds:[s.id+'3'],nodeIds:s.names.map((_,i)=>s.id+i),edges:[edge('a',s.id+'0',s.id+'1'),edge('b',s.id+'1',s.id+'2'),edge('c',s.id+'2',s.id+'3','符合要求','success'),edge('d',s.id+'2',s.id+'0','需要补充','rework')]}],relations:[]}));
+const original=JSON.parse(readFileSync(new URL('../../../../wsr-ui/packages/bi/src/domain/workflow-activity-ir.example.json',import.meta.url),'utf8'));
+const nested=structuredClone(original),rename=id=>'unseen-'+id;
+nested.source={kind:'example',id:'renamed-hierarchy'};nested.title='层级与辅助流程：重命名不应改变能力';
+for(const n of nested.nodes)n.id=rename(n.id);
+for(const f of nested.flows){f.id=rename(f.id);f.entryNodeId=rename(f.entryNodeId);f.exitNodeIds=f.exitNodeIds.map(rename);f.nodeIds=f.nodeIds.map(rename);for(const e of f.edges){e.id=rename(e.id);e.from=rename(e.from);e.to=rename(e.to);}}
+for(const r of nested.relations){r.id=rename(r.id);r.from={flowId:rename(r.from.flowId),nodeId:rename(r.from.nodeId)};r.target={flowId:rename(r.target.flowId),entryNodeId:rename(r.target.entryNodeId),exitNodeId:rename(r.target.exitNodeId)};if(r.resume.kind==='node'){r.resume.flowId=rename(r.resume.flowId);r.resume.nodeId=rename(r.resume.nodeId);}}
+cases.push(nested);
+const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+const results=[];
+for(const ir of cases){writeFileSync(new URL(ir.source.id+'.json',out),JSON.stringify(ir,null,2));for(const direction of ['RIGHT','DOWN','COMPACT']){const row={case:ir.source.id,direction,validation:validateActivityIR(ir),flows:[]};for(const f of ir.flows){try{const before=JSON.stringify(ir),layout=await layoutActivityFlow(ir,f.id,direction);const identity=Object.keys(layout.nodes).sort().join()===f.nodeIds.slice().sort().join()&&Object.keys(layout.edges).sort().join()===f.edges.map(e=>e.id).sort().join();row.flows.push({flow:f.id,identityPreserved:identity,inputUnchanged:before===JSON.stringify(ir),width:layout.width,height:layout.height});if(direction==='RIGHT'){let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${layout.width}" height="${layout.height}" viewBox="0 0 ${layout.width} ${layout.height}"><rect width="100%" height="100%" fill="#151517"/>`;for(const e of Object.values(layout.edges)){svg+=`<path d="${e.path}" fill="none" stroke="#999"/>`;if(e.label)svg+=`<text x="${e.label.x}" y="${e.label.y+16}" fill="#ccc" font-size="14">${esc(e.label.lines.join(' '))}</text>`;}for(const [id,n] of Object.entries(layout.nodes)){svg+=`<rect x="${n.x-n.width/2}" y="${n.y-n.height/2}" width="${n.width}" height="${n.height}" rx="12" fill="#232324" stroke="#555"/><text x="${n.x}" y="${n.y+5}" text-anchor="middle" fill="#eee" font-size="16">${esc(ir.nodes.find(x=>x.id===id).title)}</text>`;}writeFileSync(new URL(ir.source.id+'-'+f.id+'.svg',out),svg+'</svg>');}}catch(e){row.flows.push({flow:f.id,error:e.message});}}results.push(row);}}
+const negatives=[{name:'null input',value:null},{name:'missing fields',value:{}},{name:'unsupported schema',value:{...structuredClone(cases[0]),schemaVersion:'999'}},{name:'unsupported parallel kind',value:structuredClone(cases[0])},{name:'dangling edge',value:structuredClone(cases[0])},{name:'unreachable exit',value:structuredClone(cases[0])}];
+negatives[3].value.nodes[1].kind='fork';negatives[4].value.flows[0].edges[0].to='missing';negatives[5].value.flows[0].edges=negatives[5].value.flows[0].edges.filter(e=>e.to!=='architecture3');
+const negativeResults=negatives.map(x=>{try{const errors=validateActivityIR(x.value);return {name:x.name,result:errors.length?'rejected':'accepted',errors};}catch(e){return {name:x.name,result:'exception',message:e.message};}});
+const report={scope:'Current v0.1-draft validator and ELK adapter. SVG files are geometry inspection artifacts, not the product viewer or executable workflow.',results,negativeResults};writeFileSync(new URL('results.json',out),JSON.stringify(report,null,2));console.log(JSON.stringify({layout:results.map(r=>({case:r.case,direction:r.direction,failed:r.flows.filter(f=>f.error).length,total:r.flows.length})),negativeResults},null,2));

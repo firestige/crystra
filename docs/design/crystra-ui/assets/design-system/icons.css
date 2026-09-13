@@ -1,0 +1,30 @@
+/* Accepted DeepSeek icon dimensions. Artwork and background containers supplied by components. */
+[data-crystra-theme="dark"] {
+ --icon-disclosure-size: 12px;
+ --icon-inline-action-size: 14px;
+ --icon-content-marker-size: 14px;
+ --icon-navigation-size: 18px;
+ --icon-primary-action-size: 18px;
+ --icon-brand-slot-size: 24px;
+ --icon-context-marker-size: 24px;
+ --icon-widget-signal-size: 48px;
+ --icon-tool-hit: 28px;
+ --icon-primary-hit: 36px;
+ --icon-rail-hit: 40px;
+}
+[data-crystra-theme="dark"] [data-icon-role="disclosure"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-disclosure-size);height:var(--icon-disclosure-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="disclosure"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-disclosure-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="inline-action"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-inline-action-size);height:var(--icon-inline-action-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="inline-action"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-inline-action-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="content-marker"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-content-marker-size);height:var(--icon-content-marker-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="content-marker"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-content-marker-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="navigation"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-navigation-size);height:var(--icon-navigation-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="navigation"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-navigation-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="primary-action"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-primary-action-size);height:var(--icon-primary-action-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="primary-action"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-primary-action-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="brand-slot"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-brand-slot-size);height:var(--icon-brand-slot-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="brand-slot"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-brand-slot-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="context-marker"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-context-marker-size);height:var(--icon-context-marker-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="context-marker"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-context-marker-size);line-height:1;}
+[data-crystra-theme="dark"] [data-icon-role="widget-signal"][data-icon-kind="svg"]:not([data-host-owned], [data-host-owned] *) {width:var(--icon-widget-signal-size);height:var(--icon-widget-signal-size);flex-shrink:0;}
+[data-crystra-theme="dark"] [data-icon-role="widget-signal"][data-icon-kind="glyph"]:not([data-host-owned], [data-host-owned] *) {font-size:var(--icon-widget-signal-size);line-height:1;}

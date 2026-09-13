@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN" class="h-full bg-[#0d0f12]">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystra · Analysis &amp; Audit impression</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          shell: '#0d0f12', sidebar: '#111317', surface: '#15181d', panel: '#1a1e24', raised: '#20252d',
+          line: '#2b313a', muted: '#8a94a3', accent: '#5b8def', success: '#58c77b', warning: '#d49b32', danger: '#e25b5b'
+        },
+        boxShadow: { panel: '0 18px 45px rgba(0,0,0,.24)' }
+      }}
+    }
+  </script>
+  <style>
+    * { scrollbar-width: thin; scrollbar-color: #3a424d transparent; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  </style>
+</head>
+<body class="h-full overflow-hidden bg-shell text-slate-100 antialiased">
+  <main data-section-id="app-shell" class="grid h-screen min-h-[760px] grid-cols-[260px_minmax(0,1fr)]">
+    <aside data-section-id="sidebar" class="flex min-h-0 flex-col border-r border-line bg-sidebar px-3.5 py-4">
+      <button data-section-id="surface-banner" type="button" class="flex h-14 items-center gap-3 rounded-lg border border-line bg-[#181b20] px-4 text-left shadow-panel transition hover:border-slate-500">
+        <span class="grid size-7 place-items-center text-sky-300">◇</span><span class="text-lg font-semibold tracking-tight">Crystra</span><span class="ml-auto text-lg text-muted">⇄</span>
+      </button>
+      <button data-section-id="new-task-action" type="button" class="mt-8 h-11 rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 font-medium text-white shadow-lg shadow-blue-950/30">＋ New Task</button>
+
+      <nav data-section-id="work-navigation" class="mt-8">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Work</p>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-warning">◉</span><span>Needs attention</span><span class="ml-auto rounded-full bg-amber-500/15 px-2 py-0.5 text-xs text-warning">2</span></li>
+          <li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-accent">◉</span><span>Running</span><span class="ml-auto rounded-full bg-blue-500/15 px-2 py-0.5 text-xs text-blue-300">3</span></li>
+          <li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-muted">▣</span><span>Drafts</span><span class="ml-auto rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted">1</span></li>
+          <li class="flex items-center gap-3 rounded-md px-2 py-2"><span class="text-success">✓</span><span>Completed</span></li>
+        </ul>
+      </nav>
+
+      <nav data-section-id="build-navigation" class="mt-6">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Build</p>
+        <div class="flex items-center gap-3 rounded-md px-2 py-2 text-sm"><span>⌘</span><span>Workflows</span><span class="ml-auto rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted">8</span></div>
+      </nav>
+
+      <nav data-section-id="library-navigation" class="mt-6">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Library</p>
+        <div class="space-y-1 text-sm"><div class="flex items-center gap-3 rounded-md px-2 py-2"><span>◇</span><span>Assets</span></div><div class="flex items-center gap-3 rounded-md px-2 py-2"><span>□</span><span>Resources</span></div></div>
+      </nav>
+
+      <section data-section-id="recent-tasks" class="mt-6 min-h-0 flex-1 overflow-auto">
+        <p class="mb-2 px-1 text-[11px] font-medium uppercase tracking-[.12em] text-muted">Recent tasks</p>
+        <div class="space-y-1 text-[13px]">
+          <div class="-mx-1 flex items-center gap-2 rounded-md border-l-2 border-accent bg-white/10 px-3 py-2.5"><span class="text-blue-300">▱</span><span class="truncate">发布插件市场方案</span><span class="ml-auto text-xs text-muted">#08</span></div>
+          <div class="flex items-center gap-2 rounded-md px-2 py-2.5 text-slate-300"><span>▱</span><span class="truncate">用户反馈分析与修复计划</span></div>
+          <div class="flex items-center gap-2 rounded-md px-2 py-2.5 text-slate-300"><span>▱</span><span class="truncate">搜索功能优化方案</span></div>
+        </div>
+      </section>
+      <button data-section-id="host-settings" type="button" class="mt-3 flex items-center gap-3 border-t border-line px-2 pt-4 text-sm text-slate-300"><span>⚙</span><span>Settings</span></button>
+    </aside>
+
+    <section data-section-id="analysis-workspace" class="flex min-w-0 flex-col overflow-hidden bg-[#101216]">
+      <header data-section-id="workspace-header" class="flex min-h-[112px] items-center justify-between gap-8 border-b border-line px-7 py-4">
+        <div class="flex min-w-0 items-start gap-4">
+          <span class="grid size-12 shrink-0 place-items-center rounded-lg border border-line bg-panel text-xl">⌁</span>
+          <div class="min-w-0"><h1 class="truncate text-2xl font-semibold tracking-tight">发布插件市场方案</h1><p class="mt-1 truncate text-sm text-slate-300">分析已完成的运行，重建事实，并发现可以结晶的高成本决策</p>
+            <div data-section-id="analysis-context" class="mt-2 flex flex-wrap items-center gap-2 text-xs text-muted"><span>Workflow v3</span><span>·</span><span>Run #08</span><span>·</span><span>Accepted</span><span class="rounded bg-emerald-500/10 px-2 py-1 text-success">Recorded</span></div>
+            <div data-section-id="analysis-linked-wave-context" class="mt-2 hidden flex-wrap items-center gap-2 rounded-md border border-blue-500/25 bg-blue-500/10 px-2.5 py-1.5 text-[11px] text-blue-200"><span data-section-id="analysis-linked-source-label">From Execution</span><span class="text-blue-300/50">·</span><span data-section-id="analysis-linked-wave-id" class="font-mono"></span><span class="text-blue-300/50">·</span><span data-section-id="analysis-linked-workflow-run-id" class="font-mono"></span><span class="text-blue-300/50">·</span><span data-section-id="analysis-linked-trace-root-id" class="font-mono"></span></div>
+            <div data-section-id="analysis-linked-gate-context" class="mt-2 hidden flex-wrap items-center gap-2 rounded-md border border-amber-500/25 bg-amber-500/10 px-2.5 py-1.5 text-[11px] text-amber-100"><span data-section-id="analysis-linked-gate-id" class="font-medium"></span><span class="text-amber-300/50">·</span><span data-section-id="analysis-linked-gate-focus" class="font-mono text-amber-200"></span><a data-section-id="analysis-linked-gate-return" class="ml-auto text-amber-200 underline decoration-amber-300/30 underline-offset-2">返回审核关口 →</a></div>
+          </div>
+        </div>
+        <nav data-section-id="analysis-navigation" class="flex shrink-0 items-center rounded-lg border border-line bg-panel p-1 text-sm"><button data-section-id="analysis-tab-analysis" class="rounded-md bg-blue-600 px-4 py-2">Analysis</button><button data-section-id="analysis-tab-audit" class="px-4 py-2 text-muted">Audit log</button><button data-section-id="analysis-tab-compare" class="px-4 py-2 text-muted">Compare</button></nav>
+      </header>
+
+      <div class="grid min-h-0 flex-1 grid-cols-[230px_minmax(0,1fr)_300px]">
+        <aside data-section-id="run-history" class="min-h-0 overflow-auto border-r border-line bg-[#12151a] p-4">
+          <div class="mb-4 flex items-center justify-between"><h2 class="text-sm font-medium">Run history</h2><button data-section-id="analysis-run-filter" class="text-xs text-blue-300">Filter⌄</button></div>
+          <div class="space-y-2 text-xs">
+            <article class="rounded-lg border border-blue-500/50 bg-blue-500/10 p-3"><div class="flex justify-between"><strong>Run #08</strong><span class="text-success">Accepted</span></div><p class="mt-2 text-muted">Today · 18m 42s</p><p class="mt-1 text-muted">¥12.40 · 47 events</p></article>
+            <article class="rounded-lg border border-line bg-panel p-3"><div class="flex justify-between"><strong>Run #07</strong><span class="text-warning">Changed</span></div><p class="mt-2 text-muted">Yesterday · 24m 11s</p><p class="mt-1 text-muted">¥18.80 · 62 events</p></article>
+            <article class="rounded-lg border border-line bg-panel p-3"><div class="flex justify-between"><strong>Run #06</strong><span class="text-danger">Failed</span></div><p class="mt-2 text-muted">Sep 4 · 12m 06s</p><p class="mt-1 text-muted">¥9.30 · 31 events</p></article>
+          </div>
+        </aside>
+
+        <div class="min-h-0 overflow-auto p-4">
+          <section data-section-id="run-summary" class="grid grid-cols-4 gap-3">
+            <article class="rounded-lg border border-line bg-panel p-3"><p class="text-xs text-muted">Outcome</p><p class="mt-2 text-lg font-medium text-success">Accepted</p></article>
+            <article class="rounded-lg border border-line bg-panel p-3"><p class="text-xs text-muted">Human attention</p><p class="mt-2 text-lg font-medium">6m 18s</p></article>
+            <article class="rounded-lg border border-line bg-panel p-3"><p class="text-xs text-muted">Agent cost</p><p class="mt-2 text-lg font-medium">¥12.40</p></article>
+            <article class="rounded-lg border border-line bg-panel p-3"><p class="text-xs text-muted">Intercepted</p><p class="mt-2 text-lg font-medium">2 issues</p></article>
+          </section>
+
+          <section data-section-id="trace-reconstruction" class="mt-3 rounded-lg border border-line bg-panel p-4">
+            <div class="flex items-center"><div><h2 class="font-medium">Trace reconstruction</h2><p class="mt-1 text-xs text-muted">Recorded facts · exact relationships · no inferred causality</p></div><button data-section-id="analysis-fit-graph" class="ml-auto rounded-md border border-line bg-raised px-3 py-2 text-xs">Fit graph</button></div>
+            <div class="mt-5 min-h-[290px] rounded-lg border border-line bg-[#111923] p-5">
+              <div class="grid grid-cols-[1fr_44px_1fr_44px_1fr] items-center gap-2 text-xs">
+                <div class="space-y-4"><div class="rounded-md border border-emerald-500/40 bg-emerald-500/10 p-3"><span class="text-muted">INPUT</span><p class="mt-1 font-medium">Publish intent</p><p class="mt-2 text-success">validated</p></div></div>
+                <div class="text-center text-muted">→</div>
+                <div class="space-y-4"><div class="rounded-md border border-blue-500/50 bg-blue-500/10 p-3"><span class="text-muted">AGENT</span><p class="mt-1 font-medium">Market compatibility check</p><p class="mt-2 text-blue-300">3m 42s · ¥4.80</p></div><div class="rounded-md border border-amber-500/50 bg-amber-500/10 p-3"><span class="text-muted">REVIEW</span><p class="mt-1 font-medium">Release-path decision</p><p class="mt-2 text-warning">human corrected</p></div></div>
+                <div class="text-center text-muted">→</div>
+                <div class="space-y-4"><div class="rounded-md border border-emerald-500/40 bg-emerald-500/10 p-3"><span class="text-muted">OUTPUT</span><p class="mt-1 font-medium">Verified package</p><p class="mt-2 text-success">accepted</p></div><div class="rounded-md border border-line bg-raised p-3"><span class="text-muted">EVIDENCE</span><p class="mt-1 font-medium">Publish report</p><p class="mt-2 text-slate-300">receipt available</p></div></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <section data-section-id="crystallization-candidates" class="rounded-lg border border-line bg-panel p-4"><div class="flex items-center"><h2 class="text-sm font-medium">Crystallization candidates</h2><span class="ml-auto rounded-full bg-blue-500/10 px-2 py-1 text-xs text-blue-300">3 found</span></div><div class="mt-3 space-y-2 text-xs"><article class="rounded-md border border-blue-500/40 bg-blue-500/10 p-3"><strong>Market compatibility check</strong><p class="mt-1 text-muted">Repeated in 7 runs · stable inputs · ¥4.80/run</p></article><article class="rounded-md border border-line bg-raised p-3"><strong>Package metadata normalization</strong><p class="mt-1 text-muted">Repeated in 5 runs · low variance</p></article></div></section>
+            <section data-section-id="run-comparison" class="rounded-lg border border-line bg-panel p-4"><div class="flex items-center"><h2 class="text-sm font-medium">Compared with Run #07</h2><button class="ml-auto text-xs text-blue-300">Change run</button></div><div class="mt-4 grid grid-cols-2 gap-3 text-xs"><div><p class="text-muted">Cost</p><p class="mt-1 text-lg text-success">−34%</p></div><div><p class="text-muted">Attention</p><p class="mt-1 text-lg text-success">−5m</p></div><div><p class="text-muted">Coverage</p><p class="mt-1 text-lg">+8%</p></div><div><p class="text-muted">Interception</p><p class="mt-1 text-lg">2 / 2</p></div></div></section>
+          </div>
+        </div>
+
+        <aside data-section-id="recorded-evidence" class="min-h-0 overflow-auto border-l border-line bg-[#12151a] p-4">
+          <div class="flex items-center"><div><p class="text-[11px] font-medium uppercase tracking-[.14em] text-muted">Recorded evidence</p><h2 class="mt-1 font-medium">Market compatibility check</h2></div><span class="ml-auto rounded bg-blue-500/10 px-2 py-1 text-xs text-blue-300">Agent</span></div>
+          <section data-section-id="evidence-receipts" class="mt-5 space-y-4 text-xs"><div><p class="uppercase tracking-wider text-muted">Identity</p><p class="mt-1 break-all font-mono text-slate-300">trace/08/span/market-check</p></div><div><p class="uppercase tracking-wider text-muted">Recorded time</p><p class="mt-1 text-slate-300">14:03:18 — 14:07:00</p></div><div><p class="uppercase tracking-wider text-muted">Inputs / outputs</p><p class="mt-1 text-slate-300">4 inputs · 3 outputs</p></div><div><p class="uppercase tracking-wider text-muted">Cost / model</p><p class="mt-1 text-slate-300">¥4.80 · DeepSeek-V4</p></div><div><p class="uppercase tracking-wider text-muted">Evidence files</p><div class="mt-2 space-y-2"><div class="rounded border border-line bg-panel p-2">compatibility.json</div><div class="rounded border border-line bg-panel p-2">market-policy.md</div><div class="rounded border border-line bg-panel p-2">decision-receipt.json</div></div></div></section>
+          <section data-section-id="audit-events" class="mt-6 border-t border-line pt-5"><div class="flex items-center"><h2 class="text-sm font-medium">Audit events</h2><span class="ml-auto text-xs text-muted">9</span></div><ol class="mt-4 space-y-4 border-l border-line pl-4 text-xs"><li><p class="text-slate-300">Tool result recorded</p><p class="mt-1 text-muted">14:05:12</p></li><li><p class="text-slate-300">Human correction attached</p><p class="mt-1 text-muted">14:06:41</p></li><li><p class="text-slate-300">Output accepted</p><p class="mt-1 text-muted">14:07:00</p></li></ol></section>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script>
+    const linkedParams = new URLSearchParams(window.location.search);
+    const linkedIdentity = {
+      planRunId: linkedParams.get('plan_run_id'),
+      waveId: linkedParams.get('wave_id'),
+      workflowRunId: linkedParams.get('workflow_run_id'),
+      traceRootId: linkedParams.get('trace_root_id'),
+    };
+    if (Object.values(linkedIdentity).every(Boolean)) {
+      const linkedContext = document.querySelector('[data-section-id="analysis-linked-wave-context"]');
+      linkedContext.dataset.planRunId = linkedIdentity.planRunId;
+      linkedContext.dataset.waveId = linkedIdentity.waveId;
+      linkedContext.dataset.workflowRunId = linkedIdentity.workflowRunId;
+      linkedContext.dataset.traceRootId = linkedIdentity.traceRootId;
+      linkedContext.classList.remove('hidden');
+      linkedContext.classList.add('flex');
+      document.querySelector('[data-section-id="analysis-linked-wave-id"]').textContent = linkedIdentity.waveId;
+      document.querySelector('[data-section-id="analysis-linked-workflow-run-id"]').textContent = linkedIdentity.workflowRunId;
+      document.querySelector('[data-section-id="analysis-linked-trace-root-id"]').textContent = linkedIdentity.traceRootId;
+    }
+    const linkedGateId = linkedParams.get('from_gate_id');
+    if (linkedGateId) {
+      const linkedGateContext = document.querySelector('[data-section-id="analysis-linked-gate-context"]');
+      const gateKey = linkedGateId.toLowerCase().replace('-', '');
+      linkedGateContext.classList.remove('hidden');
+      linkedGateContext.classList.add('flex');
+      document.querySelector('[data-section-id="analysis-linked-source-label"]').textContent = 'From Gate';
+      document.querySelector('[data-section-id="analysis-linked-gate-id"]').textContent = `来自 ${linkedGateId}`;
+      const focusParts = [
+        linkedParams.get('attempt') ? `attempt ${linkedParams.get('attempt')}` : null,
+        linkedParams.get('span_id') ? `span ${linkedParams.get('span_id')}` : null,
+        linkedParams.get('event_id') ? `event ${linkedParams.get('event_id')}` : null,
+      ].filter(Boolean);
+      document.querySelector('[data-section-id="analysis-linked-gate-focus"]').textContent = focusParts.join(' · ') || 'Gate evidence scope';
+      document.querySelector('[data-section-id="analysis-linked-gate-return"]').href = `crystra-task-work-v7.html?surface=gate&gate_id=${gateKey}`;
+    }
+  </script>
+</body>
+</html>

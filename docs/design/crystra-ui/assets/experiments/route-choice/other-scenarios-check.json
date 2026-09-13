@@ -1,0 +1,352 @@
+{
+  "errors": [],
+  "renderedStates": 24,
+  "checks": [
+    {
+      "name": "architecture",
+      "direction": "RIGHT",
+      "scope": null,
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "RIGHT",
+      "scope": "explore",
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "RIGHT",
+      "scope": "architecture",
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "RIGHT",
+      "scope": "reviewing",
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "RIGHT",
+      "scope": "all"
+    },
+    {
+      "name": "architecture",
+      "direction": "DOWN",
+      "scope": null,
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "DOWN",
+      "scope": "explore",
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "DOWN",
+      "scope": "architecture",
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "DOWN",
+      "scope": "reviewing",
+      "focusRestored": true
+    },
+    {
+      "name": "architecture",
+      "direction": "DOWN",
+      "scope": "all"
+    },
+    {
+      "name": "research",
+      "direction": "RIGHT",
+      "scope": null,
+      "focusRestored": true
+    },
+    {
+      "name": "research",
+      "direction": "RIGHT",
+      "scope": "collect",
+      "focusRestored": true
+    },
+    {
+      "name": "research",
+      "direction": "RIGHT",
+      "scope": "compute",
+      "focusRestored": true
+    },
+    {
+      "name": "research",
+      "direction": "RIGHT",
+      "scope": "all"
+    },
+    {
+      "name": "research",
+      "direction": "DOWN",
+      "scope": null,
+      "focusRestored": true
+    },
+    {
+      "name": "research",
+      "direction": "DOWN",
+      "scope": "collect",
+      "focusRestored": true
+    },
+    {
+      "name": "research",
+      "direction": "DOWN",
+      "scope": "compute",
+      "focusRestored": true
+    },
+    {
+      "name": "research",
+      "direction": "DOWN",
+      "scope": "all"
+    }
+  ],
+  "choices": [
+    {
+      "sample": "architecture",
+      "key": "RIGHT2",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 652
+    },
+    {
+      "sample": "architecture",
+      "key": "RIGHT3",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 652
+    },
+    {
+      "sample": "architecture",
+      "key": "RIGHT6",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": true
+        }
+      ],
+      "validCandidates": 12,
+      "score": 958.4
+    },
+    {
+      "sample": "architecture",
+      "key": "RIGHT7",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": true
+        }
+      ],
+      "validCandidates": 12,
+      "score": 958.4
+    },
+    {
+      "sample": "architecture",
+      "key": "DOWN2",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 606
+    },
+    {
+      "sample": "architecture",
+      "key": "DOWN3",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 606
+    },
+    {
+      "sample": "architecture",
+      "key": "DOWN6",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 8,
+      "score": 890
+    },
+    {
+      "sample": "architecture",
+      "key": "DOWN7",
+      "scope": "architecture",
+      "chosen": [
+        {
+          "id": "edge-11",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 8,
+      "score": 890
+    },
+    {
+      "sample": "research",
+      "key": "RIGHT1",
+      "scope": "collect",
+      "chosen": [
+        {
+          "id": "edge-8",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 673
+    },
+    {
+      "sample": "research",
+      "key": "RIGHT2",
+      "scope": "compute",
+      "chosen": [
+        {
+          "id": "edge-13",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 652
+    },
+    {
+      "sample": "research",
+      "key": "RIGHT3",
+      "scope": "collect",
+      "chosen": [
+        {
+          "id": "edge-8",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 673
+    },
+    {
+      "sample": "research",
+      "key": "RIGHT3",
+      "scope": "compute",
+      "chosen": [
+        {
+          "id": "edge-13",
+          "fromSide": "WEST",
+          "toSide": "SOUTH",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 652
+    },
+    {
+      "sample": "research",
+      "key": "DOWN1",
+      "scope": "collect",
+      "chosen": [
+        {
+          "id": "edge-8",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": true
+        }
+      ],
+      "validCandidates": 12,
+      "score": 728.2
+    },
+    {
+      "sample": "research",
+      "key": "DOWN2",
+      "scope": "compute",
+      "chosen": [
+        {
+          "id": "edge-13",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 578
+    },
+    {
+      "sample": "research",
+      "key": "DOWN3",
+      "scope": "collect",
+      "chosen": [
+        {
+          "id": "edge-8",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": true
+        }
+      ],
+      "validCandidates": 12,
+      "score": 728.2
+    },
+    {
+      "sample": "research",
+      "key": "DOWN3",
+      "scope": "compute",
+      "chosen": [
+        {
+          "id": "edge-13",
+          "fromSide": "NORTH",
+          "toSide": "EAST",
+          "flexPins": false
+        }
+      ],
+      "validCandidates": 12,
+      "score": 578
+    }
+  ]
+}

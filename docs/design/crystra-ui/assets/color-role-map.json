@@ -1,0 +1,3896 @@
+[
+  {
+    "selector": "*",
+    "property": "scrollbar-color",
+    "original": "rgb(58, 66, 77) transparent",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-search-control\"][data-open=\"true\"]",
+    "property": "background-color",
+    "original": "rgb(24, 27, 32)",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-search-control\"][data-open=\"true\"]",
+    "property": "border-color",
+    "original": "rgb(52, 58, 68)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-search-control\"][data-open=\"true\"]",
+    "property": "border-top-color",
+    "original": "rgb(52, 58, 68)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-search-control\"][data-open=\"true\"]",
+    "property": "border-right-color",
+    "original": "rgb(52, 58, 68)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-search-control\"][data-open=\"true\"]",
+    "property": "border-bottom-color",
+    "original": "rgb(52, 58, 68)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-search-control\"][data-open=\"true\"]",
+    "property": "border-left-color",
+    "original": "rgb(52, 58, 68)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-section-header\"]:has([data-section-id=\"task-section-toggle\"]:hover)",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.055)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-section-header\"]:has([data-section-id=\"task-search-control\"]:hover), [data-section-id=\"task-section-header\"]:has([data-section-id=\"task-section-actions\"]:hover)",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.024)",
+    "roles": {
+      "background-color": "transparent (idle; tool hover isolated)"
+    },
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "color",
+    "original": "rgb(147, 197, 253)",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "background-color",
+    "original": "rgba(23, 29, 38, 0.88)",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "border-color",
+    "original": "rgba(91, 141, 239, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "border-top-color",
+    "original": "rgba(91, 141, 239, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "border-right-color",
+    "original": "rgba(91, 141, 239, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(91, 141, 239, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"better-sidebar-toggle\"]",
+    "property": "border-left-color",
+    "original": "rgba(91, 141, 239, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "color",
+    "original": "rgb(255, 255, 255)",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "background-color",
+    "original": "rgba(91, 141, 239, 0.12)",
+    "roles": [
+      "status-info-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "border-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "border-top-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "border-right-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "border-bottom-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked)",
+    "property": "border-left-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option][data-system-active=\"true\"]::before",
+    "property": "background-color",
+    "original": "rgb(96, 165, 250)",
+    "roles": [
+      "status-info-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-dag-node][data-search-match=\"true\"] rect",
+    "property": "stroke",
+    "original": "rgb(127, 176, 255)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-edge-degraded\"]",
+    "property": "stroke",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-degraded-sweep\"]",
+    "property": "stroke",
+    "original": "rgb(255, 211, 106)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-running-halo\"]",
+    "property": "stroke",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-body\"]",
+    "property": "fill",
+    "original": "rgb(44, 37, 24)",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-body\"]",
+    "property": "stroke",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-map-status\"]",
+    "property": "fill",
+    "original": "rgb(241, 191, 85)",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-progress-bar\"]",
+    "property": "background-image",
+    "original": "linear-gradient(90deg, rgb(183, 121, 31), rgb(246, 196, 83))",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-pace-arrowhead\"]",
+    "property": "fill",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-status\"], [data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-progress-value\"], [data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-run-pace-copy\"]",
+    "property": "color",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-status\"]",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.1)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.05)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-current-node-active-dot\"]",
+    "property": "color",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-edge-degraded\"]",
+    "property": "stroke",
+    "original": "rgb(52, 135, 232)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-degraded-sweep\"]",
+    "property": "stroke",
+    "original": "rgb(140, 216, 255)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-running-halo\"]",
+    "property": "stroke",
+    "original": "rgb(74, 168, 255)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-body\"]",
+    "property": "fill",
+    "original": "rgb(23, 43, 71)",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-body\"]",
+    "property": "stroke",
+    "original": "rgb(74, 168, 255)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-map-status\"]",
+    "property": "fill",
+    "original": "rgb(140, 216, 255)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-progress-bar\"]",
+    "property": "background-image",
+    "original": "linear-gradient(90deg, rgb(37, 99, 235), rgb(53, 208, 255))",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-pace-arrowhead\"]",
+    "property": "fill",
+    "original": "rgb(52, 135, 232)",
+    "roles": [
+      "status-running-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-status\"], [data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-progress-value\"], [data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-run-pace-copy\"]",
+    "property": "color",
+    "original": "rgb(125, 211, 252)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-status\"]",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.1)",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.06)",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-current-node-active-dot\"]",
+    "property": "color",
+    "original": "rgb(125, 211, 252)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-edge-degraded\"]",
+    "property": "stroke",
+    "original": "rgb(79, 154, 240)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-degraded-sweep\"]",
+    "property": "stroke",
+    "original": "rgb(115, 198, 255)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-running-halo\"]",
+    "property": "stroke",
+    "original": "rgb(79, 154, 240)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-body\"]",
+    "property": "fill",
+    "original": "rgb(23, 37, 58)",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-body\"]",
+    "property": "stroke",
+    "original": "rgb(79, 154, 240)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-map-status\"]",
+    "property": "fill",
+    "original": "rgb(147, 197, 253)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-progress-bar\"]",
+    "property": "background-image",
+    "original": "linear-gradient(90deg, rgb(37, 99, 235), rgb(96, 165, 250))",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-pace-arrowhead\"]",
+    "property": "fill",
+    "original": "rgb(79, 154, 240)",
+    "roles": [
+      "status-running-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-status\"], [data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-progress-value\"], [data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-run-pace-copy\"]",
+    "property": "color",
+    "original": "rgb(147, 197, 253)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-status\"]",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.1)",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.04)",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-check\"]",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-dashboard\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-current-node-active-dot\"]",
+    "property": "color",
+    "original": "rgb(147, 197, 253)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "color",
+    "original": "rgb(253, 230, 138)",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.1)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"]",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"slow\"] [data-section-id=\"execution-speed-signal-dot\"]",
+    "property": "background-color",
+    "original": "rgb(251, 191, 36)",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "color",
+    "original": "rgb(186, 230, 253)",
+    "roles": [
+      "status-running-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.1)",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.32)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.32)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.32)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.32)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"]",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.32)",
+    "roles": [
+      "status-running-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"fast\"] [data-section-id=\"execution-speed-signal-dot\"], [data-section-id=\"execution-speed-signal\"][data-runtime-pace=\"normal\"] [data-section-id=\"execution-speed-signal-dot\"]",
+    "property": "background-color",
+    "original": "rgb(96, 165, 250)",
+    "roles": [
+      "status-running-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar\"] button:focus-visible, [data-section-id=\"sidebar\"] a:focus-visible",
+    "property": "outline-color",
+    "original": "rgb(147, 197, 253)",
+    "roles": [
+      "border-focus"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action",
+    "property": "color",
+    "original": "rgb(138, 148, 163)",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action:hover",
+    "property": "color",
+    "original": "rgb(226, 232, 240)",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action:hover",
+    "property": "background-color",
+    "original": "rgb(32, 37, 45)",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "color",
+    "original": "rgb(147, 197, 253)",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "background-color",
+    "original": "rgba(91, 141, 239, 0.12)",
+    "roles": [
+      "status-info-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "border-color",
+    "original": "rgba(91, 141, 239, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "border-top-color",
+    "original": "rgba(91, 141, 239, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "border-right-color",
+    "original": "rgba(91, 141, 239, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "border-bottom-color",
+    "original": "rgba(91, 141, 239, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-current=\"true\"]",
+    "property": "border-left-color",
+    "original": "rgba(91, 141, 239, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "color",
+    "original": "rgb(219, 234, 254)",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "background-color",
+    "original": "rgb(38, 51, 72)",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "border-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "border-top-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "border-right-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "border-bottom-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-action[aria-expanded=\"true\"]",
+    "property": "border-left-color",
+    "original": "rgb(91, 141, 239)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-badge",
+    "property": "color",
+    "original": "rgb(23, 19, 11)",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-badge",
+    "property": "background-color",
+    "original": "rgb(212, 155, 50)",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "color",
+    "original": "rgb(226, 232, 240)",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "background-color",
+    "original": "rgb(32, 37, 45)",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "border-color",
+    "original": "rgb(56, 66, 83)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "border-top-color",
+    "original": "rgb(56, 66, 83)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "border-right-color",
+    "original": "rgb(56, 66, 83)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "border-bottom-color",
+    "original": "rgb(56, 66, 83)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"]",
+    "property": "border-left-color",
+    "original": "rgb(56, 66, 83)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-section-id=\"surface-banner\"]:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.04)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-section-id=\"sidebar-rail\"]",
+    "property": "border-top-color",
+    "original": "rgb(43, 49, 58)",
+    "roles": [
+      "border-subtle"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-product-surface=\"deepseek\"] [data-section-id=\"harness-preview\"]",
+    "property": "color",
+    "original": "rgb(226, 232, 240)",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-product-surface=\"deepseek\"] [data-section-id=\"harness-preview\"]",
+    "property": "background-color",
+    "original": "rgb(21, 24, 29)",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-sidebar-flyout=\"open\"]",
+    "property": "background-color",
+    "original": "rgb(21, 24, 29)",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-sidebar-flyout=\"open\"]",
+    "property": "border-color",
+    "original": "rgb(53, 64, 82)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-sidebar-flyout=\"open\"]",
+    "property": "border-top-color",
+    "original": "rgb(53, 64, 82)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-sidebar-flyout=\"open\"]",
+    "property": "border-right-color",
+    "original": "rgb(53, 64, 82)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-sidebar-flyout=\"open\"]",
+    "property": "border-bottom-color",
+    "original": "rgb(53, 64, 82)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-sidebar-collapsed=\"true\"] [data-sidebar-flyout=\"open\"]",
+    "property": "border-left-color",
+    "original": "rgb(53, 64, 82)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "*, ::after, ::before",
+    "property": "border-color",
+    "original": "rgb(229, 231, 235)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "*, ::after, ::before",
+    "property": "border-top-color",
+    "original": "rgb(229, 231, 235)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "*, ::after, ::before",
+    "property": "border-right-color",
+    "original": "rgb(229, 231, 235)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "*, ::after, ::before",
+    "property": "border-bottom-color",
+    "original": "rgb(229, 231, 235)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "*, ::after, ::before",
+    "property": "border-left-color",
+    "original": "rgb(229, 231, 235)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "input::placeholder, textarea::placeholder",
+    "property": "color",
+    "original": "rgb(156, 163, 175)",
+    "roles": [
+      "text-secondary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".divide-line > :not([hidden]) ~ :not([hidden])",
+    "property": "border-color",
+    "original": "rgb(43 49 58 / var(--tw-divide-opacity, 1))",
+    "roles": [
+      "border-subtle"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-400\\/50",
+    "property": "border-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-400\\/50",
+    "property": "border-top-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-400\\/50",
+    "property": "border-right-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-400\\/50",
+    "property": "border-bottom-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-400\\/50",
+    "property": "border-left-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/15",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.15)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/15",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.15)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/15",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.15)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/15",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.15)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/15",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.15)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/20",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.2)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/20",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.2)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/20",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.2)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/20",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.2)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/20",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.2)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/25",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/25",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/25",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/25",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/25",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.25)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/30",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/30",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/30",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/30",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/30",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.3)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/40",
+    "property": "border-color",
+    "original": "rgba(245, 158, 11, 0.4)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/40",
+    "property": "border-top-color",
+    "original": "rgba(245, 158, 11, 0.4)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/40",
+    "property": "border-right-color",
+    "original": "rgba(245, 158, 11, 0.4)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/40",
+    "property": "border-bottom-color",
+    "original": "rgba(245, 158, 11, 0.4)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500\\/40",
+    "property": "border-left-color",
+    "original": "rgba(245, 158, 11, 0.4)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/50",
+    "property": "border-color",
+    "original": "rgba(96, 165, 250, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/50",
+    "property": "border-top-color",
+    "original": "rgba(96, 165, 250, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/50",
+    "property": "border-right-color",
+    "original": "rgba(96, 165, 250, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/50",
+    "property": "border-bottom-color",
+    "original": "rgba(96, 165, 250, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/50",
+    "property": "border-left-color",
+    "original": "rgba(96, 165, 250, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/70",
+    "property": "border-color",
+    "original": "rgba(96, 165, 250, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/70",
+    "property": "border-top-color",
+    "original": "rgba(96, 165, 250, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/70",
+    "property": "border-right-color",
+    "original": "rgba(96, 165, 250, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/70",
+    "property": "border-bottom-color",
+    "original": "rgba(96, 165, 250, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/70",
+    "property": "border-left-color",
+    "original": "rgba(96, 165, 250, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/20",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/20",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/20",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/20",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/20",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.2)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/25",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/25",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/25",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/25",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/25",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.25)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/30",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/30",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/30",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/30",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/30",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/35",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.35)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/35",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.35)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/35",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.35)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/35",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.35)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/35",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.35)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/40",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/40",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/40",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/40",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/40",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/50",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/50",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/50",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/50",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/50",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.5)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/70",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/70",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/70",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/70",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-500\\/70",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.7)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/20",
+    "property": "border-color",
+    "original": "rgba(16, 185, 129, 0.2)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/20",
+    "property": "border-top-color",
+    "original": "rgba(16, 185, 129, 0.2)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/20",
+    "property": "border-right-color",
+    "original": "rgba(16, 185, 129, 0.2)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/20",
+    "property": "border-bottom-color",
+    "original": "rgba(16, 185, 129, 0.2)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/20",
+    "property": "border-left-color",
+    "original": "rgba(16, 185, 129, 0.2)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/40",
+    "property": "border-color",
+    "original": "rgba(16, 185, 129, 0.4)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/40",
+    "property": "border-top-color",
+    "original": "rgba(16, 185, 129, 0.4)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/40",
+    "property": "border-right-color",
+    "original": "rgba(16, 185, 129, 0.4)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/40",
+    "property": "border-bottom-color",
+    "original": "rgba(16, 185, 129, 0.4)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/40",
+    "property": "border-left-color",
+    "original": "rgba(16, 185, 129, 0.4)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-line",
+    "property": "border-color",
+    "original": "rgb(43 49 58 / var(--tw-border-opacity, 1))",
+    "roles": [
+      "border-subtle"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-red-500\\/25",
+    "property": "border-color",
+    "original": "rgba(239, 68, 68, 0.25)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-red-500\\/25",
+    "property": "border-top-color",
+    "original": "rgba(239, 68, 68, 0.25)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-red-500\\/25",
+    "property": "border-right-color",
+    "original": "rgba(239, 68, 68, 0.25)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-red-500\\/25",
+    "property": "border-bottom-color",
+    "original": "rgba(239, 68, 68, 0.25)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-red-500\\/25",
+    "property": "border-left-color",
+    "original": "rgba(239, 68, 68, 0.25)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/40",
+    "property": "border-color",
+    "original": "rgba(71, 85, 105, 0.4)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/40",
+    "property": "border-top-color",
+    "original": "rgba(71, 85, 105, 0.4)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/40",
+    "property": "border-right-color",
+    "original": "rgba(71, 85, 105, 0.4)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/40",
+    "property": "border-bottom-color",
+    "original": "rgba(71, 85, 105, 0.4)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/40",
+    "property": "border-left-color",
+    "original": "rgba(71, 85, 105, 0.4)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/50",
+    "property": "border-color",
+    "original": "rgba(71, 85, 105, 0.5)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/50",
+    "property": "border-top-color",
+    "original": "rgba(71, 85, 105, 0.5)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/50",
+    "property": "border-right-color",
+    "original": "rgba(71, 85, 105, 0.5)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/50",
+    "property": "border-bottom-color",
+    "original": "rgba(71, 85, 105, 0.5)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600\\/50",
+    "property": "border-left-color",
+    "original": "rgba(71, 85, 105, 0.5)",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-white\\/\\[\\.12\\]",
+    "property": "border-color",
+    "original": "rgba(255, 255, 255, 0.12)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-white\\/\\[\\.12\\]",
+    "property": "border-top-color",
+    "original": "rgba(255, 255, 255, 0.12)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-white\\/\\[\\.12\\]",
+    "property": "border-right-color",
+    "original": "rgba(255, 255, 255, 0.12)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-white\\/\\[\\.12\\]",
+    "property": "border-bottom-color",
+    "original": "rgba(255, 255, 255, 0.12)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-white\\/\\[\\.12\\]",
+    "property": "border-left-color",
+    "original": "rgba(255, 255, 255, 0.12)",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-amber-500",
+    "property": "border-color",
+    "original": "rgb(245 158 11 / var(--tw-border-opacity, 1))",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/30",
+    "property": "border-color",
+    "original": "rgba(96, 165, 250, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/30",
+    "property": "border-top-color",
+    "original": "rgba(96, 165, 250, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/30",
+    "property": "border-right-color",
+    "original": "rgba(96, 165, 250, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/30",
+    "property": "border-bottom-color",
+    "original": "rgba(96, 165, 250, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-blue-400\\/30",
+    "property": "border-left-color",
+    "original": "rgba(96, 165, 250, 0.3)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/25",
+    "property": "border-color",
+    "original": "rgba(16, 185, 129, 0.25)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/25",
+    "property": "border-top-color",
+    "original": "rgba(16, 185, 129, 0.25)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/25",
+    "property": "border-right-color",
+    "original": "rgba(16, 185, 129, 0.25)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/25",
+    "property": "border-bottom-color",
+    "original": "rgba(16, 185, 129, 0.25)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/25",
+    "property": "border-left-color",
+    "original": "rgba(16, 185, 129, 0.25)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/35",
+    "property": "border-color",
+    "original": "rgba(16, 185, 129, 0.35)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/35",
+    "property": "border-top-color",
+    "original": "rgba(16, 185, 129, 0.35)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/35",
+    "property": "border-right-color",
+    "original": "rgba(16, 185, 129, 0.35)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/35",
+    "property": "border-bottom-color",
+    "original": "rgba(16, 185, 129, 0.35)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-emerald-500\\/35",
+    "property": "border-left-color",
+    "original": "rgba(16, 185, 129, 0.35)",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-400",
+    "property": "border-color",
+    "original": "rgb(148 163 184 / var(--tw-border-opacity, 1))",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".border-slate-600",
+    "property": "border-color",
+    "original": "rgb(71 85 105 / var(--tw-border-opacity, 1))",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#0d0f12\\]",
+    "property": "background-color",
+    "original": "rgb(13 15 18 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#0f1720\\]",
+    "property": "background-color",
+    "original": "rgb(15 23 32 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#101216\\]",
+    "property": "background-color",
+    "original": "rgb(16 18 22 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#11151a\\]",
+    "property": "background-color",
+    "original": "rgb(17 21 26 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#15191f\\]",
+    "property": "background-color",
+    "original": "rgb(21 25 31 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#171b21\\]",
+    "property": "background-color",
+    "original": "rgb(23 27 33 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#18212b\\]\\/95",
+    "property": "background-color",
+    "original": "rgba(24, 33, 43, 0.95)",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#1a1e24\\]",
+    "property": "background-color",
+    "original": "rgb(26 30 36 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#20242b\\]",
+    "property": "background-color",
+    "original": "rgb(32 36 43 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#24282f\\]",
+    "property": "background-color",
+    "original": "rgb(36 40 47 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#252b34\\]",
+    "property": "background-color",
+    "original": "rgb(37 43 52 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-amber-400",
+    "property": "background-color",
+    "original": "rgb(251 191 36 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-amber-500\\/10",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.1)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-amber-500\\/15",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.15)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-amber-500\\/20",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.2)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-amber-500\\/5",
+    "property": "background-color",
+    "original": "rgba(245, 158, 11, 0.05)",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-amber-600",
+    "property": "background-color",
+    "original": "rgb(217 119 6 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-black\\/15",
+    "property": "background-color",
+    "original": "rgba(0, 0, 0, 0.15)",
+    "roles": [
+      "overlay"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-blue-400",
+    "property": "background-color",
+    "original": "rgb(96 165 250 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-info-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-blue-500\\/10",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.1)",
+    "roles": [
+      "status-info-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-blue-500\\/15",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.15)",
+    "roles": [
+      "status-info-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-blue-500\\/5",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.05)",
+    "roles": [
+      "status-info-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-blue-500\\/\\[\\.08\\]",
+    "property": "background-color",
+    "original": "rgba(59, 130, 246, 0.08)",
+    "roles": [
+      "status-info-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-blue-600",
+    "property": "background-color",
+    "original": "rgb(37 99 235 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-info-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-emerald-400",
+    "property": "background-color",
+    "original": "rgb(52 211 153 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-success-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-emerald-500\\/10",
+    "property": "background-color",
+    "original": "rgba(16, 185, 129, 0.1)",
+    "roles": [
+      "status-success-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-emerald-500\\/5",
+    "property": "background-color",
+    "original": "rgba(16, 185, 129, 0.05)",
+    "roles": [
+      "status-success-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-emerald-600",
+    "property": "background-color",
+    "original": "rgb(5 150 105 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-success-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-line",
+    "property": "background-color",
+    "original": "rgb(43 49 58 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-panel",
+    "property": "background-color",
+    "original": "rgb(26 30 36 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-raised",
+    "property": "background-color",
+    "original": "rgb(32 37 45 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-red-400",
+    "property": "background-color",
+    "original": "rgb(248 113 113 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-error-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-red-500\\/20",
+    "property": "background-color",
+    "original": "rgba(239, 68, 68, 0.2)",
+    "roles": [
+      "status-error-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-red-500\\/5",
+    "property": "background-color",
+    "original": "rgba(239, 68, 68, 0.05)",
+    "roles": [
+      "status-error-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-shell",
+    "property": "background-color",
+    "original": "rgb(13 15 18 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-sidebar",
+    "property": "background-color",
+    "original": "rgb(17 19 23 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-slate-500",
+    "property": "background-color",
+    "original": "rgb(100 116 139 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-slate-500\\/15",
+    "property": "background-color",
+    "original": "rgba(100, 116, 139, 0.15)",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-slate-600",
+    "property": "background-color",
+    "original": "rgb(71 85 105 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-white\\/5",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.05)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-white\\/\\[\\.025\\]",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.024)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-white\\/\\[\\.18\\]",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.18)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#0e151d\\]",
+    "property": "background-color",
+    "original": "rgb(14 21 29 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#101821\\]",
+    "property": "background-color",
+    "original": "rgb(16 24 33 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#111923\\]",
+    "property": "background-color",
+    "original": "rgb(17 25 35 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#12151a\\]",
+    "property": "background-color",
+    "original": "rgb(18 21 26 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-canvas"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#15181d\\]",
+    "property": "background-color",
+    "original": "rgb(21 24 29 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#151a20\\]",
+    "property": "background-color",
+    "original": "rgb(21 26 32 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#18243a\\]",
+    "property": "background-color",
+    "original": "rgb(24 36 58 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-\\[\\#1a1e24\\]\\/\\[\\.98\\]",
+    "property": "background-color",
+    "original": "rgba(26, 30, 36, 0.98)",
+    "roles": [
+      "background-card"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-emerald-500",
+    "property": "background-color",
+    "original": "rgb(16 185 129 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-success-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-emerald-500\\/15",
+    "property": "background-color",
+    "original": "rgba(16, 185, 129, 0.15)",
+    "roles": [
+      "status-success-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-red-500",
+    "property": "background-color",
+    "original": "rgb(239 68 68 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "status-error-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-red-500\\/10",
+    "property": "background-color",
+    "original": "rgba(239, 68, 68, 0.1)",
+    "roles": [
+      "status-error-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-slate-700",
+    "property": "background-color",
+    "original": "rgb(51 65 85 / var(--tw-bg-opacity, 1))",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".bg-white\\/\\[\\.04\\]",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.04)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-amber-100",
+    "property": "color",
+    "original": "rgb(254 243 199 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-amber-100\\/70",
+    "property": "color",
+    "original": "rgba(254, 243, 199, 0.7)",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-amber-200",
+    "property": "color",
+    "original": "rgb(253 230 138 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-amber-200\\/70",
+    "property": "color",
+    "original": "rgba(253, 230, 138, 0.7)",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-amber-300",
+    "property": "color",
+    "original": "rgb(252 211 77 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-blue-200",
+    "property": "color",
+    "original": "rgb(191 219 254 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-blue-300",
+    "property": "color",
+    "original": "rgb(147 197 253 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-blue-400",
+    "property": "color",
+    "original": "rgb(96 165 250 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-emerald-300",
+    "property": "color",
+    "original": "rgb(110 231 183 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-success-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-muted",
+    "property": "color",
+    "original": "rgb(138 148 163 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-red-200",
+    "property": "color",
+    "original": "rgb(254 202 202 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-error-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-red-200\\/70",
+    "property": "color",
+    "original": "rgba(254, 202, 202, 0.7)",
+    "roles": [
+      "status-error-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-red-300",
+    "property": "color",
+    "original": "rgb(252 165 165 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-error-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-sky-300",
+    "property": "color",
+    "original": "rgb(125 211 252 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-slate-100",
+    "property": "color",
+    "original": "rgb(241 245 249 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-slate-200",
+    "property": "color",
+    "original": "rgb(226 232 240 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-slate-300",
+    "property": "color",
+    "original": "rgb(203 213 225 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-slate-400",
+    "property": "color",
+    "original": "rgb(148 163 184 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-secondary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-slate-500",
+    "property": "color",
+    "original": "rgb(100 116 139 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-success",
+    "property": "color",
+    "original": "rgb(88 199 123 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-success-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-warning",
+    "property": "color",
+    "original": "rgb(212 155 50 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-warning-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".text-white",
+    "property": "color",
+    "original": "rgb(255 255 255 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".accent-blue-500",
+    "property": "accent-color",
+    "original": "rgb(59, 130, 246)",
+    "roles": [
+      "status-info-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".placeholder\\:text-slate-500::placeholder",
+    "property": "color",
+    "original": "rgb(100 116 139 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".placeholder\\:text-slate-600::placeholder",
+    "property": "color",
+    "original": "rgb(71 85 105 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-amber-400\\/50:hover",
+    "property": "border-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-amber-400\\/50:hover",
+    "property": "border-top-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-amber-400\\/50:hover",
+    "property": "border-right-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-amber-400\\/50:hover",
+    "property": "border-bottom-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-amber-400\\/50:hover",
+    "property": "border-left-color",
+    "original": "rgba(251, 191, 36, 0.5)",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-line:hover",
+    "property": "border-color",
+    "original": "rgb(43 49 58 / var(--tw-border-opacity, 1))",
+    "roles": [
+      "border-subtle"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-red-400\\/50:hover",
+    "property": "border-color",
+    "original": "rgba(248, 113, 113, 0.5)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-red-400\\/50:hover",
+    "property": "border-top-color",
+    "original": "rgba(248, 113, 113, 0.5)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-red-400\\/50:hover",
+    "property": "border-right-color",
+    "original": "rgba(248, 113, 113, 0.5)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-red-400\\/50:hover",
+    "property": "border-bottom-color",
+    "original": "rgba(248, 113, 113, 0.5)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-red-400\\/50:hover",
+    "property": "border-left-color",
+    "original": "rgba(248, 113, 113, 0.5)",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-slate-500:hover",
+    "property": "border-color",
+    "original": "rgb(100 116 139 / var(--tw-border-opacity, 1))",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-blue-500\\/40:hover",
+    "property": "border-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-blue-500\\/40:hover",
+    "property": "border-top-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-blue-500\\/40:hover",
+    "property": "border-right-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-blue-500\\/40:hover",
+    "property": "border-bottom-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:border-blue-500\\/40:hover",
+    "property": "border-left-color",
+    "original": "rgba(59, 130, 246, 0.4)",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:bg-white\\/5:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.05)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:bg-white\\/\\[\\.03\\]:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.03)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:bg-white\\/\\[\\.04\\]:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.04)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:bg-white\\/\\[\\.05\\]:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.05)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:bg-white\\/\\[\\.06\\]:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.06)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:bg-white\\/\\[\\.24\\]:hover",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.24)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:text-slate-100:hover",
+    "property": "color",
+    "original": "rgb(241 245 249 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:text-slate-200:hover",
+    "property": "color",
+    "original": "rgb(226 232 240 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:text-white:hover",
+    "property": "color",
+    "original": "rgb(255 255 255 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".hover\\:text-blue-300:hover",
+    "property": "color",
+    "original": "rgb(147 197 253 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".active\\:bg-white\\/\\[\\.28\\]:active",
+    "property": "background-color",
+    "original": "rgba(255, 255, 255, 0.28)",
+    "roles": [
+      "interaction-hover"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".group:hover .group-hover\\:text-sky-200",
+    "property": "color",
+    "original": "rgb(186 230 253 / var(--tw-text-opacity, 1))",
+    "roles": [
+      "status-info-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#123029\"]",
+    "property": "fill",
+    "original": "#123029",
+    "roles": [
+      "status-success-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#172b47\"]",
+    "property": "fill",
+    "original": "#172b47",
+    "roles": [
+      "status-running-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#1b1f25\"]",
+    "property": "fill",
+    "original": "#1b1f25",
+    "roles": [
+      "status-paused-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#1d2229\"]",
+    "property": "fill",
+    "original": "#1d2229",
+    "roles": [
+      "status-paused-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#263443\"]",
+    "property": "fill",
+    "original": "#263443",
+    "roles": [
+      "background-inset"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#2a2418\"]",
+    "property": "fill",
+    "original": "#2a2418",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#2c2518\"]",
+    "property": "fill",
+    "original": "#2c2518",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#2d2819\"]",
+    "property": "fill",
+    "original": "#2d2819",
+    "roles": [
+      "status-warning-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#2f9f70\"]",
+    "property": "fill",
+    "original": "#2f9f70",
+    "roles": [
+      "status-success-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#30191c\"]",
+    "property": "fill",
+    "original": "#30191c",
+    "roles": [
+      "status-error-surface"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#3487e8\"]",
+    "property": "fill",
+    "original": "#3487e8",
+    "roles": [
+      "status-info-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#66717f\"]",
+    "property": "fill",
+    "original": "#66717f",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#79d19a\"]",
+    "property": "fill",
+    "original": "#79d19a",
+    "roles": [
+      "status-success-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#8a94a3\"]",
+    "property": "fill",
+    "original": "#8a94a3",
+    "roles": [
+      "text-muted"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#cbd1d9\"]",
+    "property": "fill",
+    "original": "#cbd1d9",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#d49b32\"]",
+    "property": "fill",
+    "original": "#d49b32",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#d4d8de\"]",
+    "property": "fill",
+    "original": "#d4d8de",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#e25b5b\"]",
+    "property": "fill",
+    "original": "#e25b5b",
+    "roles": [
+      "status-error-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#e5e7eb\"]",
+    "property": "fill",
+    "original": "#e5e7eb",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#f1bf55\"]",
+    "property": "fill",
+    "original": "#f1bf55",
+    "roles": [
+      "status-warning-solid"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#f1f5f9\"]",
+    "property": "fill",
+    "original": "#f1f5f9",
+    "roles": [
+      "text-primary"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [fill=\"#ff8f8f\"]",
+    "property": "fill",
+    "original": "#ff8f8f",
+    "roles": [
+      "status-error-text"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#2f9f70\"]",
+    "property": "stroke",
+    "original": "#2f9f70",
+    "roles": [
+      "status-success-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#3487e8\"]",
+    "property": "stroke",
+    "original": "#3487e8",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#3b4450\"]",
+    "property": "stroke",
+    "original": "#3b4450",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#526170\"]",
+    "property": "stroke",
+    "original": "#526170",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#53606e\"]",
+    "property": "stroke",
+    "original": "#53606e",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#546171\"]",
+    "property": "stroke",
+    "original": "#546171",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#586271\"]",
+    "property": "stroke",
+    "original": "#586271",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#5b8def\"]",
+    "property": "stroke",
+    "original": "#5b8def",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#66717f\"]",
+    "property": "stroke",
+    "original": "#66717f",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#697586\"]",
+    "property": "stroke",
+    "original": "#697586",
+    "roles": [
+      "border-default"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#73c6ff\"]",
+    "property": "stroke",
+    "original": "#73c6ff",
+    "roles": [
+      "status-info-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#8d681e\"]",
+    "property": "stroke",
+    "original": "#8d681e",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#d49b32\"]",
+    "property": "stroke",
+    "original": "#d49b32",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#d9f4ff\"]",
+    "property": "stroke",
+    "original": "#d9f4ff",
+    "roles": [
+      "border-strong"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#e25b5b\"]",
+    "property": "stroke",
+    "original": "#e25b5b",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#ff7474\"]",
+    "property": "stroke",
+    "original": "#ff7474",
+    "roles": [
+      "status-error-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "svg [stroke=\"#fff1b2\"]",
+    "property": "stroke",
+    "original": "#fff1b2",
+    "roles": [
+      "status-warning-border"
+    ],
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "html",
+    "roles": {
+      "background-color": "background-shell"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "body",
+    "roles": {
+      "background-color": "background-shell",
+      "color": "text-primary"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar\"]",
+    "roles": {
+      "background-color": "background-sidebar",
+      "color": "text-secondary",
+      "border-color": "border-subtle"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-workspace\"]",
+    "roles": {
+      "background-color": "background-workspace"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-execution-summary\"]",
+    "roles": {
+      "background-color": "background-summary"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"new-task-action\"]",
+    "roles": {
+      "background-color": "background-neutral-action",
+      "color": "text-primary",
+      "border-color": "border-default"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"new-task-action\"]:hover",
+    "roles": {
+      "background-color": "background-neutral-action-hover"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"new-task-action\"]:active",
+    "roles": {
+      "background-color": "interaction-pressed"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"composer-send\"], [data-section-id=\"new-task-empty-state\"] button[aria-label=\"发送\"]",
+    "roles": {
+      "background-color": "interaction-primary",
+      "color": "text-on-primary"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"composer-send\"]:hover",
+    "roles": {
+      "background-color": "interaction-primary-hover"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"composer-send\"]:active",
+    "roles": {
+      "background-color": "interaction-primary-pressed"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-surface-option]:has(input:checked), [data-section-id=\"task-current\"], .sidebar-rail-action[aria-current=\"true\"], .sidebar-rail-action[aria-expanded=\"true\"]",
+    "roles": {
+      "background-color": "interaction-selected",
+      "border-color": "interaction-selected-border",
+      "color": "interaction-selected-text"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"task-current-title\"]",
+    "roles": {
+      "color": "interaction-selected-text"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"sidebar-tooltip\"], [data-sidebar-flyout=\"open\"], [data-section-id=\"gate-decision-queue\"], [data-section-id=\"task-view-options-menu\"]",
+    "roles": {
+      "background-color": "background-floating",
+      "color": "text-primary",
+      "border-color": "border-default"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": ".sidebar-rail-badge",
+    "roles": {
+      "background-color": "status-warning-solid",
+      "color": "text-on-status"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-plan-run-canvas\"], [data-section-id=\"execution-run-map-canvas\"]",
+    "roles": {
+      "background-color": "background-canvas"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"gate-review-overview\"]",
+    "roles": {
+      "background-color": "status-warning-surface",
+      "border-color": "status-warning-border"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"gate-decision-question-title\"]",
+    "roles": {
+      "color": "text-primary"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-running-sweep\"]",
+    "roles": {
+      "stroke": "status-running-solid"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"execution-error-halo\"]",
+    "roles": {
+      "stroke": "status-error-solid"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"harness-preview\"]",
+    "roles": {
+      "background-color": "background-workspace",
+      "color": "text-primary"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-section-id=\"harness-preview\"] p",
+    "roles": {
+      "color": "text-muted"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "[data-brand-deepseek]",
+    "roles": {
+      "color": "brand"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "input[type=\"checkbox\"], input[type=\"radio\"]",
+    "roles": {
+      "accent-color": "interaction-primary"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  },
+  {
+    "selector": "button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible",
+    "roles": {
+      "outline-color": "border-focus"
+    },
+    "source": "semantic component binding",
+    "scope": "page-only; excludes [data-color-scope=\"chart\"] and descendants"
+  }
+]

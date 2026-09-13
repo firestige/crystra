@@ -1,0 +1,14 @@
+/* Shell geometry only. The DSH Input subtree retains its own styling. */
+:root [data-section-id="task-layout-region"] {margin-top:0;padding:0;column-gap:0;}
+:root [data-section-id="control-workspace"] {min-width:0;padding:16px 20px 20px;border-left:1px solid var(--color-border-default);container-type:inline-size;}
+:root [data-section-id="task-execution-summary"] {display:grid;grid-template-columns:126px minmax(0,1fr) 208px 188px 204px;gap:12px;margin:0 0 12px;padding:12px 16px;min-height:88px;flex-shrink:0;overflow:visible;}
+:root [data-section-id="task-execution-summary"]>div {width:auto;min-width:0;padding:0;border-right:0;}
+:root [data-section-id="task-execution-summary"] [data-section-id="run-health"],
+:root [data-section-id="task-execution-summary"] [data-section-id="attention-summary"] {gap:8px;}
+:root [data-section-id="task-execution-summary"] [data-section-id="run-health"]>span,
+:root [data-section-id="task-execution-summary"] [data-section-id="attention-summary"]>span {flex-shrink:0;}
+:root [data-section-id="task-execution-summary"] [data-section-id="run-consumption"] {margin-left:8px;}
+@container (width < 1000px) {
+ :root [data-section-id="task-execution-summary"] {grid-template-columns:repeat(3,minmax(0,1fr));row-gap:12px;}
+ :root [data-section-id="task-execution-summary"]>div:last-child {grid-column:span 2;}
+}

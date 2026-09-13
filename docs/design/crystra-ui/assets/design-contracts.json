@@ -1,0 +1,3181 @@
+{
+  "version": 1,
+  "scope": [
+    "crystra-task-work-v8-sidebar.html",
+    "crystra-task-browser-v8.html",
+    "crystra-workflow-explorer-v8.html",
+    "crystra-analysis-audit-v8.html"
+  ],
+  "excluded": [
+    "crystra-workflow-studio-v8.html"
+  ],
+  "contracts": {
+    "widget-tooltip": {
+      "selectors": ".crystra-widget-tooltip",
+      "documents": [
+        "components/widget-component-contract.md"
+      ]
+    },
+    "configuration-file": {
+      "selectors": "input[type=file]",
+      "documents": [
+        "components/configuration-files.md"
+      ]
+    },
+    "observation-settings": {
+      "selectors": "#result-analysis-review",
+      "documents": [
+        "components/result-analysis-review.md"
+      ]
+    },
+    "delivery-directory": {
+      "selectors": ".delivery-directory",
+      "documents": [
+        "components/delivery-directory-review.md"
+      ]
+    },
+    "trace-waterfall": {
+      "selectors": ".trace-waterfall",
+      "documents": [
+        "components/library/trace-waterfall.md",
+        "pages/analysis-audit.md"
+      ]
+    },
+    "trace-tree": {
+      "selectors": ".trace-tree-graph",
+      "documents": [
+        "components/library/trace-tree.md",
+        "pages/analysis-audit.md"
+      ]
+    },
+    "trace-passport": {
+      "selectors": ".span-passport",
+      "documents": [
+        "components/library/inspector-details.md",
+        "pages/analysis-audit.md"
+      ]
+    },
+    "observation-calendar": {
+      "selectors": ".obs-time-controls,.obs-calendar-popover",
+      "documents": [
+        "pages/analysis-audit.md"
+      ]
+    },
+    "observation-header": {
+      "selectors": "[data-section-id=workspace-header]",
+      "documents": [
+        "pages/analysis-audit.md"
+      ]
+    },
+    "observation-layout": {
+      "selectors": ".obs-layout-editor,.obs-widget-modal",
+      "documents": [
+        "pages/analysis-audit.md",
+        "components/widget-component-contract.md"
+      ]
+    },
+    "observation-widgets": {
+      "selectors": ".dashboard-grid,.obs-topic,.obs-add-widget,.wsr-widget-menu",
+      "documents": [
+        "pages/analysis-audit.md",
+        "components/widget-expression-design.md"
+      ]
+    },
+    "resource-browser": {
+      "selectors": ".browser-host,#browser-rename-dialog,#browser-thumbnail-input,.task-context-menu",
+      "documents": [
+        "pages/task-browser.md",
+        "pages/workflow-explorer.md",
+        "components/component-recipes.md"
+      ]
+    },
+    "search-field": {
+      "selectors": ".wsr-search-field,.wsr-expandable-search",
+      "documents": [
+        "components/search-field-review.md"
+      ]
+    },
+    "region.app-shell": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "app-shell"
+    },
+    "region.sidebar": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar"
+    },
+    "region.sidebar-logo-row": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "sidebar-logo-row"
+    },
+    "region.surface-banner": {
+      "documents": [
+        "foundations/navigation.md",
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "surface-banner"
+    },
+    "region.sidebar-brand-mark": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "sidebar-brand-mark"
+    },
+    "region.sidebar-brand-name": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "sidebar-brand-name"
+    },
+    "region.sidebar-toggle": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "sidebar-toggle"
+    },
+    "region.new-task-action": {
+      "documents": [
+        "foundations/navigation.md",
+        "pages/new-task.md"
+      ],
+      "elementKey": "new-task-action"
+    },
+    "region.new-task-icon": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "new-task-icon"
+    },
+    "region.new-task-label": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "new-task-label"
+    },
+    "region.sidebar-rail": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar-rail"
+    },
+    "region.sidebar-rail-tasks": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar-rail-tasks"
+    },
+    "region.sidebar-rail-task-attention": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar-rail-task-attention"
+    },
+    "region.sidebar-rail-workflows": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar-rail-workflows"
+    },
+    "region.sidebar-rail-analysis": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar-rail-analysis"
+    },
+    "region.task-working-set": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "task-working-set"
+    },
+    "region.task-section-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-header"
+    },
+    "region.task-section-toggle": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-toggle"
+    },
+    "region.task-section-chevron": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-chevron"
+    },
+    "region.task-section-label": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-label"
+    },
+    "region.task-section-attention-badge": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-attention-badge"
+    },
+    "region.task-search-control": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-search-control"
+    },
+    "region.task-search-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-search-action"
+    },
+    "region.task-search-input": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-search-input"
+    },
+    "region.task-search-clear": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-search-clear"
+    },
+    "region.task-section-actions": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-actions"
+    },
+    "region.task-view-options-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-view-options-action"
+    },
+    "region.all-tasks-action": {
+      "documents": [
+        "foundations/navigation.md",
+        "foundations/layout.md"
+      ],
+      "elementKey": "all-tasks-action"
+    },
+    "region.task-view-options-menu": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-view-options-menu"
+    },
+    "region.task-sort-created": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-sort-created"
+    },
+    "region.task-sort-activity": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-sort-activity"
+    },
+    "region.task-filter-all": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-filter-all"
+    },
+    "region.task-filter-active": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-filter-active"
+    },
+    "region.task-section-content": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-section-content"
+    },
+    "region.task-list": {
+      "documents": [
+        "foundations/layout.md"
+      ],
+      "elementKey": "task-list"
+    },
+    "region.task-current": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "task-current"
+    },
+    "region.task-current-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-current-status"
+    },
+    "region.task-current-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-current-title"
+    },
+    "region.task-current-attention-badge": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-current-attention-badge"
+    },
+    "region.task-running": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-running"
+    },
+    "region.task-running-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-running-status"
+    },
+    "region.task-failed": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-failed"
+    },
+    "region.task-failed-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-failed-status"
+    },
+    "region.task-failed-attention-badge": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-failed-attention-badge"
+    },
+    "region.task-complete": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-complete"
+    },
+    "region.task-complete-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "task-complete-status"
+    },
+    "region.workflow-navigation": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "workflow-navigation"
+    },
+    "region.workflow-section-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-section-header"
+    },
+    "region.workflow-section-toggle": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-section-toggle"
+    },
+    "region.workflow-section-chevron": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-section-chevron"
+    },
+    "region.workflow-section-label": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-section-label"
+    },
+    "region.workflow-search-control": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-search-control"
+    },
+    "region.workflow-search-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-search-action"
+    },
+    "region.workflow-search-input": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-search-input"
+    },
+    "region.workflow-search-clear": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-search-clear"
+    },
+    "region.workflow-section-actions": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-section-actions"
+    },
+    "region.workflow-view-options-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-view-options-action"
+    },
+    "region.all-workflows-action": {
+      "documents": [
+        "foundations/navigation.md",
+        "foundations/layout.md"
+      ],
+      "elementKey": "all-workflows-action"
+    },
+    "region.workflow-view-options-menu": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-view-options-menu"
+    },
+    "region.workflow-show-version": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-show-version"
+    },
+    "region.workflow-section-content": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-section-content"
+    },
+    "region.workflow-current-list": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workflow-current-list"
+    },
+    "region.analysis-navigation": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "analysis-navigation"
+    },
+    "region.analysis-section-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-section-header"
+    },
+    "region.analysis-section-toggle": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-section-toggle"
+    },
+    "region.analysis-section-chevron": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-section-chevron"
+    },
+    "region.analysis-section-label": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-section-label"
+    },
+    "region.analysis-section-content": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-section-content"
+    },
+    "region.analysis-secondary-navigation": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-secondary-navigation"
+    },
+    "region.analysis-dashboard-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-dashboard-action"
+    },
+    "region.analysis-traces-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-traces-action"
+    },
+    "region.analysis-reports-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "analysis-reports-action"
+    },
+    "region.sidebar-footer": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "sidebar-footer"
+    },
+    "region.host-settings": {
+      "documents": [
+        "foundations/navigation.md",
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "host-settings"
+    },
+    "region.task-workspace": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "task-workspace"
+    },
+    "region.new-task-empty-state": {
+      "documents": [
+        "pages/new-task.md"
+      ],
+      "elementKey": "new-task-empty-state"
+    },
+    "region.new-task-composer-seat": {
+      "documents": [
+        "components/input-and-host-slots.md",
+        "pages/new-task.md"
+      ],
+      "elementKey": "new-task-composer-seat"
+    },
+    "region.new-task-hero-composer-placeholder": {
+      "documents": [
+        "components/input-and-host-slots.md"
+      ],
+      "elementKey": "new-task-hero-composer-placeholder"
+    },
+    "region.hero-composer-add": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "hero-composer-add"
+    },
+    "region.hero-composer-write-mode": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "hero-composer-write-mode"
+    },
+    "region.hero-composer-send": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "hero-composer-send"
+    },
+    "region.workspace-header": {
+      "documents": [
+        "foundations/layout.md",
+        "pages/workflow-studio.md",
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "workspace-header"
+    },
+    "region.task-context": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "task-context"
+    },
+    "region.task-layout-region": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "task-layout-region"
+    },
+    "region.input-stream": {
+      "documents": [
+        "components/input-and-host-slots.md",
+        "pages/workflow-studio.md",
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "input-stream"
+    },
+    "region.conversation-feed": {
+      "documents": [
+        "foundations/layout.md",
+        "components/input-and-host-slots.md"
+      ],
+      "elementKey": "conversation-feed"
+    },
+    "region.input-approval-card": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "input-approval-card"
+    },
+    "region.input-approval-submit": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "input-approval-submit"
+    },
+    "region.composer": {
+      "documents": [
+        "components/input-and-host-slots.md",
+        "pages/workflow-studio.md"
+      ],
+      "elementKey": "composer"
+    },
+    "region.composer-reply-subject": {
+      "documents": [
+        "components/input-and-host-slots.md",
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "composer-reply-subject"
+    },
+    "region.composer-reply-subject-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "composer-reply-subject-copy"
+    },
+    "region.composer-reply-subject-clear": {
+      "documents": [
+        "components/input-and-host-slots.md"
+      ],
+      "elementKey": "composer-reply-subject-clear"
+    },
+    "region.composer-add": {
+      "documents": [
+        "components/input-and-host-slots.md"
+      ],
+      "elementKey": "composer-add"
+    },
+    "region.composer-write-mode": {
+      "documents": [
+        "components/input-and-host-slots.md"
+      ],
+      "elementKey": "composer-write-mode"
+    },
+    "region.composer-send": {
+      "documents": [
+        "components/input-and-host-slots.md"
+      ],
+      "elementKey": "composer-send"
+    },
+    "region.control-workspace": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "control-workspace"
+    },
+    "region.control-workspace-scroll-region": {
+      "documents": [
+        "foundations/layout.md"
+      ],
+      "elementKey": "control-workspace-scroll-region"
+    },
+    "region.task-execution-summary": {
+      "documents": [
+        "foundations/layout.md",
+        "components/review-surfaces.md",
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "task-execution-summary"
+    },
+    "region.run-health": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "run-health"
+    },
+    "region.current-activity": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "current-activity"
+    },
+    "region.execution-counts": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-counts"
+    },
+    "region.attention-summary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "attention-summary"
+    },
+    "region.attention-open-gates": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "attention-open-gates"
+    },
+    "region.latest-activity": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "latest-activity"
+    },
+    "region.run-consumption": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "run-consumption"
+    },
+    "region.task-workbench-navigation": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "task-workbench-navigation"
+    },
+    "region.workbench-nav-grilling": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workbench-nav-grilling"
+    },
+    "region.preview-surface-grilling": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "preview-surface-grilling"
+    },
+    "region.workbench-nav-plan": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workbench-nav-plan"
+    },
+    "region.preview-surface-plan": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "preview-surface-plan"
+    },
+    "region.workbench-nav-execution": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workbench-nav-execution"
+    },
+    "region.preview-surface-execution": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "preview-surface-execution"
+    },
+    "region.workbench-system-focus": {
+      "documents": [
+        "pages/task-detail/README.md"
+      ],
+      "elementKey": "workbench-system-focus"
+    },
+    "region.workbench-nav-gate": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workbench-nav-gate"
+    },
+    "region.preview-surface-gate": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "preview-surface-gate"
+    },
+    "region.workbench-nav-delivery": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "workbench-nav-delivery"
+    },
+    "region.preview-surface-delivery": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "preview-surface-delivery"
+    },
+    "region.gate-review-workbench": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-review-workbench"
+    },
+    "region.gate-main-view": {
+      "documents": [
+        "components/context-viewers.md",
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-main-view"
+    },
+    "region.gate-review-overview": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-review-overview"
+    },
+    "region.gate-queue-navigation": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-queue-navigation"
+    },
+    "region.gate-queue-toggle": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-queue-toggle"
+    },
+    "region.gate-queue-count": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-queue-count"
+    },
+    "region.gate-queue-position": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-queue-position"
+    },
+    "region.gate-current-impact": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-current-impact"
+    },
+    "region.gate-decision-queue": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-decision-queue"
+    },
+    "region.gate-queue-item-g3": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-queue-item-g3"
+    },
+    "region.gate-queue-item-g5": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-queue-item-g5"
+    },
+    "region.gate-queue-item-g6": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-queue-item-g6"
+    },
+    "region.gate-decision-question": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-decision-question"
+    },
+    "region.gate-decision-question-kicker": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-decision-question-kicker"
+    },
+    "region.gate-decision-question-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-decision-question-title"
+    },
+    "region.gate-trigger-context": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-trigger-context"
+    },
+    "region.gate-location-context": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-location-context"
+    },
+    "region.gate-decision-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-decision-status"
+    },
+    "region.gate-decision-board": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-decision-board"
+    },
+    "region.gate-decision-state": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-decision-state"
+    },
+    "region.gate-relevant-decisions": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-relevant-decisions"
+    },
+    "region.gate-relevant-decisions-count": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-relevant-decisions-count"
+    },
+    "region.gate-relevant-decisions-list": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-relevant-decisions-list"
+    },
+    "region.gate-current-interpretation": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-current-interpretation"
+    },
+    "region.gate-current-interpretation-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-current-interpretation-status"
+    },
+    "region.gate-current-interpretation-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-current-interpretation-copy"
+    },
+    "region.gate-understanding-delta": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-understanding-delta"
+    },
+    "region.gate-understanding-delta-list": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-understanding-delta-list"
+    },
+    "region.gate-execution-preview": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-execution-preview"
+    },
+    "region.gate-execution-preview-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-execution-preview-title"
+    },
+    "region.gate-execution-preview-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-execution-preview-status"
+    },
+    "region.gate-execution-steps": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-execution-steps"
+    },
+    "region.gate-preserved-boundary": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-preserved-boundary"
+    },
+    "region.gate-preserved-boundary-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-preserved-boundary-copy"
+    },
+    "region.gate-evidence": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence"
+    },
+    "region.gate-evidence-plan-context": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-evidence-plan-context"
+    },
+    "region.gate-evidence-plan-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-plan-title"
+    },
+    "region.gate-evidence-plan-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-plan-copy"
+    },
+    "region.gate-evidence-plan-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-plan-action"
+    },
+    "region.gate-evidence-trigger-record": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-evidence-trigger-record"
+    },
+    "region.gate-evidence-trigger-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-trigger-title"
+    },
+    "region.gate-evidence-trigger-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-trigger-copy"
+    },
+    "region.gate-evidence-trigger-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-trigger-action"
+    },
+    "region.gate-evidence-proposed-change": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-evidence-proposed-change"
+    },
+    "region.gate-evidence-change-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-change-title"
+    },
+    "region.gate-evidence-change-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-change-copy"
+    },
+    "region.gate-evidence-change-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-change-action"
+    },
+    "region.gate-evidence-validation-result": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-evidence-validation-result"
+    },
+    "region.gate-evidence-validation-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-validation-title"
+    },
+    "region.gate-evidence-validation-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-validation-copy"
+    },
+    "region.gate-evidence-validation-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-validation-action"
+    },
+    "region.gate-evidence-governing-decision": {
+      "documents": [
+        "pages/task-detail/gate.md"
+      ],
+      "elementKey": "gate-evidence-governing-decision"
+    },
+    "region.gate-evidence-decision-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-decision-title"
+    },
+    "region.gate-evidence-decision-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-decision-copy"
+    },
+    "region.gate-evidence-decision-action": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-evidence-decision-action"
+    },
+    "region.gate-context-inspector": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-inspector"
+    },
+    "region.gate-context-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-header"
+    },
+    "region.gate-context-back": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-back"
+    },
+    "region.gate-context-kind": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-kind"
+    },
+    "region.gate-context-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-title"
+    },
+    "region.gate-context-revision": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-revision"
+    },
+    "region.gate-context-body": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-body"
+    },
+    "region.gate-context-summary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-summary"
+    },
+    "region.gate-context-summary-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-summary-copy"
+    },
+    "region.gate-context-detail-grid": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-detail-grid"
+    },
+    "region.gate-context-primary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-primary"
+    },
+    "region.gate-context-primary-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-primary-title"
+    },
+    "region.gate-context-primary-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-primary-copy"
+    },
+    "region.gate-context-secondary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-secondary"
+    },
+    "region.gate-context-secondary-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-secondary-title"
+    },
+    "region.gate-context-secondary-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-secondary-copy"
+    },
+    "region.gate-context-provenance": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-provenance"
+    },
+    "region.gate-context-provenance-fields": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "gate-context-provenance-fields"
+    },
+    "region.grilling-workbench": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "grilling-workbench"
+    },
+    "region.grilling-overview": {
+      "documents": [
+        "pages/task-detail/grilling.md"
+      ],
+      "elementKey": "grilling-overview"
+    },
+    "region.grilling-question-map": {
+      "documents": [
+        "pages/task-detail/grilling.md"
+      ],
+      "elementKey": "grilling-question-map"
+    },
+    "region.grilling-live-brief": {
+      "documents": [
+        "pages/task-detail/grilling.md"
+      ],
+      "elementKey": "grilling-live-brief"
+    },
+    "region.grilling-brief-changes": {
+      "documents": [
+        "pages/task-detail/grilling.md"
+      ],
+      "elementKey": "grilling-brief-changes"
+    },
+    "region.plan-workbench": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-workbench"
+    },
+    "region.plan-document-viewer": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-document-viewer"
+    },
+    "region.plan-document-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-document-header"
+    },
+    "region.plan-document-back": {
+      "documents": [
+        "components/context-viewers.md",
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-document-back"
+    },
+    "region.plan-document-page": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-document-page"
+    },
+    "region.plan-document-outline": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-document-outline"
+    },
+    "region.plan-document-dag-chapter-entry": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-document-dag-chapter-entry"
+    },
+    "region.plan-document-content": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-document-content"
+    },
+    "region.plan-linked-gate-context": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-linked-gate-context"
+    },
+    "region.plan-linked-gate-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-linked-gate-copy"
+    },
+    "region.plan-document-wave-anchor": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-document-wave-anchor"
+    },
+    "region.plan-full-dag": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-full-dag"
+    },
+    "region.plan-dag-toolbar": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-toolbar"
+    },
+    "region.plan-dag-document-back": {
+      "documents": [
+        "components/context-viewers.md",
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-dag-document-back"
+    },
+    "region.plan-dag-search": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-dag-search"
+    },
+    "region.plan-dag-collapse-branches": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-dag-collapse-branches"
+    },
+    "region.plan-dag-zoom-out": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-zoom-out"
+    },
+    "region.plan-dag-zoom-in": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-zoom-in"
+    },
+    "region.plan-dag-fit-view": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-fit-view"
+    },
+    "region.plan-dag-viewport": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-viewport"
+    },
+    "region.plan-dag-canvas": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-canvas"
+    },
+    "region.plan-dag-grid": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-grid"
+    },
+    "region.plan-dag-minimap": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-minimap"
+    },
+    "region.plan-dag-node-details": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-node-details"
+    },
+    "region.plan-dag-node-title": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-dag-node-title"
+    },
+    "region.plan-summary": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-summary"
+    },
+    "region.plan-overview": {
+      "documents": [
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-overview"
+    },
+    "region.plan-document-entry": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-document-entry"
+    },
+    "region.plan-outcome-summary": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-outcome-summary"
+    },
+    "region.plan-dag-projection": {
+      "documents": [
+        "components/context-viewers.md",
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-dag-projection"
+    },
+    "region.plan-dag-entry": {
+      "documents": [
+        "pages/task-detail/plan.md"
+      ],
+      "elementKey": "plan-dag-entry"
+    },
+    "region.plan-readiness-summaries": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-readiness-summaries"
+    },
+    "region.plan-control-envelope-summary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-control-envelope-summary"
+    },
+    "region.plan-proof-readiness": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-proof-readiness"
+    },
+    "region.plan-context-health": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-context-health"
+    },
+    "region.plan-attention-summary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-attention-summary"
+    },
+    "region.plan-change-summary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "plan-change-summary"
+    },
+    "region.execution-workbench": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-workbench"
+    },
+    "region.execution-plan-run-overview": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-plan-run-overview"
+    },
+    "region.execution-plan-run-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-run-header"
+    },
+    "region.execution-plan-run-summary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-run-summary"
+    },
+    "region.execution-plan-run-map": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-run-map"
+    },
+    "region.execution-plan-run-canvas": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-run-canvas"
+    },
+    "region.execution-plan-edge-arrows": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-edge-arrows"
+    },
+    "region.execution-plan-node-goal": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-node-goal"
+    },
+    "region.execution-plan-wave-0": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-wave-0"
+    },
+    "region.execution-plan-wave-1a": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-wave-1a"
+    },
+    "region.execution-plan-wave-1b": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-wave-1b"
+    },
+    "region.execution-plan-wave-2": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-wave-2"
+    },
+    "region.execution-plan-gate": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-gate"
+    },
+    "region.execution-plan-frontier": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-frontier"
+    },
+    "region.execution-plan-wave-outcome": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-plan-wave-outcome"
+    },
+    "region.execution-wave-run-detail": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-wave-run-detail"
+    },
+    "region.execution-wave-run-toolbar": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-run-toolbar"
+    },
+    "region.execution-level-breadcrumb": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-level-breadcrumb"
+    },
+    "region.execution-wave-run-back": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-wave-run-back"
+    },
+    "region.execution-wave-run-metadata-toggle": {
+      "documents": [
+        "components/context-viewers.md",
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-wave-run-metadata-toggle"
+    },
+    "region.execution-wave-run-metadata-chevron": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-run-metadata-chevron"
+    },
+    "region.execution-wave-run-analysis-link": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-wave-run-analysis-link"
+    },
+    "region.execution-wave-run-metadata": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-run-metadata"
+    },
+    "region.execution-wave-metadata-plan-run": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-metadata-plan-run"
+    },
+    "region.execution-wave-copy-plan-run": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-copy-plan-run"
+    },
+    "region.execution-wave-metadata-wave": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-metadata-wave"
+    },
+    "region.execution-wave-copy-wave": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-copy-wave"
+    },
+    "region.execution-wave-metadata-workflow": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-metadata-workflow"
+    },
+    "region.execution-wave-copy-workflow": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-copy-workflow"
+    },
+    "region.execution-wave-metadata-run": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-metadata-run"
+    },
+    "region.execution-wave-copy-run": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-copy-run"
+    },
+    "region.execution-wave-metadata-trace-root": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-metadata-trace-root"
+    },
+    "region.execution-wave-copy-trace-root": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-wave-copy-trace-root"
+    },
+    "region.execution-dashboard": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-dashboard"
+    },
+    "region.execution-dashboard-header": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-dashboard-header"
+    },
+    "region.execution-dashboard-health": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-dashboard-health"
+    },
+    "region.execution-effects-toggle": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-effects-toggle"
+    },
+    "region.execution-effects-indicator": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-effects-indicator"
+    },
+    "region.execution-effects-label": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-effects-label"
+    },
+    "region.execution-observability-slots": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-observability-slots"
+    },
+    "region.execution-speed-signal": {
+      "documents": [
+        "components/graph-projections.md",
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-speed-signal"
+    },
+    "region.execution-speed-signal-dot": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-speed-signal-dot"
+    },
+    "region.execution-speed-signal-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-speed-signal-copy"
+    },
+    "region.execution-error-signal": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-error-signal"
+    },
+    "region.execution-observability-extension-slot": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-observability-extension-slot"
+    },
+    "region.execution-workflow-run-map": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-workflow-run-map"
+    },
+    "region.execution-run-map-heading": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-run-map-heading"
+    },
+    "region.execution-legend-success": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-legend-success"
+    },
+    "region.execution-legend-running": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-legend-running"
+    },
+    "region.execution-legend-failed": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-legend-failed"
+    },
+    "region.execution-legend-paused": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-legend-paused"
+    },
+    "region.execution-legend-gate": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-legend-gate"
+    },
+    "region.execution-run-map-viewport": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-run-map-viewport"
+    },
+    "region.execution-run-map-canvas": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-run-map-canvas"
+    },
+    "region.execution-observed-path": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-observed-path"
+    },
+    "region.execution-edge-success": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-edge-success"
+    },
+    "region.execution-edge-running": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-edge-running"
+    },
+    "region.execution-edge-degraded": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-edge-degraded"
+    },
+    "region.execution-edge-failed": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-edge-failed"
+    },
+    "region.execution-edge-paused": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-edge-paused"
+    },
+    "region.execution-next-action-frontier": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-next-action-frontier"
+    },
+    "region.execution-flow-particles": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-flow-particles"
+    },
+    "region.execution-running-sweep": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-running-sweep"
+    },
+    "region.execution-degraded-sweep": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-degraded-sweep"
+    },
+    "region.execution-edge-arrowheads": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-edge-arrowheads"
+    },
+    "region.execution-pace-arrowhead": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-pace-arrowhead"
+    },
+    "region.execution-node-goal": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-goal"
+    },
+    "region.execution-node-rules": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-rules"
+    },
+    "region.execution-node-security": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-security"
+    },
+    "region.execution-node-build": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-build"
+    },
+    "region.execution-running-halo": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-running-halo"
+    },
+    "region.execution-current-node-body": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-body"
+    },
+    "region.execution-current-node-map-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-map-status"
+    },
+    "region.execution-node-docs": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-docs"
+    },
+    "region.execution-error-halo": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-error-halo"
+    },
+    "region.execution-node-paused": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-paused"
+    },
+    "region.execution-node-sandbox": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-sandbox"
+    },
+    "region.execution-loop-control": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-loop-control"
+    },
+    "region.execution-loop-decision": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-loop-decision"
+    },
+    "region.execution-loop-return": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-loop-return"
+    },
+    "region.execution-node-gate": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-node-gate"
+    },
+    "region.execution-run-frontier": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-run-frontier"
+    },
+    "region.execution-run-event-strip": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-run-event-strip"
+    },
+    "region.execution-run-pace-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-run-pace-copy"
+    },
+    "region.execution-current-node": {
+      "documents": [
+        "pages/task-detail/execution.md"
+      ],
+      "elementKey": "execution-current-node"
+    },
+    "region.execution-current-node-status": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-status"
+    },
+    "region.execution-current-node-progress": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-progress"
+    },
+    "region.execution-current-node-progress-value": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-progress-value"
+    },
+    "region.execution-current-node-progress-bar": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-progress-bar"
+    },
+    "region.execution-current-node-duration-copy": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-duration-copy"
+    },
+    "region.execution-current-output": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-output"
+    },
+    "region.execution-current-node-checks": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-checks"
+    },
+    "region.execution-current-node-active-check": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-active-check"
+    },
+    "region.execution-current-node-active-dot": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-current-node-active-dot"
+    },
+    "region.execution-next-boundary": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "execution-next-boundary"
+    },
+    "region.delivery-workbench": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "delivery-workbench"
+    },
+    "region.delivery-current-readiness": {
+      "documents": [
+        "pages/task-detail/delivery.md"
+      ],
+      "elementKey": "delivery-current-readiness"
+    },
+    "region.delivery-readiness-invalidated-by-input": {
+      "documents": [
+        "pages/task-detail/delivery.md"
+      ],
+      "elementKey": "delivery-readiness-invalidated-by-input"
+    },
+    "region.delivery-artifacts": {
+      "documents": [
+        "pages/task-detail/delivery.md"
+      ],
+      "elementKey": "delivery-artifacts"
+    },
+    "region.delivery-acceptance": {
+      "documents": [
+        "pages/task-detail/delivery.md"
+      ],
+      "elementKey": "delivery-acceptance"
+    },
+    "region.delivery-residual-risk": {
+      "documents": [
+        "pages/task-detail/delivery.md"
+      ],
+      "elementKey": "delivery-residual-risk"
+    },
+    "region.delivery-economics": {
+      "documents": [
+        "pages/task-detail/delivery.md"
+      ],
+      "elementKey": "delivery-economics"
+    },
+    "region.better-sidebar-edge-handle": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "better-sidebar-edge-handle"
+    },
+    "region.better-sidebar-toggle": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "better-sidebar-toggle"
+    },
+    "region.better-sidebar-handle-icon": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "better-sidebar-handle-icon"
+    },
+    "region.better-sidebar-surface": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "better-sidebar-surface"
+    },
+    "region.better-sidebar-close": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "better-sidebar-close"
+    },
+    "region.better-sidebar-host-slot": {
+      "documents": [
+        "components/shell-and-sidebar.md"
+      ],
+      "elementKey": "better-sidebar-host-slot"
+    },
+    "region.harness-preview": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "harness-preview"
+    },
+    "region.sidebar-tooltip": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "sidebar-tooltip"
+    },
+    "region.icon-preview": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "icon-preview"
+    },
+    "region.icon-candidate-name": {
+      "documents": [
+        "pages/task-detail/README.md",
+        "components/context-viewers.md"
+      ],
+      "elementKey": "icon-candidate-name"
+    },
+    "region.main-surface-host": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "main-surface-host"
+    },
+    "region.task-browser-header": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-header"
+    },
+    "region.task-browser-search": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-search"
+    },
+    "region.task-browser-toolbar": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-toolbar"
+    },
+    "region.browser-sort-toggle": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-sort-toggle"
+    },
+    "region.browser-sort-menu": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-sort-menu"
+    },
+    "region.browser-view-toggle-seat": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-view-toggle-seat"
+    },
+    "region.browser-archive": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-archive"
+    },
+    "region.browser-archive-tooltip": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-archive-tooltip"
+    },
+    "region.task-browser-content": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-content"
+    },
+    "region.browser-select-all": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-select-all"
+    },
+    "region.browser-result-count": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-result-count"
+    },
+    "region.browser-batch-actions": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-batch-actions"
+    },
+    "region.browser-selected-count": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-selected-count"
+    },
+    "region.browser-clear-selection": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-clear-selection"
+    },
+    "region.browser-group-label": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-group-label"
+    },
+    "region.browser-group": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-group"
+    },
+    "region.task-browser-gallery": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-gallery"
+    },
+    "region.task-browser-list": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-list"
+    },
+    "region.browser-list-body": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-list-body"
+    },
+    "region.browser-empty": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-empty"
+    },
+    "region.task-browser-pagination": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "task-browser-pagination"
+    },
+    "region.browser-page-size": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-page-size"
+    },
+    "region.browser-page-label": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-page-label"
+    },
+    "region.browser-prev": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-prev"
+    },
+    "region.browser-next": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-next"
+    },
+    "region.browser-archive-notice": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-archive-notice"
+    },
+    "region.browser-archive-message": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-archive-message"
+    },
+    "region.browser-undo-archive": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-undo-archive"
+    },
+    "region.browser-dismiss-notice": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-dismiss-notice"
+    },
+    "region.browser-thumbnail-input": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-thumbnail-input"
+    },
+    "region.browser-rename-dialog": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-rename-dialog"
+    },
+    "region.browser-rename-form": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-rename-form"
+    },
+    "region.browser-rename-title": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-rename-title"
+    },
+    "region.browser-rename-input": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-rename-input"
+    },
+    "region.browser-rename-cancel": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-rename-cancel"
+    },
+    "region.browser-rename-save": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-rename-save"
+    },
+    "region.browser-edit-notice": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-edit-notice"
+    },
+    "region.browser-edit-message": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-edit-message"
+    },
+    "region.browser-edit-dismiss": {
+      "documents": [
+        "pages/task-browser.md"
+      ],
+      "elementKey": "browser-edit-dismiss"
+    },
+    "region.workflow-explorer-header": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-header"
+    },
+    "region.workflow-explorer-search": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-search"
+    },
+    "region.workflow-explorer-toolbar": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-toolbar"
+    },
+    "region.workflow-explorer-content": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-content"
+    },
+    "region.workflow-explorer-gallery": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-gallery"
+    },
+    "region.workflow-explorer-list": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-list"
+    },
+    "region.workflow-explorer-pagination": {
+      "documents": [
+        "pages/workflow-explorer.md"
+      ],
+      "elementKey": "workflow-explorer-pagination"
+    },
+    "region.workbench-root": {
+      "documents": [
+        "pages/analysis-audit.md"
+      ],
+      "elementKey": "workbench-root"
+    },
+    "region.workbench-host-input": {
+      "documents": [
+        "pages/analysis-audit.md"
+      ],
+      "elementKey": "workbench-host-input"
+    }
+  },
+  "staticKeys": {
+    "app-shell": "region.app-shell",
+    "sidebar": "region.sidebar",
+    "sidebar-logo-row": "region.sidebar-logo-row",
+    "surface-banner": "region.surface-banner",
+    "sidebar-brand-mark": "region.sidebar-brand-mark",
+    "sidebar-brand-name": "region.sidebar-brand-name",
+    "sidebar-toggle": "region.sidebar-toggle",
+    "new-task-action": "region.new-task-action",
+    "new-task-icon": "region.new-task-icon",
+    "new-task-label": "region.new-task-label",
+    "sidebar-rail": "region.sidebar-rail",
+    "sidebar-rail-tasks": "region.sidebar-rail-tasks",
+    "sidebar-rail-task-attention": "region.sidebar-rail-task-attention",
+    "sidebar-rail-workflows": "region.sidebar-rail-workflows",
+    "sidebar-rail-analysis": "region.sidebar-rail-analysis",
+    "task-working-set": "region.task-working-set",
+    "task-section-header": "region.task-section-header",
+    "task-section-toggle": "region.task-section-toggle",
+    "task-section-chevron": "region.task-section-chevron",
+    "task-section-label": "region.task-section-label",
+    "task-section-attention-badge": "region.task-section-attention-badge",
+    "task-search-control": "region.task-search-control",
+    "task-search-action": "region.task-search-action",
+    "task-search-input": "region.task-search-input",
+    "task-search-clear": "region.task-search-clear",
+    "task-section-actions": "region.task-section-actions",
+    "task-view-options-action": "region.task-view-options-action",
+    "all-tasks-action": "region.all-tasks-action",
+    "task-view-options-menu": "region.task-view-options-menu",
+    "task-sort-created": "region.task-sort-created",
+    "task-sort-activity": "region.task-sort-activity",
+    "task-filter-all": "region.task-filter-all",
+    "task-filter-active": "region.task-filter-active",
+    "task-section-content": "region.task-section-content",
+    "task-list": "region.task-list",
+    "task-current": "region.task-current",
+    "task-current-status": "region.task-current-status",
+    "task-current-title": "region.task-current-title",
+    "task-current-attention-badge": "region.task-current-attention-badge",
+    "task-running": "region.task-running",
+    "task-running-status": "region.task-running-status",
+    "task-failed": "region.task-failed",
+    "task-failed-status": "region.task-failed-status",
+    "task-failed-attention-badge": "region.task-failed-attention-badge",
+    "task-complete": "region.task-complete",
+    "task-complete-status": "region.task-complete-status",
+    "workflow-navigation": "region.workflow-navigation",
+    "workflow-section-header": "region.workflow-section-header",
+    "workflow-section-toggle": "region.workflow-section-toggle",
+    "workflow-section-chevron": "region.workflow-section-chevron",
+    "workflow-section-label": "region.workflow-section-label",
+    "workflow-search-control": "region.workflow-search-control",
+    "workflow-search-action": "region.workflow-search-action",
+    "workflow-search-input": "region.workflow-search-input",
+    "workflow-search-clear": "region.workflow-search-clear",
+    "workflow-section-actions": "region.workflow-section-actions",
+    "workflow-view-options-action": "region.workflow-view-options-action",
+    "all-workflows-action": "region.all-workflows-action",
+    "workflow-view-options-menu": "region.workflow-view-options-menu",
+    "workflow-show-version": "region.workflow-show-version",
+    "workflow-section-content": "region.workflow-section-content",
+    "workflow-current-list": "region.workflow-current-list",
+    "analysis-navigation": "region.analysis-navigation",
+    "analysis-section-header": "region.analysis-section-header",
+    "analysis-section-toggle": "region.analysis-section-toggle",
+    "analysis-section-chevron": "region.analysis-section-chevron",
+    "analysis-section-label": "region.analysis-section-label",
+    "analysis-section-content": "region.analysis-section-content",
+    "analysis-secondary-navigation": "region.analysis-secondary-navigation",
+    "analysis-dashboard-action": "region.analysis-dashboard-action",
+    "analysis-traces-action": "region.analysis-traces-action",
+    "analysis-reports-action": "region.analysis-reports-action",
+    "sidebar-footer": "region.sidebar-footer",
+    "host-settings": "region.host-settings",
+    "task-workspace": "region.task-workspace",
+    "new-task-empty-state": "region.new-task-empty-state",
+    "new-task-composer-seat": "region.new-task-composer-seat",
+    "new-task-hero-composer-placeholder": "region.new-task-hero-composer-placeholder",
+    "hero-composer-add": "region.hero-composer-add",
+    "hero-composer-write-mode": "region.hero-composer-write-mode",
+    "hero-composer-send": "region.hero-composer-send",
+    "workspace-header": "region.workspace-header",
+    "task-context": "region.task-context",
+    "task-layout-region": "region.task-layout-region",
+    "input-stream": "region.input-stream",
+    "conversation-feed": "region.conversation-feed",
+    "input-approval-card": "region.input-approval-card",
+    "input-approval-submit": "region.input-approval-submit",
+    "composer": "region.composer",
+    "composer-reply-subject": "region.composer-reply-subject",
+    "composer-reply-subject-copy": "region.composer-reply-subject-copy",
+    "composer-reply-subject-clear": "region.composer-reply-subject-clear",
+    "composer-add": "region.composer-add",
+    "composer-write-mode": "region.composer-write-mode",
+    "composer-send": "region.composer-send",
+    "control-workspace": "region.control-workspace",
+    "control-workspace-scroll-region": "region.control-workspace-scroll-region",
+    "task-execution-summary": "region.task-execution-summary",
+    "run-health": "region.run-health",
+    "current-activity": "region.current-activity",
+    "execution-counts": "region.execution-counts",
+    "attention-summary": "region.attention-summary",
+    "attention-open-gates": "region.attention-open-gates",
+    "latest-activity": "region.latest-activity",
+    "run-consumption": "region.run-consumption",
+    "task-workbench-navigation": "region.task-workbench-navigation",
+    "workbench-nav-grilling": "region.workbench-nav-grilling",
+    "preview-surface-grilling": "region.preview-surface-grilling",
+    "workbench-nav-plan": "region.workbench-nav-plan",
+    "preview-surface-plan": "region.preview-surface-plan",
+    "workbench-nav-execution": "region.workbench-nav-execution",
+    "preview-surface-execution": "region.preview-surface-execution",
+    "workbench-system-focus": "region.workbench-system-focus",
+    "workbench-nav-gate": "region.workbench-nav-gate",
+    "preview-surface-gate": "region.preview-surface-gate",
+    "workbench-nav-delivery": "region.workbench-nav-delivery",
+    "preview-surface-delivery": "region.preview-surface-delivery",
+    "gate-review-workbench": "region.gate-review-workbench",
+    "gate-main-view": "region.gate-main-view",
+    "gate-review-overview": "region.gate-review-overview",
+    "gate-queue-navigation": "region.gate-queue-navigation",
+    "gate-queue-toggle": "region.gate-queue-toggle",
+    "gate-queue-count": "region.gate-queue-count",
+    "gate-queue-position": "region.gate-queue-position",
+    "gate-current-impact": "region.gate-current-impact",
+    "gate-decision-queue": "region.gate-decision-queue",
+    "gate-queue-item-g3": "region.gate-queue-item-g3",
+    "gate-queue-item-g5": "region.gate-queue-item-g5",
+    "gate-queue-item-g6": "region.gate-queue-item-g6",
+    "gate-decision-question": "region.gate-decision-question",
+    "gate-decision-question-kicker": "region.gate-decision-question-kicker",
+    "gate-decision-question-title": "region.gate-decision-question-title",
+    "gate-trigger-context": "region.gate-trigger-context",
+    "gate-location-context": "region.gate-location-context",
+    "gate-decision-status": "region.gate-decision-status",
+    "gate-decision-board": "region.gate-decision-board",
+    "gate-decision-state": "region.gate-decision-state",
+    "gate-relevant-decisions": "region.gate-relevant-decisions",
+    "gate-relevant-decisions-count": "region.gate-relevant-decisions-count",
+    "gate-relevant-decisions-list": "region.gate-relevant-decisions-list",
+    "gate-current-interpretation": "region.gate-current-interpretation",
+    "gate-current-interpretation-status": "region.gate-current-interpretation-status",
+    "gate-current-interpretation-copy": "region.gate-current-interpretation-copy",
+    "gate-understanding-delta": "region.gate-understanding-delta",
+    "gate-understanding-delta-list": "region.gate-understanding-delta-list",
+    "gate-execution-preview": "region.gate-execution-preview",
+    "gate-execution-preview-title": "region.gate-execution-preview-title",
+    "gate-execution-preview-status": "region.gate-execution-preview-status",
+    "gate-execution-steps": "region.gate-execution-steps",
+    "gate-preserved-boundary": "region.gate-preserved-boundary",
+    "gate-preserved-boundary-copy": "region.gate-preserved-boundary-copy",
+    "gate-evidence": "region.gate-evidence",
+    "gate-evidence-plan-context": "region.gate-evidence-plan-context",
+    "gate-evidence-plan-title": "region.gate-evidence-plan-title",
+    "gate-evidence-plan-copy": "region.gate-evidence-plan-copy",
+    "gate-evidence-plan-action": "region.gate-evidence-plan-action",
+    "gate-evidence-trigger-record": "region.gate-evidence-trigger-record",
+    "gate-evidence-trigger-title": "region.gate-evidence-trigger-title",
+    "gate-evidence-trigger-copy": "region.gate-evidence-trigger-copy",
+    "gate-evidence-trigger-action": "region.gate-evidence-trigger-action",
+    "gate-evidence-proposed-change": "region.gate-evidence-proposed-change",
+    "gate-evidence-change-title": "region.gate-evidence-change-title",
+    "gate-evidence-change-copy": "region.gate-evidence-change-copy",
+    "gate-evidence-change-action": "region.gate-evidence-change-action",
+    "gate-evidence-validation-result": "region.gate-evidence-validation-result",
+    "gate-evidence-validation-title": "region.gate-evidence-validation-title",
+    "gate-evidence-validation-copy": "region.gate-evidence-validation-copy",
+    "gate-evidence-validation-action": "region.gate-evidence-validation-action",
+    "gate-evidence-governing-decision": "region.gate-evidence-governing-decision",
+    "gate-evidence-decision-title": "region.gate-evidence-decision-title",
+    "gate-evidence-decision-copy": "region.gate-evidence-decision-copy",
+    "gate-evidence-decision-action": "region.gate-evidence-decision-action",
+    "gate-context-inspector": "region.gate-context-inspector",
+    "gate-context-header": "region.gate-context-header",
+    "gate-context-back": "region.gate-context-back",
+    "gate-context-kind": "region.gate-context-kind",
+    "gate-context-title": "region.gate-context-title",
+    "gate-context-revision": "region.gate-context-revision",
+    "gate-context-body": "region.gate-context-body",
+    "gate-context-summary": "region.gate-context-summary",
+    "gate-context-summary-copy": "region.gate-context-summary-copy",
+    "gate-context-detail-grid": "region.gate-context-detail-grid",
+    "gate-context-primary": "region.gate-context-primary",
+    "gate-context-primary-title": "region.gate-context-primary-title",
+    "gate-context-primary-copy": "region.gate-context-primary-copy",
+    "gate-context-secondary": "region.gate-context-secondary",
+    "gate-context-secondary-title": "region.gate-context-secondary-title",
+    "gate-context-secondary-copy": "region.gate-context-secondary-copy",
+    "gate-context-provenance": "region.gate-context-provenance",
+    "gate-context-provenance-fields": "region.gate-context-provenance-fields",
+    "grilling-workbench": "region.grilling-workbench",
+    "grilling-overview": "region.grilling-overview",
+    "grilling-question-map": "region.grilling-question-map",
+    "grilling-live-brief": "region.grilling-live-brief",
+    "grilling-brief-changes": "region.grilling-brief-changes",
+    "plan-workbench": "region.plan-workbench",
+    "plan-document-viewer": "region.plan-document-viewer",
+    "plan-document-header": "region.plan-document-header",
+    "plan-document-back": "region.plan-document-back",
+    "plan-document-page": "region.plan-document-page",
+    "plan-document-outline": "region.plan-document-outline",
+    "plan-document-dag-chapter-entry": "region.plan-document-dag-chapter-entry",
+    "plan-document-content": "region.plan-document-content",
+    "plan-linked-gate-context": "region.plan-linked-gate-context",
+    "plan-linked-gate-copy": "region.plan-linked-gate-copy",
+    "plan-document-wave-anchor": "region.plan-document-wave-anchor",
+    "plan-full-dag": "region.plan-full-dag",
+    "plan-dag-toolbar": "region.plan-dag-toolbar",
+    "plan-dag-document-back": "region.plan-dag-document-back",
+    "plan-dag-search": "region.plan-dag-search",
+    "plan-dag-collapse-branches": "region.plan-dag-collapse-branches",
+    "plan-dag-zoom-out": "region.plan-dag-zoom-out",
+    "plan-dag-zoom-in": "region.plan-dag-zoom-in",
+    "plan-dag-fit-view": "region.plan-dag-fit-view",
+    "plan-dag-viewport": "region.plan-dag-viewport",
+    "plan-dag-canvas": "region.plan-dag-canvas",
+    "plan-dag-grid": "region.plan-dag-grid",
+    "plan-dag-minimap": "region.plan-dag-minimap",
+    "plan-dag-node-details": "region.plan-dag-node-details",
+    "plan-dag-node-title": "region.plan-dag-node-title",
+    "plan-summary": "region.plan-summary",
+    "plan-overview": "region.plan-overview",
+    "plan-document-entry": "region.plan-document-entry",
+    "plan-outcome-summary": "region.plan-outcome-summary",
+    "plan-dag-projection": "region.plan-dag-projection",
+    "plan-dag-entry": "region.plan-dag-entry",
+    "plan-readiness-summaries": "region.plan-readiness-summaries",
+    "plan-control-envelope-summary": "region.plan-control-envelope-summary",
+    "plan-proof-readiness": "region.plan-proof-readiness",
+    "plan-context-health": "region.plan-context-health",
+    "plan-attention-summary": "region.plan-attention-summary",
+    "plan-change-summary": "region.plan-change-summary",
+    "execution-workbench": "region.execution-workbench",
+    "execution-plan-run-overview": "region.execution-plan-run-overview",
+    "execution-plan-run-header": "region.execution-plan-run-header",
+    "execution-plan-run-summary": "region.execution-plan-run-summary",
+    "execution-plan-run-map": "region.execution-plan-run-map",
+    "execution-plan-run-canvas": "region.execution-plan-run-canvas",
+    "execution-plan-edge-arrows": "region.execution-plan-edge-arrows",
+    "execution-plan-node-goal": "region.execution-plan-node-goal",
+    "execution-plan-wave-0": "region.execution-plan-wave-0",
+    "execution-plan-wave-1a": "region.execution-plan-wave-1a",
+    "execution-plan-wave-1b": "region.execution-plan-wave-1b",
+    "execution-plan-wave-2": "region.execution-plan-wave-2",
+    "execution-plan-gate": "region.execution-plan-gate",
+    "execution-plan-frontier": "region.execution-plan-frontier",
+    "execution-plan-wave-outcome": "region.execution-plan-wave-outcome",
+    "execution-wave-run-detail": "region.execution-wave-run-detail",
+    "execution-wave-run-toolbar": "region.execution-wave-run-toolbar",
+    "execution-level-breadcrumb": "region.execution-level-breadcrumb",
+    "execution-wave-run-back": "region.execution-wave-run-back",
+    "execution-wave-run-metadata-toggle": "region.execution-wave-run-metadata-toggle",
+    "execution-wave-run-metadata-chevron": "region.execution-wave-run-metadata-chevron",
+    "execution-wave-run-analysis-link": "region.execution-wave-run-analysis-link",
+    "execution-wave-run-metadata": "region.execution-wave-run-metadata",
+    "execution-wave-metadata-plan-run": "region.execution-wave-metadata-plan-run",
+    "execution-wave-copy-plan-run": "region.execution-wave-copy-plan-run",
+    "execution-wave-metadata-wave": "region.execution-wave-metadata-wave",
+    "execution-wave-copy-wave": "region.execution-wave-copy-wave",
+    "execution-wave-metadata-workflow": "region.execution-wave-metadata-workflow",
+    "execution-wave-copy-workflow": "region.execution-wave-copy-workflow",
+    "execution-wave-metadata-run": "region.execution-wave-metadata-run",
+    "execution-wave-copy-run": "region.execution-wave-copy-run",
+    "execution-wave-metadata-trace-root": "region.execution-wave-metadata-trace-root",
+    "execution-wave-copy-trace-root": "region.execution-wave-copy-trace-root",
+    "execution-dashboard": "region.execution-dashboard",
+    "execution-dashboard-header": "region.execution-dashboard-header",
+    "execution-dashboard-health": "region.execution-dashboard-health",
+    "execution-effects-toggle": "region.execution-effects-toggle",
+    "execution-effects-indicator": "region.execution-effects-indicator",
+    "execution-effects-label": "region.execution-effects-label",
+    "execution-observability-slots": "region.execution-observability-slots",
+    "execution-speed-signal": "region.execution-speed-signal",
+    "execution-speed-signal-dot": "region.execution-speed-signal-dot",
+    "execution-speed-signal-copy": "region.execution-speed-signal-copy",
+    "execution-error-signal": "region.execution-error-signal",
+    "execution-observability-extension-slot": "region.execution-observability-extension-slot",
+    "execution-workflow-run-map": "region.execution-workflow-run-map",
+    "execution-run-map-heading": "region.execution-run-map-heading",
+    "execution-legend-success": "region.execution-legend-success",
+    "execution-legend-running": "region.execution-legend-running",
+    "execution-legend-failed": "region.execution-legend-failed",
+    "execution-legend-paused": "region.execution-legend-paused",
+    "execution-legend-gate": "region.execution-legend-gate",
+    "execution-run-map-viewport": "region.execution-run-map-viewport",
+    "execution-run-map-canvas": "region.execution-run-map-canvas",
+    "execution-observed-path": "region.execution-observed-path",
+    "execution-edge-success": "region.execution-edge-success",
+    "execution-edge-running": "region.execution-edge-running",
+    "execution-edge-degraded": "region.execution-edge-degraded",
+    "execution-edge-failed": "region.execution-edge-failed",
+    "execution-edge-paused": "region.execution-edge-paused",
+    "execution-next-action-frontier": "region.execution-next-action-frontier",
+    "execution-flow-particles": "region.execution-flow-particles",
+    "execution-running-sweep": "region.execution-running-sweep",
+    "execution-degraded-sweep": "region.execution-degraded-sweep",
+    "execution-edge-arrowheads": "region.execution-edge-arrowheads",
+    "execution-pace-arrowhead": "region.execution-pace-arrowhead",
+    "execution-node-goal": "region.execution-node-goal",
+    "execution-node-rules": "region.execution-node-rules",
+    "execution-node-security": "region.execution-node-security",
+    "execution-node-build": "region.execution-node-build",
+    "execution-running-halo": "region.execution-running-halo",
+    "execution-current-node-body": "region.execution-current-node-body",
+    "execution-current-node-map-status": "region.execution-current-node-map-status",
+    "execution-node-docs": "region.execution-node-docs",
+    "execution-error-halo": "region.execution-error-halo",
+    "execution-node-paused": "region.execution-node-paused",
+    "execution-node-sandbox": "region.execution-node-sandbox",
+    "execution-loop-control": "region.execution-loop-control",
+    "execution-loop-decision": "region.execution-loop-decision",
+    "execution-loop-return": "region.execution-loop-return",
+    "execution-node-gate": "region.execution-node-gate",
+    "execution-run-frontier": "region.execution-run-frontier",
+    "execution-run-event-strip": "region.execution-run-event-strip",
+    "execution-run-pace-copy": "region.execution-run-pace-copy",
+    "execution-current-node": "region.execution-current-node",
+    "execution-current-node-status": "region.execution-current-node-status",
+    "execution-current-node-progress": "region.execution-current-node-progress",
+    "execution-current-node-progress-value": "region.execution-current-node-progress-value",
+    "execution-current-node-progress-bar": "region.execution-current-node-progress-bar",
+    "execution-current-node-duration-copy": "region.execution-current-node-duration-copy",
+    "execution-current-output": "region.execution-current-output",
+    "execution-current-node-checks": "region.execution-current-node-checks",
+    "execution-current-node-active-check": "region.execution-current-node-active-check",
+    "execution-current-node-active-dot": "region.execution-current-node-active-dot",
+    "execution-next-boundary": "region.execution-next-boundary",
+    "delivery-workbench": "region.delivery-workbench",
+    "delivery-current-readiness": "region.delivery-current-readiness",
+    "delivery-readiness-invalidated-by-input": "region.delivery-readiness-invalidated-by-input",
+    "delivery-artifacts": "region.delivery-artifacts",
+    "delivery-acceptance": "region.delivery-acceptance",
+    "delivery-residual-risk": "region.delivery-residual-risk",
+    "delivery-economics": "region.delivery-economics",
+    "better-sidebar-edge-handle": "region.better-sidebar-edge-handle",
+    "better-sidebar-toggle": "region.better-sidebar-toggle",
+    "better-sidebar-handle-icon": "region.better-sidebar-handle-icon",
+    "better-sidebar-surface": "region.better-sidebar-surface",
+    "better-sidebar-close": "region.better-sidebar-close",
+    "better-sidebar-host-slot": "region.better-sidebar-host-slot",
+    "harness-preview": "region.harness-preview",
+    "sidebar-tooltip": "region.sidebar-tooltip",
+    "icon-preview": "region.icon-preview",
+    "icon-candidate-name": "region.icon-candidate-name",
+    "main-surface-host": "region.main-surface-host",
+    "task-browser-header": "region.task-browser-header",
+    "task-browser-search": "region.task-browser-search",
+    "task-browser-toolbar": "region.task-browser-toolbar",
+    "browser-sort-toggle": "region.browser-sort-toggle",
+    "browser-sort-menu": "region.browser-sort-menu",
+    "browser-view-toggle-seat": "region.browser-view-toggle-seat",
+    "browser-archive": "region.browser-archive",
+    "browser-archive-tooltip": "region.browser-archive-tooltip",
+    "task-browser-content": "region.task-browser-content",
+    "browser-select-all": "region.browser-select-all",
+    "browser-result-count": "region.browser-result-count",
+    "browser-batch-actions": "region.browser-batch-actions",
+    "browser-selected-count": "region.browser-selected-count",
+    "browser-clear-selection": "region.browser-clear-selection",
+    "browser-group-label": "region.browser-group-label",
+    "browser-group": "region.browser-group",
+    "task-browser-gallery": "region.task-browser-gallery",
+    "task-browser-list": "region.task-browser-list",
+    "browser-list-body": "region.browser-list-body",
+    "browser-empty": "region.browser-empty",
+    "task-browser-pagination": "region.task-browser-pagination",
+    "browser-page-size": "region.browser-page-size",
+    "browser-page-label": "region.browser-page-label",
+    "browser-prev": "region.browser-prev",
+    "browser-next": "region.browser-next",
+    "browser-archive-notice": "region.browser-archive-notice",
+    "browser-archive-message": "region.browser-archive-message",
+    "browser-undo-archive": "region.browser-undo-archive",
+    "browser-dismiss-notice": "region.browser-dismiss-notice",
+    "browser-thumbnail-input": "region.browser-thumbnail-input",
+    "browser-rename-dialog": "region.browser-rename-dialog",
+    "browser-rename-form": "region.browser-rename-form",
+    "browser-rename-title": "region.browser-rename-title",
+    "browser-rename-input": "region.browser-rename-input",
+    "browser-rename-cancel": "region.browser-rename-cancel",
+    "browser-rename-save": "region.browser-rename-save",
+    "browser-edit-notice": "region.browser-edit-notice",
+    "browser-edit-message": "region.browser-edit-message",
+    "browser-edit-dismiss": "region.browser-edit-dismiss",
+    "workflow-explorer-header": "region.workflow-explorer-header",
+    "workflow-explorer-search": "region.workflow-explorer-search",
+    "workflow-explorer-toolbar": "region.workflow-explorer-toolbar",
+    "workflow-explorer-content": "region.workflow-explorer-content",
+    "workflow-explorer-gallery": "region.workflow-explorer-gallery",
+    "workflow-explorer-list": "region.workflow-explorer-list",
+    "workflow-explorer-pagination": "region.workflow-explorer-pagination",
+    "workbench-root": "region.workbench-root",
+    "workbench-host-input": "region.workbench-host-input"
+  },
+  "rules": [
+    {
+      "contract": "widget-tooltip",
+      "selector": ".crystra-widget-tooltip"
+    },
+    {
+      "contract": "configuration-file",
+      "selector": "input[type=file]"
+    },
+    {
+      "contract": "observation-settings",
+      "selector": "#result-analysis-review"
+    },
+    {
+      "contract": "delivery-directory",
+      "selector": ".delivery-directory"
+    },
+    {
+      "contract": "trace-waterfall",
+      "selector": ".trace-waterfall"
+    },
+    {
+      "contract": "trace-tree",
+      "selector": ".trace-tree-graph"
+    },
+    {
+      "contract": "trace-passport",
+      "selector": ".span-passport"
+    },
+    {
+      "contract": "observation-calendar",
+      "selector": ".obs-time-controls,.obs-calendar-popover"
+    },
+    {
+      "contract": "observation-header",
+      "selector": "[data-section-id=workspace-header]"
+    },
+    {
+      "contract": "observation-layout",
+      "selector": ".obs-layout-editor,.obs-widget-modal"
+    },
+    {
+      "contract": "observation-widgets",
+      "selector": ".dashboard-grid,.obs-topic,.obs-add-widget,.wsr-widget-menu"
+    },
+    {
+      "contract": "resource-browser",
+      "selector": ".browser-host,#browser-rename-dialog,#browser-thumbnail-input,.task-context-menu"
+    },
+    {
+      "contract": "search-field",
+      "selector": ".wsr-search-field,.wsr-expandable-search"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "bpmn": {
+    "plan": {
+      "before": {
+        "id": "plan",
+        "parent": "Process",
+        "x": 216,
+        "y": 80,
+        "width": 802,
+        "height": 320,
+        "collapsed": false
+      },
+      "collapsed": {
+        "id": "plan",
+        "parent": "Process",
+        "x": 567,
+        "y": 200,
+        "width": 100,
+        "height": 80,
+        "collapsed": true
+      },
+      "restored": {
+        "id": "plan",
+        "parent": "Process",
+        "x": 230,
+        "y": 90,
+        "width": 780,
+        "height": 310,
+        "collapsed": false
+      }
+    },
+    "work": {
+      "before": {
+        "id": "work",
+        "parent": "Process",
+        "x": 1118,
+        "y": 120,
+        "width": 1854,
+        "height": 240,
+        "collapsed": false
+      },
+      "collapsed": {
+        "id": "work",
+        "parent": "Process",
+        "x": 1118,
+        "y": 120,
+        "width": 1854,
+        "height": 240,
+        "collapsed": false
+      },
+      "restored": {
+        "id": "work",
+        "parent": "Process",
+        "x": 1118,
+        "y": 120,
+        "width": 1854,
+        "height": 240,
+        "collapsed": false
+      }
+    },
+    "delivery": {
+      "before": {
+        "id": "delivery",
+        "parent": "Process",
+        "x": 3072,
+        "y": 80,
+        "width": 952,
+        "height": 320,
+        "collapsed": false
+      },
+      "collapsed": {
+        "id": "delivery",
+        "parent": "Process",
+        "x": 3072,
+        "y": 80,
+        "width": 952,
+        "height": 320,
+        "collapsed": false
+      },
+      "restored": {
+        "id": "delivery",
+        "parent": "Process",
+        "x": 3072,
+        "y": 80,
+        "width": 952,
+        "height": 320,
+        "collapsed": false
+      }
+    },
+    "ready": {
+      "before": {
+        "id": "ready",
+        "parent": "Process",
+        "x": 4124,
+        "y": 215,
+        "width": 50,
+        "height": 50,
+        "collapsed": false
+      },
+      "collapsed": {
+        "id": "ready",
+        "parent": "Process",
+        "x": 4124,
+        "y": 215,
+        "width": 50,
+        "height": 50,
+        "collapsed": false
+      },
+      "restored": {
+        "id": "ready",
+        "parent": "Process",
+        "x": 4124,
+        "y": 215,
+        "width": 50,
+        "height": 50,
+        "collapsed": false
+      }
+    }
+  },
+  "maxgraph": {
+    "geometryRestored": true,
+    "originalEdgesPreserved": true,
+    "promotedEdge": {
+      "id": "reconsider-design",
+      "source": "ready",
+      "target": "read",
+      "visible": true,
+      "visibleSource": "ready",
+      "visibleTarget": "plan",
+      "points": [
+        {
+          "x": 633.8,
+          "y": 67.47
+        },
+        {
+          "x": 633.8,
+          "y": 119
+        },
+        {
+          "x": 646.2,
+          "y": 119
+        },
+        {
+          "x": 646.2,
+          "y": 170.43
+        }
+      ]
+    },
+    "incomingHiddenOnEnter": true
+  }
+}

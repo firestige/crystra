@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" width="100%%" height="100%%" viewBox="14.8333 358.772 749.833 447.833">
+<path stroke="black" stroke-width="1" fill="none" d="M 32.83,754.61L 259.83,754.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 259.83,754.61L 259.83,434.77"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 259.83,434.77L 531.67,434.77"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 531.67,434.77L 531.67,754.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 531.67,754.61L 259.83,754.61"/>
+<path stroke="black" stroke-width="1" fill="none" d="M 531.67,434.77L 746.67,434.77"/>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="179.83" y="390.77" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="254.83" y="439.77">
+0
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="179.83" y="710.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="254.83" y="759.61">
+1
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="463.67" y="366.77" width="136.00" height="136.00"/>
+<text font-family="sans-serif" x="526.67" y="439.77">
+2
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="451.67" y="710.61" width="160.00" height="88.00"/>
+<text font-family="sans-serif" x="526.67" y="759.61">
+3
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="22.83" y="744.61" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="27.83" y="759.61">
+4
+</text>
+</g>
+<g>
+<rect stroke="black" stroke-width="1" fill="gray" opacity="0.5" x="736.67" y="424.77" width="20.00" height="20.00"/>
+<text font-family="sans-serif" x="741.67" y="439.77">
+5
+</text>
+</g>
+</svg>

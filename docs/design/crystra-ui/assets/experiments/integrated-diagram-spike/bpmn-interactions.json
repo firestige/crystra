@@ -1,0 +1,3427 @@
+{
+  "entered": "plan_plane",
+  "before": [
+    {
+      "id": "s",
+      "parent": "Process",
+      "x": 80,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "s_label",
+      "parent": "Process",
+      "x": 87,
+      "y": 263,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "plan",
+      "parent": "Process",
+      "x": 216,
+      "y": 80,
+      "width": 802,
+      "height": 320,
+      "collapsed": false
+    },
+    {
+      "id": "plan_start",
+      "parent": "plan",
+      "x": 256,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "plan_end",
+      "parent": "plan",
+      "x": 942,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "read",
+      "parent": "plan",
+      "x": 392,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "clear",
+      "parent": "plan",
+      "x": 592,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "clear_label",
+      "parent": "plan",
+      "x": 590,
+      "y": 116,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "ask",
+      "parent": "plan",
+      "x": 742,
+      "y": 280,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "design",
+      "parent": "plan",
+      "x": 742,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "work",
+      "parent": "Process",
+      "x": 1118,
+      "y": 120,
+      "width": 1854,
+      "height": 240,
+      "collapsed": false
+    },
+    {
+      "id": "work_start",
+      "parent": "work",
+      "x": 1158,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "work_end",
+      "parent": "work",
+      "x": 2896,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "next",
+      "parent": "work",
+      "x": 2746,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "next_label",
+      "parent": "work",
+      "x": 2733,
+      "y": 196,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "tdd",
+      "parent": "work",
+      "x": 1494,
+      "y": 160,
+      "width": 1152,
+      "height": 160,
+      "collapsed": false
+    },
+    {
+      "id": "tdd_start",
+      "parent": "tdd",
+      "x": 1534,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "tdd_end",
+      "parent": "tdd",
+      "x": 2570,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "red",
+      "parent": "tdd",
+      "x": 1670,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "green",
+      "parent": "tdd",
+      "x": 1870,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "pass",
+      "parent": "tdd",
+      "x": 2070,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "pass_label",
+      "parent": "tdd",
+      "x": 2068,
+      "y": 196,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "refactor",
+      "parent": "tdd",
+      "x": 2220,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "stable",
+      "parent": "tdd",
+      "x": 2420,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "stable_label",
+      "parent": "tdd",
+      "x": 2418,
+      "y": 196,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "choose",
+      "parent": "work",
+      "x": 1294,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "delivery",
+      "parent": "Process",
+      "x": 3072,
+      "y": 80,
+      "width": 952,
+      "height": 320,
+      "collapsed": false
+    },
+    {
+      "id": "delivery_start",
+      "parent": "delivery",
+      "x": 3112,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "delivery_end",
+      "parent": "delivery",
+      "x": 3948,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "pack",
+      "parent": "delivery",
+      "x": 3748,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "fork",
+      "parent": "delivery",
+      "x": 3248,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "fork_label",
+      "parent": "delivery",
+      "x": 3251,
+      "y": 116,
+      "width": 44,
+      "height": 14
+    },
+    {
+      "id": "review",
+      "parent": "delivery",
+      "x": 3398,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "verify",
+      "parent": "delivery",
+      "x": 3398,
+      "y": 280,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "join",
+      "parent": "delivery",
+      "x": 3598,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "join_label",
+      "parent": "delivery",
+      "x": 3590,
+      "y": 116,
+      "width": 66,
+      "height": 14
+    },
+    {
+      "id": "ready",
+      "parent": "Process",
+      "x": 4124,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "ready_label",
+      "parent": "Process",
+      "x": 4111,
+      "y": 196,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "e",
+      "parent": "Process",
+      "x": 4274,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "e_label",
+      "parent": "Process",
+      "x": 4281,
+      "y": 263,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "aborted",
+      "parent": "Process",
+      "x": 4274,
+      "y": 382,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "aborted_label",
+      "parent": "Process",
+      "x": 4281,
+      "y": 423,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "edge-2",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 492,
+          "y": 160
+        },
+        {
+          "x": 592,
+          "y": 160
+        }
+      ],
+      "source": "read",
+      "target": "clear"
+    },
+    {
+      "id": "edge-3",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 617,
+          "y": 185
+        },
+        {
+          "x": 617,
+          "y": 320
+        },
+        {
+          "x": 742,
+          "y": 320
+        }
+      ],
+      "source": "clear",
+      "target": "ask"
+    },
+    {
+      "id": "edge-3_label",
+      "parent": "plan",
+      "x": 617,
+      "y": 246,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-4",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 792,
+          "y": 360
+        },
+        {
+          "x": 792,
+          "y": 380
+        },
+        {
+          "x": 442,
+          "y": 380
+        },
+        {
+          "x": 442,
+          "y": 200
+        }
+      ],
+      "source": "ask",
+      "target": "read"
+    },
+    {
+      "id": "edge-5",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 642,
+          "y": 160
+        },
+        {
+          "x": 742,
+          "y": 160
+        }
+      ],
+      "source": "clear",
+      "target": "design"
+    },
+    {
+      "id": "edge-5_label",
+      "parent": "plan",
+      "x": 654,
+      "y": 138,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "plan_entry_bridge",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 292,
+          "y": 160
+        },
+        {
+          "x": 392,
+          "y": 160
+        }
+      ],
+      "source": "plan_start",
+      "target": "read"
+    },
+    {
+      "id": "plan_exit_bridge",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 842,
+          "y": 160
+        },
+        {
+          "x": 942,
+          "y": 160
+        }
+      ],
+      "source": "design",
+      "target": "plan_end"
+    },
+    {
+      "id": "edge-8",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1770,
+          "y": 240
+        },
+        {
+          "x": 1870,
+          "y": 240
+        }
+      ],
+      "source": "red",
+      "target": "green"
+    },
+    {
+      "id": "edge-9",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1970,
+          "y": 240
+        },
+        {
+          "x": 2070,
+          "y": 240
+        }
+      ],
+      "source": "green",
+      "target": "pass"
+    },
+    {
+      "id": "edge-10",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2095,
+          "y": 265
+        },
+        {
+          "x": 2095,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 280
+        }
+      ],
+      "source": "pass",
+      "target": "green"
+    },
+    {
+      "id": "edge-10_label",
+      "parent": "tdd",
+      "x": 2099,
+      "y": 276,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-11",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2120,
+          "y": 240
+        },
+        {
+          "x": 2220,
+          "y": 240
+        }
+      ],
+      "source": "pass",
+      "target": "refactor"
+    },
+    {
+      "id": "edge-11_label",
+      "parent": "tdd",
+      "x": 2132,
+      "y": 218,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-12",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2320,
+          "y": 240
+        },
+        {
+          "x": 2420,
+          "y": 240
+        }
+      ],
+      "source": "refactor",
+      "target": "stable"
+    },
+    {
+      "id": "edge-13",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2445,
+          "y": 265
+        },
+        {
+          "x": 2445,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 280
+        }
+      ],
+      "source": "stable",
+      "target": "green"
+    },
+    {
+      "id": "edge-13_label",
+      "parent": "tdd",
+      "x": 2332,
+      "y": 278,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "tdd_entry_bridge",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1570,
+          "y": 240
+        },
+        {
+          "x": 1670,
+          "y": 240
+        }
+      ],
+      "source": "tdd_start",
+      "target": "red"
+    },
+    {
+      "id": "tdd_exit_bridge",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2470,
+          "y": 240
+        },
+        {
+          "x": 2570,
+          "y": 240
+        }
+      ],
+      "source": "stable",
+      "target": "tdd_end"
+    },
+    {
+      "id": "edge-7",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1394,
+          "y": 240
+        },
+        {
+          "x": 1494,
+          "y": 240
+        }
+      ],
+      "source": "choose",
+      "target": "tdd"
+    },
+    {
+      "id": "edge-14",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2646,
+          "y": 240
+        },
+        {
+          "x": 2746,
+          "y": 240
+        }
+      ],
+      "source": "tdd",
+      "target": "next"
+    },
+    {
+      "id": "edge-14_label",
+      "parent": "work",
+      "x": 2658,
+      "y": 218,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-15",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2771,
+          "y": 265
+        },
+        {
+          "x": 2771,
+          "y": 340
+        },
+        {
+          "x": 1344,
+          "y": 340
+        },
+        {
+          "x": 1344,
+          "y": 280
+        }
+      ],
+      "source": "next",
+      "target": "choose"
+    },
+    {
+      "id": "edge-15_label",
+      "parent": "work",
+      "x": 1419,
+      "y": 318,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "work_entry_bridge",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1194,
+          "y": 240
+        },
+        {
+          "x": 1294,
+          "y": 240
+        }
+      ],
+      "source": "work_start",
+      "target": "choose"
+    },
+    {
+      "id": "work_exit_bridge",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2796,
+          "y": 240
+        },
+        {
+          "x": 2896,
+          "y": 240
+        }
+      ],
+      "source": "next",
+      "target": "work_end"
+    },
+    {
+      "id": "edge-17",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3298,
+          "y": 160
+        },
+        {
+          "x": 3398,
+          "y": 160
+        }
+      ],
+      "source": "fork",
+      "target": "review"
+    },
+    {
+      "id": "edge-18",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3273,
+          "y": 185
+        },
+        {
+          "x": 3273,
+          "y": 320
+        },
+        {
+          "x": 3398,
+          "y": 320
+        }
+      ],
+      "source": "fork",
+      "target": "verify"
+    },
+    {
+      "id": "edge-19",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3498,
+          "y": 160
+        },
+        {
+          "x": 3598,
+          "y": 160
+        }
+      ],
+      "source": "review",
+      "target": "join"
+    },
+    {
+      "id": "edge-20",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3498,
+          "y": 320
+        },
+        {
+          "x": 3623,
+          "y": 320
+        },
+        {
+          "x": 3623,
+          "y": 185
+        }
+      ],
+      "source": "verify",
+      "target": "join"
+    },
+    {
+      "id": "edge-21",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3648,
+          "y": 160
+        },
+        {
+          "x": 3748,
+          "y": 160
+        }
+      ],
+      "source": "join",
+      "target": "pack"
+    },
+    {
+      "id": "delivery_entry_bridge",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3148,
+          "y": 160
+        },
+        {
+          "x": 3248,
+          "y": 160
+        }
+      ],
+      "source": "delivery_start",
+      "target": "fork"
+    },
+    {
+      "id": "delivery_exit_bridge",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3848,
+          "y": 160
+        },
+        {
+          "x": 3948,
+          "y": 160
+        }
+      ],
+      "source": "pack",
+      "target": "delivery_end"
+    },
+    {
+      "id": "edge-1",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 116,
+          "y": 240
+        },
+        {
+          "x": 216,
+          "y": 240
+        }
+      ],
+      "source": "s",
+      "target": "plan"
+    },
+    {
+      "id": "edge-6",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1018,
+          "y": 240
+        },
+        {
+          "x": 1118,
+          "y": 240
+        }
+      ],
+      "source": "plan",
+      "target": "work"
+    },
+    {
+      "id": "edge-16",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2972,
+          "y": 240
+        },
+        {
+          "x": 3072,
+          "y": 240
+        }
+      ],
+      "source": "work",
+      "target": "delivery"
+    },
+    {
+      "id": "edge-16_label",
+      "parent": "Process",
+      "x": 2984,
+      "y": 218,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "edge-24",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4174,
+          "y": 240
+        },
+        {
+          "x": 4274,
+          "y": 240
+        }
+      ],
+      "source": "ready",
+      "target": "e"
+    },
+    {
+      "id": "edge-24_label",
+      "parent": "Process",
+      "x": 4202,
+      "y": 218,
+      "width": 44,
+      "height": 14
+    },
+    {
+      "id": "edge-25",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4024,
+          "y": 240
+        },
+        {
+          "x": 4124,
+          "y": 240
+        }
+      ],
+      "source": "delivery",
+      "target": "ready"
+    },
+    {
+      "id": "reconsider-design",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 440
+        },
+        {
+          "x": 617,
+          "y": 440
+        },
+        {
+          "x": 617,
+          "y": 400
+        }
+      ],
+      "source": "ready",
+      "target": "plan"
+    },
+    {
+      "id": "reconsider-design_label",
+      "parent": "Process",
+      "x": 2339,
+      "y": 448,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "repair-implementation",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 420
+        },
+        {
+          "x": 2045,
+          "y": 420
+        },
+        {
+          "x": 2045,
+          "y": 360
+        }
+      ],
+      "source": "ready",
+      "target": "work"
+    },
+    {
+      "id": "repair-implementation_label",
+      "parent": "Process",
+      "x": 2993,
+      "y": 398,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "stop-work",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 400
+        },
+        {
+          "x": 4274,
+          "y": 400
+        }
+      ],
+      "source": "ready",
+      "target": "aborted"
+    },
+    {
+      "id": "stop-work_label",
+      "parent": "Process",
+      "x": 4168,
+      "y": 378,
+      "width": 88,
+      "height": 14
+    }
+  ],
+  "collapsed": [
+    {
+      "id": "s",
+      "parent": "Process",
+      "x": 80,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "s_label",
+      "parent": "Process",
+      "x": 87,
+      "y": 263,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "plan",
+      "parent": "Process",
+      "x": 567,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": true
+    },
+    {
+      "id": "plan_start",
+      "parent": "plan_plane",
+      "x": 180,
+      "y": 186,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "plan_end",
+      "parent": "plan_plane",
+      "x": 866,
+      "y": 186,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "read",
+      "parent": "plan_plane",
+      "x": 316,
+      "y": 164,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "clear",
+      "parent": "plan_plane",
+      "x": 516,
+      "y": 179,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "clear_label",
+      "parent": "plan_plane",
+      "x": 514,
+      "y": 160,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "ask",
+      "parent": "plan_plane",
+      "x": 666,
+      "y": 324,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "design",
+      "parent": "plan_plane",
+      "x": 666,
+      "y": 164,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "work",
+      "parent": "Process",
+      "x": 1118,
+      "y": 120,
+      "width": 1854,
+      "height": 240,
+      "collapsed": false
+    },
+    {
+      "id": "work_start",
+      "parent": "work",
+      "x": 1158,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "work_end",
+      "parent": "work",
+      "x": 2896,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "next",
+      "parent": "work",
+      "x": 2746,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "next_label",
+      "parent": "work",
+      "x": 2733,
+      "y": 196,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "tdd",
+      "parent": "work",
+      "x": 1494,
+      "y": 160,
+      "width": 1152,
+      "height": 160,
+      "collapsed": false
+    },
+    {
+      "id": "tdd_start",
+      "parent": "tdd",
+      "x": 1534,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "tdd_end",
+      "parent": "tdd",
+      "x": 2570,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "red",
+      "parent": "tdd",
+      "x": 1670,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "green",
+      "parent": "tdd",
+      "x": 1870,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "pass",
+      "parent": "tdd",
+      "x": 2070,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "pass_label",
+      "parent": "tdd",
+      "x": 2068,
+      "y": 196,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "refactor",
+      "parent": "tdd",
+      "x": 2220,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "stable",
+      "parent": "tdd",
+      "x": 2420,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "stable_label",
+      "parent": "tdd",
+      "x": 2418,
+      "y": 196,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "choose",
+      "parent": "work",
+      "x": 1294,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "delivery",
+      "parent": "Process",
+      "x": 3072,
+      "y": 80,
+      "width": 952,
+      "height": 320,
+      "collapsed": false
+    },
+    {
+      "id": "delivery_start",
+      "parent": "delivery",
+      "x": 3112,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "delivery_end",
+      "parent": "delivery",
+      "x": 3948,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "pack",
+      "parent": "delivery",
+      "x": 3748,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "fork",
+      "parent": "delivery",
+      "x": 3248,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "fork_label",
+      "parent": "delivery",
+      "x": 3251,
+      "y": 116,
+      "width": 44,
+      "height": 14
+    },
+    {
+      "id": "review",
+      "parent": "delivery",
+      "x": 3398,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "verify",
+      "parent": "delivery",
+      "x": 3398,
+      "y": 280,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "join",
+      "parent": "delivery",
+      "x": 3598,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "join_label",
+      "parent": "delivery",
+      "x": 3590,
+      "y": 116,
+      "width": 66,
+      "height": 14
+    },
+    {
+      "id": "ready",
+      "parent": "Process",
+      "x": 4124,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "ready_label",
+      "parent": "Process",
+      "x": 4111,
+      "y": 196,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "e",
+      "parent": "Process",
+      "x": 4274,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "e_label",
+      "parent": "Process",
+      "x": 4281,
+      "y": 263,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "aborted",
+      "parent": "Process",
+      "x": 4274,
+      "y": 382,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "aborted_label",
+      "parent": "Process",
+      "x": 4281,
+      "y": 423,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "edge-2",
+      "parent": "plan_plane",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 416,
+          "y": 204
+        },
+        {
+          "x": 516,
+          "y": 204
+        }
+      ],
+      "source": "read",
+      "target": "clear"
+    },
+    {
+      "id": "edge-3",
+      "parent": "plan_plane",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 541,
+          "y": 229
+        },
+        {
+          "x": 541,
+          "y": 364
+        },
+        {
+          "x": 666,
+          "y": 364
+        }
+      ],
+      "source": "clear",
+      "target": "ask"
+    },
+    {
+      "id": "edge-3_label",
+      "parent": "plan_plane",
+      "x": 541,
+      "y": 290,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-4",
+      "parent": "plan_plane",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 716,
+          "y": 404
+        },
+        {
+          "x": 716,
+          "y": 424
+        },
+        {
+          "x": 366,
+          "y": 424
+        },
+        {
+          "x": 366,
+          "y": 244
+        }
+      ],
+      "source": "ask",
+      "target": "read"
+    },
+    {
+      "id": "edge-5",
+      "parent": "plan_plane",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 566,
+          "y": 204
+        },
+        {
+          "x": 666,
+          "y": 204
+        }
+      ],
+      "source": "clear",
+      "target": "design"
+    },
+    {
+      "id": "edge-5_label",
+      "parent": "plan_plane",
+      "x": 578,
+      "y": 182,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "plan_entry_bridge",
+      "parent": "plan_plane",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 216,
+          "y": 204
+        },
+        {
+          "x": 316,
+          "y": 204
+        }
+      ],
+      "source": "plan_start",
+      "target": "read"
+    },
+    {
+      "id": "plan_exit_bridge",
+      "parent": "plan_plane",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 766,
+          "y": 204
+        },
+        {
+          "x": 866,
+          "y": 204
+        }
+      ],
+      "source": "design",
+      "target": "plan_end"
+    },
+    {
+      "id": "edge-8",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1770,
+          "y": 240
+        },
+        {
+          "x": 1870,
+          "y": 240
+        }
+      ],
+      "source": "red",
+      "target": "green"
+    },
+    {
+      "id": "edge-9",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1970,
+          "y": 240
+        },
+        {
+          "x": 2070,
+          "y": 240
+        }
+      ],
+      "source": "green",
+      "target": "pass"
+    },
+    {
+      "id": "edge-10",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2095,
+          "y": 265
+        },
+        {
+          "x": 2095,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 280
+        }
+      ],
+      "source": "pass",
+      "target": "green"
+    },
+    {
+      "id": "edge-10_label",
+      "parent": "tdd",
+      "x": 2099,
+      "y": 276,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-11",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2120,
+          "y": 240
+        },
+        {
+          "x": 2220,
+          "y": 240
+        }
+      ],
+      "source": "pass",
+      "target": "refactor"
+    },
+    {
+      "id": "edge-11_label",
+      "parent": "tdd",
+      "x": 2132,
+      "y": 218,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-12",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2320,
+          "y": 240
+        },
+        {
+          "x": 2420,
+          "y": 240
+        }
+      ],
+      "source": "refactor",
+      "target": "stable"
+    },
+    {
+      "id": "edge-13",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2445,
+          "y": 265
+        },
+        {
+          "x": 2445,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 280
+        }
+      ],
+      "source": "stable",
+      "target": "green"
+    },
+    {
+      "id": "edge-13_label",
+      "parent": "tdd",
+      "x": 2332,
+      "y": 278,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "tdd_entry_bridge",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1570,
+          "y": 240
+        },
+        {
+          "x": 1670,
+          "y": 240
+        }
+      ],
+      "source": "tdd_start",
+      "target": "red"
+    },
+    {
+      "id": "tdd_exit_bridge",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2470,
+          "y": 240
+        },
+        {
+          "x": 2570,
+          "y": 240
+        }
+      ],
+      "source": "stable",
+      "target": "tdd_end"
+    },
+    {
+      "id": "edge-7",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1394,
+          "y": 240
+        },
+        {
+          "x": 1494,
+          "y": 240
+        }
+      ],
+      "source": "choose",
+      "target": "tdd"
+    },
+    {
+      "id": "edge-14",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2646,
+          "y": 240
+        },
+        {
+          "x": 2746,
+          "y": 240
+        }
+      ],
+      "source": "tdd",
+      "target": "next"
+    },
+    {
+      "id": "edge-14_label",
+      "parent": "work",
+      "x": 2658,
+      "y": 218,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-15",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2771,
+          "y": 265
+        },
+        {
+          "x": 2771,
+          "y": 340
+        },
+        {
+          "x": 1344,
+          "y": 340
+        },
+        {
+          "x": 1344,
+          "y": 280
+        }
+      ],
+      "source": "next",
+      "target": "choose"
+    },
+    {
+      "id": "edge-15_label",
+      "parent": "work",
+      "x": 1419,
+      "y": 318,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "work_entry_bridge",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1194,
+          "y": 240
+        },
+        {
+          "x": 1294,
+          "y": 240
+        }
+      ],
+      "source": "work_start",
+      "target": "choose"
+    },
+    {
+      "id": "work_exit_bridge",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2796,
+          "y": 240
+        },
+        {
+          "x": 2896,
+          "y": 240
+        }
+      ],
+      "source": "next",
+      "target": "work_end"
+    },
+    {
+      "id": "edge-17",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3298,
+          "y": 160
+        },
+        {
+          "x": 3398,
+          "y": 160
+        }
+      ],
+      "source": "fork",
+      "target": "review"
+    },
+    {
+      "id": "edge-18",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3273,
+          "y": 185
+        },
+        {
+          "x": 3273,
+          "y": 320
+        },
+        {
+          "x": 3398,
+          "y": 320
+        }
+      ],
+      "source": "fork",
+      "target": "verify"
+    },
+    {
+      "id": "edge-19",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3498,
+          "y": 160
+        },
+        {
+          "x": 3598,
+          "y": 160
+        }
+      ],
+      "source": "review",
+      "target": "join"
+    },
+    {
+      "id": "edge-20",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3498,
+          "y": 320
+        },
+        {
+          "x": 3623,
+          "y": 320
+        },
+        {
+          "x": 3623,
+          "y": 185
+        }
+      ],
+      "source": "verify",
+      "target": "join"
+    },
+    {
+      "id": "edge-21",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3648,
+          "y": 160
+        },
+        {
+          "x": 3748,
+          "y": 160
+        }
+      ],
+      "source": "join",
+      "target": "pack"
+    },
+    {
+      "id": "delivery_entry_bridge",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3148,
+          "y": 160
+        },
+        {
+          "x": 3248,
+          "y": 160
+        }
+      ],
+      "source": "delivery_start",
+      "target": "fork"
+    },
+    {
+      "id": "delivery_exit_bridge",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3848,
+          "y": 160
+        },
+        {
+          "x": 3948,
+          "y": 160
+        }
+      ],
+      "source": "pack",
+      "target": "delivery_end"
+    },
+    {
+      "id": "edge-1",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 116,
+          "y": 240
+        },
+        {
+          "x": 567,
+          "y": 240
+        }
+      ],
+      "source": "s",
+      "target": "plan"
+    },
+    {
+      "id": "edge-6",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 667,
+          "y": 240
+        },
+        {
+          "x": 1118,
+          "y": 240
+        }
+      ],
+      "source": "plan",
+      "target": "work"
+    },
+    {
+      "id": "edge-16",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2972,
+          "y": 240
+        },
+        {
+          "x": 3072,
+          "y": 240
+        }
+      ],
+      "source": "work",
+      "target": "delivery"
+    },
+    {
+      "id": "edge-16_label",
+      "parent": "Process",
+      "x": 2984,
+      "y": 218,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "edge-24",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4174,
+          "y": 240
+        },
+        {
+          "x": 4274,
+          "y": 240
+        }
+      ],
+      "source": "ready",
+      "target": "e"
+    },
+    {
+      "id": "edge-24_label",
+      "parent": "Process",
+      "x": 4202,
+      "y": 218,
+      "width": 44,
+      "height": 14
+    },
+    {
+      "id": "edge-25",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4024,
+          "y": 240
+        },
+        {
+          "x": 4124,
+          "y": 240
+        }
+      ],
+      "source": "delivery",
+      "target": "ready"
+    },
+    {
+      "id": "reconsider-design",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 440
+        },
+        {
+          "x": 617,
+          "y": 440
+        },
+        {
+          "x": 617,
+          "y": 280
+        }
+      ],
+      "source": "ready",
+      "target": "plan"
+    },
+    {
+      "id": "reconsider-design_label",
+      "parent": "Process",
+      "x": 2339,
+      "y": 448,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "repair-implementation",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 420
+        },
+        {
+          "x": 2045,
+          "y": 420
+        },
+        {
+          "x": 2045,
+          "y": 360
+        }
+      ],
+      "source": "ready",
+      "target": "work"
+    },
+    {
+      "id": "repair-implementation_label",
+      "parent": "Process",
+      "x": 2993,
+      "y": 398,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "stop-work",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 400
+        },
+        {
+          "x": 4274,
+          "y": 400
+        }
+      ],
+      "source": "ready",
+      "target": "aborted"
+    },
+    {
+      "id": "stop-work_label",
+      "parent": "Process",
+      "x": 4168,
+      "y": 378,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "plan_plane",
+      "width": 350,
+      "height": 200,
+      "collapsed": false
+    }
+  ],
+  "restored": [
+    {
+      "id": "s",
+      "parent": "Process",
+      "x": 80,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "s_label",
+      "parent": "Process",
+      "x": 87,
+      "y": 263,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "plan",
+      "parent": "Process",
+      "x": 230,
+      "y": 90,
+      "width": 780,
+      "height": 310,
+      "collapsed": false
+    },
+    {
+      "id": "plan_start",
+      "parent": "plan",
+      "x": 256,
+      "y": 134,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "plan_end",
+      "parent": "plan",
+      "x": 942,
+      "y": 134,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "read",
+      "parent": "plan",
+      "x": 392,
+      "y": 112,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "clear",
+      "parent": "plan",
+      "x": 592,
+      "y": 127,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "clear_label",
+      "parent": "Process",
+      "x": 590,
+      "y": 108,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "ask",
+      "parent": "plan",
+      "x": 742,
+      "y": 272,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "design",
+      "parent": "plan",
+      "x": 742,
+      "y": 112,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "work",
+      "parent": "Process",
+      "x": 1118,
+      "y": 120,
+      "width": 1854,
+      "height": 240,
+      "collapsed": false
+    },
+    {
+      "id": "work_start",
+      "parent": "work",
+      "x": 1158,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "work_end",
+      "parent": "work",
+      "x": 2896,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "next",
+      "parent": "work",
+      "x": 2746,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "next_label",
+      "parent": "work",
+      "x": 2733,
+      "y": 196,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "tdd",
+      "parent": "work",
+      "x": 1494,
+      "y": 160,
+      "width": 1152,
+      "height": 160,
+      "collapsed": false
+    },
+    {
+      "id": "tdd_start",
+      "parent": "tdd",
+      "x": 1534,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "tdd_end",
+      "parent": "tdd",
+      "x": 2570,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "red",
+      "parent": "tdd",
+      "x": 1670,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "green",
+      "parent": "tdd",
+      "x": 1870,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "pass",
+      "parent": "tdd",
+      "x": 2070,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "pass_label",
+      "parent": "tdd",
+      "x": 2068,
+      "y": 196,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "refactor",
+      "parent": "tdd",
+      "x": 2220,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "stable",
+      "parent": "tdd",
+      "x": 2420,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "stable_label",
+      "parent": "tdd",
+      "x": 2418,
+      "y": 196,
+      "width": 55,
+      "height": 14
+    },
+    {
+      "id": "choose",
+      "parent": "work",
+      "x": 1294,
+      "y": 200,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "delivery",
+      "parent": "Process",
+      "x": 3072,
+      "y": 80,
+      "width": 952,
+      "height": 320,
+      "collapsed": false
+    },
+    {
+      "id": "delivery_start",
+      "parent": "delivery",
+      "x": 3112,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "delivery_end",
+      "parent": "delivery",
+      "x": 3948,
+      "y": 142,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "pack",
+      "parent": "delivery",
+      "x": 3748,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "fork",
+      "parent": "delivery",
+      "x": 3248,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "fork_label",
+      "parent": "delivery",
+      "x": 3251,
+      "y": 116,
+      "width": 44,
+      "height": 14
+    },
+    {
+      "id": "review",
+      "parent": "delivery",
+      "x": 3398,
+      "y": 120,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "verify",
+      "parent": "delivery",
+      "x": 3398,
+      "y": 280,
+      "width": 100,
+      "height": 80,
+      "collapsed": false
+    },
+    {
+      "id": "join",
+      "parent": "delivery",
+      "x": 3598,
+      "y": 135,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "join_label",
+      "parent": "delivery",
+      "x": 3590,
+      "y": 116,
+      "width": 66,
+      "height": 14
+    },
+    {
+      "id": "ready",
+      "parent": "Process",
+      "x": 4124,
+      "y": 215,
+      "width": 50,
+      "height": 50,
+      "collapsed": false
+    },
+    {
+      "id": "ready_label",
+      "parent": "Process",
+      "x": 4111,
+      "y": 196,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "e",
+      "parent": "Process",
+      "x": 4274,
+      "y": 222,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "e_label",
+      "parent": "Process",
+      "x": 4281,
+      "y": 263,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "aborted",
+      "parent": "Process",
+      "x": 4274,
+      "y": 382,
+      "width": 36,
+      "height": 36,
+      "collapsed": false
+    },
+    {
+      "id": "aborted_label",
+      "parent": "Process",
+      "x": 4281,
+      "y": 423,
+      "width": 22,
+      "height": 14
+    },
+    {
+      "id": "edge-2",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 492,
+          "y": 152
+        },
+        {
+          "x": 592,
+          "y": 152
+        }
+      ],
+      "source": "read",
+      "target": "clear"
+    },
+    {
+      "id": "edge-3",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 617,
+          "y": 177
+        },
+        {
+          "x": 617,
+          "y": 312
+        },
+        {
+          "x": 742,
+          "y": 312
+        }
+      ],
+      "source": "clear",
+      "target": "ask"
+    },
+    {
+      "id": "edge-3_label",
+      "parent": "Process",
+      "x": 617,
+      "y": 238,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-4",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 792,
+          "y": 352
+        },
+        {
+          "x": 792,
+          "y": 372
+        },
+        {
+          "x": 442,
+          "y": 372
+        },
+        {
+          "x": 442,
+          "y": 192
+        }
+      ],
+      "source": "ask",
+      "target": "read"
+    },
+    {
+      "id": "edge-5",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 642,
+          "y": 152
+        },
+        {
+          "x": 742,
+          "y": 152
+        }
+      ],
+      "source": "clear",
+      "target": "design"
+    },
+    {
+      "id": "edge-5_label",
+      "parent": "Process",
+      "x": 654,
+      "y": 130,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "plan_entry_bridge",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 292,
+          "y": 152
+        },
+        {
+          "x": 392,
+          "y": 152
+        }
+      ],
+      "source": "plan_start",
+      "target": "read"
+    },
+    {
+      "id": "plan_exit_bridge",
+      "parent": "plan",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 842,
+          "y": 152
+        },
+        {
+          "x": 942,
+          "y": 152
+        }
+      ],
+      "source": "design",
+      "target": "plan_end"
+    },
+    {
+      "id": "edge-8",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1770,
+          "y": 240
+        },
+        {
+          "x": 1870,
+          "y": 240
+        }
+      ],
+      "source": "red",
+      "target": "green"
+    },
+    {
+      "id": "edge-9",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1970,
+          "y": 240
+        },
+        {
+          "x": 2070,
+          "y": 240
+        }
+      ],
+      "source": "green",
+      "target": "pass"
+    },
+    {
+      "id": "edge-10",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2095,
+          "y": 265
+        },
+        {
+          "x": 2095,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 280
+        }
+      ],
+      "source": "pass",
+      "target": "green"
+    },
+    {
+      "id": "edge-10_label",
+      "parent": "tdd",
+      "x": 2099,
+      "y": 276,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-11",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2120,
+          "y": 240
+        },
+        {
+          "x": 2220,
+          "y": 240
+        }
+      ],
+      "source": "pass",
+      "target": "refactor"
+    },
+    {
+      "id": "edge-11_label",
+      "parent": "tdd",
+      "x": 2132,
+      "y": 218,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-12",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2320,
+          "y": 240
+        },
+        {
+          "x": 2420,
+          "y": 240
+        }
+      ],
+      "source": "refactor",
+      "target": "stable"
+    },
+    {
+      "id": "edge-13",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2445,
+          "y": 265
+        },
+        {
+          "x": 2445,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 300
+        },
+        {
+          "x": 1920,
+          "y": 280
+        }
+      ],
+      "source": "stable",
+      "target": "green"
+    },
+    {
+      "id": "edge-13_label",
+      "parent": "tdd",
+      "x": 2332,
+      "y": 278,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "tdd_entry_bridge",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1570,
+          "y": 240
+        },
+        {
+          "x": 1670,
+          "y": 240
+        }
+      ],
+      "source": "tdd_start",
+      "target": "red"
+    },
+    {
+      "id": "tdd_exit_bridge",
+      "parent": "tdd",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2470,
+          "y": 240
+        },
+        {
+          "x": 2570,
+          "y": 240
+        }
+      ],
+      "source": "stable",
+      "target": "tdd_end"
+    },
+    {
+      "id": "edge-7",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1394,
+          "y": 240
+        },
+        {
+          "x": 1494,
+          "y": 240
+        }
+      ],
+      "source": "choose",
+      "target": "tdd"
+    },
+    {
+      "id": "edge-14",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2646,
+          "y": 240
+        },
+        {
+          "x": 2746,
+          "y": 240
+        }
+      ],
+      "source": "tdd",
+      "target": "next"
+    },
+    {
+      "id": "edge-14_label",
+      "parent": "work",
+      "x": 2658,
+      "y": 218,
+      "width": 77,
+      "height": 27
+    },
+    {
+      "id": "edge-15",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2771,
+          "y": 265
+        },
+        {
+          "x": 2771,
+          "y": 340
+        },
+        {
+          "x": 1344,
+          "y": 340
+        },
+        {
+          "x": 1344,
+          "y": 280
+        }
+      ],
+      "source": "next",
+      "target": "choose"
+    },
+    {
+      "id": "edge-15_label",
+      "parent": "work",
+      "x": 1419,
+      "y": 318,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "work_entry_bridge",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1194,
+          "y": 240
+        },
+        {
+          "x": 1294,
+          "y": 240
+        }
+      ],
+      "source": "work_start",
+      "target": "choose"
+    },
+    {
+      "id": "work_exit_bridge",
+      "parent": "work",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2796,
+          "y": 240
+        },
+        {
+          "x": 2896,
+          "y": 240
+        }
+      ],
+      "source": "next",
+      "target": "work_end"
+    },
+    {
+      "id": "edge-17",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3298,
+          "y": 160
+        },
+        {
+          "x": 3398,
+          "y": 160
+        }
+      ],
+      "source": "fork",
+      "target": "review"
+    },
+    {
+      "id": "edge-18",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3273,
+          "y": 185
+        },
+        {
+          "x": 3273,
+          "y": 320
+        },
+        {
+          "x": 3398,
+          "y": 320
+        }
+      ],
+      "source": "fork",
+      "target": "verify"
+    },
+    {
+      "id": "edge-19",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3498,
+          "y": 160
+        },
+        {
+          "x": 3598,
+          "y": 160
+        }
+      ],
+      "source": "review",
+      "target": "join"
+    },
+    {
+      "id": "edge-20",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3498,
+          "y": 320
+        },
+        {
+          "x": 3623,
+          "y": 320
+        },
+        {
+          "x": 3623,
+          "y": 185
+        }
+      ],
+      "source": "verify",
+      "target": "join"
+    },
+    {
+      "id": "edge-21",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3648,
+          "y": 160
+        },
+        {
+          "x": 3748,
+          "y": 160
+        }
+      ],
+      "source": "join",
+      "target": "pack"
+    },
+    {
+      "id": "delivery_entry_bridge",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3148,
+          "y": 160
+        },
+        {
+          "x": 3248,
+          "y": 160
+        }
+      ],
+      "source": "delivery_start",
+      "target": "fork"
+    },
+    {
+      "id": "delivery_exit_bridge",
+      "parent": "delivery",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 3848,
+          "y": 160
+        },
+        {
+          "x": 3948,
+          "y": 160
+        }
+      ],
+      "source": "pack",
+      "target": "delivery_end"
+    },
+    {
+      "id": "edge-1",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 116,
+          "y": 240
+        },
+        {
+          "x": 230,
+          "y": 240
+        }
+      ],
+      "source": "s",
+      "target": "plan"
+    },
+    {
+      "id": "edge-6",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 1010,
+          "y": 240
+        },
+        {
+          "x": 1118,
+          "y": 240
+        }
+      ],
+      "source": "plan",
+      "target": "work"
+    },
+    {
+      "id": "edge-16",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 2972,
+          "y": 240
+        },
+        {
+          "x": 3072,
+          "y": 240
+        }
+      ],
+      "source": "work",
+      "target": "delivery"
+    },
+    {
+      "id": "edge-16_label",
+      "parent": "Process",
+      "x": 2984,
+      "y": 218,
+      "width": 77,
+      "height": 14
+    },
+    {
+      "id": "edge-24",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4174,
+          "y": 240
+        },
+        {
+          "x": 4274,
+          "y": 240
+        }
+      ],
+      "source": "ready",
+      "target": "e"
+    },
+    {
+      "id": "edge-24_label",
+      "parent": "Process",
+      "x": 4202,
+      "y": 218,
+      "width": 44,
+      "height": 14
+    },
+    {
+      "id": "edge-25",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4024,
+          "y": 240
+        },
+        {
+          "x": 4124,
+          "y": 240
+        }
+      ],
+      "source": "delivery",
+      "target": "ready"
+    },
+    {
+      "id": "reconsider-design",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4124,
+          "y": 240
+        },
+        {
+          "x": 1010,
+          "y": 240
+        }
+      ],
+      "source": "ready",
+      "target": "plan"
+    },
+    {
+      "id": "reconsider-design_label",
+      "parent": "Process",
+      "x": 2523,
+      "y": 248,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "repair-implementation",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 420
+        },
+        {
+          "x": 2045,
+          "y": 420
+        },
+        {
+          "x": 2045,
+          "y": 360
+        }
+      ],
+      "source": "ready",
+      "target": "work"
+    },
+    {
+      "id": "repair-implementation_label",
+      "parent": "Process",
+      "x": 2993,
+      "y": 398,
+      "width": 88,
+      "height": 14
+    },
+    {
+      "id": "stop-work",
+      "parent": "Process",
+      "width": 100,
+      "height": 80,
+      "waypoints": [
+        {
+          "x": 4149,
+          "y": 265
+        },
+        {
+          "x": 4149,
+          "y": 400
+        },
+        {
+          "x": 4274,
+          "y": 400
+        }
+      ],
+      "source": "ready",
+      "target": "aborted"
+    },
+    {
+      "id": "stop-work_label",
+      "parent": "Process",
+      "x": 4168,
+      "y": 378,
+      "width": 88,
+      "height": 14
+    }
+  ]
+}

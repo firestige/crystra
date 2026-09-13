@@ -1,0 +1,192 @@
+{
+  "scope": "Current v0.1-draft validator and ELK adapter. SVG files are geometry inspection artifacts, not the product viewer or executable workflow.",
+  "results": [
+    {
+      "case": "architecture",
+      "direction": "RIGHT",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "architecture-root",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 1170,
+          "height": 322
+        }
+      ]
+    },
+    {
+      "case": "architecture",
+      "direction": "DOWN",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "architecture-root",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 445,
+          "height": 882
+        }
+      ]
+    },
+    {
+      "case": "architecture",
+      "direction": "COMPACT",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "architecture-root",
+          "error": "Compact composition required for architecture-root"
+        }
+      ]
+    },
+    {
+      "case": "research",
+      "direction": "RIGHT",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "research-root",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 1170,
+          "height": 322
+        }
+      ]
+    },
+    {
+      "case": "research",
+      "direction": "DOWN",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "research-root",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 445,
+          "height": 882
+        }
+      ]
+    },
+    {
+      "case": "research",
+      "direction": "COMPACT",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "research-root",
+          "error": "Compact composition required for research-root"
+        }
+      ]
+    },
+    {
+      "case": "renamed-hierarchy",
+      "direction": "RIGHT",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "unseen-main",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 2202.08,
+          "height": 450
+        },
+        {
+          "flow": "unseen-ladder",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 2887.8,
+          "height": 689
+        },
+        {
+          "flow": "unseen-research",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 1424,
+          "height": 266
+        }
+      ]
+    },
+    {
+      "case": "renamed-hierarchy",
+      "direction": "DOWN",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "unseen-main",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 782,
+          "height": 1398
+        },
+        {
+          "flow": "unseen-ladder",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 1121,
+          "height": 1708
+        },
+        {
+          "flow": "unseen-research",
+          "identityPreserved": true,
+          "inputUnchanged": true,
+          "width": 377,
+          "height": 928
+        }
+      ]
+    },
+    {
+      "case": "renamed-hierarchy",
+      "direction": "COMPACT",
+      "validation": [],
+      "flows": [
+        {
+          "flow": "unseen-main",
+          "error": "Compact composition required for unseen-main"
+        },
+        {
+          "flow": "unseen-ladder",
+          "error": "Compact composition required for unseen-ladder"
+        },
+        {
+          "flow": "unseen-research",
+          "error": "Compact composition required for unseen-research"
+        }
+      ]
+    }
+  ],
+  "negativeResults": [
+    {
+      "name": "null input",
+      "result": "exception",
+      "message": "Cannot read properties of null (reading 'nodes')"
+    },
+    {
+      "name": "missing fields",
+      "result": "exception",
+      "message": "Cannot read properties of undefined (reading 'map')"
+    },
+    {
+      "name": "unsupported schema",
+      "result": "accepted",
+      "errors": []
+    },
+    {
+      "name": "unsupported parallel kind",
+      "result": "accepted",
+      "errors": []
+    },
+    {
+      "name": "dangling edge",
+      "result": "rejected",
+      "errors": [
+        "architecture-root: invalid edge a"
+      ]
+    },
+    {
+      "name": "unreachable exit",
+      "result": "accepted",
+      "errors": []
+    }
+  ]
+}

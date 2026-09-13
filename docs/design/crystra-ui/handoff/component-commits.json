@@ -1,0 +1,8 @@
+{
+  "branch": "codex/accepted-ui-design",
+  "status": "local-source-commits-not-release",
+  "components": {
+    "wsr-ui": "c8f14281bd843e48bba2283bf66246c5e08379ce",
+    "wsr-dsh": "bf5ee95a3ea2938084ca3c3e7c5df258d221d5c9"
+  }
+}

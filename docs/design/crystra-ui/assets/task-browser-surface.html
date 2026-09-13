@@ -1,0 +1,35 @@
+<section data-section-id="main-surface-host" class="browser-host">
+ <header data-section-id="task-browser-header" class="browser-header">
+  <div data-header-slot="identity"><h1 data-type="page-title">全部任务</h1><p data-type="description">浏览任务，继续推进。</p></div>
+  <div data-header-slot="search"><label class="browser-search"><span data-browser-icon="search"></span><input id="browser-search" data-section-id="task-browser-search" type="search" placeholder="搜索任务、目标或 Workspace…" aria-label="搜索任务"></label></div>
+  <section class="browser-toolbar" data-header-slot="toolbar" data-section-id="task-browser-toolbar" aria-label="任务浏览选项">
+   <div class="browser-button-group" role="group" aria-label="筛选与排序">
+    <button type="button" data-browser-filter="all" aria-pressed="true">全部</button><button type="button" data-browser-filter="active" aria-pressed="false">活跃</button><button type="button" data-browser-filter="attention" aria-pressed="false">需要关注</button>
+    <div class="browser-sort-control"><button id="browser-sort-toggle" type="button" aria-label="排序：最近活动，降序" title="排序：最近活动，降序" aria-haspopup="menu" aria-expanded="false" aria-controls="browser-sort-menu"><span data-browser-icon="sort-descending"></span></button>
+     <div id="browser-sort-menu" class="browser-sort-menu" role="menu" aria-label="排序方式" hidden>
+      <button type="button" role="menuitemradio" aria-checked="true" data-sort-option="activity">最近活动</button><button type="button" role="menuitemradio" aria-checked="false" data-sort-option="created">创建时间</button><button type="button" role="menuitemradio" aria-checked="false" data-sort-option="cost">成本</button>
+     </div>
+    </div>
+   </div>
+   <div id="browser-view-toggle-seat" data-label="任务视图" data-view="gallery"></div>
+  </section>
+  <div data-header-slot="actions"><div class="browser-action-group" role="group" aria-label="任务操作"><div class="browser-archive-control"><button class="browser-button" id="browser-archive" aria-label="归档所选" aria-describedby="browser-archive-tooltip" disabled><span data-browser-icon="archive"></span></button><span id="browser-archive-tooltip" role="tooltip">归档所选</span></div><a class="browser-button" href="crystra-task-work-v8-sidebar.html?new_task=1"><span data-browser-icon="plus"></span>新建任务</a></div></div>
+ </header>
+ <div id="browser-scroll" data-section-id="task-browser-content">
+
+  <div class="browser-results"><div class="browser-selection-summary"><label class="browser-select-all"><input type="checkbox" id="browser-select-all">全选结果</label><p id="browser-result-count" role="status"></p><div id="browser-batch-actions" hidden><span id="browser-selected-count" role="status"></span><button class="browser-button" id="browser-clear-selection" title="取消选择" aria-label="取消选择"><span data-browser-icon="x"></span></button></div></div><label class="browser-select" id="browser-group-label">分组<select id="browser-group" aria-label="分组"><option value="workspace">Workspace</option><option value="status">状态</option><option value="none">不分组</option></select></label></div>
+  <div id="browser-gallery" data-section-id="task-browser-gallery"></div>
+  <section id="browser-list" data-section-id="task-browser-list" hidden>
+   <table><thead><tr><th class="selection-cell"><span class="browser-sr-only">选择任务</span></th><th>任务</th><th>状态</th><th>Workspace</th><th>当前进度</th><th>关注项</th><th>创建时间</th><th>最近活动</th><th class="cost-cell">成本</th><th class="row-actions"><span class="browser-sr-only">操作</span></th></tr></thead><tbody id="browser-list-body"></tbody></table>
+  </section>
+  <div id="browser-empty" hidden><span data-browser-icon="file"></span><p>没有符合条件的任务</p><span>试试其他关键词或筛选条件</span></div>
+  <footer id="browser-pagination" data-section-id="task-browser-pagination" hidden><label class="browser-select">每页<select id="browser-page-size" aria-label="每页条数"><option>12</option><option>24</option><option>48</option></select>条</label><div><span id="browser-page-label"></span><button class="browser-button" id="browser-prev">上一页</button><button class="browser-button" id="browser-next">下一页</button></div></footer>
+ </div>
+ <div id="browser-archive-notice" class="browser-notice" hidden><span id="browser-archive-message" role="status"></span><button id="browser-undo-archive" class="browser-button">撤销</button><button id="browser-dismiss-notice" class="browser-button" aria-label="关闭通知"><span data-browser-icon="x"></span></button></div>
+ <input id="browser-thumbnail-input" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+ <dialog id="browser-rename-dialog" aria-labelledby="browser-rename-title">
+  <form id="browser-rename-form"><h2 id="browser-rename-title">修改任务名称</h2><label for="browser-rename-input">名称</label><input id="browser-rename-input" required maxlength="120" autocomplete="off">
+  <div class="browser-dialog-actions"><button type="button" class="browser-button" id="browser-rename-cancel">取消</button><button class="browser-button" id="browser-rename-save" type="submit">保存</button></div></form>
+ </dialog>
+ <div id="browser-edit-notice" class="browser-notice" hidden><span id="browser-edit-message" role="status"></span><button class="browser-button" id="browser-edit-dismiss" aria-label="关闭通知"><span data-browser-icon="x"></span></button></div>
+</section>

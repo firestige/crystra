@@ -1,0 +1,128 @@
+[
+  {
+    "system": "bpmn-next",
+    "name": "development",
+    "group": "plan",
+    "root": "plan_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "development",
+    "group": "work",
+    "root": "work_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "development",
+    "group": "delivery",
+    "root": "delivery_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "development",
+    "group": "tdd",
+    "root": "tdd_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "architecture",
+    "group": "explore",
+    "root": "explore_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "architecture",
+    "group": "architecture",
+    "root": "architecture_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "architecture",
+    "group": "reviewing",
+    "root": "reviewing_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "research",
+    "group": "collect",
+    "root": "collect_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "bpmn-next",
+    "name": "research",
+    "group": "compute",
+    "root": "compute_plane",
+    "status": "导入警告 0；点击原生折叠可观察它是否自动腾挪空间。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "development",
+    "group": "plan",
+    "root": "plan",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "development",
+    "group": "work",
+    "root": "work",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "development",
+    "group": "delivery",
+    "root": "delivery",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "development",
+    "group": "tdd",
+    "root": "tdd",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "architecture",
+    "group": "explore",
+    "root": "explore",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "architecture",
+    "group": "architecture",
+    "root": "architecture",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "architecture",
+    "group": "reviewing",
+    "root": "reviewing",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "research",
+    "group": "collect",
+    "root": "collect",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  },
+  {
+    "system": "maxgraph",
+    "name": "research",
+    "group": "compute",
+    "root": "compute",
+    "status": "已加载；折叠不会自动重新布局，单独点击重新布局观察区别。"
+  }
+]

@@ -1,0 +1,73 @@
+/* Accepted balanced typography. Apply semantic roles only within the Crystra root. */
+[data-crystra-theme="dark"] {
+ --type-font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+ --type-page-title-size: 24px;
+ --type-page-title-line: 32px;
+ --type-page-title-weight: 600;
+ --type-section-title-size: 18px;
+ --type-section-title-line: 26px;
+ --type-section-title-weight: 600;
+ --type-card-title-size: 16px;
+ --type-card-title-line: 24px;
+ --type-card-title-weight: 600;
+ --type-item-title-size: 14px;
+ --type-item-title-line: 20px;
+ --type-item-title-weight: 500;
+ --type-body-size: 14px;
+ --type-body-line: 24px;
+ --type-body-weight: 400;
+ --type-body-compact-size: 14px;
+ --type-body-compact-line: 20px;
+ --type-body-compact-weight: 400;
+ --type-header-description-size: 14px;
+ --type-header-description-line: 22px;
+ --type-header-description-weight: 400;
+ --type-description-size: 12px;
+ --type-description-line: 18px;
+ --type-description-weight: 400;
+ --type-meta-size: 12px;
+ --type-meta-line: 18px;
+ --type-meta-weight: 400;
+ --type-label-size: 12px;
+ --type-label-line: 18px;
+ --type-label-weight: 600;
+ --type-control-size: 14px;
+ --type-control-line: 20px;
+ --type-control-weight: 500;
+ --type-code-size: 12px;
+ --type-code-line: 20px;
+ --type-code-weight: 400;
+ --type-metric-size: 20px;
+ --type-metric-line: 28px;
+ --type-metric-weight: 500;
+ --type-brand-size: 20px;
+ --type-brand-line: 28px;
+ --type-brand-weight: 600;
+ --type-badge-size: 11px;
+ --type-badge-line: 14px;
+ --type-badge-weight: 500;
+ --type-graph-title-size: 13px;
+ --type-graph-title-line: 18px;
+ --type-graph-title-weight: 500;
+ --type-graph-meta-size: 11px;
+ --type-graph-meta-line: 16px;
+ --type-graph-meta-weight: 400;
+}
+[data-crystra-theme="dark"] [data-type="page-title"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-page-title-size);line-height:var(--type-page-title-line);font-weight:var(--type-page-title-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="section-title"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-section-title-size);line-height:var(--type-section-title-line);font-weight:var(--type-section-title-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="card-title"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-card-title-size);line-height:var(--type-card-title-line);font-weight:var(--type-card-title-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="item-title"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-item-title-size);line-height:var(--type-item-title-line);font-weight:var(--type-item-title-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="body"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-body-size);line-height:var(--type-body-line);font-weight:var(--type-body-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="body-compact"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-body-compact-size);line-height:var(--type-body-compact-line);font-weight:var(--type-body-compact-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="header-description"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-header-description-size);line-height:var(--type-header-description-line);font-weight:var(--type-header-description-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="description"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-description-size);line-height:var(--type-description-line);font-weight:var(--type-description-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="meta"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-meta-size);line-height:var(--type-meta-line);font-weight:var(--type-meta-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="label"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-label-size);line-height:var(--type-label-line);font-weight:var(--type-label-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="control"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-control-size);line-height:var(--type-control-line);font-weight:var(--type-control-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="code"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-code-size);line-height:var(--type-code-line);font-weight:var(--type-code-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="metric"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-metric-size);line-height:var(--type-metric-line);font-weight:var(--type-metric-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="brand"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-brand-size);line-height:var(--type-brand-line);font-weight:var(--type-brand-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="badge"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-badge-size);line-height:var(--type-badge-line);font-weight:var(--type-badge-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="graph-title"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-graph-title-size);line-height:var(--type-graph-title-line);font-weight:var(--type-graph-title-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="graph-meta"]:not([data-host-owned], [data-host-owned] *) {font-family:var(--type-font-family);font-size:var(--type-graph-meta-size);line-height:var(--type-graph-meta-line);font-weight:var(--type-graph-meta-weight);letter-spacing:0;}
+[data-crystra-theme="dark"] [data-type="code"]:not([data-host-owned], [data-host-owned] *) {font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}

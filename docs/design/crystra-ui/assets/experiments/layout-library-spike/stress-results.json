@@ -1,0 +1,162 @@
+[
+  {
+    "size": 25,
+    "engine": "elk",
+    "placementMs": 94.226667,
+    "routingMs": 24.49350000000001,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 1,
+      "sharedLength": 320.4,
+      "nonOrthogonal": 0,
+      "bends": 45,
+      "length": 4440,
+      "constraintViolations": 0,
+      "width": 1824,
+      "height": 793.33,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 25,
+    "engine": "webcola",
+    "placementMs": 52.39945799999998,
+    "routingMs": 5.719833999999992,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 1,
+      "sharedLength": 402,
+      "nonOrthogonal": 0,
+      "bends": 35,
+      "length": 7021.02,
+      "constraintViolations": 0,
+      "width": 5271.74,
+      "height": 1685.3,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 25,
+    "engine": "fcose",
+    "placementMs": 24.138417000000004,
+    "routingMs": 2.379542000000015,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 0,
+      "sharedLength": 0,
+      "nonOrthogonal": 0,
+      "bends": 8,
+      "length": 4782.13,
+      "constraintViolations": 0,
+      "width": 6222.13,
+      "height": 96,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 25,
+    "engine": "libcola",
+    "placementMs": 19.83254100000005,
+    "routingMs": 4.787833000000035,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 1,
+      "sharedLength": 512,
+      "nonOrthogonal": 0,
+      "bends": 35,
+      "length": 6897.92,
+      "constraintViolations": 0,
+      "width": 5486.52,
+      "height": 1506.02,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 100,
+    "engine": "elk",
+    "placementMs": 76.63937500000003,
+    "routingMs": 97.337084,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 8,
+      "sharedLength": 2030.47,
+      "nonOrthogonal": 0,
+      "bends": 176,
+      "length": 27317.67,
+      "constraintViolations": 0,
+      "width": 6620,
+      "height": 1623.67,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 100,
+    "engine": "webcola",
+    "placementMs": 241.017083,
+    "routingMs": 93.02254199999993,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 4,
+      "sharedLength": 1919.07,
+      "nonOrthogonal": 0,
+      "bends": 146,
+      "length": 31870.34,
+      "constraintViolations": 0,
+      "width": 21008.95,
+      "height": 8020.63,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 100,
+    "engine": "fcose",
+    "placementMs": 20.710916999999995,
+    "routingMs": 10.737457999999947,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 0,
+      "sharedLength": 0,
+      "nonOrthogonal": 0,
+      "bends": 38,
+      "length": 17982.13,
+      "constraintViolations": 0,
+      "width": 21822.13,
+      "height": 96,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  },
+  {
+    "size": 100,
+    "engine": "libcola",
+    "placementMs": 228.51695899999993,
+    "routingMs": 60.46304199999986,
+    "metrics": {
+      "nodeOverlaps": 0,
+      "blocked": 0,
+      "crossings": 1,
+      "sharedLength": 2431.99,
+      "nonOrthogonal": 0,
+      "bends": 145,
+      "length": 31057.41,
+      "constraintViolations": 0,
+      "width": 21218.2,
+      "height": 4870.88,
+      "finite": true,
+      "missingRoutes": 0
+    }
+  }
+]

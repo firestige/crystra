@@ -1,0 +1,3191 @@
+[
+  {
+    "lineBeforeMigration": 280,
+    "section": "sidebar-brand-name",
+    "tag": "span",
+    "text": "Crystra",
+    "originalClass": "truncate text-[19px] font-semibold tracking-[-.025em]",
+    "role": "brand"
+  },
+  {
+    "lineBeforeMigration": 286,
+    "section": "new-task-action",
+    "tag": "button",
+    "text": "",
+    "originalClass": "mt-6 flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/[.12] bg-white/[.18] text-sm font-medium text-slate-100 transition-colors hover:bg-white/[.24] active:bg-white/[.28]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 296,
+    "section": "sidebar-rail-task-attention",
+    "tag": "span",
+    "text": "3",
+    "originalClass": "sidebar-rail-badge",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 304,
+    "section": "task-section-toggle",
+    "tag": "button",
+    "text": "",
+    "originalClass": "flex h-full min-w-0 flex-1 items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition-colors hover:text-slate-100",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 307,
+    "section": "task-section-attention-badge",
+    "tag": "span",
+    "text": "3",
+    "originalClass": "ml-1 grid size-[18px] place-items-center rounded-full bg-amber-500/20 text-[10px] font-medium tracking-normal text-amber-300",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 313,
+    "section": "task-search-input",
+    "tag": "input",
+    "text": "",
+    "originalClass": "h-full min-w-0 flex-1 border-0 bg-transparent px-1.5 text-[13px] text-slate-200 outline-none placeholder:text-slate-500",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 324,
+    "section": "task-view-options-menu",
+    "tag": "div",
+    "text": "",
+    "originalClass": "absolute right-0 top-10 z-50 w-52 rounded-xl border border-line bg-[#1a1e24] p-2 text-xs shadow-2xl shadow-black/50",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 325,
+    "section": "task-view-options-menu",
+    "tag": "p",
+    "text": "排序方式",
+    "originalClass": "px-2 py-1 text-[10px] font-medium text-slate-500",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 326,
+    "section": "task-view-options-menu",
+    "tag": "span",
+    "text": "最新优先",
+    "originalClass": "ml-auto text-[10px] text-slate-500",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 327,
+    "section": "task-view-options-menu",
+    "tag": "span",
+    "text": "事件冒泡",
+    "originalClass": "ml-auto text-[10px] text-slate-500",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 329,
+    "section": "task-view-options-menu",
+    "tag": "p",
+    "text": "过滤方式",
+    "originalClass": "px-2 py-1 text-[10px] font-medium text-slate-500",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 339,
+    "section": "task-current-title",
+    "tag": "span",
+    "text": "发布插件市场方案",
+    "originalClass": "min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-medium text-slate-100",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 340,
+    "section": "task-current",
+    "tag": "span",
+    "text": "2 分钟",
+    "originalClass": "shrink-0 text-[10px] text-slate-500",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 341,
+    "section": "task-current-attention-badge",
+    "tag": "span",
+    "text": "1",
+    "originalClass": "grid size-[18px] shrink-0 place-items-center rounded-full bg-amber-500/20 text-[10px] font-medium text-amber-300",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 345,
+    "section": "task-running",
+    "tag": "span",
+    "text": "UI 工作台设计",
+    "originalClass": "min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px]",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 346,
+    "section": "task-running",
+    "tag": "span",
+    "text": "18 分钟",
+    "originalClass": "shrink-0 text-[10px] text-slate-500",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 350,
+    "section": "task-failed",
+    "tag": "span",
+    "text": "插件兼容性预检与冲突诊断",
+    "originalClass": "min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px]",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 351,
+    "section": "task-failed",
+    "tag": "span",
+    "text": "42 分钟",
+    "originalClass": "shrink-0 text-[10px] text-slate-500",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 352,
+    "section": "task-failed-attention-badge",
+    "tag": "span",
+    "text": "2",
+    "originalClass": "grid size-[18px] shrink-0 place-items-center rounded-full bg-red-500/20 text-[10px] font-medium text-red-300",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 356,
+    "section": "task-complete",
+    "tag": "span",
+    "text": "插件兼容性研究",
+    "originalClass": "min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13px]",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 357,
+    "section": "task-complete",
+    "tag": "span",
+    "text": "昨天",
+    "originalClass": "shrink-0 text-[10px] text-slate-500",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 359,
+    "section": "all-tasks-action",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-9 items-center rounded-lg px-2.5 text-xs text-blue-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 366,
+    "section": "workflow-section-toggle",
+    "tag": "button",
+    "text": "",
+    "originalClass": "flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04] hover:text-slate-100",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 373,
+    "section": "workflow-current-list",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 373,
+    "section": "workflow-current-list",
+    "tag": "span",
+    "text": "v3",
+    "originalClass": "shrink-0 text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 374,
+    "section": "workflow-current-list",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 374,
+    "section": "workflow-current-list",
+    "tag": "span",
+    "text": "v2",
+    "originalClass": "shrink-0 text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 375,
+    "section": "workflow-current-list",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 375,
+    "section": "workflow-current-list",
+    "tag": "span",
+    "text": "v1",
+    "originalClass": "shrink-0 text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 377,
+    "section": "all-workflows-action",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 items-center rounded-md px-2.5 text-xs text-blue-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 383,
+    "section": "analysis-section-toggle",
+    "tag": "button",
+    "text": "",
+    "originalClass": "flex h-full w-full items-center gap-1.5 rounded-md px-2 text-left text-[11px] font-semibold tracking-[.06em] text-slate-400 transition hover:bg-white/[.04] hover:text-slate-100",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 390,
+    "section": "analysis-dashboard-action",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 391,
+    "section": "analysis-traces-action",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 391,
+    "section": "analysis-traces-action",
+    "tag": "span",
+    "text": "3",
+    "originalClass": "grid min-w-[17px] shrink-0 place-items-center rounded-full bg-amber-500/15 px-1 text-[9px] text-amber-300",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 392,
+    "section": "analysis-audit-action",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 393,
+    "section": "analysis-compare-action",
+    "tag": "a",
+    "text": "",
+    "originalClass": "flex h-8 min-w-0 items-center gap-2.5 rounded-md px-2.5 text-xs text-slate-300 transition hover:bg-white/[.05]",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 401,
+    "section": "host-settings",
+    "tag": "button",
+    "text": "",
+    "originalClass": "flex h-9 w-full items-center gap-3 rounded-md px-2 text-sm text-slate-300 transition hover:bg-white/[.05] hover:text-white",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 408,
+    "section": "new-task-composer-seat",
+    "tag": "p",
+    "text": "开始一个新任务",
+    "originalClass": "mb-5 text-center text-xl font-medium tracking-tight text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 410,
+    "section": "new-task-hero-composer-placeholder",
+    "tag": "p",
+    "text": "描述你想完成的工作…",
+    "originalClass": "min-h-14 text-sm text-muted",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 411,
+    "section": "new-task-hero-composer-placeholder",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex items-center gap-3 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 412,
+    "section": "new-task-hero-composer-placeholder",
+    "tag": "button",
+    "text": "＋",
+    "originalClass": "grid size-8 place-items-center rounded-full bg-white/5 text-xl",
+    "role": "glyph"
+  },
+  {
+    "lineBeforeMigration": 419,
+    "section": "new-task-hero-composer-placeholder",
+    "tag": "button",
+    "text": "↑",
+    "originalClass": "grid size-9 place-items-center rounded-full bg-blue-600 text-lg text-white",
+    "role": "glyph"
+  },
+  {
+    "lineBeforeMigration": 428,
+    "section": "workspace-header",
+    "tag": "span",
+    "text": "↗",
+    "originalClass": "grid size-12 shrink-0 place-items-center rounded-lg border border-line bg-panel text-xl",
+    "role": "glyph"
+  },
+  {
+    "lineBeforeMigration": 430,
+    "section": "workspace-header",
+    "tag": "h1",
+    "text": "发布插件市场方案",
+    "originalClass": "truncate text-2xl font-semibold tracking-tight",
+    "role": "page-title"
+  },
+  {
+    "lineBeforeMigration": 431,
+    "section": "workspace-header",
+    "tag": "p",
+    "text": "验证发布路径，并将重复步骤结晶为低成本 Workflow",
+    "originalClass": "mt-1 truncate text-sm text-slate-300",
+    "role": "header-description"
+  },
+  {
+    "lineBeforeMigration": 432,
+    "section": "task-context",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-2 flex flex-wrap items-center gap-2 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 434,
+    "section": "task-context",
+    "tag": "span",
+    "text": "等待审核",
+    "originalClass": "rounded bg-amber-500/15 px-2 py-1 font-medium text-warning",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 444,
+    "section": "run-health",
+    "tag": "p",
+    "text": "运行正常",
+    "originalClass": "text-sm font-medium",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 444,
+    "section": "run-health",
+    "tag": "p",
+    "text": "持续产生进展",
+    "originalClass": "mt-1 text-xs text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 448,
+    "section": "current-activity",
+    "tag": "p",
+    "text": "当前活动",
+    "originalClass": "text-[11px] font-medium uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 449,
+    "section": "current-activity",
+    "tag": "p",
+    "text": "安全扫描、发布说明生成、市场兼容检查",
+    "originalClass": "mt-1 truncate text-sm text-slate-200",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 453,
+    "section": "execution-counts",
+    "tag": "p",
+    "text": "已完成",
+    "originalClass": "text-sm font-medium",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 453,
+    "section": "execution-counts",
+    "tag": "p",
+    "text": "当前剩余",
+    "originalClass": "text-sm font-medium",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 454,
+    "section": "execution-counts",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-2 flex items-center gap-2 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 459,
+    "section": "attention-summary",
+    "tag": "p",
+    "text": "1 项需要你审核",
+    "originalClass": "text-sm font-medium text-amber-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 459,
+    "section": "attention-open-gates",
+    "tag": "button",
+    "text": "处理后解除 2 项阻塞 →",
+    "originalClass": "mt-1 text-xs text-warning",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 463,
+    "section": "latest-activity",
+    "tag": "p",
+    "text": "最近活动",
+    "originalClass": "text-[11px] font-medium uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 463,
+    "section": "latest-activity",
+    "tag": "p",
+    "text": "安全扫描通过 · 2 分钟前",
+    "originalClass": "mt-1 truncate text-xs text-slate-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 464,
+    "section": "run-consumption",
+    "tag": "p",
+    "text": "18 分钟",
+    "originalClass": "text-sm",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 464,
+    "section": "run-consumption",
+    "tag": "p",
+    "text": "¥12.40",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 471,
+    "section": "conversation-feed",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mb-2 flex items-center gap-2 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 471,
+    "section": "conversation-feed",
+    "tag": "p",
+    "text": "请基于当前计划检查发布路径，并识别可以复用的模块化步骤。",
+    "originalClass": "text-sm leading-6 text-slate-200",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 472,
+    "section": "conversation-feed",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mb-2 flex items-center gap-2 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 472,
+    "section": "conversation-feed",
+    "tag": "p",
+    "text": "已完成路径验证与步骤抽取，当前处于验证阶段，需要审阅结果。",
+    "originalClass": "text-sm leading-6 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 473,
+    "section": "conversation-feed",
+    "tag": "div",
+    "text": "validate-publish-path",
+    "originalClass": "text-sm",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 473,
+    "section": "conversation-feed",
+    "tag": "div",
+    "text": "1 分 24 秒 · ¥0.38",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 473,
+    "section": "conversation-feed",
+    "tag": "span",
+    "text": "已完成",
+    "originalClass": "ml-auto rounded bg-emerald-500/10 px-2 py-1 text-xs text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 474,
+    "section": "conversation-feed",
+    "tag": "div",
+    "text": "需要决策",
+    "originalClass": "font-medium text-amber-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 474,
+    "section": "conversation-feed",
+    "tag": "p",
+    "text": "请审阅检查点结果并决定下一步。",
+    "originalClass": "mt-1 text-xs text-amber-100/70",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 475,
+    "section": "input-approval-card",
+    "tag": "article",
+    "text": "",
+    "originalClass": "rounded-lg border border-line bg-panel p-4",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 475,
+    "section": "input-approval-card",
+    "tag": "div",
+    "text": "请确认以下事项",
+    "originalClass": "mb-3 text-sm font-medium",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 475,
+    "section": "input-approval-publish-path",
+    "tag": "label",
+    "text": "发布路径是否完整且可执行？",
+    "originalClass": "flex gap-2 py-1.5 text-xs text-slate-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 475,
+    "section": "input-approval-reuse-abstraction",
+    "tag": "label",
+    "text": "可复用步骤的抽象是否合理？",
+    "originalClass": "flex gap-2 py-1.5 text-xs text-slate-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 475,
+    "section": "input-approval-submit",
+    "tag": "button",
+    "text": "提交",
+    "originalClass": "mt-3 float-right rounded-md border border-blue-500/50 px-3 py-1.5 text-xs text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 478,
+    "section": "composer-reply-subject",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mb-3 hidden items-center gap-2 rounded-lg border border-amber-500/20 bg-amber-500/5 px-3 py-2 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 479,
+    "section": "composer",
+    "tag": "p",
+    "text": "继续描述、纠偏或批准…",
+    "originalClass": "min-h-10 text-sm text-muted",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 480,
+    "section": "composer",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex items-center gap-3 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 480,
+    "section": "composer-add",
+    "tag": "button",
+    "text": "＋",
+    "originalClass": "grid size-8 place-items-center rounded-full bg-white/5 text-xl",
+    "role": "glyph"
+  },
+  {
+    "lineBeforeMigration": 480,
+    "section": "composer-write-mode",
+    "tag": "button",
+    "text": "◈ 工作区写入⌄",
+    "originalClass": "",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 480,
+    "section": "composer-send",
+    "tag": "button",
+    "text": "↑",
+    "originalClass": "grid size-9 place-items-center rounded-full bg-blue-600 text-lg text-white",
+    "role": "glyph"
+  },
+  {
+    "lineBeforeMigration": 485,
+    "section": "task-workbench-navigation",
+    "tag": "nav",
+    "text": "",
+    "originalClass": "mb-3 flex shrink-0 items-center gap-1 rounded-xl border border-line bg-panel p-1.5 text-xs text-muted shadow-panel",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 486,
+    "section": "workbench-nav-grilling",
+    "tag": "span",
+    "text": "已对齐",
+    "originalClass": "ml-1 text-[10px] text-emerald-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 487,
+    "section": "workbench-nav-plan",
+    "tag": "span",
+    "text": "v4",
+    "originalClass": "ml-1 text-[10px] text-slate-400",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 488,
+    "section": "workbench-system-focus",
+    "tag": "span",
+    "text": "系统当前",
+    "originalClass": "ml-1 text-[10px] text-blue-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 489,
+    "section": "workbench-nav-gate",
+    "tag": "span",
+    "text": "1",
+    "originalClass": "ml-1 rounded-full bg-amber-500/15 px-1.5 py-0.5 text-[10px] text-warning",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 490,
+    "section": "workbench-nav-delivery",
+    "tag": "span",
+    "text": "可交付",
+    "originalClass": "ml-1 text-[10px] text-emerald-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 497,
+    "section": "gate-queue-navigation",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mb-3 flex items-center gap-2 border-b border-amber-500/15 pb-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 503,
+    "section": "gate-decision-queue",
+    "tag": "h3",
+    "text": "待决策",
+    "originalClass": "text-xs font-medium text-slate-200",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 503,
+    "section": "gate-decision-queue",
+    "tag": "span",
+    "text": "按控制影响排序",
+    "originalClass": "ml-auto text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 504,
+    "section": "gate-queue-item-g3",
+    "tag": "span",
+    "text": "G-3 · 是否允许修改签名配置并重试？",
+    "originalClass": "block text-xs text-slate-100",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 504,
+    "section": "gate-queue-item-g3",
+    "tag": "span",
+    "text": "Wave 2 · 阻塞主路径 · 等待用户",
+    "originalClass": "mt-1 block text-[11px] text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 505,
+    "section": "gate-queue-item-g5",
+    "tag": "span",
+    "text": "G-5 · 是否接受发布说明覆盖率偏差？",
+    "originalClass": "block text-xs text-slate-100",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 505,
+    "section": "gate-queue-item-g5",
+    "tag": "span",
+    "text": "Wave 4 · 不阻塞主路径 · 等待用户",
+    "originalClass": "mt-1 block text-[11px] text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 506,
+    "section": "gate-queue-item-g6",
+    "tag": "span",
+    "text": "G-6 · 是否允许候选包进入公开发布？",
+    "originalClass": "block text-xs text-slate-100",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 506,
+    "section": "gate-queue-item-g6",
+    "tag": "span",
+    "text": "最终关口 · 等待 G-3、G-5",
+    "originalClass": "mt-1 block text-[11px] text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 511,
+    "section": "gate-decision-question-kicker",
+    "tag": "p",
+    "text": "审核检查点 · G-3",
+    "originalClass": "text-[10px] font-semibold uppercase tracking-[.12em] text-warning",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 512,
+    "section": "gate-decision-question-title",
+    "tag": "h2",
+    "text": "是否允许 Wave 2 修改签名配置并重新执行？",
+    "originalClass": "mt-1 text-base font-medium text-slate-100",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 513,
+    "section": "gate-decision-question",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 518,
+    "section": "gate-decision-status",
+    "tag": "span",
+    "text": "等待用户决定",
+    "originalClass": "ml-auto shrink-0 rounded bg-amber-500/15 px-2.5 py-1 text-xs text-warning",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 524,
+    "section": "gate-decision-state",
+    "tag": "h3",
+    "text": "当前决策状态",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 527,
+    "section": "gate-relevant-decisions",
+    "tag": "p",
+    "text": "与本次问题相关的已确认决定",
+    "originalClass": "text-xs font-medium text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 527,
+    "section": "gate-relevant-decisions-count",
+    "tag": "span",
+    "text": "3 项已确认",
+    "originalClass": "ml-auto rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 528,
+    "section": "gate-relevant-decisions-list",
+    "tag": "ul",
+    "text": "",
+    "originalClass": "mt-2.5 grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 536,
+    "section": "gate-current-interpretation",
+    "tag": "p",
+    "text": "AI 当前理解",
+    "originalClass": "text-xs font-medium text-blue-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 536,
+    "section": "gate-current-interpretation-status",
+    "tag": "span",
+    "text": "等待明确确认",
+    "originalClass": "ml-auto rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 537,
+    "section": "gate-current-interpretation-copy",
+    "tag": "p",
+    "text": "允许修改签名配置并重新执行 Wave 2；成功或失败后返回 Gate G-3，且不自动进入公开发布。",
+    "originalClass": "mt-2 text-sm leading-6 text-slate-100",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 541,
+    "section": "gate-understanding-delta",
+    "tag": "p",
+    "text": "相对既有决定",
+    "originalClass": "text-xs font-medium text-slate-300",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 542,
+    "section": "gate-understanding-delta-list",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-2 grid grid-cols-2 gap-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 551,
+    "section": "gate-execution-preview",
+    "tag": "p",
+    "text": "确认后的控制效果",
+    "originalClass": "text-[10px] font-semibold uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 551,
+    "section": "gate-execution-preview-title",
+    "tag": "h3",
+    "text": "确认后将执行",
+    "originalClass": "mt-1 text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 551,
+    "section": "gate-execution-preview-status",
+    "tag": "span",
+    "text": "尚未授权",
+    "originalClass": "ml-auto rounded bg-amber-500/10 px-2 py-1 text-[10px] text-warning",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 552,
+    "section": "gate-execution-steps",
+    "tag": "ol",
+    "text": "",
+    "originalClass": "mt-5 space-y-0 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 553,
+    "section": "gate-execution-steps",
+    "tag": "span",
+    "text": "1",
+    "originalClass": "grid size-6 place-items-center rounded-full border border-blue-400/50 bg-blue-500/10 text-[10px] text-blue-200",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 553,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "恢复 Wave 2",
+    "originalClass": "text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 553,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "保持既有 Goal 与交付范围",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 554,
+    "section": "gate-execution-steps",
+    "tag": "span",
+    "text": "2",
+    "originalClass": "grid size-6 place-items-center rounded-full border border-blue-400/50 bg-blue-500/10 text-[10px] text-blue-200",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 554,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "仅修改签名配置",
+    "originalClass": "text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 554,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "不改公开 API 与其他构建步骤",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 555,
+    "section": "gate-execution-steps",
+    "tag": "span",
+    "text": "3",
+    "originalClass": "grid size-6 place-items-center rounded-full border border-blue-400/50 bg-blue-500/10 text-[10px] text-blue-200",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 555,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "重跑构建与签名验证",
+    "originalClass": "text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 555,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "保留仍有效的安全扫描证据",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 556,
+    "section": "gate-execution-steps",
+    "tag": "span",
+    "text": "4",
+    "originalClass": "grid size-6 place-items-center rounded-full border border-amber-400/50 bg-amber-500/10 text-[10px] text-amber-200",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 556,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "返回 Gate G-3",
+    "originalClass": "text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 556,
+    "section": "gate-execution-steps",
+    "tag": "p",
+    "text": "成功或失败均不自动发布",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 558,
+    "section": "gate-preserved-boundary",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-3 py-2.5 text-xs text-slate-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 563,
+    "section": "gate-evidence",
+    "tag": "h3",
+    "text": "证据与上下文",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 563,
+    "section": "gate-evidence",
+    "tag": "p",
+    "text": "快速核对当前问题的来源、边界与执行事实",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 563,
+    "section": "gate-evidence",
+    "tag": "span",
+    "text": "5 个入口",
+    "originalClass": "ml-auto rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 564,
+    "section": "gate-evidence",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 grid grid-cols-5 gap-2 text-left text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 565,
+    "section": "gate-evidence-plan-title",
+    "tag": "span",
+    "text": "Wave 2 执行计划",
+    "originalClass": "block text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 565,
+    "section": "gate-evidence-plan-copy",
+    "tag": "span",
+    "text": "核对原定恢复边界",
+    "originalClass": "mt-1.5 block text-[11px] text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 565,
+    "section": "gate-evidence-plan-action",
+    "tag": "span",
+    "text": "打开 Plan 章节 →",
+    "originalClass": "mt-3 block text-[10px] text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 566,
+    "section": "gate-evidence-trigger-title",
+    "tag": "span",
+    "text": "第 3 次失败 Trace",
+    "originalClass": "block text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 566,
+    "section": "gate-evidence-trigger-copy",
+    "tag": "span",
+    "text": "查看升级触发事实",
+    "originalClass": "mt-1.5 block text-[11px] text-red-200/70",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 566,
+    "section": "gate-evidence-trigger-action",
+    "tag": "span",
+    "text": "在分析中查看 →",
+    "originalClass": "mt-3 block text-[10px] text-red-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 567,
+    "section": "gate-evidence-change-title",
+    "tag": "span",
+    "text": "签名配置差异",
+    "originalClass": "block text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 567,
+    "section": "gate-evidence-change-copy",
+    "tag": "span",
+    "text": "3 处准备修改",
+    "originalClass": "mt-1.5 block text-[11px] text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 567,
+    "section": "gate-evidence-change-action",
+    "tag": "span",
+    "text": "查看差异 →",
+    "originalClass": "mt-3 block text-[10px] text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 568,
+    "section": "gate-evidence-validation-title",
+    "tag": "span",
+    "text": "安全扫描结果",
+    "originalClass": "block text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 568,
+    "section": "gate-evidence-validation-copy",
+    "tag": "span",
+    "text": "既有证据仍有效",
+    "originalClass": "mt-1.5 block text-[11px] text-success",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 568,
+    "section": "gate-evidence-validation-action",
+    "tag": "span",
+    "text": "打开证据 →",
+    "originalClass": "mt-3 block text-[10px] text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 569,
+    "section": "gate-evidence-decision-title",
+    "tag": "span",
+    "text": "配置冻结决定",
+    "originalClass": "block text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 569,
+    "section": "gate-evidence-decision-copy",
+    "tag": "span",
+    "text": "可能与当前理解冲突",
+    "originalClass": "mt-1.5 block text-[11px] text-amber-200/70",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 569,
+    "section": "gate-evidence-decision-action",
+    "tag": "span",
+    "text": "定位原始决定 →",
+    "originalClass": "mt-3 block text-[10px] text-amber-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 576,
+    "section": "gate-context-back",
+    "tag": "a",
+    "text": "← 返回 G-3",
+    "originalClass": "mr-4 rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 577,
+    "section": "gate-context-kind",
+    "tag": "p",
+    "text": "上下文检查",
+    "originalClass": "text-[10px] font-semibold uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 577,
+    "section": "gate-context-title",
+    "tag": "h2",
+    "text": "签名配置差异",
+    "originalClass": "mt-1 text-sm font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 578,
+    "section": "gate-context-revision",
+    "tag": "span",
+    "text": "immutable revision",
+    "originalClass": "ml-auto rounded bg-white/5 px-2 py-1 font-mono text-[10px] text-muted",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 581,
+    "section": "gate-context-summary",
+    "tag": "p",
+    "text": "与当前 Gate 的关系",
+    "originalClass": "text-xs text-blue-200",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 581,
+    "section": "gate-context-summary-copy",
+    "tag": "p",
+    "text": "",
+    "originalClass": "mt-2 text-sm leading-6 text-slate-200",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 583,
+    "section": "gate-context-primary-title",
+    "tag": "h3",
+    "text": "",
+    "originalClass": "text-xs font-medium text-slate-200",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 583,
+    "section": "gate-context-primary-copy",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 whitespace-pre-line font-mono text-xs leading-6 text-slate-300",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 584,
+    "section": "gate-context-secondary-title",
+    "tag": "h3",
+    "text": "",
+    "originalClass": "text-xs font-medium text-slate-200",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 584,
+    "section": "gate-context-secondary-copy",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 whitespace-pre-line text-xs leading-6 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 586,
+    "section": "gate-context-provenance",
+    "tag": "h3",
+    "text": "身份与来源",
+    "originalClass": "text-xs font-medium text-slate-200",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 586,
+    "section": "gate-context-provenance",
+    "tag": "span",
+    "text": "精确版本",
+    "originalClass": "ml-auto text-[10px] text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 586,
+    "section": "gate-context-provenance-fields",
+    "tag": "dl",
+    "text": "",
+    "originalClass": "mt-3 grid grid-cols-2 gap-x-6 gap-y-3 font-mono text-[11px] text-muted",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 593,
+    "section": "grilling-overview",
+    "tag": "h2",
+    "text": "需求澄清 · 第 2 轮",
+    "originalClass": "font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 593,
+    "section": "grilling-overview",
+    "tag": "p",
+    "text": "12 个已知问题 · 7 个已解决 · 3 个待回答 · 2 个条件问题",
+    "originalClass": "mt-0.5 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 593,
+    "section": "grilling-overview",
+    "tag": "div",
+    "text": "",
+    "originalClass": "ml-auto text-right text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 593,
+    "section": "grilling-overview",
+    "tag": "p",
+    "text": "还剩 3 个主题",
+    "originalClass": "text-blue-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 593,
+    "section": "grilling-overview",
+    "tag": "p",
+    "text": "问题预算：5",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 595,
+    "section": "grilling-question-map",
+    "tag": "h3",
+    "text": "问题地图",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 595,
+    "section": "grilling-question-map",
+    "tag": "span",
+    "text": "根据需求澄清 IR 生成",
+    "originalClass": "ml-auto text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 595,
+    "section": "grilling-question-map",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 space-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 595,
+    "section": "grilling-question-map",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 595,
+    "section": "grilling-question-map",
+    "tag": "p",
+    "text": "为何新增这个问题？",
+    "originalClass": "font-medium text-amber-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 595,
+    "section": "grilling-question-map",
+    "tag": "p",
+    "text": "实际发布需要外部凭据，因此新增授权边界问题。",
+    "originalClass": "mt-1 leading-5 text-muted",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "h3",
+    "text": "实时简报",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "当前权威理解 · 增量编译",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "span",
+    "text": "9 个字段 · 6 个已解决",
+    "originalClass": "ml-auto rounded-full bg-white/5 px-2 py-1 text-[10px] text-muted",
+    "role": "badge"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 space-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "目标",
+    "originalClass": "font-medium text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "验证 DSH 插件的完整市场发布路径，并形成可重放、可结晶的流程。",
+    "originalClass": "mt-1 leading-5 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "约束",
+    "originalClass": "font-medium text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "不修改 DSH 核心；优先复用宿主认证与 UI。",
+    "originalClass": "mt-1 leading-5 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "自动公开发布",
+    "originalClass": "font-medium",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "必须由用户授权",
+    "originalClass": "mt-2 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "私有分发",
+    "originalClass": "font-medium",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "等待本轮回答",
+    "originalClass": "mt-2 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "回滚边界",
+    "originalClass": "font-medium text-red-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-live-brief",
+    "tag": "p",
+    "text": "发布后的健康检查与失败恢复尚未定义。",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-brief-changes",
+    "tag": "p",
+    "text": "本轮变更",
+    "originalClass": "font-medium text-blue-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-brief-changes",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-2 space-y-1.5 font-mono text-[11px]",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-brief-changes",
+    "tag": "p",
+    "text": "+ 公开发布必须由用户授权",
+    "originalClass": "text-emerald-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 596,
+    "section": "grilling-brief-changes",
+    "tag": "p",
+    "text": "− Agent 可以自动完成整个发布流程",
+    "originalClass": "text-red-300 line-through",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 603,
+    "section": "plan-document-back",
+    "tag": "button",
+    "text": "← 返回计划摘要",
+    "originalClass": "mr-4 rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 604,
+    "section": "plan-document-header",
+    "tag": "h2",
+    "text": "plan.md",
+    "originalClass": "font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 604,
+    "section": "plan-document-header",
+    "tag": "p",
+    "text": "修订版 4 · 源提交 abc123 · 2 分钟前编译",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 605,
+    "section": "plan-document-header",
+    "tag": "span",
+    "text": "只读",
+    "originalClass": "ml-auto rounded bg-emerald-500/10 px-2 py-1 text-xs text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 609,
+    "section": "plan-document-outline",
+    "tag": "nav",
+    "text": "",
+    "originalClass": "border-r border-line p-4 text-xs text-muted",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 610,
+    "section": "plan-document-dag-chapter-entry",
+    "tag": "button",
+    "text": "4. 影响与 DAG →",
+    "originalClass": "text-left text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-content",
+    "tag": "article",
+    "text": "",
+    "originalClass": "max-h-[500px] overflow-auto p-6 text-xs leading-6 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-linked-gate-context",
+    "tag": "span",
+    "text": "精确计划版本",
+    "originalClass": "ml-auto text-[10px] text-blue-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-content",
+    "tag": "h3",
+    "text": "发布插件市场方案 — 执行计划",
+    "originalClass": "text-lg font-semibold text-slate-100",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-content",
+    "tag": "p",
+    "text": "来源：任务 024 · 当前批次：wave0 · 下一步：固定市场规则版本",
+    "originalClass": "mt-2 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-content",
+    "tag": "p",
+    "text": "生成经过沙盒验证、可由用户授权发布的插件候选。完成要求包括构建、签名、安全扫描、沙盒安装和发布路径重放。",
+    "originalClass": "mt-2",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-content",
+    "tag": "p",
+    "text": "可自主执行构建、测试与沙盒安装；新增生产依赖、修改公开契约或使用发布凭据必须请示。",
+    "originalClass": "mt-2",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-wave-anchor",
+    "tag": "p",
+    "text": "wave0 → wave1A / wave1B → wave2 → 发布关口。签名与沙盒环境版本差异构成当前主要风险。",
+    "originalClass": "mt-2",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 612,
+    "section": "plan-document-wave-anchor",
+    "tag": "p",
+    "text": "每个批次包含外部可验证的验收项、退出条件、失败注记与证据指针。完整内容在权威计划文档中保存，不在摘要工作面重复。",
+    "originalClass": "mt-2",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 616,
+    "section": "plan-dag-toolbar",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex shrink-0 items-center gap-2 border-b border-line px-4 py-2.5 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 617,
+    "section": "plan-dag-document-back",
+    "tag": "button",
+    "text": "← 计划目录",
+    "originalClass": "rounded-lg border border-line bg-raised px-3 py-2 text-slate-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 618,
+    "section": "plan-dag-toolbar",
+    "tag": "p",
+    "text": "4. 影响与 DAG",
+    "originalClass": "font-medium text-slate-100",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 618,
+    "section": "plan-dag-toolbar",
+    "tag": "p",
+    "text": "完整拓扑 · 只读浏览",
+    "originalClass": "mt-0.5 text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 620,
+    "section": "plan-dag-collapse-branches",
+    "tag": "button",
+    "text": "折叠普通分支",
+    "originalClass": "rounded-lg border border-line bg-raised px-3 py-2",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 623,
+    "section": "plan-dag-fit-view",
+    "tag": "button",
+    "text": "适应窗口",
+    "originalClass": "rounded-lg border border-line bg-raised px-3 py-2",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 631,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "目标",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 631,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "发布候选可验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 632,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "批次 0",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 632,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "市场规则固定",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 633,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "批次 1A",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 633,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "安全与依赖检查",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 634,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "批次 1B",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 634,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "构建与签名验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 635,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "批次 1C",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 635,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "发布说明生成",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 636,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "批次 2 · 关注",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 636,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "沙盒集成验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 637,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "人工关口",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 637,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "用户发布授权",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 638,
+    "section": "plan-dag-canvas",
+    "tag": "text",
+    "text": "验证失败 → 修改实现 → 重新验证",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 643,
+    "section": "plan-dag-node-details",
+    "tag": "aside",
+    "text": "",
+    "originalClass": "border-l border-line bg-[#171b21] p-4 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 643,
+    "section": "plan-dag-node-details",
+    "tag": "p",
+    "text": "节点详情",
+    "originalClass": "text-[10px] font-semibold uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 643,
+    "section": "plan-dag-node-title",
+    "tag": "h3",
+    "text": "沙盒集成验证",
+    "originalClass": "mt-2 text-base font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 643,
+    "section": "plan-dag-node-details",
+    "tag": "p",
+    "text": "修改节点或依赖，请在左侧输入流中描述。",
+    "originalClass": "mt-6 border-t border-line pt-4 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 649,
+    "section": "plan-overview",
+    "tag": "h2",
+    "text": "计划 v4 · 等待审核",
+    "originalClass": "font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 649,
+    "section": "plan-overview",
+    "tag": "p",
+    "text": "这条路径是否可信，并可授权进行自治执行？",
+    "originalClass": "mt-0.5 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 649,
+    "section": "plan-overview",
+    "tag": "div",
+    "text": "",
+    "originalClass": "ml-auto flex items-center gap-2 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 649,
+    "section": "plan-document-entry",
+    "tag": "button",
+    "text": "查看完整计划 →",
+    "originalClass": "ml-1 rounded-lg border border-blue-400/30 bg-[#18243a] px-3 py-2 text-blue-200",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "h3",
+    "text": "目标与完成判定",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "span",
+    "text": "已对齐",
+    "originalClass": "ml-auto text-xs text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "生成经过沙盒验证、可由用户授权发布的插件候选。",
+    "originalClass": "mt-3 text-sm leading-6 text-slate-200",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 grid grid-cols-2 gap-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "完成标准",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "5",
+    "originalClass": "mt-1 text-lg",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "全部已定义",
+    "originalClass": "text-success",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "非目标",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "2",
+    "originalClass": "mt-1 text-lg",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "已明确",
+    "originalClass": "text-slate-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 652,
+    "section": "plan-outcome-summary",
+    "tag": "p",
+    "text": "公开发布不在本次执行范围内。",
+    "originalClass": "mt-4 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "h3",
+    "text": "当前计划结构",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "p",
+    "text": "Task Plan v4 · 可由追加目标或 Replan 产生新版本",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-entry",
+    "tag": "button",
+    "text": "查看完整 DAG →",
+    "originalClass": "ml-auto rounded-lg border border-line bg-raised px-3 py-2 text-xs text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "目标",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "发布候选可验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "批次 1A",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "市场规则研究",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "批次 1B",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "构建与签名验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "批次 2",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "集成验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "关口",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "授权",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 653,
+    "section": "plan-dag-projection",
+    "tag": "text",
+    "text": "验证失败 → 修改实现",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 656,
+    "section": "plan-control-envelope-summary",
+    "tag": "h3",
+    "text": "控制边界",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 656,
+    "section": "plan-control-envelope-summary",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 grid grid-cols-2 gap-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 656,
+    "section": "plan-proof-readiness",
+    "tag": "h3",
+    "text": "证明准备度",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 656,
+    "section": "plan-proof-readiness",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 grid grid-cols-2 gap-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 656,
+    "section": "plan-context-health",
+    "tag": "h3",
+    "text": "权威上下文",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 656,
+    "section": "plan-context-health",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 grid grid-cols-2 gap-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 658,
+    "section": "plan-attention-summary",
+    "tag": "h3",
+    "text": "需要关注",
+    "originalClass": "text-sm font-medium text-amber-200",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 658,
+    "section": "plan-attention-summary",
+    "tag": "span",
+    "text": "2",
+    "originalClass": "ml-auto rounded-full bg-amber-500/10 px-2 py-0.5 text-xs text-warning",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 658,
+    "section": "plan-attention-summary",
+    "tag": "ul",
+    "text": "",
+    "originalClass": "mt-3 space-y-2 text-xs text-slate-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 658,
+    "section": "plan-change-summary",
+    "tag": "h3",
+    "text": "相较 v3 的变更",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 658,
+    "section": "plan-change-summary",
+    "tag": "span",
+    "text": "3",
+    "originalClass": "ml-auto text-xs text-blue-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 658,
+    "section": "plan-change-summary",
+    "tag": "ul",
+    "text": "",
+    "originalClass": "mt-3 space-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 666,
+    "section": "execution-plan-run-header",
+    "tag": "h2",
+    "text": "计划执行总览",
+    "originalClass": "font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 666,
+    "section": "execution-plan-run-header",
+    "tag": "p",
+    "text": "计划 v4 · 运行 #08 · 展示 Wave 级执行状态与当前前沿",
+    "originalClass": "mt-0.5 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 667,
+    "section": "execution-plan-run-header",
+    "tag": "div",
+    "text": "",
+    "originalClass": "ml-auto flex items-center gap-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 670,
+    "section": "execution-plan-run-summary",
+    "tag": "section",
+    "text": "",
+    "originalClass": "grid grid-cols-5 border-b border-line bg-[#151a20] text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 671,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "计划健康",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 671,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "正常推进",
+    "originalClass": "mt-1 text-success",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 672,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "完成",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 672,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "2 / 5 Wave",
+    "originalClass": "mt-1 text-slate-200",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 673,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "当前前沿",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 673,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "批次 1B",
+    "originalClass": "mt-1 text-warning",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 674,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "阻塞",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 674,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "0",
+    "originalClass": "mt-1 text-slate-200",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 675,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "累计消耗",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 675,
+    "section": "execution-plan-run-summary",
+    "tag": "p",
+    "text": "18 分钟 · ¥12.40",
+    "originalClass": "mt-1 text-slate-200",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 680,
+    "section": "execution-plan-run-map",
+    "tag": "h3",
+    "text": "计划 DAG 的实际执行投影",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 680,
+    "section": "execution-plan-run-map",
+    "tag": "p",
+    "text": "节点是 Wave 或 Gate；选择 Wave 可查看其内部 Workflow Run",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 680,
+    "section": "execution-plan-run-map",
+    "tag": "div",
+    "text": "",
+    "originalClass": "ml-auto flex gap-3 text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-node-goal",
+    "tag": "text",
+    "text": "计划入口 · 完成",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-node-goal",
+    "tag": "text",
+    "text": "目标已授权",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-0",
+    "tag": "text",
+    "text": "Wave 0 · 完成",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-0",
+    "tag": "text",
+    "text": "固定规则",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-1a",
+    "tag": "text",
+    "text": "Wave 1A · 完成",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-1a",
+    "tag": "text",
+    "text": "安全检查",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-1b",
+    "tag": "text",
+    "text": "Wave 1B · 执行中",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-1b",
+    "tag": "text",
+    "text": "构建与签名",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-2",
+    "tag": "text",
+    "text": "Wave 2 · 未开始",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-wave-2",
+    "tag": "text",
+    "text": "沙盒验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-gate",
+    "tag": "text",
+    "text": "Gate · 未开始",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 684,
+    "section": "execution-plan-gate",
+    "tag": "text",
+    "text": "发布",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 685,
+    "section": "execution-plan-run-canvas",
+    "tag": "text",
+    "text": "[验证失败] 返回 Wave 1B",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 690,
+    "section": "execution-plan-frontier",
+    "tag": "p",
+    "text": "当前执行前沿",
+    "originalClass": "text-[10px] font-semibold uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 690,
+    "section": "execution-plan-frontier",
+    "tag": "h3",
+    "text": "Wave 1B · 构建与签名",
+    "originalClass": "mt-2 text-lg font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 690,
+    "section": "execution-plan-frontier",
+    "tag": "p",
+    "text": "来自计划 v4 · wave/build-and-sign",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 691,
+    "section": "execution-plan-frontier",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-5 rounded-lg border border-amber-500/25 bg-amber-500/5 p-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 692,
+    "section": "execution-plan-wave-outcome",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 692,
+    "section": "execution-plan-wave-outcome",
+    "tag": "p",
+    "text": "生成签名候选、校验摘要，并把可安装包交给 Wave 2。",
+    "originalClass": "mt-3 text-xs leading-5 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 693,
+    "section": "execution-plan-frontier",
+    "tag": "p",
+    "text": "选择图中的 Wave 1B，进入该 Wave 的 Workflow Run；返回后仍保留 Plan Run 的全局上下文。",
+    "originalClass": "mt-auto text-xs leading-5 text-muted",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 700,
+    "section": "execution-level-breadcrumb",
+    "tag": "nav",
+    "text": "",
+    "originalClass": "flex items-center rounded-xl border border-line bg-panel px-4 py-3 text-xs",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 700,
+    "section": "execution-wave-run-back",
+    "tag": "button",
+    "text": "← 计划执行",
+    "originalClass": "text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 700,
+    "section": "execution-wave-run-analysis-link",
+    "tag": "a",
+    "text": "在分析中查看 ↗",
+    "originalClass": "ml-2 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-1.5 text-blue-300",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 702,
+    "section": "execution-wave-run-metadata",
+    "tag": "h2",
+    "text": "Wave Run 元数据",
+    "originalClass": "text-sm font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 702,
+    "section": "execution-wave-run-metadata",
+    "tag": "p",
+    "text": "不可变运行身份 · Analysis 与 Audit 使用同一组关联键",
+    "originalClass": "mt-1 text-[11px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 702,
+    "section": "execution-wave-run-metadata",
+    "tag": "span",
+    "text": "分析关联已固定",
+    "originalClass": "ml-auto rounded-md border border-emerald-500/25 bg-emerald-500/10 px-2 py-1 text-[10px] text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 703,
+    "section": "execution-wave-run-metadata",
+    "tag": "dl",
+    "text": "",
+    "originalClass": "mt-3 divide-y divide-line overflow-hidden rounded-lg border border-line bg-[#151a20] text-[11px]",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 704,
+    "section": "execution-wave-metadata-plan-run",
+    "tag": "dd",
+    "text": "plan-v4/run-08",
+    "originalClass": "min-w-0 break-all font-mono text-slate-200",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 705,
+    "section": "execution-wave-metadata-wave",
+    "tag": "dd",
+    "text": "wave-1b",
+    "originalClass": "min-w-0 break-all font-mono text-slate-200",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 706,
+    "section": "execution-wave-metadata-workflow",
+    "tag": "dd",
+    "text": "build-sign@v3",
+    "originalClass": "min-w-0 break-all font-mono text-slate-200",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 707,
+    "section": "execution-wave-metadata-run",
+    "tag": "dd",
+    "text": "workflow-v3/run-08",
+    "originalClass": "min-w-0 break-all font-mono text-slate-200",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 708,
+    "section": "execution-wave-metadata-trace-root",
+    "tag": "dd",
+    "text": "trace-7f42a",
+    "originalClass": "min-w-0 break-all font-mono text-blue-300",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 715,
+    "section": "execution-dashboard-header",
+    "tag": "h2",
+    "text": "工作流正在执行",
+    "originalClass": "font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 715,
+    "section": "execution-dashboard-header",
+    "tag": "p",
+    "text": "工作流 v3 · 运行 #08 · 当前路径与定义一致",
+    "originalClass": "mt-0.5 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 716,
+    "section": "execution-dashboard-health",
+    "tag": "div",
+    "text": "",
+    "originalClass": "ml-auto mr-3 flex items-center gap-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 717,
+    "section": "execution-effects-toggle",
+    "tag": "button",
+    "text": "",
+    "originalClass": "flex items-center gap-2 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-xs text-blue-200",
+    "role": "control"
+  },
+  {
+    "lineBeforeMigration": 720,
+    "section": "execution-observability-slots",
+    "tag": "section",
+    "text": "",
+    "originalClass": "flex items-center gap-2 border-b border-line bg-[#151a20] px-4 py-2 text-[11px]",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 721,
+    "section": "execution-observability-slots",
+    "tag": "span",
+    "text": "可观测信号",
+    "originalClass": "mr-1 font-medium text-muted",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 729,
+    "section": "execution-run-map-heading",
+    "tag": "h3",
+    "text": "已发生路径与下一步候选",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 729,
+    "section": "execution-run-map-heading",
+    "tag": "p",
+    "text": "实线是已提交事实；虚线候选来自 Workflow 的允许关系，Planner 尚未选择",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 729,
+    "section": "execution-run-map-heading",
+    "tag": "div",
+    "text": "",
+    "originalClass": "ml-auto flex flex-wrap justify-end gap-x-2.5 gap-y-1 text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 750,
+    "section": "execution-node-goal",
+    "tag": "text",
+    "text": "目标 · 成功",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 750,
+    "section": "execution-node-goal",
+    "tag": "text",
+    "text": "候选可验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 751,
+    "section": "execution-node-rules",
+    "tag": "text",
+    "text": "批次 0 · 成功",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 751,
+    "section": "execution-node-rules",
+    "tag": "text",
+    "text": "市场规则固定",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 752,
+    "section": "execution-node-security",
+    "tag": "text",
+    "text": "批次 1A · 成功",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 752,
+    "section": "execution-node-security",
+    "tag": "text",
+    "text": "安全检查",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 753,
+    "section": "execution-current-node-map-status",
+    "tag": "text",
+    "text": "批次 1B · 运行偏慢",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 753,
+    "section": "execution-node-build",
+    "tag": "text",
+    "text": "构建与签名",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 754,
+    "section": "execution-node-docs",
+    "tag": "text",
+    "text": "批次 1C · 失败",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 754,
+    "section": "execution-node-docs",
+    "tag": "text",
+    "text": "发布说明",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 755,
+    "section": "execution-node-paused",
+    "tag": "text",
+    "text": "批次 1D · 暂停",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 755,
+    "section": "execution-node-paused",
+    "tag": "text",
+    "text": "兼容性抽样",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 756,
+    "section": "execution-node-sandbox",
+    "tag": "text",
+    "text": "候选 Action",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 756,
+    "section": "execution-node-sandbox",
+    "tag": "text",
+    "text": "沙盒验证",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 759,
+    "section": "execution-loop-decision",
+    "tag": "text",
+    "text": "验证通过？",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 760,
+    "section": "execution-loop-control",
+    "tag": "text",
+    "text": "[失败且可重试] 第 2 / 3 次",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 760,
+    "section": "execution-loop-control",
+    "tag": "text",
+    "text": "[通过]",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 762,
+    "section": "execution-node-gate",
+    "tag": "text",
+    "text": "候选边界",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 762,
+    "section": "execution-node-gate",
+    "tag": "text",
+    "text": "发布",
+    "originalClass": "",
+    "role": "graph-title"
+  },
+  {
+    "lineBeforeMigration": 764,
+    "section": "execution-run-frontier",
+    "tag": "text",
+    "text": "当前执行前沿 · 待选择",
+    "originalClass": "",
+    "role": "graph-meta"
+  },
+  {
+    "lineBeforeMigration": 768,
+    "section": "execution-run-event-strip",
+    "tag": "footer",
+    "text": "",
+    "originalClass": "flex items-center border-t border-line px-4 py-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 772,
+    "section": "execution-current-node",
+    "tag": "p",
+    "text": "当前节点",
+    "originalClass": "text-[10px] font-semibold uppercase tracking-[.12em] text-muted",
+    "role": "label"
+  },
+  {
+    "lineBeforeMigration": 772,
+    "section": "execution-current-node",
+    "tag": "h3",
+    "text": "构建与签名验证",
+    "originalClass": "mt-2 text-lg font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 772,
+    "section": "execution-current-node",
+    "tag": "p",
+    "text": "批次 1B · build-and-sign",
+    "originalClass": "mt-1 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 772,
+    "section": "execution-current-node-status",
+    "tag": "span",
+    "text": "运行偏慢",
+    "originalClass": "ml-auto rounded bg-amber-500/10 px-2 py-1 text-xs text-warning",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 774,
+    "section": "execution-current-node-progress",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 774,
+    "section": "execution-current-node-duration-copy",
+    "tag": "p",
+    "text": "已运行 4 分 18 秒 · 预计慢 28%",
+    "originalClass": "mt-2 text-[11px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 776,
+    "section": "execution-current-output",
+    "tag": "p",
+    "text": "当前产出",
+    "originalClass": "text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 776,
+    "section": "execution-current-output",
+    "tag": "span",
+    "text": "持续更新",
+    "originalClass": "ml-auto text-[10px] text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 776,
+    "section": "execution-current-output",
+    "tag": "p",
+    "text": "publish-candidate-v0.8.2.tgz",
+    "originalClass": "mt-2 truncate text-sm text-slate-100",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 776,
+    "section": "execution-current-output",
+    "tag": "p",
+    "text": "12.8 MB · 36 秒前更新",
+    "originalClass": "mt-1 text-[11px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 778,
+    "section": "execution-current-node-checks",
+    "tag": "section",
+    "text": "",
+    "originalClass": "mt-4 space-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 780,
+    "section": "execution-next-boundary",
+    "tag": "p",
+    "text": "下一个控制边界",
+    "originalClass": "text-xs font-medium text-amber-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 780,
+    "section": "execution-next-boundary",
+    "tag": "span",
+    "text": "约 8 分钟",
+    "originalClass": "ml-auto text-xs text-warning",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 780,
+    "section": "execution-next-boundary",
+    "tag": "p",
+    "text": "进入沙盒验证；若失败则沿活动图回路返回本节点，最多重试 3 次。",
+    "originalClass": "mt-2 text-xs leading-5 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 788,
+    "section": "delivery-current-readiness",
+    "tag": "h2",
+    "text": "当前可交付",
+    "originalClass": "font-medium",
+    "role": "section-title"
+  },
+  {
+    "lineBeforeMigration": 788,
+    "section": "delivery-current-readiness",
+    "tag": "p",
+    "text": "当前目标的必要验收条件已有证据支持；这是一项实时判断，不会关闭任务。",
+    "originalClass": "mt-0.5 text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 788,
+    "section": "delivery-current-readiness",
+    "tag": "span",
+    "text": "4 / 4 已满足",
+    "originalClass": "ml-auto rounded bg-emerald-500/15 px-2 py-1 text-xs text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 789,
+    "section": "delivery-readiness-invalidated-by-input",
+    "tag": "section",
+    "text": "",
+    "originalClass": "flex items-center rounded-xl border border-blue-500/25 bg-blue-500/5 px-4 py-3 text-xs",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 789,
+    "section": "delivery-readiness-invalidated-by-input",
+    "tag": "p",
+    "text": "继续在输入流中追加目标或要求 Replan 后，系统会更新计划，并重新计算这里的可交付状态。",
+    "originalClass": "ml-3 text-slate-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "h3",
+    "text": "当前交付候选",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "span",
+    "text": "3 项产物 · 随 Task 更新",
+    "originalClass": "ml-auto text-xs text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 space-y-2 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "p",
+    "text": "publish-candidate-v0.8.2.tgz",
+    "originalClass": "",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "p",
+    "text": "已签名 · 已通过沙盒验证",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "p",
+    "text": "publish-path-report.md",
+    "originalClass": "",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "p",
+    "text": "当前报告",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "p",
+    "text": "workflow-candidates.md",
+    "originalClass": "",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-artifacts",
+    "tag": "p",
+    "text": "3 个结晶候选",
+    "originalClass": "mt-1 text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-acceptance",
+    "tag": "h3",
+    "text": "当前验收覆盖",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-acceptance",
+    "tag": "span",
+    "text": "没有阻断缺口",
+    "originalClass": "ml-auto text-xs text-success",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 790,
+    "section": "delivery-acceptance",
+    "tag": "ul",
+    "text": "",
+    "originalClass": "mt-4 space-y-3 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-residual-risk",
+    "tag": "h3",
+    "text": "当前残余风险",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-residual-risk",
+    "tag": "span",
+    "text": "不阻断交付",
+    "originalClass": "ml-auto rounded bg-amber-500/10 px-2 py-1 text-xs text-warning",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-residual-risk",
+    "tag": "p",
+    "text": "Node 22 的长期兼容性仍需在真实市场环境验证；追加兼容性目标后将重新进入计划与执行。",
+    "originalClass": "mt-3 text-xs leading-5 text-slate-300",
+    "role": "body"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "h3",
+    "text": "任务累计成本",
+    "originalClass": "text-sm font-medium",
+    "role": "card-title"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-4 grid grid-cols-3 gap-3 text-xs",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "p",
+    "text": "耗时",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "p",
+    "text": "31 分钟",
+    "originalClass": "mt-1 text-lg",
+    "role": "metric"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "p",
+    "text": "智能体成本",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "p",
+    "text": "¥18.60",
+    "originalClass": "mt-1 text-lg",
+    "role": "metric"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "p",
+    "text": "你的注意力",
+    "originalClass": "text-muted",
+    "role": "description"
+  },
+  {
+    "lineBeforeMigration": 791,
+    "section": "delivery-economics",
+    "tag": "p",
+    "text": "7 分钟",
+    "originalClass": "mt-1 text-lg",
+    "role": "metric"
+  },
+  {
+    "lineBeforeMigration": 807,
+    "section": "better-sidebar-surface",
+    "tag": "p",
+    "text": "文件",
+    "originalClass": "truncate text-xs font-medium text-slate-200",
+    "role": "item-title"
+  },
+  {
+    "lineBeforeMigration": 807,
+    "section": "better-sidebar-surface",
+    "tag": "p",
+    "text": "Better Sidebar · 当前任务工作区",
+    "originalClass": "truncate text-[10px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 812,
+    "section": "better-sidebar-host-slot",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex items-center text-[11px] text-muted",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 813,
+    "section": "better-sidebar-host-slot",
+    "tag": "div",
+    "text": "",
+    "originalClass": "mt-3 space-y-1 text-xs text-slate-300",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 819,
+    "section": "better-sidebar-host-slot",
+    "tag": "div",
+    "text": "",
+    "originalClass": "flex h-9 shrink-0 items-center border-b border-line px-3 text-[11px] text-slate-300",
+    "role": "meta"
+  },
+  {
+    "lineBeforeMigration": 820,
+    "section": "better-sidebar-host-slot",
+    "tag": "div",
+    "text": "",
+    "originalClass": "min-h-0 flex-1 overflow-hidden p-4 font-mono text-[11px] leading-5 text-slate-400",
+    "role": "code"
+  },
+  {
+    "lineBeforeMigration": 820,
+    "section": "better-sidebar-host-slot",
+    "tag": "p",
+    "text": "# Task 控制工作面交互设计输入",
+    "originalClass": "text-slate-200",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 820,
+    "section": "better-sidebar-host-slot",
+    "tag": "p",
+    "text": "Crystra 的 Task 页面由稳定的输入面、控制投影与可选工具面组成……",
+    "originalClass": "mt-3",
+    "role": "body-compact"
+  },
+  {
+    "lineBeforeMigration": 820,
+    "section": "better-sidebar-host-slot",
+    "tag": "p",
+    "text": "@ 引用到当前 Input",
+    "originalClass": "mt-3 text-blue-300",
+    "role": "body-compact"
+  },
+  {
+    "section": "plan-readiness-summaries",
+    "tag": "span",
+    "text": "准备就绪",
+    "role": "meta",
+    "note": "Explicit role for previously inherited default font"
+  },
+  {
+    "section": "plan-readiness-summaries",
+    "tag": "span",
+    "text": "1 个缺口",
+    "role": "meta",
+    "note": "Explicit role for previously inherited default font"
+  },
+  {
+    "section": "plan-readiness-summaries",
+    "tag": "span",
+    "text": "需检查",
+    "role": "meta",
+    "note": "Explicit role for previously inherited default font"
+  }
+]
