@@ -1,101 +1,16 @@
-# Quickstart
+# Crystra 入门
 
-English | [中文](quickstart.zh-CN.md)
+Crystra 通过 DeepSeek Harness 的单个 **dsh-crystra** 插件使用。唯一注册仓库为 [firestige/crystra-dsh](https://github.com/firestige/crystra-dsh)。普通 Execution／UI 依赖由插件安装闭包提供。
 
-This guide rebuilds the Iter6 reference assembly on one trusted personal computer. It installs the
-top-level operations bundle from the `product-0.4.0` GitHub Release and consumes only that bundle's
-stable compatibility manifest. No WSR source checkout or owner build is part of the product path.
+此次更名尚未发布经过验证的新组合。候选完成前，不提供猜测的下载 URL，也不使用旧 WSR 安装器或历史制品。完成后的组合记录将给出固定的插件 tgz URL、SHA-256、DSH 版本与服务资源身份。
 
-## 1. Prepare configuration
+安装流程由 DSH `plugin add` 接收精确插件 tgz URL。随后在 DSH 中：
 
-Prerequisites are DSH `0.1.1-rc.2`, Node `24.12.0`, npm `11.6.2`, Docker with Compose, Codex CLI
-`0.144.5` logged in locally, and an available local GitHub Copilot login. Install the exact operations
-asset and download its editable configuration example:
+1. `/crystra doctor` 检查当前状态、Docker 与角色绑定缺失项。
+2. `/crystra setup` 创建新 Crystra 配置并准备插件绑定的服务资源。
+3. 按诊断在工作区 `.crystra/role-provider-bindings.json` 设置实际角色路由，使用 Provider 自身的授权入口。
+4. 再次运行 `/crystra doctor`，以真实就绪结果为准。
 
-```sh
-npm install --global https://github.com/firestige/workflow-self-recursive/releases/download/product-0.4.0/wsr-product-operations-0.4.0.tgz
-curl --proto '=https' --tlsv1.2 --fail --location --remote-name \
-  https://github.com/firestige/workflow-self-recursive/releases/download/product-0.4.0/wsr-product-0.4.0.config.example.json
-```
+配置和命令详见[当前插件初始化文档](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md)。`/crystra services start|stop|status` 管理服务组；插件卸载不删除数据库卷，不自动停止仍在运行的服务。
 
-The example selects the GitHub repository that publishes Workflow Packages. Service ports are optional;
-the shown values are the defaults. It contains no workspace, Workflow selector, Task, repository filter,
-Role binding, or credential. To override the OS-level state location, add an absolute `state.root`.
-
-```sh
-wsr setup --config-input /absolute/config.json
-wsr doctor
-wsr install
-wsr preflight
-```
-
-The CLI stores global config and state in stable OS-level user directories documented in the package
-README, so every command can run from any current directory. No token or credential is copied into WSR
-configuration.
-
-`doctor` is read-only. A clean machine reports `READY`; `install` repeats the same check and fails closed
-before changing anything when cleanup or a manual action is required. For an existing or manually modified
-installation, preview the exact WSR-owned cleanup plan and apply it explicitly:
-
-```sh
-wsr cleanup
-wsr cleanup --apply true
-wsr doctor
-```
-
-Cleanup removes obsolete software roots and managed caches only. It preserves configuration, Delivery,
-checkpoints, bindings, durable Execution state, Evidence data and volumes, credentials, non-WSR plugins,
-and user-owned DSH patches. User patches and externally owned processes are reported as manual actions.
-
-## 2. Start and create a Delivery
-
-```sh
-wsr start
-```
-
-`start` starts the published Docker Compose stack itself, waits for PostgreSQL, reconciles the managed
-database roles without deleting Evidence, runs migrations, waits for Evidence and Evolution, and then
-starts DSH. Do not start Compose separately. A blocked result includes the bounded, redacted stderr;
-use `wsr status`, `wsr health`, and `wsr logs` for the complete layer checks.
-
-Open the DSH web profile, register a workspace, create a Session there, and submit
-the selector on the first line with the Task directive on following lines:
-
-```text
-/wsr create hello-world-workflow@0.2.0
-Return a concise greeting and review it.
-```
-
-The Delivery card and Session Delivery view expose the durable status and final result. `WSR Studio`
-is the conversation tab immediately after `Delivery`; it does not navigate away from the Session. Studio reads
-Evidence and Evolution through the configured loopback services; it does not select or filter by a
-repository. The active Session supplies the runtime workspace. If the Workflow declares Roles, place
-their bindings in that repository's `.wsr/role-provider-bindings.json`.
-
-## 3. Inspect and recover
-
-Use `status`, `health`, and `logs` for layer-specific diagnostics. `restart` restarts Compose and DSH;
-Execution reconstructs Delivery, checkpoint and Session bindings from durable state.
-
-## 4. Upgrade or remove
-
-Stop the managed runtime, run `doctor`, and apply any reported cleanup before `upgrade`. `upgrade` and
-`rollback` use explicit compatible versions and digests, never an ambient `latest`.
-`uninstall` preserves Delivery, checkpoints, bindings, Evidence, configuration, and other durable data
-by default. Any future data purge must be a separate explicit destructive operation.
-
-## Contributor source preview
-
-Feature-branch human acceptance is a single command from the repository root:
-
-```sh
-./deployment/accept-current-branch.sh
-```
-
-The script creates isolated DSH profile, port, Compose project, Evidence volume, and state resources,
-then builds and deploys the current DSH, Compose, and product-operations checkout. The human performs
-only the printed browser checks and presses Enter when finished; the script removes every temporary
-asset. Startup failure and interruption use the same cleanup path.
-
-Contributors who need other source-built data-service scenarios should follow the separate
-[source-build guide](../contributing/source-build.md). It is not the clean-machine product path.
+旧 WSR 部署将在新候选验证之后一次性打包、校验、隔离、清理，不是新产品的安装或迁移步骤。

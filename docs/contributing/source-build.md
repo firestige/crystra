@@ -1,46 +1,9 @@
-# Source-built contributor preview
+# Crystra 组件开发与组合选择
 
-English | [中文](source-build.zh-CN.md)
+组件在自己的仓库 `main` 演进。请从各组件 README 获取当前构建、测试及精确开发输入准备命令；不在本组合 checkout 的子模块中推进开发。
 
-This path is for contributors who need to build PostgreSQL, Evidence, Evolution, and BI from the
-current checkout. It does not install or start DSH/Execution and is not a packaged-product substitute.
+仓库与职责见[根 README](../../README.md)。Contracts、Execution、Evidence、Evolution、UI、Workflow、DSH 各自验证和发布。DSH 开发输入清单绑定普通依赖的源码 revision 与可重建归档摘要，不依赖组合仓库的当前 checkout。
 
-Install Git, OpenSSL, and Docker Desktop or Docker Engine with Compose v2, then clone every source
-component:
+本仓库选择已验证的源码快照和制品组合。更新 gitlink 不等于发布完成；发行必须另有不可变制品 URL、摘要与隔离环境验收。顺序为组件候选、服务组资源、绑定服务的插件、最终组合。
 
-```sh
-git clone --recurse-submodules https://github.com/firestige/workflow-self-recursive.git
-cd workflow-self-recursive
-```
-
-For an existing checkout without initialized component repositories:
-
-```sh
-git submodule update --init --recursive
-```
-
-Start the source-built data services:
-
-```sh
-./deployment/start.sh
-```
-
-The first start downloads base images, builds the checkout, initializes PostgreSQL, and waits for
-service health. Open the printed BI URL, which defaults to <http://127.0.0.1:8080/evaluate>.
-
-Stop while retaining Evidence data:
-
-```sh
-docker compose -f deployment/compose.yaml stop
-```
-
-Run `./deployment/start.sh` again to resume. See the [deployment implementation](../../deployment/README.md)
-for the source topology, networks, generated local secrets, and maintainer smoke tests.
-
-The checkout currently links the Workflow Package, Execution, Evidence, Evolution, shared Contracts,
-and UI repositories as Git submodules. Those are source workstreams, not separate product installation
-steps and not a statement that the product has six systems.
-
-Release maintainers qualify the separate published-image service bundle with
-`deployment/published/build-bundle.py`. That tooling consumes only frozen image coordinates and is not
-an alternative source-preview launcher or an end-user release before clean-machine qualification.
+维护组合时使用独立干净 worktree，避免影响其它 checkout 的子模块未提交内容。历史 WSR 部署脚本不是当前安装入口；真实旧数据仅在更名清理阶段人工处理。

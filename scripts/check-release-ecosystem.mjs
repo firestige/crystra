@@ -54,7 +54,7 @@ try {
 }
 
 if (config) {
-  if (config.schemaVersion !== "wsr.release-topology@1.0.0" || !Array.isArray(config.repositories) || config.repositories.length === 0) {
+  if (config.schemaVersion !== "crystra.release-topology@1.0.0" || !Array.isArray(config.repositories) || config.repositories.length === 0) {
     fail(path.relative(root, configPath), "invalid release topology schema");
   } else {
     for (const repository of config.repositories) {

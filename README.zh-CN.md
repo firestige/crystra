@@ -1,63 +1,39 @@
-# workflow-self-recursive
+# Crystra
 
 [English](README.md) | 中文
 
-workflow-self-recursive 是一个开源的 Agent 工作流架构：它通过小型、与宿主无关的执行边界运行工作流，并使每次运行都可检查。
+Crystra 把可重复的 Agent 工作固化为明确、可验证的 Workflow。产品方向是用更少的 Agent 和更少的 LLM 调用完成工作：把判断留在明确的边界，将可重复的协调过程写成确定性步骤。“晶体”代表逐渐固化的工作结构，不代表已经实现自主递归优化。
 
-它将每次交付（Delivery）绑定到 Workflow Package 的一个确定版本与摘要，保持运行时结果的权威性，并可通过 OpenTelemetry 记录最小必要范围的事实。Runner 是 Execution module M02；LangGraph 是当前可替换 Workflow Host substrate，[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 是当前 concrete Agent Provider。
+Execution 将每个 Delivery 绑定到精确的 Workflow Package 版本与摘要；Evidence 独立记录有限事实，Evolution 评估 Workflow 变更提案。数据服务保留 PostgreSQL。分析服务或遥测不可用时，不接管执行权威。
 
-## 总纲
+## 安装与使用
 
-workflow-self-recursive 遵循**[递归语义编译](docs/recursive-semantic-compilation.zh-CN.md)**：LLM 把未结构化的意图、上下文与证据提升为类型化语义表示；确定性系统负责校验、绑定、降级、执行，并将这些语义纳入权威 Runtime State。已提交的执行产生有界事实，这些事实作为独立 Evidence 被保留，并可用于合成和资格评定下一版本 Workflow。
+唯一公开的 DeepSeek Harness 插件是 **dsh-crystra**，只由 [crystra-dsh](https://github.com/firestige/crystra-dsh) 仓库注册。Execution 与 UI 是普通依赖。通过 DSH 安装经过验证的精确插件制品，无需独立 Crystra 安装器或全局 Crystra CLI。
 
-> **语义上提，确定性下沉，证据驱动版本递归。**
+此次更名的新制品仍在资格验证中。在精确制品和空白环境验收完成前，本文不宣称新候选已可安装。参见[入门说明](docs/guides/quickstart.md)与[插件初始化说明](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md)。
 
-概率性工作只存在于显式语义边界。Proposal 只有经过确定性校验和提交才能进入权威 Runtime State；演进通过创建新的不可变版本发生，而不修改 active Delivery。同一种结构递归出现在三个尺度：意图成为 Workflow，Action 上下文成为类型化结果或 Artifact，Evidence 成为 Workflow 变更候选。
+在 DSH 中，`/crystra setup` 准备固定服务组和插件配置，`/crystra doctor` 报告就绪状态与缺失的角色／Provider 配置，`/crystra services start|stop|status` 控制服务组。PostgreSQL、Evidence、Evolution 需要 Docker。普通插件卸载保留服务数据；需要停止服务时显式执行停止操作。
 
-## Developer preview
+## 本仓库职责
 
-workflow-self-recursive 目前是以架构为先的打包开发者预览版，适用于个人或小团队的可信本地环境。Reference assembly 通过精确的 GitHub Release 资产分发。**后续会有破坏兼容性的变更。**
+本仓库只发布**经过验证的不可变组合**。各组件在自己的 `main` 开发与验证，不以组合 gitlink 更新作为开发或发布前提。gitlink 记录选择的源码快照；可用发行还必须记录精确制品 URL、摘要和资格证据。
 
-## 架构
+服务资源先发布，插件再绑定这些资源，最后组合记录两者，避免发布依赖循环。旧 WSR Release 保留历史身份；Crystra 不导入旧制品或已部署旧数据。
 
-目标产品架构包含两个设计上可独立采用的系统：
+## 组件与文档
 
-- **Execution**：解析并校验一个确定的 Workflow Package，将绑定信息写入不可变的 Delivery Manifest，协调当前交付并发出有界观测事实。
-- **Evidence**：接收受支持的 OTLP 事实，建立事实投影并供人检查，但不控制 Execution；Evidence 或遥测不可用时，Execution 仍会继续。
+| 职责 | 仓库 |
+|---|---|
+| 契约与一致性验证 | [crystra-contracts](https://github.com/firestige/crystra-contracts) |
+| Delivery 执行 | [crystra-execution](https://github.com/firestige/crystra-execution) |
+| Evidence 服务 | [crystra-evidence](https://github.com/firestige/crystra-evidence) |
+| Evolution 服务 | [crystra-evolution](https://github.com/firestige/crystra-evolution) |
+| Workflow 资源 | [crystra-workflow-package](https://github.com/firestige/crystra-workflow-package) |
+| UI 普通库 | [crystra-ui](https://github.com/firestige/crystra-ui) |
+| 唯一 DSH 插件与初始化 | [crystra-dsh](https://github.com/firestige/crystra-dsh) |
 
-工作流定义与资源位于版本化的 Workflow Package 中。共享契约定义两个系统之间的边界。Runner 是当前的 M02 module；其 Host 与 Provider substrate 是私有、可替换的实现选择。当前不存在 Runner-selection abstraction。
+开发入口见[组件开发说明](docs/contributing/source-build.md)。旧架构、资格与递归愿景文档保留其历史上下文，不覆盖当前组件契约，也不构成已实现递归优化的承诺。
 
-## 开始使用
-
-Iter6 reference assembly 使用稳定顶层操作 `setup`、`install`、`preflight`、`config`、`status`、
-`health`、`logs`、`start`、`stop`、`restart`、`upgrade`、`rollback` 与 `uninstall`。默认 adapter
-消费已发布 compatibility manifest；fixture 模式必须显式启用且只用于测试。
-
-用户旅程和当前发行状态见[快速开始](docs/guides/quickstart.zh-CN.md)。需要运行现有源码构建数据服务
-预览的贡献者，请使用单独的[源码构建指南](docs/contributing/source-build.zh-CN.md)。
-
-正式安装与运维解析 exact compatible artifacts，不要求构建内部源码仓库，也不选择 ambient
-`latest`。uninstall 默认保留用户 durable data。
-
-## 文档
-
-建议从[概念架构](docs/agent-architecture.zh-CN.md)开始，然后继续阅读：
-
-- [递归语义编译](docs/recursive-semantic-compilation.zh-CN.md)
-- [Workflow 组合模型](docs/workflow-composition-model.md)
-- [Execution System 设计](docs/systems/execution/project-execution-system.zh-CN.md)
-  - [Runner 模块设计](docs/systems/execution/modules/runner/runner.zh-CN.md)
-    - [Interpreter](docs/systems/execution/modules/runner/interpreter.zh-CN.md)
-    - [Lifecycle Coordinator](docs/systems/execution/modules/runner/lifecycle-coordinator.zh-CN.md)
-    - [Workflow Host](docs/systems/execution/modules/runner/workflow-host.zh-CN.md)
-    - [Managed Agent Invocation](docs/systems/execution/modules/runner/managed-agent-invocation.zh-CN.md)
-    - [Custody](docs/systems/execution/modules/runner/custody.zh-CN.md)
-  - [Runner 追踪与实现记录](docs/systems/execution/modules/runner/traceability.zh-CN.md)
-- [Evidence System 设计](docs/systems/evidence/evidence-system.zh-CN.md)
-- [Execution–Evidence Contract](docs/contracts/execution-evidence/interaction-contract.zh-CN.md)
-
-内部仓库拓扑记录在 contributor 源码构建指南中，不属于最终用户安装模型。
-
-## License
+## 许可证
 
 [Apache-2.0](LICENSE)
