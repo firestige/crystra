@@ -252,7 +252,7 @@ function checkActionRuntimeAndIdentity(files) {
       }
     }
     if (/actions\/create-github-app-token@/.test(text) && /^\s*app-id:/m.test(text)) {
-      fail(path, "create-github-app-token 使用 app-id", "发布身份仍依赖已弃用的 App ID 输入", ["改用 client-id: ${{ vars.WSR_RELEASE_CLIENT_ID }}"]);
+      fail(path, "create-github-app-token 使用 app-id", "发布身份仍依赖已弃用的 App ID 输入", ["改用 client-id: ${{ vars.CRYSTRA_RELEASE_CLIENT_ID }}"]);
     }
   }
 }

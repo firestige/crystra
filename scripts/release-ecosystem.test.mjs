@@ -18,7 +18,7 @@ async function fixture() {
     await writeFile(path.join(base, ".github", "workflows", "release-promote.yml"), `on:\n  workflow_dispatch:\njobs: {}\n`);
   }
   const config = {
-    schemaVersion: "wsr.release-topology@1.0.0",
+    schemaVersion: "crystra.release-topology@1.0.0",
     repositories: [
       { path: ".", candidate: ".github/workflows/release-candidate.yml", promotions: [".github/workflows/release-promote.yml"] },
       { path: "component", candidate: ".github/workflows/release-candidate.yml", promotions: [".github/workflows/release-promote.yml"] },

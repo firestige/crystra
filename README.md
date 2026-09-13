@@ -1,65 +1,38 @@
-# workflow-self-recursive
+# Crystra
 
 English | [中文](README.zh-CN.md)
 
-workflow-self-recursive is an open-source architecture for running agent workflows through a small, host-neutral execution boundary and making each run inspectable.
+Crystra turns repeatable agent work into explicit, verifiable workflows. The direction is to accomplish useful work with fewer agents and fewer LLM calls: keep judgment at clear boundaries, and encode repeatable coordination as deterministic steps. A crystal is the metaphor for that settled structure, not a claim that autonomous recursive optimization is implemented.
 
-It binds each delivery to one resolved version and digest of a Workflow Package, keeps runtime results authoritative, and can record a minimal set of facts through OpenTelemetry. Runner is Execution module M02; LangGraph is its current replaceable Workflow Host substrate and [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) is its current concrete Agent Provider.
+Execution binds each Delivery to an exact Workflow Package version and digest. Evidence records bounded facts independently of execution; Evolution evaluates proposed workflow changes. PostgreSQL remains the data-service substrate. Missing telemetry does not transfer execution authority to the analysis services.
 
-## Foundational principle
+## Install and operate
 
-workflow-self-recursive follows **[recursive semantic compilation](docs/recursive-semantic-compilation.md)**: LLMs lift unstructured intent, context, and evidence into typed semantic representations; deterministic systems validate, bind, lower, execute, and admit those semantics into authoritative runtime state. Committed execution emits bounded facts that are retained as independent Evidence and may guide synthesis and qualification of the next Workflow version.
+The single public DeepSeek Harness plugin is **dsh-crystra**, owned by [crystra-dsh](https://github.com/firestige/crystra-dsh). Execution and UI are ordinary dependencies. Use DSH to install an exact qualified plugin release; there is no separate Crystra installer or global Crystra CLI.
 
-> **Lift semantics, push determinism downward, and let evidence drive recursion across versions.**
+Crystra releases are being qualified during the rename. No new candidate is advertised as ready here until its immutable artifacts and clean-environment checks are recorded. See the [quickstart](docs/guides/quickstart.md) and [plugin initialization guide](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md).
 
-Probabilistic work is contained at explicit semantic boundaries. A proposal enters authoritative runtime state only through deterministic validation and commit, and evolution creates a new immutable version rather than mutating an active Delivery. The same pattern recurs at three scales: intent becomes a Workflow, Action context becomes a typed result or Artifact, and Evidence becomes a candidate Workflow change.
+Within DSH, `/crystra setup` prepares the plugin's fixed service group and configuration; `/crystra doctor` reports readiness and missing role/provider configuration. `/crystra services start|stop|status` controls the service group. Docker is required for PostgreSQL, Evidence and Evolution. Removing the plugin preserves service data; stop services explicitly when needed.
 
-## Developer preview
+## Repository purpose
 
-workflow-self-recursive is currently an architecture-first packaged developer preview for trusted local use by individuals and small teams. The reference assembly is distributed through exact GitHub Release assets. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
+This repository publishes **tested, immutable combinations**. Each component develops and qualifies its own `main`; a component does not need a superproject gitlink update to develop or release. Gitlinks identify selected source snapshots, while a usable release also records exact artifact URLs, digests and qualification evidence.
 
-## Architecture
+Service resources are published before the plugin that binds them. The final combination records both, avoiding a circular dependency. Historical WSR releases remain historical; Crystra does not import their artifacts or deployed data.
 
-The product architecture separates two systems that are intended to remain independently usable:
+## Components and documentation
 
-- **Execution** resolves and validates one exact Workflow Package, records that binding in an immutable Delivery Manifest, coordinates the current delivery, and emits bounded observations.
-- **Evidence** accepts supported OTLP facts, builds factual projections, and serves human inspection without controlling execution. Execution continues when Evidence or telemetry is unavailable.
+| Responsibility | Repository |
+|---|---|
+| Contracts and conformance | [crystra-contracts](https://github.com/firestige/crystra-contracts) |
+| Delivery execution | [crystra-execution](https://github.com/firestige/crystra-execution) |
+| Evidence service | [crystra-evidence](https://github.com/firestige/crystra-evidence) |
+| Evolution service | [crystra-evolution](https://github.com/firestige/crystra-evolution) |
+| Workflow resources | [crystra-workflow-package](https://github.com/firestige/crystra-workflow-package) |
+| UI library | [crystra-ui](https://github.com/firestige/crystra-ui) |
+| Single DSH plugin and initialization | [crystra-dsh](https://github.com/firestige/crystra-dsh) |
 
-Workflow definitions and resources live in versioned Workflow Packages. Shared contracts define the boundary between the systems. Runner is the current M02 module; its Host and Provider substrates are private replaceable selections. A Runner-selection abstraction does not exist today.
-
-## Get started
-
-The Iter6 reference assembly uses the stable top-level `setup`, `install`, `preflight`, `config`,
-`status`, `health`, `logs`, `start`, `stop`, `restart`, `upgrade`, `rollback`, and `uninstall`
-operations. The default adapter consumes the published compatibility manifest; fixture mode is
-explicit and test-only.
-
-Follow the [quickstart](docs/guides/quickstart.md) for the user-facing journey and current release
-status. Contributors who need the existing source-built data-service preview should use the separate
-[source-build guide](docs/contributing/source-build.md).
-
-Installation and operation resolve exact compatible artifacts rather than build internal source
-repositories or select ambient `latest` versions. Uninstall preserves durable user data by default.
-
-## Documentation
-
-Start with the [conceptual architecture](docs/agent-architecture.md), then continue with:
-
-- [Recursive semantic compilation](docs/recursive-semantic-compilation.md)
-- [Workflow composition model](docs/workflow-composition-model.md)
-- [Execution System design](docs/systems/execution/project-execution-system.md)
-  - [Runner module design](docs/systems/execution/modules/runner/runner.md)
-    - [Interpreter](docs/systems/execution/modules/runner/interpreter.md)
-    - [Lifecycle Coordinator](docs/systems/execution/modules/runner/lifecycle-coordinator.md)
-    - [Workflow Host](docs/systems/execution/modules/runner/workflow-host.md)
-    - [Managed Agent Invocation](docs/systems/execution/modules/runner/managed-agent-invocation.md)
-    - [Custody](docs/systems/execution/modules/runner/custody.md)
-  - [Runner traceability and implementation record](docs/systems/execution/modules/runner/traceability.md)
-- [Evidence System design](docs/systems/evidence/evidence-system.md)
-- [Execution–Evidence contracts](docs/contracts/execution-evidence/interaction-contract.md)
-
-The internal repository topology is documented in the contributor source-build guide; it is not part of
-the end-user installation model.
+Start with the [contributor guide](docs/contributing/source-build.md). Older architecture and qualification records retain their original context; they do not override current component contracts or imply that recursive optimization is complete.
 
 ## License
 
