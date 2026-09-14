@@ -1,0 +1,137 @@
+{
+  "schema": "crystra.compatibility@1.0.0",
+  "release": "0.1.0-rc.2",
+  "plugin": "dsh-crystra",
+  "dsh": "0.1.1-rc.2",
+  "components": [
+    {
+      "id": "contracts",
+      "repository": "firestige/crystra-contracts",
+      "revision": "13adf4df2a5abb755cf583f2c10972584e63eec3",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-contracts/releases/download/crystra-contracts-v0.1.0-rc.1/crystra-contracts.tgz",
+          "sha256": "9aef1649fe1554e2be090c7911b29bbf93a8305ec377435d4c1e0823d119f0bd"
+        }
+      ]
+    },
+    {
+      "id": "dsh",
+      "repository": "firestige/crystra-dsh",
+      "revision": "3ac11ad5c3e5c9a7bdfa8fd4b5cbcd76cc6b6486",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-dsh/releases/download/crystra-dsh-v0.1.0-rc.3/dsh-crystra-0.1.0.tgz",
+          "sha256": "10953b107d3a5093003e66ac9535b184f28155706a0a734508b2f6cfc22a76fd"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "repository": "firestige/crystra-evidence",
+      "revision": "84bb3152162dee4d448f4c8227f34a686af008d6",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-evidence/releases/download/crystra-evidence-v0.1.0-rc.1/crystra_evidence-0.1.0-py3-none-any.whl",
+          "sha256": "9f515111ddd94e2c2fe635b7012c0f4fe7ca2e39c4a338fad40864c80a473822"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-evidence/releases/download/crystra-evidence-v0.1.0-rc.1/release-qualification.json",
+          "sha256": "e2ade599edaf4f0ddda6519bf6b2a196cbf87d00c150045e7c18f3471bc2dd6b"
+        }
+      ]
+    },
+    {
+      "id": "evolution",
+      "repository": "firestige/crystra-evolution",
+      "revision": "c5aa85ec25781d11df31354b076764fa900754a7",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-evolution/releases/download/crystra-evolution-v0.1.0-rc.3/release-qualification.json",
+          "sha256": "27fa4102c22d264247ff4ba54095eb66ab33576cc09cebee438134c8fa33cfc3"
+        }
+      ]
+    },
+    {
+      "id": "execution",
+      "repository": "firestige/crystra-execution",
+      "revision": "82a88ea4222e40810a387863d654a12e008a5b26",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-execution/releases/download/crystra-execution-v0.1.0-rc.2/crystra-execution-0.1.0.tgz",
+          "sha256": "72a30478e47183752b84c9294999ffc6a31469bb227c16300c910f119e4567c8"
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "repository": "firestige/crystra-ui",
+      "revision": "05c4c12fb83dc0ec592d74ac3c85c1416dc160f2",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-ui/releases/download/crystra-ui-v0.1.0-rc.3/crystra-ui-core-0.1.0.tgz",
+          "sha256": "010a92aa53cd38afcab6bdb2bd7fdd7de584eed35ae939d1f8beac96e11e3e19"
+        }
+      ]
+    },
+    {
+      "id": "workflow-package",
+      "repository": "firestige/crystra-workflow-package",
+      "revision": "2fc61f057ca712deacfed504f70601ed916c0fb3",
+      "artifacts": [
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-hello-world-workflow-0.2.0.json",
+          "sha256": "daaae2c5f8077fb2fbca790dd3bd851fc1851b4b32847328a889a036f1f9fc73"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-hello-world-workflow-0.2.0.provenance.json",
+          "sha256": "0d73fd9a36659ae62f49b6869f276ba31a2fc2ee4820db82af719b82cfc082e2"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-hello-world-workflow-0.2.0.tar.gz",
+          "sha256": "afb1d32ec30494f6ce141cede8398fb9a30054cfd5ee2486c4364a912fb39f4e"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-hello-world-workflow-0.2.0.tar.gz.sha256",
+          "sha256": "efe1388181e4d98a3ede66f274856ae0e451edaa9b9f793ef8371af3a13bf7b5"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-implementation-workflow-0.4.12.json",
+          "sha256": "fcafde117ce4f8aafceb5b06382ccaa745da1a4b63e041b1792ac36dc80ba848"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-implementation-workflow-0.4.12.provenance.json",
+          "sha256": "157ecbcc9defcce5337feed8b9864f8b5792be710e3976737a3bf50981302b71"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-implementation-workflow-0.4.12.tar.gz",
+          "sha256": "78722e9a78b7a0e8f773a48d7af4672bad134c56b584c77495eeca053d2a67e0"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-implementation-workflow-0.4.12.tar.gz.sha256",
+          "sha256": "6f3317f2a3299a939f59e5a72fde5a92d6184593a12da2abb6116cc756d9fa7c"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-system-design-workflow-0.4.10.json",
+          "sha256": "5ec3af84b4040a778df882fa90e01dd641b80a3086e59886ecf94ea695405ff3"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-system-design-workflow-0.4.10.provenance.json",
+          "sha256": "64bd94c76b35deb8f8fa231457299d22050909bab1107805394c97d1f23ea86e"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-system-design-workflow-0.4.10.tar.gz",
+          "sha256": "76dbae812cb7f398a4724cf8fc5a267df6a8ad3549f186732c9845444c517066"
+        },
+        {
+          "url": "https://github.com/firestige/crystra-workflow-package/releases/download/crystra-workflow-package-v0.1.0-rc.1/workflow-package-system-design-workflow-0.4.10.tar.gz.sha256",
+          "sha256": "54f5855915ff8f297b2893cd41febeadb1c77bc74cf740ef7d21255293341514"
+        }
+      ]
+    }
+  ],
+  "services": {
+    "url": "https://github.com/firestige/crystra/releases/download/crystra-services-v0.1.0-rc.3/crystra-services-0.1.0.tar.gz",
+    "sha256": "4ad75bbca7d544b4710c9eabe97f5080e694329f01d584babe3ec3f9a4f30d9f"
+  }
+}
