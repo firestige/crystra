@@ -32,6 +32,8 @@ Service resources are published before the plugin that binds them. The final com
 | UI library | [crystra-ui](https://github.com/firestige/crystra-ui) |
 | Single DSH plugin and initialization | [crystra-dsh](https://github.com/firestige/crystra-dsh) |
 
+See [documentation ownership](docs/README.md) for current component authority and the status of retained design material.
+
 Start with the [contributor guide](docs/contributing/source-build.md). Older architecture and qualification records retain their original context; they do not override current component contracts or imply that recursive optimization is complete.
 
 ## License

@@ -1,5 +1,7 @@
 # Execution 配置参考
 
+当前配置权威位于 [crystra-execution](https://github.com/firestige/crystra-execution/tree/main/config)，插件首次配置由 [crystra-dsh 初始化模块](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md)负责。本文保留领域配置说明；具体字段与版本以所属组件的 schema 为准。
+
 `ExecutionInstallationConfig` 是所有 embedding 共用的唯一 versioned installation document。Canonical schema 是 `execution.config@1.0.0`；Release 同时发布 JSON Schema、TypeScript types、YAML/JSON defaults 与 `execution-config` CLI。YAML 和 JSON 只是两种 parser 输入，不是配置层：不存在 merge、environment override、content sniffing 或 fallback。
 
 先用 `execution-config init|copy <absolute-path> [yaml|json]`，填写 required placeholder，再执行 `execution-config validate <absolute-path>` 与 `execution-config dump-effective <absolute-path>`。`validate` 返回 canonical installation identity；`dump-effective` 遮盖 path/endpoint，绝不打印 credential material。
@@ -44,7 +46,6 @@
 
 Loader 从 `stateRoot` 派生 `packages`、`manifests`、`current-slots`、`staging` 与 `runner/{journal,checkpoints,sessions,custody}`。Manifest/current-slot 与 Runner roots 属于 durable truth；staging 是临时目录。DSH plugin 的独立 `bindingFile` 保存 adapter-private session↔Delivery binding，也必须位于 plugin installation directory 外。
 
-DSH Web 的配置不会改变 UI 职责边界：sidebar tabs 调用已有 list/status control-plane operation，chat timeline 承载 interactive command、Action conversation、普通答复与 terminal result。`/wsr list` 和 `/wsr status` alias 继续保留给 compatibility 与 automation。
 
 Credential document 独立保存：
 

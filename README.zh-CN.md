@@ -37,3 +37,5 @@ Execution 将每个 Delivery 绑定到精确的 Workflow Package 版本与摘要
 ## 许可证
 
 [Apache-2.0](LICENSE)
+
+当前维护归属与保留设计材料的适用范围见[文档入口](docs/README.md)。

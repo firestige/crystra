@@ -1,6 +1,6 @@
 # Naming convention
 
-**Status: DRAFT for review (2026-08-25).** This document records, for the first time in writing, the naming governance decisions that have been applied de facto since 2026-08-19. It is the deliverable for the remaining acceptance item of issue [#36](https://github.com/firestige/workflow-self-recursive/issues/36) ("特性 ID 格式（单词[.单词]，无数字，含文档权威 ID 映射表）"). It does not claim publication authority until reviewed and confirmed.
+**Status: DRAFT for review (2026-08-25).** This document records, for the first time in writing, the naming governance decisions that have been applied de facto since 2026-08-19. It is the deliverable for the remaining acceptance item of issue [#36](https://github.com/firestige/crystra/issues/36) ("特性 ID 格式（单词[.单词]，无数字，含文档权威 ID 映射表）"). It does not claim publication authority until reviewed and confirmed.
 
 ## 1. Scope
 
@@ -14,10 +14,10 @@ Not covered here: DSL naming inside Workflow Contracts (owned by their contract 
 
 ## 2. Repository name
 
-- **Formal name: `workflow-self-recursive`** (lowercase, hyphenated, ASCII). Always written in this form in new artifacts.
-- **The codename `Agent Ops Ledger` is retired.** It survives only in historical records (CHANGELOG, git history, prior issue cards). No new artifact may use it.
-- **Rename executed**: commit `ed5d243` (2026-08-20) — FPLG → runner (268 occurrences), Agent Ops Ledger → workflow-self-recursive (53), repository slug change (12), EN↔ZH parity kept, 5 submodule pointers bumped. Grep verification: old names are gone from the current tree.
-- **Slugs**: GitHub repo `workflow-self-recursive`; npm packages use the `wsr-<system>` namespace (see §6).
+- Product brand: **Crystra**. Combination repository: **firestige/crystra**. Components: **firestige/crystra-<component>**.
+- Components evolve on their own main; the combination repository selects and publishes usable combinations.
+- WSR, workflow-self-recursive and Agent Ops Ledger remain historical evidence, not identities for new installations, releases or assets.
+- The 2026-09-13 rename decision supersedes this section and §6. Domain asset IDs and contract protocol revisions do not change automatically with the brand.
 
 ## 3. Engine and role vocabulary
 
@@ -72,12 +72,12 @@ This table is the de facto authoritative inventory (extracted from the current t
 
 Additional `execution` feature-card classifications in use: `delivery`, `observation`, `runner`, `release` (`[feature] execution.delivery`, `[feature] execution.observation`, `[chore] execution.release`).
 
-## 6. Package naming (npm / DSH plugin)
+## 6. Package naming and plugin identity
 
-- Namespace: `wsr-<system>`, **no npm scope**. Decided 2026-08-25.
-- Current: `wsr-execution` (execution system), `dsh-wsr-execution` (product-level entry; currently carries Execution capability).
-- Reserved: `wsr-evidence`, `wsr-evolution` (for the closed loop).
-- Rationale: DSH ecosystem convention (short unscoped names: `dsh-plugin`, `dsh-auto-update`, …); short install command; no npm org needed; consistent with "systems are first-class, DSH is the entry" organization decision.
+- The sole public plugin is **dsh-crystra**, registered only through **firestige/crystra-dsh**.
+- **crystra-execution** and **crystra-ui-core** are ordinary dependencies. Execution, Studio and initialization can remain internal modules, not separately registered plugins.
+- Private Contracts tooling uses the **@crystra** scope. Domain distributions use Crystra names; exact package manifests govern their spelling. This does not claim public npm availability.
+- DSH installs the plugin; deterministic setup, doctor and services belong to the plugin. There is no independent installer or migration of old plugins/artifacts.
 
 ## 7. Abbreviation policy — no abbreviations, ever
 
