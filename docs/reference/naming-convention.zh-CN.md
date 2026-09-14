@@ -1,6 +1,6 @@
 # 命名规范
 
-**状态：评审草稿（2026-08-25）。** 本文首次以书面形式记录自 2026-08-19 起一直以事实标准（de facto）执行的命名治理决策。它是 issue [#36](https://github.com/firestige/workflow-self-recursive/issues/36)（"特性 ID 格式（单词[.单词]，无数字，含文档权威 ID 映射表）"）剩余验收项的交付物。在评审确认之前不主张发布权威地位。
+**状态：评审草稿（2026-08-25）。** 本文首次以书面形式记录自 2026-08-19 起一直以事实标准（de facto）执行的命名治理决策。它是 issue [#36](https://github.com/firestige/crystra/issues/36)（"特性 ID 格式（单词[.单词]，无数字，含文档权威 ID 映射表）"）剩余验收项的交付物。在评审确认之前不主张发布权威地位。
 
 ## 1. 范围
 
@@ -14,10 +14,10 @@
 
 ## 2. 仓库名
 
-- **正式名称：`workflow-self-recursive`**（小写、连字符、ASCII）。新产物一律使用此书写形式。
-- **代号 `Agent Ops Ledger` 已退役**：只保留在历史记录（CHANGELOG、git history、旧 issue 卡片）中，任何新产物不得使用。
-- **改名已执行**：commit `ed5d243`（2026-08-20）— FPLG → runner（268 处）、Agent Ops Ledger → workflow-self-recursive（53 处）、仓库 slug 变更（12 处）、EN↔ZH parity 保持、5 个 submodule 指针 bump。grep 验证：旧名在当前树中已清零。
-- **Slug**：GitHub 仓库 `workflow-self-recursive`；npm 包使用 `wsr-<系统>` 命名空间（见 §6）。
+- 产品品牌 **Crystra**；组合仓库 **firestige/crystra**；组件仓库采用 **firestige/crystra-<component>**。
+- 组件在自己的 main 演进；组合仓库只选择和发布可用组合。
+- 旧 WSR、workflow-self-recursive 和 Agent Ops Ledger 名称仅保留在历史证据中，不用于新的安装、发布或资产身份。
+- 2026-09-13 更名决策更新本节及 §6；领域资产 ID 与契约协议版本不随品牌自动改动。
 
 ## 3. 引擎与角色词
 
@@ -72,12 +72,12 @@ Feature 卡片在标题中使用同一规则，浅一层：`[type] owner.classif
 
 `execution` 在使用中的其他 feature 卡片分类：`delivery`、`observation`、`runner`、`release`（`[feature] execution.delivery`、`[feature] execution.observation`、`[chore] execution.release`）。
 
-## 6. 包命名（npm / DSH 插件）
+## 6. 包命名与插件身份
 
-- 命名空间：`wsr-<系统>`，**无 npm scope**。2026-08-25 裁决。
-- 现状：`wsr-execution`（执行系统）、`dsh-wsr-execution`（产品级入口，当前承载 Execution 能力）。
-- 预留：`wsr-evidence`、`wsr-evolution`（闭环用）。
-- 理由：符合 DSH 生态惯例（无 scope 短名：`dsh-plugin`、`dsh-auto-update` 等）；安装命令简短；无需注册 npm 组织；与"系统为主体、DSH 为入口"的组织决策一致。
+- 唯一公开插件为 **dsh-crystra**，只注册 **firestige/crystra-dsh**。
+- **crystra-execution** 与 **crystra-ui-core** 是普通依赖；Execution、Studio、初始化仍可作为内部模块拆分，不单独注册插件。
+- Contracts 的私有工具包使用 **@crystra** scope；领域分发制品采用 crystra 名称。实际包名以组件清单为准，不表示已在 npm 公开发布。
+- DSH 负责插件安装，插件负责确定性的 setup、doctor 和 services；没有独立安装器。旧插件和旧制品不迁移。
 
 ## 7. 缩写策略 — 一律禁止缩写
 

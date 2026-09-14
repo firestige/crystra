@@ -1,52 +1,9 @@
-# DSH Bundle 本地发布前 E2E
+# Crystra 本地资格验证
 
-本指南从唯一 DSH 发布权威
-[`firestige/wsr-dsh`](https://github.com/firestige/wsr-dsh) 验证未发布的
-bundle candidate。普通用户从发布物安装时使用
-[DSH Execution 快速开始](dsh-execution-quickstart.zh-CN.md)。
+本页替代旧 WSR 独立插件、安装器与源码部署指引。唯一公开插件是 dsh-crystra，注册来源为 firestige/crystra-dsh；组件开发在各自仓库 main。
 
-## 前置项
-
-使用 Node `24.12.0`、npm `11.6.2`、DSH `0.1.1-rc.2` 与 Chrome：
-
-```sh
-node --version
-npm --version
-dsh --version
-```
-
-## 构建与静态 qualification
-
-在已经初始化全部 submodule 的 superproject 根目录执行：
-
-```sh
-npm --prefix wsr-dsh ci --ignore-scripts --no-audit --no-fund
-npm --prefix wsr-dsh run test
-npm --prefix wsr-dsh run build
-npm --prefix wsr-dsh run pack:verify
-npm --prefix wsr-dsh run provenance:verify
-```
-
-DSH 仓库只消费其 manifest 记录的 immutable `wsr-execution@0.1.4` owner
-asset；不得换成 npm `latest`、branch、本地 Execution checkout 或重建 archive。
-
-## Clean-profile 与 lifecycle qualification
-
-```sh
-npm --prefix wsr-dsh run qualify:clean-profile
-npm --prefix wsr-dsh run qualify:lifecycle
-npm --prefix wsr-dsh run qualify:provider-routing
-npm --prefix wsr-dsh run qualify:real-harness
-```
-
-这些门禁使用临时 DSH home 与 package archive，验证 Execution-only、
-Studio-only、suite 安装，suite/component 对账，升级、回滚、移除、重装，
-single-slot UI 组合，Provider routing，真实 Host 与浏览器 surface。它们不
-发布产物，也不得删除外置 Delivery、checkpoint、binding、Evidence 或用户配置。
-
-## Candidate 与 stable 发布
-
-只有 `wsr-dsh` 的 candidate/promotion workflows 可以发布
-`dsh-wsr-execution`、`dsh-wsr-studio` 与 `dsh-wsr`。candidate 字节在 npm
-OIDC promotion 前必须重新下载并复验。详见
-[`wsr-dsh` release lifecycle](https://github.com/firestige/wsr-dsh/blob/main/docs/release-lifecycle.md)。
+- 安装与首次使用：[当前快速开始](quickstart.zh-CN.md)。新候选正式资格完成前，不宣称存在可直接安装的已验证版本。
+- 配置、状态目录、服务启停与卸载：[插件初始化文档](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md)。使用 `/crystra setup`、`/crystra doctor`、`/crystra services start|stop|status`；卸载插件保留数据，需显式停止服务。
+- 本地开发与真实 Host 验证：[crystra-dsh README](https://github.com/firestige/crystra-dsh/blob/main/README.md)。使用该仓库固定的开发输入及资格脚本；源码联调成功不能替代远端制品资格。
+- 候选和人工 GA：[组合发布流程](release-automation.zh-CN.md)。按组件、服务归档、绑定服务的插件、最终组合的依赖顺序推进。
+- 文档职责及现行依据：[文档入口](../README.md)。领域协议与 Provider 职责不因单插件合并而改变。

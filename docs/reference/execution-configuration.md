@@ -1,5 +1,7 @@
 # Execution configuration reference
 
+Current configuration authority lives in [crystra-execution](https://github.com/firestige/crystra-execution/tree/main/config). Plugin bootstrap belongs to [crystra-dsh initialization](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md). This reference preserves domain configuration context; the owning component schema governs exact fields and versions.
+
 `ExecutionInstallationConfig` is the single versioned installation document consumed by every embedding. The canonical schema is `execution.config@1.0.0`; the release ships its JSON Schema, TypeScript types, YAML/JSON defaults, and the `execution-config` CLI. YAML and JSON are parser alternatives, not configuration layers: there is no merge, environment override, content sniffing, or fallback.
 
 Use `execution-config init|copy <absolute-path> [yaml|json]`, fill the required placeholders, then run `execution-config validate <absolute-path>` and `execution-config dump-effective <absolute-path>`. `validate` returns the canonical installation identity. `dump-effective` redacts path and endpoint values and never prints credential material.
@@ -44,7 +46,6 @@ Use `execution-config init|copy <absolute-path> [yaml|json]`, fill the required 
 
 The loader derives `<stateRoot>/packages`, `manifests`, `current-slots`, `staging`, and `runner/{journal,checkpoints,sessions,custody}`. Manifest/current-slot and Runner roots are durable truth; staging is temporary. The DSH plugin's separate `bindingFile` stores adapter-private session↔Delivery bindings and must also remain outside the plugin installation directory.
 
-In the DSH Web product, configuration does not change the UI responsibility boundary: sidebar tabs invoke the existing list/status control-plane operations, while the chat timeline carries interactive commands, Action conversation, ordinary answers, and terminal results. The `/wsr list` and `/wsr status` aliases remain available for compatibility and automation.
 
 The credential document is separate:
 
