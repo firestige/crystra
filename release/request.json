@@ -1,7 +1,7 @@
 {
   "schemaVersion": "crystra.release-request@1.0.0",
-  "kind": "services",
+  "kind": "combination",
   "version": "0.1.0",
-  "candidateTag": "crystra-services-v0.1.0-rc.3",
-  "manifest": "release/services/0.1.0-rc.3.json"
+  "candidateTag": "crystra-v0.1.0-rc.1",
+  "manifest": "release/combinations/0.1.0-rc.1.json"
 }
