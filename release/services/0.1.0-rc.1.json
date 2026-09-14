@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "crystra.compose-release@1.0.0",
+  "version": "0.1.0",
+  "supportedPlatforms": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
+  "schemaCompatibility": {
+    "evidenceRevision": "20260828_0004",
+    "reads": [
+      "20260828_0004"
+    ]
+  },
+  "hostIntegration": {
+    "schemaVersion": "crystra.loopback-host@1.0.0",
+    "evidenceQueryRevision": "0.1.0",
+    "evidenceTaskQueryRevision": "1.0.0",
+    "evolutionComputeRevision": "1"
+  },
+  "images": {
+    "postgres": {
+      "coordinate": "postgres:18.4-bookworm@sha256:882236b897e39051d2368c5ccc6cda944904723506b2dfc97f2a8f5bc9afa382",
+      "source": "https://github.com/docker-library/postgres/tree/master/18/bookworm",
+      "provenance": "https://hub.docker.com/_/postgres/tags?name=18.4-bookworm"
+    },
+    "evidence": {
+      "coordinate": "ghcr.io/firestige/crystra-evidence:crystra-evidence-v0.1.0-rc.1@sha256:e65bb3d68e9f08862a54407dc927bf702ff32ec8845c2733cbb967970a84010b",
+      "source": "https://github.com/firestige/crystra-evidence/tree/84bb3152162dee4d448f4c8227f34a686af008d6",
+      "provenance": "https://github.com/firestige/crystra-evidence/releases/download/crystra-evidence-v0.1.0-rc.1/release-qualification.json",
+      "qualificationSha256": "sha256:e2ade599edaf4f0ddda6519bf6b2a196cbf87d00c150045e7c18f3471bc2dd6b"
+    },
+    "evolution": {
+      "coordinate": "ghcr.io/firestige/crystra-evolution:crystra-evolution-v0.1.0-rc.1@sha256:fdc1e3a800c2851d4b468e92b717d290a6408d3ab4d8575901d02f535ffdddb2",
+      "source": "https://github.com/firestige/crystra-evolution/tree/984a0dcf2d9388812136b789b5d0bc487c146d56",
+      "provenance": "https://github.com/firestige/crystra-evolution/releases/download/crystra-evolution-v0.1.0-rc.1/release-qualification.json",
+      "qualificationSha256": "sha256:6f361987c50111388d1b64d16a5069bdb48987ebe6a219a00422fca9ca663ebd"
+    }
+  },
+  "release": "0.1.0-rc.1",
+  "dshSource": {
+    "repository": "firestige/crystra-dsh",
+    "revision": "fee8e8796cb4a0fa8d82ef4a8b9f37f541cd101b"
+  }
+}
