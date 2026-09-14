@@ -2,6 +2,6 @@
   "schemaVersion": "crystra.release-request@1.0.0",
   "kind": "services",
   "version": "0.1.0",
-  "candidateTag": "crystra-services-v0.1.0-rc.1",
-  "manifest": "release/services/0.1.0-rc.1.json"
+  "candidateTag": "crystra-services-v0.1.0-rc.2",
+  "manifest": "release/services/0.1.0-rc.2.json"
 }
