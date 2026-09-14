@@ -1,5 +1,6 @@
 import {createHash} from 'node:crypto';
 const VERSION=/^\d+\.\d+\.\d+$/;
+const RELEASE_VERSION=/^\d+\.\d+\.\d+(?:-rc\.[1-9]\d*)?$/;
 const COMMIT=/^[0-9a-f]{40}$/;
 const DIGEST=/^[0-9a-f]{64}$/;
 const IDS=['contracts','execution','ui','evidence','evolution','workflow-package','dsh'];
@@ -18,7 +19,7 @@ export function validateArtifact(artifact,repository,{services=false}={}) {
  if(!exact.test(tag)&&!workflow)fail('COMBINATION_COORDINATE_TAG_INVALID');
 }
 export function validateCombination(manifest) {
- if(manifest?.schema!=='crystra.compatibility@1.0.0'||manifest.plugin!=='dsh-crystra'||!VERSION.test(manifest.release)||manifest.dsh!=='0.1.1-rc.2')fail('COMBINATION_IDENTITY_INVALID');
+ if(manifest?.schema!=='crystra.compatibility@1.0.0'||manifest.plugin!=='dsh-crystra'||!RELEASE_VERSION.test(manifest.release)||manifest.dsh!=='0.1.1-rc.2')fail('COMBINATION_IDENTITY_INVALID');
  if(!Array.isArray(manifest.components)||JSON.stringify(manifest.components.map(x=>x.id).sort())!==JSON.stringify([...IDS].sort()))fail('COMBINATION_COMPONENT_SET_INVALID');
  for(const component of manifest.components){
   if(component.repository!==`firestige/crystra-${component.id}`||!COMMIT.test(component.revision))fail('COMBINATION_SOURCE_INVALID');
@@ -54,6 +55,13 @@ export function validateReleaseRequest(request){
  return request;
 }
 
+export function validateCandidateManifest(request,manifest){
+ validateReleaseRequest(request);
+ const prefix=request.kind==='services'?'crystra-services-v':'crystra-v';
+ if(manifest?.release!==request.candidateTag.slice(prefix.length)||(request.kind==='services'&&manifest.version!==request.version))fail('CANDIDATE_MANIFEST_IDENTITY_MISMATCH');
+ if(request.kind==='combination')validateCombination(manifest);
+}
+
 export async function verifyCandidateDirectory(directory){
  const {readFile}=await import('node:fs/promises');
  const {resolve,basename}=await import('node:path');
@@ -62,6 +70,9 @@ export async function verifyCandidateDirectory(directory){
  if(metadata.schemaVersion!=='crystra.release-metadata@1.0.0'||metadata.repository!=='firestige/crystra'||!COMMIT.test(metadata.commit))fail('CANDIDATE_METADATA_INVALID');
  validateReleaseRequest({schemaVersion:'crystra.release-request@1.0.0',kind:metadata.kind,version:metadata.version,candidateTag:metadata.candidateTag,manifest:metadata.manifestPath});
  if(!Array.isArray(metadata.files)||!metadata.files.length)fail('CANDIDATE_FILES_REQUIRED');
+ const prefix=metadata.kind==='services'?`crystra-services-${metadata.version}`:`crystra-${metadata.version}`;
+ const expected=metadata.kind==='services'?[`${prefix}.tar.gz`,`${prefix}.release.json`,'service-descriptor.json']:[`${prefix}.release.json`,'verified-inputs.json'];
+ if(JSON.stringify(metadata.files.map(asset=>asset.file).sort())!==JSON.stringify(expected.sort()))fail('CANDIDATE_FILE_SET_INVALID');
  const names=new Set();
  for(const asset of metadata.files){
   if(typeof asset.file!=='string'||basename(asset.file)!==asset.file||asset.file==='release-metadata.json'||asset.file==='SHA256SUMS'||!DIGEST.test(asset.sha256)||names.has(asset.file))fail('CANDIDATE_FILE_INVALID');
@@ -69,5 +80,18 @@ export async function verifyCandidateDirectory(directory){
   const bytes=await readFile(resolve(directory,asset.file));
   if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256)fail('CANDIDATE_FILE_DIGEST_MISMATCH');
  }
- return {metadata,metadataBytes};
+ const manifestBytes=await readFile(resolve(directory,`${prefix}.release.json`));
+ if(!DIGEST.test(metadata.manifestSha256)||createHash('sha256').update(manifestBytes).digest('hex')!==metadata.manifestSha256)fail('CANDIDATE_MANIFEST_DIGEST_MISMATCH');
+ const manifest=JSON.parse(manifestBytes);
+ validateCandidateManifest({schemaVersion:'crystra.release-request@1.0.0',kind:metadata.kind,version:metadata.version,candidateTag:metadata.candidateTag,manifest:metadata.manifestPath},manifest);
+ if(metadata.kind==='services'){
+  const descriptor=JSON.parse(await readFile(resolve(directory,'service-descriptor.json'),'utf8'));
+  const archive=metadata.files.find(asset=>asset.file===`${prefix}.tar.gz`);
+  if(descriptor.schemaVersion!=='crystra.services@1.0.0'||descriptor.directory!==prefix||descriptor.sha256!==archive.sha256||descriptor.url!==`https://github.com/firestige/crystra/releases/download/${metadata.candidateTag}/${prefix}.tar.gz`)fail('CANDIDATE_SERVICE_BINDING_MISMATCH');
+ }else{
+  const receipt=JSON.parse(await readFile(resolve(directory,'verified-inputs.json'),'utf8'));
+  const artifacts=[...manifest.components.flatMap(component=>component.artifacts),manifest.services];
+  if(!Array.isArray(receipt.downloads)||receipt.downloads.length!==artifacts.length||receipt.downloads.some((item,index)=>item.url!==artifacts[index].url||item.sha256!==artifacts[index].sha256||!Number.isSafeInteger(item.size)||item.size<1))fail('CANDIDATE_INPUT_RECEIPT_MISMATCH');
+ }
+ return {metadata,metadataBytes,manifest,manifestBytes};
 }

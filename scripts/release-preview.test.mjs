@@ -97,3 +97,15 @@ test("candidate publication exposes the generated preview in the summary and rel
   assert.match(workflow, /--notes-file "\$RELEASE_PREVIEW"/);
   assert.match(workflow, /"\$RELEASE_PREVIEW"/);
 });
+
+test('Crystra previews enumerate exact component assets and service bytes',()=>{
+ const manifest={schema:'crystra.compatibility@1.0.0',release:'0.1.0-rc.1',dsh:'0.1.1-rc.2',components:[{id:'execution',artifacts:[{url:'https://github.com/firestige/crystra-execution/releases/download/crystra-execution-v0.1.0/lib.tgz',sha256:'a'.repeat(64)}]}],services:{url:'https://github.com/firestige/crystra/releases/download/crystra-services-v0.1.0/services.tar.gz',sha256:'b'.repeat(64)}};
+ const preview=renderReleasePreview(manifest,[]);
+ assert.match(preview,/lib\.tgz/);assert.match(preview,/services\.tar\.gz/);assert.match(preview,/GA readiness: READY/);
+ manifest.services.url=manifest.services.url.replace('v0.1.0/','v0.1.0-rc.1/');
+ assert.match(renderReleasePreview(manifest,[]),/GA readiness: BLOCKED/);
+});
+test('Crystra service previews use explicit release identity and selected image digests',()=>{
+ const preview=renderReleasePreview({schemaVersion:'crystra.compose-release@1.0.0',version:'0.1.0',release:'0.1.0-rc.1',images:{evidence:{coordinate:'ghcr.io/firestige/crystra-evidence:0.1.0@sha256:'+'a'.repeat(64)}}},[]);
+ assert.match(preview,/image.evidence/);assert.match(preview,/services-0.1.0-rc.1/);
+});

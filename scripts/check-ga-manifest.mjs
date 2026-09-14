@@ -17,6 +17,7 @@ import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { createHash } from "node:crypto";
 
+import {validateReleaseRequest,validateCandidateManifest} from './lib/combination-release.mjs';
 import { isThirdPartyPrereleaseField } from "./release-content-policy.mjs";
 
 const PRERELEASE = /-(rc|dev|alpha|beta|canary|snapshot|preview)\b/i;
@@ -219,6 +220,12 @@ async function checkCoordinatesPullable(manifest) {
 // ------------------------------------------------------------------- report
 
 const manifest = readJson(manifestPath);
+if (manifest?.schemaVersion === 'crystra.release-request@1.0.0') {
+  validateReleaseRequest(manifest);
+  validateCandidateManifest(manifest,readJson(manifest.manifest));
+  console.log(`validated candidate request: ${manifest.candidateTag}`);
+  process.exit(0);
+}
 const version = manifest?.release ?? manifest?.version;
 
 // Candidate provenance and publication state live under release/ too, but carry

@@ -1,74 +1,19 @@
-# Release automation
+# Crystra combination releases
 
-Iteration 4 makes the release machinery implementation-ready. Wave 12 uses it for the real Contract, Execution, and Evidence publication sequence after the required approval gates.
+Components develop on their own repositories' main branches. This repository selects fixed combinations and publishes service archives. Users install the single dsh-crystra plugin from firestige/crystra-dsh through DSH and use `/crystra setup`, `doctor`, and `services`. There is no independent WSR installer.
 
-## Shared lifecycle
+## Candidates
 
-Every active component declares `wsr.release-component@1.0.0` with its repository, `main` release branch, `release/next` trigger branch, asset mode, acceptance command, publisher adapter, remote qualification mode, and `qualified-candidate-exact-assets` stable policy.
+Complete development qualification and freeze exact artifacts before requesting RC qualification. Push to release/next is the only candidate entry point. release/request.json selects kind `services` or `combination`, a base version, exact RC tag, and release/services/X.Y.Z-rc.N.json or release/combinations/X.Y.Z-rc.N.json. The manifest root `release` must carry that RC identity; service `version` remains the archive base version.
 
-The only supported transition is:
+The workflow builds from committed sources, verifies exact downloads, runs real service lifecycle or combination installation qualification, then publishes the receipt, preview, and checksums. Combination checks bind the packed plugin's Execution/UI dependencies and service descriptor to selected artifacts, including original gate logs. Existing tags fail closed. Synthetic packaging tests do not qualify a real candidate.
 
-`SOURCE → ACCEPTED → BUILT → MANIFESTED → RC → QUALIFIED → COMPONENT_MERGED → SUPERPROJECT_REPINNED → STABLE`
+See [the complete request and qualification procedure](release-automation.zh-CN.md) and [service qualification](../../qualification/service-release/README.md).
 
-Create `release/next` from the exact component candidate and include an immutable `release/request.json` in the pushed commit. That push runs the candidate workflow from the same ref, so first publication does not depend on the workflow already existing on the default branch. After qualification, squash-merge the component to `main` and repin the superproject to that component main commit. Stable promotion still targets the qualified RC commit and reuses its exact assets; it does not rebuild from the squash commit.
+## Human GA promotion
 
-| Component | Asset and publisher adapter | Release status |
-|---|---|---|
-| Execution | one npm core package + GitHub Release | active |
-| DSH bundles | three-package npm set + DSH clean-profile + GitHub Release | active (`firestige/wsr-dsh`) |
-| Evidence | Python wheel/sdist + GHCR OCI + GitHub Release | active |
-| system-contracts | publication records + GitHub Release | active |
-| workflow-package | deterministic workflow assets + GitHub Release | active |
-| Evolution | parameter-only | no Iter4 publication |
-| BI | excluded | no Iter4 automation |
+Only a human may dispatch release-compose-bundle.yml. Supply the exact RC tag, full authority commit SHA, and GA manifest path. The workflow verifies the published non-draft prerelease, actual tag commit, artifact digests, complete qualification, and byte-identical repository RC manifest. Only root release/version may change. Nested coordinates, digests and content are immutable. First-party prerelease references block GA; promote lower layers first and qualify an upper-layer RC using their stable coordinates. The external DSH runtime is the sole scoped exception.
 
-Python support is expressed as minor-version compatibility and tested on Python 3.13 and 3.14; it is not pinned to a Python patch release. npm/DSH rules belong only to the Execution adapter.
+GA never rebuilds. Original candidate assets, metadata and receipts remain unchanged. promotion-manifest.json supplies GA identity; promotion.json and PROMOTION-SHA256SUMS bind the projection to its exact candidate. Service GA provides ga-service-descriptor.json with the stable archive URL for subsequent plugin qualification; the original descriptor retains RC provenance.
 
-## Trigger and recovery
-
-Candidate workflows reject any event or ref other than a push to `release/next`. An RC is triggered by pushing a commit whose repository-specific `release/request.json` contains the fixed candidate tag and every immutable authority/product ref required by that publisher. For example:
-
-```json
-{
-  "candidate_tag": "evidence-query-0.1.0-rc.1"
-}
-```
-
-There is no manual or reusable candidate entry point. Recovery updates the immutable request or implementation in dev and pushes `release/next` again; changed bytes use the next RC ordinal. Execution requires an exact superproject `authority_ref` whose Execution submodule points to the candidate and an `authority_manifest` path to the tracked unified candidate. The workflow materializes those bound assets instead of rebuilding them. See the component-specific guide.
-
-| Failure | Stable allowed? | Recovery |
-|---|---:|---|
-| Acceptance/build failure | no | fix source; rerun before creating an RC |
-| RC tag collision | no | inspect the existing immutable tag; use the next RC number for changed bytes |
-| Downloaded digest mismatch | no | preserve URLs/digests for investigation; never replace the RC assets |
-| Permission denial | no | repair App/registry configuration; rerun the same immutable candidate |
-| Candidate differs from component `main` after squash | yes, after repin | expected; stable still targets the qualified candidate commit |
-| One package in the DSH set published, a later package failed | no stable DSH Release yet | rerun the same `wsr-dsh` manifest; skip only exact registry-byte matches, then continue the ordered set |
-| Stable operation fails | no new build | retry from the qualified manifest and candidate commit; never retarget a tag |
-
-## GitHub App identity
-
-The approved App identity is owned by `firestige`, with slug `wsr-release`. Its installation allowlist is exactly `workflow-self-recursive`, `wsr-execution`, `wsr-evidence`, `wsr-evolution`, `wsr-contracts`, `wsr-workflow-package`, `wsr-dsh`, and `wsr-ui`. Registration permissions are Contents read/write, Workflows read/write, and Metadata read. Each release workflow further narrows the minted token to its own repository and required permissions.
-
-Store the App Client ID as Actions variable `WSR_RELEASE_CLIENT_ID` and the PEM private key as Actions secret `WSR_RELEASE_APP_PRIVATE_KEY`; the deprecated `app-id` action input is not used. Build and qualification steps never receive that key or an installation token. Candidate workflows mint a short-lived token only after all local qualification gates pass and use it only for the scoped RC Release write; stable workflows mint a new token only immediately before the final stable GitHub Release operation. Request both `contents: write` and `workflows: write` when the selected release target changes `.github/workflows/` relative to the default branch; otherwise GitHub rejects Release creation even when Contents is writable. GitHub documents that installation tokens expire after one hour and can be restricted to selected repositories and permissions ([workflow authentication](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/making-authenticated-api-requests-with-a-github-app-in-a-github-actions-workflow), [installation token scope](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app), [Release target permission rule](https://docs.github.com/en/rest/releases/releases#create-a-release)).
-
-Bootstrap:
-
-1. Register/install the App with the approved allowlist and permissions.
-2. Add the variable and secret independently to each active publishing repository.
-3. Confirm that no PAT or App key appears in repository files, logs, artifacts, or reports.
-4. Run only the no-side-effect configuration/oracle checks before publication approval; use the real release sequence only in Wave 12.
-
-Rotate by generating a second App private key, replacing the Actions secret, running the static attestation, and then deleting the old key. Revoke during an incident by disabling/uninstalling the App or deleting the key; cancel release runs and preserve run URLs and immutable digests. Break-glass means pausing publication and obtaining explicit owner approval to restore the App path. A host `gh` credential or personal PAT is not an accepted publication fallback.
-
-## npm trusted publishing
-
-Execution chooses npm trusted publishing through GitHub Actions OIDC, not a long-lived automation token. Configure `wsr-execution` for organization/user `firestige`, repository `wsr-execution`, workflow `release-promote.yml`, and no environment unless the workflow later uses one. Configure the three independently versioned `dsh-wsr-*` packages against the separate `firestige/wsr-dsh` promotion workflow. Both workflows have `id-token: write`, require npm 11.5 or newer, run on GitHub-hosted runners, publish only immutable qualified tgz files, and carry no `NODE_AUTH_TOKEN`.
-
-npm requires npm CLI 11.5.1 or newer, Node 22.14 or newer, an exact repository/workflow match, and `id-token: write`; trusted publishing provides short-lived credentials and provenance ([npm trusted publishers](https://docs.npmjs.com/trusted-publishers/)). If a reusable workflow is introduced around the npm publish job, reconfigure npm for the caller workflow identity and give OIDC permission to both caller and called workflow.
-
-After a successful publish, each owner adapter verifies its exact tarball digests, non-empty descriptions, version list, and `latest`. Direct source `npm pack`/`npm publish` fails closed. A source build is allowed only through the relevant verified artifact builder, and promotion accepts only its immutable manifest.
-
-## Release cadence and versioning
-
-There is no calendar-forced release. Publish when a reviewed change and its ecosystem-specific qualification are ready. Use SemVer: PATCH for backward-compatible fixes or metadata/automation corrections, MINOR for backward-compatible capabilities, and MAJOR for incompatible public contract or installation changes. Execution core and the DSH bundle set are independently versioned; each release manifest binds the exact compatible cross-owner coordinates.
+Publishing uses the repository-scoped release App and requires CRYSTRA_RELEASE_CLIENT_ID plus CRYSTRA_RELEASE_APP_PRIVATE_KEY. Credential configuration remains separately authorized. Workflow integration is not evidence of a real release. Historical release/compose and release/product records are retained but are no longer publishing entry points. Old runtime cleanup occurs manually after new candidate qualification.
