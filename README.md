@@ -10,7 +10,7 @@ Execution binds each Delivery to an exact Workflow Package version and digest. E
 
 The single public DeepSeek Harness plugin is **dsh-crystra**, owned by [crystra-dsh](https://github.com/firestige/crystra-dsh). Execution and UI are ordinary dependencies. Use DSH to install an exact qualified plugin release; there is no separate Crystra installer or global Crystra CLI.
 
-Crystra releases are being qualified during the rename. No new candidate is advertised as ready here until its immutable artifacts and clean-environment checks are recorded. See the [quickstart](docs/guides/quickstart.md) and [plugin initialization guide](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md).
+The qualified combination [crystra-v0.1.0-rc.5](https://github.com/firestige/crystra/releases/tag/crystra-v0.1.0-rc.5) is available. It binds dsh-crystra RC6, UI RC5 and service RC3; clean installation and real Execution → Evidence → Evolution integration passed. RC qualification is the release acceptance criterion for this rename; GA is not required. See the [quickstart](docs/guides/quickstart.md) and [plugin initialization guide](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md).
 
 Within DSH, `/crystra setup` prepares the plugin's fixed service group and configuration; `/crystra doctor` reports readiness and missing role/provider configuration. `/crystra services start|stop|status` controls the service group. Docker is required for PostgreSQL, Evidence and Evolution. Removing the plugin preserves service data; stop services explicitly when needed.
 

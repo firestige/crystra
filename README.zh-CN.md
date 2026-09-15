@@ -10,7 +10,7 @@ Execution 将每个 Delivery 绑定到精确的 Workflow Package 版本与摘要
 
 唯一公开的 DeepSeek Harness 插件是 **dsh-crystra**，只由 [crystra-dsh](https://github.com/firestige/crystra-dsh) 仓库注册。Execution 与 UI 是普通依赖。通过 DSH 安装经过验证的精确插件制品，无需独立 Crystra 安装器或全局 Crystra CLI。
 
-此次更名的新制品仍在资格验证中。在精确制品和空白环境验收完成前，本文不宣称新候选已可安装。参见[入门说明](docs/guides/quickstart.md)与[插件初始化说明](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md)。
+已发布合格组合 [crystra-v0.1.0-rc.1](https://github.com/firestige/crystra/releases/tag/crystra-v0.1.0-rc.1)，固定单插件 rc.2 与服务 rc.3。空白安装和真实 Execution → Evidence → Evolution 联调通过；此次更名以可用 RC 验证为准，不要求 GA。参见[入门说明](docs/guides/quickstart.md)与[插件初始化说明](https://github.com/firestige/crystra-dsh/blob/main/docs/initialization.md)。
 
 在 DSH 中，`/crystra setup` 准备固定服务组和插件配置，`/crystra doctor` 报告就绪状态与缺失的角色／Provider 配置，`/crystra services start|stop|status` 控制服务组。PostgreSQL、Evidence、Evolution 需要 Docker。普通插件卸载保留服务数据；需要停止服务时显式执行停止操作。
 
