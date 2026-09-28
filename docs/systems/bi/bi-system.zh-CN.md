@@ -1,3 +1,5 @@
+> 2026-09-28 Analysis integration: [current data ownership, recorded-time queries, pagination and configuration decisions](analysis-data-integration.md). This supplements the earlier design; service extensions remain an unpublished candidate.
+
 # BI 系统——Iteration 5 候选（中文追踪）
 
 > **状态：** Wave3 rebaseline 候选，2026-08-28。英文 [`bi-system.md`](bi-system.md) 是候选规范文本。原 G1 browser evaluator、BI-local manifest 与固定 `/factual`/`/trace` 设计已 supersede，不再是 authority。本文不授权 Wave4 实现。

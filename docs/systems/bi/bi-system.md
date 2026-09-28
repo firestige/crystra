@@ -1,3 +1,5 @@
+> 2026-09-28 Analysis integration: [current data ownership, recorded-time queries, pagination and configuration decisions](analysis-data-integration.md). This supplements the earlier design; service extensions remain an unpublished candidate.
+
 # BI System — Iteration 5 Candidate
 
 > **Status:** Wave3 rebaseline candidate, 2026-08-28. English is normative for this candidate; Chinese tracking companion: [`bi-system.zh-CN.md`](bi-system.zh-CN.md). The former G1 browser evaluator, BI-local manifest, and fixed `/factual`/`/trace` design are superseded inputs and are not authority. This document does not authorize Wave4 implementation.
