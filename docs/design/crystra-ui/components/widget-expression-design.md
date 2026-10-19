@@ -57,7 +57,7 @@
 
 [固定样本实现](../../../../wsr-ui/packages/bi/src/components/widget-expression-study.tsx) · [配方样式](../../../../wsr-ui/packages/bi/src/widget-expression-study.css) · [独立入口](../../../../wsr-ui/packages/bi/src/expression-preview.tsx)。原组件底座与字体/颜色资产继续共用。
 
-重建：在wsr-ui执行 CRYSTRA_PREVIEW_ENTRY=expressions.html npm exec --workspace wsr-ui-core vite -- build --config vite.components.config.ts，再执行 node scripts/export-component-preview.ts ../docs/design/crystra-ui/assets/widget-expressions.html expressions.html。Library内展示使用同一个WidgetExpressionStudy。
+重建：在wsr-ui执行 CRYSTRA_PREVIEW_ENTRY=expressions.html npm exec --workspace wsr-ui-core vite -- build --config vite.components.config.ts，再执行 node scripts/export-component-preview.ts ../tmp/20260907/Crystra-ui-design/assets/widget-expressions.html expressions.html。Library内展示使用同一个WidgetExpressionStudy。
 
 表达与视觉已确认，后续按这些配方组装页面。数据接线回到页面总装时再处理，不作为这里的准入条件。
 

@@ -121,6 +121,6 @@ CRYSTRA_PREVIEW_ENTRY=workbench-preview.html npm exec --workspace wsr-ui-core vi
 
 ## 资源文件与引用树预览（2026-09-12）
 
-资源页使用真实包快照。包变更后先运行 `node docs/design/crystra-ui/assets/build-workflow-resource-browser.mjs`，再构建 workbench-preview 与 `build-workbench-pages.mjs workflow-studio`。生成的 `workflow-resource-workspaces.js` 在 React bundle 前加载，仅用于 HTML 预览，不属于生产资源服务。参考 `../pages/workflow-resources.md`。
+资源页使用真实包快照。包变更后先运行 `node tmp/20260907/Crystra-ui-design/assets/build-workflow-resource-browser.mjs`，再构建 workbench-preview 与 `build-workbench-pages.mjs workflow-studio`。生成的 `workflow-resource-workspaces.js` 在 React bundle 前加载，仅用于 HTML 预览，不属于生产资源服务。参考 `../pages/workflow-resources.md`。
 
 资源页编辑采用 CodeMirror 6；Markdown 预览由 preview-host 注入 dsh MarkdownText 0.1.5-rc.2。`dsh-document-theme.css` 提供主题映射。为使 v8 在 file:// 下可直接运行，workbench-preview 构建内联语言模块及字体；正式宿主不要求采用此打包方式。dsh 发布包将所需渲染依赖列在 devDependencies，因此预览宿主显式锁定这些运行时依赖，未修改上游包。

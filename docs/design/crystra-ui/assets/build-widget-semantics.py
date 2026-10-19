@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,html,re
-root=Path(__file__).resolve().parents[4]; out=root/'docs/design/crystra-ui'; assets=out/'assets'
+root=Path(__file__).resolve().parents[4]; out=root/'tmp/20260907/Crystra-ui-design'; assets=out/'assets'
 icons=json.loads((root/'wsr-ui/packages/bi/src/domain/crystra-icons.json').read_text())['icons']
 def icon(name):return '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">'+icons[name]['body']+'</svg>'
 rows=[

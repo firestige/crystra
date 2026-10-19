@@ -20,7 +20,7 @@ Crystra需要让用户知道当前是否要介入、执行与结果如何、花�
 
 | 来源 | 本轮用法 | 边界 |
 |---|---|---|
-| [Task权威输入](../sources/ui/task-control-workbenches-design-input.zh-CN.md) | Task摘要、Wave/运行观察、待裁决、验收与经济性 | UI需求已明确，不等于投影字段与聚合公式已实现 |
+| [Task权威输入](../../../20260905/crystra-rename-narrative/task-control-workbenches-design-input.zh-CN.md) | Task摘要、Wave/运行观察、待裁决、验收与经济性 | UI需求已明确，不等于投影字段与聚合公式已实现 |
 | [Task与Delivery概念](../../../../docs/agent-architecture.md) | 区分持续Task、一次Delivery与运行身份 | 保留原文件发布状态；不能从无Gate推断Task结束 |
 | [Catalog 2候选](../../../../docs/contracts/evaluation/metric-catalog-2-candidate.md) | 当前12项候选指标的含义与组合限制 | REVIEW CANDIDATE，NOT PUBLISHED；不替代已发布1.0契约身份 |
 | [Evolution计算映射](../../../../docs/systems/evolution/metric-computability.md)及[服务契约](../../../../docs/systems/evolution/evolution-system.md) | MetricResult、精确坐标、覆盖率、Delta | 文档可定义数据，不能宣称所有范围当前部署可查询 |

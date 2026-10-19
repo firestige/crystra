@@ -1,1 +1,2 @@
-sources/** -text
+# Preserve archived source bytes, including historical CRLF.
+** -text

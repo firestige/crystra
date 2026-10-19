@@ -1,7 +1,5 @@
 # Crystra UI 设计文档
 
-> 正式归档：2026-09-13。由临时评审目录迁入 `docs/design/crystra-ui/`；后续以此目录为维护入口。组件源码归 Crystra UI，Shell 宿主设计输入归 DSH Crystra。历史 sources 与 experiments 保留证据身份，不因归档变成已验收规范。
-
 > 初始整理：2026-09-07；更新：2026-09-11。各主题审核状态分别维护。Task Browser、Workflow Explorer 和 Sidebar 当前规则已归入正式正文（D14 / D15；Sidebar 标题行按 D16 正式定稿）；Workflow Studio 的结晶分析 UI/UX 于2026-09-13确认定稿，其他工作面的状态分别维护；生产契约未发布。
 > 原 Task 输入的“已接受”身份被继承到对应条款；本目录整理、检查及读者测试不构成新的产品审批，也不代表生产实现完成。
 

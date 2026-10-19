@@ -114,10 +114,10 @@
 仓库根目录运行：
 
 ```sh
-python3 docs/design/crystra-ui/assets/audit-v8-design.py
-python3 docs/design/crystra-ui/assets/build-design-contracts.py
-node docs/design/crystra-ui/assets/audit-v8-runtime.mjs
-python3 docs/design/crystra-ui/assets/map-v8-design-audit.py
+python3 tmp/20260907/Crystra-ui-design/assets/audit-v8-design.py
+python3 tmp/20260907/Crystra-ui-design/assets/build-design-contracts.py
+node tmp/20260907/Crystra-ui-design/assets/audit-v8-runtime.mjs
+python3 tmp/20260907/Crystra-ui-design/assets/map-v8-design-audit.py
 ```
 
 运行态脚本只使用本地 HTML 与合成数据。输出不包含账户会话或真实业务数据。查看 JSON 中 `failures` 与状态清单，不能只看进程退出码。后续修改代码后重跑，静态 HTML 的 SHA-256 用于辨别盘点是否已过期。
@@ -135,4 +135,4 @@ python3 docs/design/crystra-ui/assets/map-v8-design-audit.py
 - 覆盖语义变量后：Card、名称输入、模态背景均变为探针色；输入圆角 16px、模态圆角 20px；侧栏间距从 24px 变为 31px。
 - [自动校验结果](v8-design-audit/parity-check.json) 无错误；[文档链接检查](v8-design-audit/document-links.json) 无错误。
 
-重新生成映射后执行 `python3 docs/design/crystra-ui/assets/check-v8-parity.py`。它同时检查页面哈希、运行态绑定、文档目标和主题响应；失败必须处理，不能仅刷新报告状态。
+重新生成映射后执行 `python3 tmp/20260907/Crystra-ui-design/assets/check-v8-parity.py`。它同时检查页面哈希、运行态绑定、文档目标和主题响应；失败必须处理，不能仅刷新报告状态。

@@ -51,7 +51,7 @@ SearchField 默认采用已确认表面；`appearance="default"` 仅保留历史
 
 已确认样本包含纯输入、图标前缀、文字前缀、展开式、框外标签与禁用状态。旧样式仅保留在可折叠的现状对照区。
 
-统一重建入口（仓库根目录）：`node docs/design/crystra-ui/assets/build-v8-search.mjs`。它重建共享控件、组件样本和 workbench，并重新生成及同步五个 v8；基础 Browser 切换组件使用仓库现有 dist-browser-switch 产物。
+统一重建入口（仓库根目录）：`node tmp/20260907/Crystra-ui-design/assets/build-v8-search.mjs`。它重建共享控件、组件样本和 workbench，并重新生成及同步五个 v8；基础 Browser 切换组件使用仓库现有 dist-browser-switch 产物。
 
 ### Prefix slot 的尺寸职责（2026-09-10 已确认，D20）
 

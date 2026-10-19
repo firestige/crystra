@@ -3,7 +3,7 @@
   "states": [
     {
       "name": "task-all-static-workbenches",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-work-v8-sidebar.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-work-v8-sidebar.html",
       "elements": [
         {
           "tag": "main",
@@ -9980,7 +9980,7 @@
     },
     {
       "name": "task-sidebar-options",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-work-v8-sidebar.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-work-v8-sidebar.html",
       "elements": [
         {
           "tag": "main",
@@ -19957,7 +19957,7 @@
     },
     {
       "name": "task-browser-gallery",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-browser-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-browser-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -33772,7 +33772,7 @@
     },
     {
       "name": "task-browser-card-menu",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-browser-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-browser-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -47586,7 +47586,7 @@
     },
     {
       "name": "task-browser-rename",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-browser-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-browser-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -61402,7 +61402,7 @@
     },
     {
       "name": "task-browser-list",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-browser-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-browser-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -78129,7 +78129,7 @@
     },
     {
       "name": "task-browser-list-menu",
-      "url": "file://docs/design/crystra-ui/assets/crystra-task-browser-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-task-browser-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -94856,7 +94856,7 @@
     },
     {
       "name": "workflow-explorer-gallery",
-      "url": "file://docs/design/crystra-ui/assets/crystra-workflow-explorer-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-workflow-explorer-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -105472,7 +105472,7 @@
     },
     {
       "name": "workflow-explorer-card-menu",
-      "url": "file://docs/design/crystra-ui/assets/crystra-workflow-explorer-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-workflow-explorer-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -116087,7 +116087,7 @@
     },
     {
       "name": "workflow-explorer-rename",
-      "url": "file://docs/design/crystra-ui/assets/crystra-workflow-explorer-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-workflow-explorer-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -126704,7 +126704,7 @@
     },
     {
       "name": "workflow-explorer-list",
-      "url": "file://docs/design/crystra-ui/assets/crystra-workflow-explorer-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-workflow-explorer-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -139960,7 +139960,7 @@
     },
     {
       "name": "workflow-explorer-list-menu",
-      "url": "file://docs/design/crystra-ui/assets/crystra-workflow-explorer-v8.html",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-workflow-explorer-v8.html",
       "elements": [
         {
           "tag": "main",
@@ -153216,7 +153216,7 @@
     },
     {
       "name": "analysis-overview",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -160844,7 +160844,7 @@
     },
     {
       "name": "analysis-calendar",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -170554,7 +170554,7 @@
     },
     {
       "name": "analysis-layout-edit",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -178220,7 +178220,7 @@
     },
     {
       "name": "analysis-add-widget",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=dashboard&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -186444,7 +186444,7 @@
     },
     {
       "name": "analysis-waterfall",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=traces&period=7d&scope=all",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=traces&period=7d&scope=all",
       "elements": [
         {
           "tag": "main",
@@ -194086,7 +194086,7 @@
     },
     {
       "name": "analysis-tree",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=traces&period=7d&scope=all",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=traces&period=7d&scope=all",
       "elements": [
         {
           "tag": "main",
@@ -200795,7 +200795,7 @@
     },
     {
       "name": "analysis-comparison",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -206043,7 +206043,7 @@
     },
     {
       "name": "analysis-setting-editor",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -211915,7 +211915,7 @@
     },
     {
       "name": "analysis-metric-catalog",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -217788,7 +217788,7 @@
     },
     {
       "name": "analysis-dataset",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
       "elements": [
         {
           "tag": "main",
@@ -223037,7 +223037,7 @@
     },
     {
       "name": "analysis-help",
-      "url": "file://docs/design/crystra-ui/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
+      "url": "file:///Users/firestige/Projects/workflow-self-recursive/tmp/20260907/Crystra-ui-design/assets/crystra-analysis-audit-v8.html?view=reports&period=7d",
       "elements": [
         {
           "tag": "main",

@@ -2,7 +2,7 @@
 
 > 更新：2026-09-09。本清单记录当前结论和剩余交付，不记录讨论过程。勾选表示设计已确认并归入正文，不表示 HTML、宿主接入或底层服务已经实现。
 
-依据：后续用户裁定在其范围内优先；UI 按 [Task 权威输入](sources/ui/task-control-workbenches-design-input.zh-CN.md) > 设计资产 > memo；Task、Delivery 和底层服务以原仓库 [docs](../../../docs) 的对应契约为准，保留其版本与发布状态。整理稿中的旧候选表述不能重开已确认事项。
+依据：后续用户裁定在其范围内优先；UI 按 [Task 权威输入](../../20260905/crystra-rename-narrative/task-control-workbenches-design-input.zh-CN.md) > 设计资产 > memo；Task、Delivery 和底层服务以原仓库 [docs](../../../docs) 的对应契约为准，保留其版本与发布状态。整理稿中的旧候选表述不能重开已确认事项。
 
 ## 已确认
 

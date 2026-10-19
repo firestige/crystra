@@ -47,7 +47,7 @@ U1 要求专用引擎。Workflow Studio 活动图草案现以 ELK Layered 正交
 
 ## Archify 学习与实现纪律
 
-用户已要求 DAG / Workflow 图必须学习 Archify 的成熟做法，不自行发明。先阅读 [Archify DESIGN.md](https://github.com/tt-a1i/archify/blob/main/DESIGN.md) 的语义色、渐进披露、有限可控运动与 viewer state 边界，以及项目已有 [Archify 源码观察](../sources/ui/obs-archify-capabilities.md) 和 [BI 参考裁决](../../../../docs/systems/bi/bi-ui-design.zh-CN.md)。Workflow Studio 候选复核了 Archify 的测量、正交路由、几何避让验证思路，并采用 ELK 计算样例布局；紧凑候选通过显式展示分组与端口约束分层组合；没有移植 Archify 编译器，也不代表完整生产图引擎已交付。
+用户已要求 DAG / Workflow 图必须学习 Archify 的成熟做法，不自行发明。先阅读 [Archify DESIGN.md](https://github.com/tt-a1i/archify/blob/main/DESIGN.md) 的语义色、渐进披露、有限可控运动与 viewer state 边界，以及项目已有 [Archify 源码观察](../../../20260827/archify-inspiration/obs-archify-capabilities.md) 和 [BI 参考裁决](../../../../docs/systems/bi/bi-ui-design.zh-CN.md)。Workflow Studio 候选复核了 Archify 的测量、正交路由、几何避让验证思路，并采用 ELK 计算样例布局；紧凑候选通过显式展示分组与端口约束分层组合；没有移植 Archify 编译器，也不代表完整生产图引擎已交付。
 
 落实到图组件：确定性几何与稳定身份；路由和节点遮挡按成熟算法实现；搜索/聚焦/上下游浏览采用渐进披露；运行状态与动效叠加不改变拓扑；单一运动 owner 并尊重 reduced motion；viewer 选择、缩放与布局偏好不进入领域权威。Archify 的作者关系或推断不得取代 Crystra 的 Plan / Workflow / Trace 契约。
 
